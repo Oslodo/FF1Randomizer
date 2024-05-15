@@ -1,0 +1,99 @@
+@using FF1Lib;
+@using Microsoft.AspNetCore.Components.Web
+@using Newtonsoft.Json;
+@using RomUtilities;
+@using System.ComponentModel;
+@using System.IO;
+@using System.Web;
+@inject Blazored.LocalStorage.ILocalStorageService LocalStorage
+@inject IJSRuntime JSRuntime
+
+
+@page "/League"
+
+<div class="content px-4 tinted">
+    <div class="nes-container is-dark col-xs-12">
+        <input type="file" id="fileInput" accept=".nes" @onchange="@OnFileChanged" />
+        <br />
+        @RomMessage
+    </div>
+</div>
+
+<div class="framed-content">
+    <div class="row">
+		    <div class="col1">
+			    <h4>Fighter Blursings</h4>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="Add10Strcheckbox" @bind-Value="Flags.Add10Str">Add 10 Strength</CheckBox>
+
+       
+
+            </div>
+
+</div>
+
+@*
+<div id="Banner" class="framed-content">
+
+    <h4>League Blursing Settings</h4>
+    <p>
+        This section allows runners to select the blursings for the NFFRL or just for fun. Choose your classes from the drop down and set the blursings and then upload a pre-randomized rom.<br>
+        For runners in the NFFRL if you do not set all six classes with your teams blursings you will be unable to take any non-set classes.
+    </p>
+    
+
+
+</div>
+
+<div>
+
+     <CheckBox UpdateToolTip="@UpdateToolTipID" Id="Add10Strcheckbox" @bind-Value="Flags.Add10Str">Add 10 Strength</CheckBox>*@
+
+
+
+</div>
+
+
+
+
+@code{
+    [Parameter] public FF1Lib.FlagsViewModel Flags { get; set; }
+    [Parameter] public Action<string> SetStatusMessage { get; set; }
+    [Parameter] public string StatusMessage { get; set; }
+    [Parameter] public Action<string, MouseEventArgs> UpdateToolTipID { get; set; }
+    [Parameter] public bool IsOpen { get; set; } = true;
+    [Parameter] public bool showChaos { get; set; }
+
+    private string BlursingsText = "";
+    private string RomMessage = "";
+    private byte[] _fileData;
+
+    async Task OnFileChanged(ChangeEventArgs e)
+    {
+        var encoded = await JSRuntime.InvokeAsync<string>("handleFileSelect", "fileInput");
+        SetFileData(encoded);
+    }
+    void SetFileData(string encoded)
+    {
+        _fileData = Convert.FromBase64String(encoded);
+        using (var stream = new MemoryStream(_fileData))
+        {
+            FF1Rom temprom = new FF1Rom(stream);
+            if (temprom.HeaderLength != 16)
+            {
+                RomMessage = "ROM header length is incorrect, try a different ROM";
+                return;
+            }
+            try
+            {
+                BlursingsText = temprom.SpoilBlursings();
+                RomMessage = "Classes Blursings Loaded";
+
+                StateHasChanged();
+            }
+            catch (FF1Lib.FF1Rom.TournamentSafeException)
+            {
+                RomMessage = "Detected ROM hash does not match the expected hash.\nResults may vary.";
+            }
+        }
+    }
+}

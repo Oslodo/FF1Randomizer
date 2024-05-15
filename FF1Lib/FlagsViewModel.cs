@@ -1,5 +1,9 @@
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.Contracts;
+using System.Diagnostics.SymbolStore;
 using System.Runtime.CompilerServices;
+using System.Security;
 using static FF1Lib.FF1Rom;
 
 namespace FF1Lib
@@ -5136,6 +5140,939 @@ namespace FF1Lib
 				RaisePropertyChanged();
 			}
 		}
+
+		#region League
+
+		public bool Add10Str
+		{
+			get => Flags.Add10Str;
+			set
+			{
+				Flags.Add10Str = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Add10Str"));
+			}
+
+		}
+		public bool? Add20Str
+		{
+			get => Flags.Add20Str;
+			set
+			{
+				Flags.Add20Str = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Add20Str"));
+			}
+		}
+		public bool? Add15Agi
+		{
+			get => Flags.Add15Agi;
+			set
+			{
+				Flags.Add15Agi = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Add15Agi"));
+			}
+		}
+
+		public bool? Add20Agi
+		{
+			get => Flags.Add20Agi;
+			set
+			{
+				Flags.Add20Agi = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Add20Agi"));
+			}
+		}
+
+		public bool? Add25Agi
+		{
+			get => Flags.Add25Agi;
+			set
+			{
+				Flags.Add25Agi = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Add25Agi"));
+			}
+		}
+
+		public bool? Add10Vit
+		{
+			get => Flags.Add10Vit;
+			set
+			{
+				Flags.Add10Vit = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Add10Vit"));
+			}
+
+		}
+		public bool? Add20Vit
+		{
+			get => Flags.Add20Vit;
+			set
+			{
+				Flags.Add20Vit = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Add20Vit"));
+			}
+		}
+		public bool? Add5Luck
+		{
+			get => Flags.Add5Luck;
+			set
+			{
+				Flags.Add5Luck = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Add5Luck"));
+			}
+		}
+		public bool? Add10Luck
+		{
+			get => Flags.Add10Luck;
+			set
+			{
+				Flags.Add10Luck = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Add10Luck"));
+			}
+		}
+
+		public bool? Add20HP
+		{
+			get => Flags.Add20HP;
+			set
+			{
+				Flags.Add20HP = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Add20HP"));
+			}
+		}
+		public bool? Add40HP
+		{
+			get => Flags.Add40HP;
+			set
+			{
+				Flags.Add40HP = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Add40HP"));
+			}
+		}
+		public bool? Add10PerHit
+		{
+			get => Flags.Add10PerHit;
+			set
+			{
+				Flags.Add10PerHit = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Add10PerHit"));
+			}
+		}
+		public bool? Add20PerHit
+		{
+			get => Flags.Add20PerHit;
+			set
+			{
+				Flags.Add20PerHit = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Add20PerHit"));
+			}
+		}
+		public bool? EquipAxe
+		{
+			get => Flags.EquipAxe;
+			set
+			{
+				Flags.EquipAxe = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("EquipAxe"));
+			}
+		}
+		public bool? EquipShirt
+		{
+			get => Flags.EquipShirt;
+			set
+			{
+				Flags.EquipShirt = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("EquipShirt"));
+			}
+		}
+		public bool? EquipShields
+		{
+			get => Flags.EquipShields;
+			set
+			{
+				Flags.EquipShields = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("EquipShields"));
+			}
+		}
+		public bool? EquipBonkHelm
+		{
+			get => Flags.EquipBonkHelm;
+			set
+			{
+				Flags.EquipBonkHelm = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("EquipBonkHelm"));
+			}
+		}
+		public bool? ThiefWeaponsBonus
+		{
+			get => Flags.ThiefWeaponsBonus;
+			set
+			{
+				Flags.ThiefWeaponsBonus = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ThiefWeaponsBonus"));
+			}
+		}
+		public bool? RMArmor
+		{
+			get => Flags.RMArmor;
+			set
+			{
+				Flags.RMArmor = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("RMArmor"));
+			}
+		}
+		public bool? LegSwords
+		{
+			get => Flags.LegSwords;
+			set
+			{
+				Flags.LegSwords = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("LegSwords"));
+			}
+		}
+		public bool? WoodArmor
+		{
+			get => Flags.WoodArmor;
+			set
+			{
+				Flags.WoodArmor = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("WoodArmor"));
+			}
+		}
+		public bool? Lvl1MP2
+		{
+			get => Flags.Lvl1MP2;
+			set
+			{
+				Flags.Lvl1MP2 = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Lvl1MP2"));
+			}
+		}
+		public bool? MP1All
+		{
+			get => Flags.MP1All;
+			set
+			{
+				Flags.MP1All = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("MP1All"));
+			}
+		}
+		public bool? AddSpell
+		{
+			get => Flags.AddSpell;
+			set
+			{
+				Flags.AddSpell = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("AddSpell"));
+			}
+		}
+		public bool? Telemagic
+		{
+			get => Flags.Telemagic;
+			set
+			{
+				Flags.Telemagic = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Telemagic"));
+			}
+		}
+		public bool? BuffMagic
+		{
+			get => Flags.Buffmagic;
+			set
+			{
+				Flags.Buffmagic = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BuffMagic"));
+			}
+		}
+		public bool? SelfMagic
+		{
+			get => Flags.Selfmagic;
+			set
+			{
+				Flags.Selfmagic = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SelfMagic"));
+			}
+		}
+		public bool? HealMagic
+		{
+			get => Flags.Healmagic;
+			set
+			{
+				Flags.Healmagic = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("HealMagic"));
+			}
+		}
+		public bool? HealMagicPlus
+		{
+			get => Flags.Healplusmagic;
+			set
+			{
+				Flags.Healplusmagic = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("HealMagicPlus"));
+			}
+		}
+		public bool? ElemMagic
+		{
+			get => Flags.Elemmagic;
+			set
+			{
+				Flags.Elemmagic = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ElemMagic"));
+			}
+		}
+		public bool? ElemplusMagic
+		{
+			get => Flags.Elemplusmagic;
+			set
+			{
+				Flags.Elemplusmagic = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ElemPlusMagic"));
+			}
+		}
+		public bool? NukeMagic
+		{
+			get => Flags.Nukemagic;
+			set
+			{
+				Flags.Nukemagic = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("NukeMagic"));
+			}
+		}
+		public bool? DoomMagic
+		{
+			get => Flags.Doommagic;
+			set
+			{
+				Flags.Doommagic = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("DoomMagic"));
+			}
+		}
+		public bool? CleanMagic
+		{
+			get => Flags.Cleanmagic;
+			set
+			{
+				Flags.Cleanmagic = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CleanMagic"));
+			}
+
+		}
+		public bool? MaxplusMPplus
+		{
+			get => Flags.MaxplusMPplus;
+			set
+			{
+				Flags.MaxplusMPplus = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("MaxPlusMPplus"));
+			}
+		}
+		public bool? ImpCatclaw
+		{
+			get => Flags.ImpCatclaw;
+			set
+			{
+				Flags.ImpCatclaw = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ImpCatclaw"));
+			}
+		}
+		public bool? ImpThor
+		{
+			get => Flags.ImpThor;
+			set
+			{
+				Flags.ImpThor = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ImpThor"));
+			}
+		}
+		public bool? HurtUndead
+		{
+			get => Flags.Hurtundead;
+			set
+			{
+				Flags.Hurtundead = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("HurtUndead"));
+			}
+		}
+		public bool? HurtDragon
+		{
+			get => Flags.Hurtdragon;
+			set
+			{
+				Flags.Hurtdragon = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("HurtDragon"));
+			}
+		}
+		public bool? HurtAll
+		{
+			get => Flags.Hurtall;
+			set
+			{
+				Flags.Hurtall = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("HurtAll"));
+			}
+		}
+		public bool? PromoFiWeapons
+		{
+			get => Flags.PromoFiweapons;
+			set
+			{
+				Flags.PromoFiweapons = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("PromoFiWeapons"));
+			}
+
+		}
+		public bool? PromoSage
+		{
+			get => Flags.PromoSage;
+			set
+			{
+				Flags.PromoSage = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("PromoSage"));
+			}
+		}
+		public bool? XP50Percent
+		{
+			get => Flags.XP50percent;
+			set
+			{
+				Flags.XP50percent = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("XP50Percent"));
+			}
+		}
+		public bool? EarlyLockpick
+		{
+			get => Flags.Earlylockpick;
+			set
+			{
+				Flags.Earlylockpick = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("EarlyLockpick"));
+			}
+		}
+		public bool? ResistPoison
+		{
+			get => Flags.ResistPosion;
+			set
+			{
+				Flags.ResistPosion = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ResistPoison"));
+			}
+		}
+		public bool? ResistEarth
+		{
+			get => Flags.ResistEarth;
+			set
+			{
+				Flags.ResistEarth = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ResistEarth"));
+			}
+		}
+		public bool? ResistDeath
+		{
+			get => Flags.ResistDeath;
+			set
+			{
+				Flags.ResistDeath = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ResistDeath"));
+			}
+		}
+		public bool? ResistTime
+		{
+			get => Flags.ResistTime;
+			set
+			{
+				Flags.ResistTime = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ResistTime"));
+			}
+		}
+		public bool? ResistStatus
+		{
+			get => Flags.ResistStatus;
+			set
+			{
+				Flags.ResistStatus = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ResistStatus"));
+			}
+		}
+		public bool? ResistIce
+		{
+			get => Flags.ResistIce;
+			set
+			{
+				Flags.ResistIce = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ResistIce"));
+			}
+		}
+		public bool? ResistLit
+		{
+			get => Flags.ResistLit;
+			set
+			{
+				Flags.ResistLit = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ResistLit"));
+			}
+		}
+		public bool? ResistFire
+		{
+			get => Flags.ResistFire;
+			set
+			{
+				Flags.ResistFire = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ResistFire"));
+			}
+		}
+		public bool? StartGold200
+		{
+			get => Flags.Startgold200;
+			set
+			{
+				Flags.Startgold200 = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("StartGold200"));
+			}
+		}
+		public bool? StartGold400
+		{
+			get => Flags.Startgold400;
+			set
+			{
+				Flags.Startgold400 = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("StartGold400"));
+			}
+		}
+		public bool? StartGold600
+		{
+			get => Flags.Startgold600;
+			set
+			{
+				Flags.Startgold600 = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("StartGold600"));
+			}
+		}
+		public bool? StartGold800
+		{
+			get => Flags.Startgold800;
+			set
+			{
+				Flags.Startgold800 = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("StartGold800"));
+			}
+		}
+		public bool? StartGold1500
+		{
+			get => Flags.Startgold1500;
+			set
+			{
+				Flags.Startgold1500 = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("StartGold1500"));
+			}
+		}
+		public bool? StartGold5000
+		{
+			get => Flags.Startgold5000;
+			set
+			{
+				Flags.Startgold5000 = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("StartGold5000"));
+			}
+		}
+		public bool? StartGold20000
+		{
+			get => Flags.Startgold20000;
+			set
+			{
+				Flags.Startgold20000 = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("StartGold20000"));
+			}
+		}
+		public bool? Add40Str
+		{
+			get => Flags.Add40Str;
+			set
+			{
+				Flags.Add40Str = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Add40Str"));
+			}
+		}
+		public bool? Add50Agi
+		{
+			get => Flags.Add50Agi;
+			set
+			{
+				Flags.Add50Agi = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Add50Agi"));
+			}
+		}
+		public bool? Add40Vit
+		{
+			get => Flags.Add40Vit;
+			set
+			{
+				Flags.Add40Vit = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Add40Vit"));
+			}
+		}
+		public bool? Add15Luck
+		{
+			get => Flags.Add15Luck;
+			set
+			{
+				Flags.Add15Luck = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Add15Luck"));
+			}
+		}
+		public bool? Add80HP
+		{
+			get => Flags.Add80HP;
+			set
+			{
+				Flags.Add80HP = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Add80HP"));
+			}
+		}
+		public bool? Mdef2Lvl
+		{
+			get => Flags.Mdef2lvl;
+			set
+			{
+				Flags.Mdef2lvl = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Mdef2Lvl"));
+			}
+		}
+		public bool? FiWeapons
+		{
+			get => Flags.FiWeapons;
+			set
+			{
+				Flags.FiWeapons = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FiWeapons"));
+			}
+		}
+		public bool? FiArmor
+		{
+			get => Flags.FiArmor;
+			set
+			{
+				Flags.FiArmor = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FiArmor"));
+			}
+		}
+		public bool? ImprovedMP
+		{
+			get => Flags.ImprovedMP;
+			set
+			{
+				Flags.ImprovedMP = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ImprovedMP"));
+			}
+		}
+		public bool? Sage
+		{
+			get => Flags.Sage;
+			set
+			{
+				Flags.Sage = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Sage"));
+			}
+		}
+		public bool? SteelFast
+		{
+			get => Flags.Steelfast;
+			set
+			{
+				Flags.Steelfast = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SteelFast"));
+			}
+		}
+		public bool? FiBB50XP
+		{
+			get => Flags.FiBB50XP;
+			set
+			{
+				Flags.FiBB50XP = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FiBB50XP"));
+			}
+		}
+		public bool? XP100Percent
+		{
+			get => Flags.XP100Percent;
+			set
+			{
+				Flags.XP100Percent = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("XP100Percent"));
+			}
+		}
+		public bool? Down10Str
+		{
+			get => Flags.Down10Str;
+			set
+			{
+				Flags.Down10Str = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Down10Str"));
+			}
+		}
+		public bool? Down20Str
+		{
+			get => Flags.Down20Str;
+			set
+			{
+				Flags.Down20Str = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Down20Str"));
+			}
+		}
+		public bool? Down10Agi
+		{
+			get => Flags.Down10Agi;
+			set
+			{
+				Flags.Down10Agi = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Down10Agi"));
+			}
+		}
+		public bool? Down20Agi
+		{
+			get => Flags.Down20Agi;
+			set
+			{
+				Flags.Down20Agi = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Down20Agi"));
+			}
+		}
+		public bool? Down10Vit
+		{
+			get => Flags.Down10Vit;
+			set
+			{
+				Flags.Down10Vit = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Down10Vit"));
+			}
+		}
+		public bool? Down20Vit
+		{
+			get => Flags.Down20Vit;
+			set
+			{
+				Flags.Down20Vit = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Down20Vit"));
+			}
+		}
+		public bool? Down5Luck
+		{
+			get => Flags.Down5Luck;
+			set
+			{
+				Flags.Down5Luck = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Down5Luck"));
+			}
+		}
+		public bool? Down10Luck
+		{
+			get => Flags.Down10Luck;
+			set
+			{
+				Flags.Down10Luck = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Down10Luck"));
+			}
+		}
+		public bool? Down15HP
+		{
+			get => Flags.Down15HP;
+			set
+			{
+				Flags.Down15HP = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Down15HP"));
+			}
+		}
+		public bool? Down30HP
+		{
+			get => Flags.Down30HP;
+			set
+			{
+				Flags.Down30HP = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Down15HP"));
+			}
+		}
+		public bool? BMHP
+		{
+			get => Flags.BMHP;
+			set
+			{
+				Flags.BMHP = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BMHP"));
+			}
+		}
+		public bool? Down1HitPercent
+		{
+			get => Flags.Down1Hitpercent;
+			set
+			{
+				Flags.Down1Hitpercent = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Down1HitPercent"));
+			}
+		}
+		public bool? Down1MDef
+		{
+			get => Flags.Down1Mdef;
+			set
+			{
+				Flags.Down1Mdef = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Down1MDef"));
+			}
+		}
+		public bool? NoBracelets
+		{
+			get => Flags.Nobrace;
+			set
+			{
+				Flags.Nobrace = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("NoBracelets"));
+			}
+		}
+		public bool? NoMasa
+		{
+			get => Flags.NoMasa;
+			set
+			{
+				Flags.NoMasa = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("NoMasa"));
+			}
+		}
+		public bool? NoRibbon
+		{
+			get => Flags.NoRibbon;
+			set
+			{
+				Flags.NoRibbon = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("NoRibbon"));
+			}
+		}
+		public bool? NoProRing
+		{
+			get => Flags.NoProring;
+			set
+			{
+				Flags.NoProring = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("NoProRing"));
+			}
+		}
+		public bool? LateLockPicking
+		{
+			get => Flags.LateLockpick;
+			set
+			{
+				Flags.LateLockpick = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("LateLockpick"));
+			}
+		}
+		public bool? ThWeaponMal
+		{
+			get => Flags.ThiefweaponsMalus;
+			set
+			{
+				Flags.ThiefweaponsMalus = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ThWeaponMal"));
+			}
+		}
+		public bool? Down4MaxMP
+		{
+			get => Flags.Down4MaxMP;
+			set
+			{
+				Flags.Down4MaxMP = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Down4MaxMP"));
+			}
+		}
+
+		public bool? NoSpell
+		{
+			get => Flags.NoSpell;
+			set
+			{
+				Flags.NoSpell = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("NoSpell"));
+			}
+		}
+		public bool? NoFiPromoArmor
+		{
+			get => Flags.NoFiPromoArmor;
+			set
+			{
+				Flags.NoFiPromoArmor = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("NoFiPromoArmor"));
+			}
+		}
+		public bool? PromoRmArmor
+		{
+			get => Flags.PromoRMArmor;
+			set
+			{
+				Flags.PromoRMArmor = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("PromoRMArmor"));
+			}
+		}
+		public bool? NoPromoSpells
+		{
+			get => Flags.NoPromoSpells;
+			set
+			{
+				Flags.NoPromoSpells = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("NoPromoSpells"));
+			}
+		}
+		public bool? Down50GP
+		{
+			get => Flags.Down50GP;
+			set
+			{
+				Flags.Down50GP = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Down50GP"));
+			}
+		}
+		public bool? Down100GP
+		{
+			get => Flags.Down100GP;
+			set
+			{
+				Flags.Down100GP = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Down100GP"));
+			}
+		}
+		public bool? Down150GP
+		{
+			get => Flags.Down150GP;
+			set
+			{
+				Flags.Down150GP = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Down150GP"));
+			}
+		}
+		public bool? Down350GP
+		{
+			get => Flags.Down350GP;
+			set
+			{
+				Flags.Down350GP = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Down350GP"));
+			}
+		}
+		public bool? Down1100GP
+		{
+			get => Flags.Down1100GP;
+			set
+			{
+				Flags.Down1100GP = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Down1100GP"));
+			}
+		}
+		public bool? Down4500GP
+		{
+			get => Flags.Down4500gp;
+			set
+			{
+				Flags.Down4500gp = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Down4500GP"));
+			}
+		}
+
+
+		#endregion
 
 		#region StartingEquipment
 

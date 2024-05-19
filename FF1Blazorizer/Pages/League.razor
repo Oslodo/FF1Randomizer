@@ -8,6 +8,8 @@
 @inject Blazored.LocalStorage.ILocalStorageService LocalStorage
 @inject IJSRuntime JSRuntime
 
+@*Ingore the code here, it is just a place holder for the future work, we are no where NEAR ready for this*@
+
 
 @page "/League"
 
@@ -18,42 +20,26 @@
         @RomMessage
     </div>
 </div>
+@*The code below works only if the Checkbox code is removed or commented out*@
 
-<div class="framed-content">
-    <div class="row">
-		    <div class="col1">
-			    <h4>Fighter Blursings</h4>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="Add10Strcheckbox" @bind-Value="Flags.Add10Str">Add 10 Strength</CheckBox>
-
-       
-
-            </div>
-
-</div>
-
-@*
-<div id="Banner" class="framed-content">
+<div id="Blusrings" class="framed-content">
 
     <h4>League Blursing Settings</h4>
     <p>
         This section allows runners to select the blursings for the NFFRL or just for fun. Choose your classes from the drop down and set the blursings and then upload a pre-randomized rom.<br>
         For runners in the NFFRL if you do not set all six classes with your teams blursings you will be unable to take any non-set classes.
     </p>
-    
 
+  <div id="fighter blursings" class="framed-content"
+      <h4>Fighter Blursings</h4>
+     <CheckBox UpdateToolTip="@UpdateToolTipID" Id="Startcrown" @bind-Value="Flags.StartCrown">Start With Crown</CheckBox> 
 
-</div>
-
-<div>
-
-     <CheckBox UpdateToolTip="@UpdateToolTipID" Id="Add10Strcheckbox" @bind-Value="Flags.Add10Str">Add 10 Strength</CheckBox>*@
-
-
-
+    <div class="checkbox-cell"></div>
+   </div>
 </div>
 
 
-
+@*Again, ingore below, it isn't there for any good reason, place holder for future use*@
 
 @code{
     [Parameter] public FF1Lib.FlagsViewModel Flags { get; set; }
@@ -95,5 +81,5 @@
                 RomMessage = "Detected ROM hash does not match the expected hash.\nResults may vary.";
             }
         }
-    }
+    } 
 }

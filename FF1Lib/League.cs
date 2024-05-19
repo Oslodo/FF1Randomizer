@@ -1,84 +1,27 @@
-﻿using System.ComponentModel;
-using FF1Lib.Helpers;
+﻿using FF1Lib.Helpers;
 using RomUtilities;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.IO.Compression;
+using System.Linq;
+using System.Reflection.Metadata.Ecma335;
+using System.Text;
+using System.Threading.Tasks;
+using static FF1Lib.GameClasses;
+
+/* This is a work in progress needed the following
+ 1) Will need to get the league page working
+ 2) Get the code set up to pull out the blursing as needed
+ 3) Create a Plando code to take a randomized rom and add in blursings without changing the basic randomization and the hash
+ 4) Test to make sure that it works*/
 
 namespace FF1Lib
 {
-
-	public class GameClassesLeague
+	public partial class GameClasses
 	{
-		private List<ClassData> _classes;
-		private GearPermissions _weaponPermissions;
-		private GearPermissions _armorPermissions;
-		private SpellPermissions _spellPermissions;
 
-		const int lut_LvlUpHitRateBonus = 0x6CA59;
-		const int lut_LvlUpMagDefBonus = 0x6CA65;
-		const int lut_InnateResist = 0x6D400;
-		const int lut_MaxMP = 0x6C902;
-		const int lut_MpGainOnMaxMpGainClasses = 0x6D830;
-		const int NewLevelUpDataOffset = 0x6CDA9;
-		const int old_lut_LvlUpHitRateBonus = 0x2CA59;
-		const int old_lut_LvlUpMagDefBonus = 0x2CA65;
-		const int old_lut_InnateResist = 0x2D400;
-		const int old_lut_MaxMP = 0x2C902;
-		const int old_lut_MpGainOnMaxMpGainClasses = 0x2D830;
-		const int old_NewLevelUpDataOffset = 0x2CDA9;
-		const int StartingStatsOffset = 0x3040;
-
-
-		public enum BonusMalusAction
-		{
-			None = 0,
-			StrMod = 1,
-			AgiMod = 2,
-			IntMod = 3,
-			VitMod = 4,
-			LckMod = 5,
-			HpMod = 6,
-			HitMod = 7,
-			MDefMod = 8,
-			StrGrowth = 9,
-			AgiGrowth = 10,
-			IntGrowth = 11,
-			VitGrowth = 12,
-			LckGrowth = 13,
-			HpGrowth = 14,
-			HitGrowth = 15,
-			MDefGrowth = 16,
-			SpcMod = 17,
-			SpcGrowth = 18,
-			WeaponAdd = 19,
-			WeaponRemove = 20,
-			WeaponReplace = 21,
-			ArmorAdd = 22,
-			ArmorRemove = 23,
-			ArmorReplace = 24,
-			WhiteSpellcaster = 25,
-			BlackSpellcaster = 27,
-			SpcMax = 29,
-			PowerRW = 30,
-			NoPromoMagic = 31,
-			LockpickingLevel = 32,
-			InnateResist = 33,
-			BonusXp = 34,
-			MpGainOnMaxMpGain = 35,
-			StartWithSpell,
-			CantLearnSpell,
-			StartWithGold,
-			StartWithMp,
-			UnarmedAttack,
-			CatClawMaster,
-			ThorMaster,
-			SteelLord,
-			WoodAdept,
-			Hunter,
-			Sleepy,
-			Sick,
-			StartWithKI,
-			InnateSpells
-		}
-		public class BonusMalus
+		public class LeagueBonusMalus
 		{
 			public List<Item> Equipment { get; set; }
 			public List<SpellSlots> SpellList { get; set; }
@@ -92,7 +35,8 @@ namespace FF1Lib
 			public List<Classes> ClassList { get; set; }
 			public SpellSlotInfo SpellSlotMod { get; set; }
 			public List<SpellSlotInfo> SpellsMod { get; set; }
-			public BonusMalus(BonusMalusAction action, string description, int mod = 0, int mod2 = 0, List<Item> equipment = null, List<bool> binarylist = null, List<SpellSlots> spelllist = null, List<byte> bytelist = null, SpellSlotInfo spellslotmod = null, List<SpellSlotInfo> spellsmod = null, List<Classes> Classes = null)
+
+			public LeagueBonusMalus(BonusMalusAction action, string description, int mod = 0, int mod2 = 0, List<Item> equipment = null, List<bool> binarylist = null, List<SpellSlots> spelllist = null, List<byte> bytelist = null, SpellSlotInfo spellslotmod = null, List<SpellSlotInfo> spellsmod = null, List<Classes> Classes = null)
 			{
 				Action = action;
 				Description = description;
@@ -112,6 +56,40 @@ namespace FF1Lib
 				else
 					ClassList = Classes;
 			}
+			private List<BonusMalus> LeagueKI(Flags flags, List<string> olditemnames)
+			{
+				List<BonusMalus> kiBlursingsLeague = new()
+				{
+					new BonusMalus(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Crown], mod: (int)Item.Crown),
+					new BonusMalus(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Crystal], mod: (int)Item.Crystal),
+					new BonusMalus(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Herb], mod: (int)Item.Herb),
+					new BonusMalus(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Tnt], mod: (int)Item.Tnt),
+					new BonusMalus(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Adamant], mod: (int)Item.Adamant),
+					new BonusMalus(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Slab], mod: (int)Item.Slab),
+					new BonusMalus(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Ruby], mod: (int)Item.Ruby),
+					new BonusMalus(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Rod], mod: (int)Item.Rod),
+					new BonusMalus(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Chime], mod: (int)Item.Chime),
+					new BonusMalus(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Cube], mod: (int)Item.Cube),
+					new BonusMalus(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Bottle], mod: (int)Item.Bottle),
+					new BonusMalus(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Oxyale], mod: (int)Item.Oxyale),
+					new BonusMalus(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Lute], mod: (int)Item.Lute),
+					new BonusMalus(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Tail], mod: (int)Item.Tail),
+					new BonusMalus(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Key], mod: (int)Item.Key),
+				};
+				return kiBlursingsLeague;
+			}
+			public void StartCrown(Flags flags)
+			{
+				if (!(bool)flags.Startcrown)
+				{
+					return;
+
+				}
+				BonusMalusAction.StartWithKI.Equals(Item.Crown);
+			}
+			
+			}
+			}
 		}
-	}
-}
+
+

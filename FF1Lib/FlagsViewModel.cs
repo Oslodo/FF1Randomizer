@@ -5153,7 +5153,7 @@ namespace FF1Lib
 			}
 
 		}
-		public bool? Add20Str
+		public bool Add20Str
 		{
 			get => Flags.Add20Str;
 			set
@@ -5162,7 +5162,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Add20Str"));
 			}
 		}
-		public bool? Add15Agi
+		public bool Add15Agi
 		{
 			get => Flags.Add15Agi;
 			set
@@ -5172,7 +5172,7 @@ namespace FF1Lib
 			}
 		}
 
-		public bool? Add20Agi
+		public bool Add20Agi
 		{
 			get => Flags.Add20Agi;
 			set
@@ -5182,7 +5182,7 @@ namespace FF1Lib
 			}
 		}
 
-		public bool? Add25Agi
+		public bool Add25Agi
 		{
 			get => Flags.Add25Agi;
 			set
@@ -5192,7 +5192,7 @@ namespace FF1Lib
 			}
 		}
 
-		public bool? Add10Vit
+		public bool Add10Vit
 		{
 			get => Flags.Add10Vit;
 			set
@@ -5202,7 +5202,7 @@ namespace FF1Lib
 			}
 
 		}
-		public bool? Add20Vit
+		public bool Add20Vit
 		{
 			get => Flags.Add20Vit;
 			set
@@ -5211,7 +5211,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Add20Vit"));
 			}
 		}
-		public bool? Add5Luck
+		public bool Add5Luck
 		{
 			get => Flags.Add5Luck;
 			set
@@ -5220,7 +5220,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Add5Luck"));
 			}
 		}
-		public bool? Add10Luck
+		public bool Add10Luck
 		{
 			get => Flags.Add10Luck;
 			set
@@ -5230,7 +5230,7 @@ namespace FF1Lib
 			}
 		}
 
-		public bool? Add20HP
+		public bool Add20HP
 		{
 			get => Flags.Add20HP;
 			set
@@ -5239,7 +5239,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Add20HP"));
 			}
 		}
-		public bool? Add40HP
+		public bool Add40HP
 		{
 			get => Flags.Add40HP;
 			set
@@ -5248,7 +5248,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Add40HP"));
 			}
 		}
-		public bool? Add10PerHit
+		public bool Add10PerHit
 		{
 			get => Flags.Add10PerHit;
 			set
@@ -5257,7 +5257,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Add10PerHit"));
 			}
 		}
-		public bool? Add20PerHit
+		public bool Add20PerHit
 		{
 			get => Flags.Add20PerHit;
 			set
@@ -5266,7 +5266,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Add20PerHit"));
 			}
 		}
-		public bool? EquipAxe
+		public bool EquipAxe
 		{
 			get => Flags.EquipAxe;
 			set
@@ -5275,7 +5275,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("EquipAxe"));
 			}
 		}
-		public bool? EquipShirt
+		public bool EquipShirt
 		{
 			get => Flags.EquipShirt;
 			set
@@ -5284,7 +5284,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("EquipShirt"));
 			}
 		}
-		public bool? EquipShields
+		public bool EquipShields
 		{
 			get => Flags.EquipShields;
 			set
@@ -5293,7 +5293,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("EquipShields"));
 			}
 		}
-		public bool? EquipBonkHelm
+		public bool EquipBonkHelm
 		{
 			get => Flags.EquipBonkHelm;
 			set
@@ -5302,7 +5302,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("EquipBonkHelm"));
 			}
 		}
-		public bool? ThiefWeaponsBonus
+		public bool ThiefWeaponsBonus
 		{
 			get => Flags.ThiefWeaponsBonus;
 			set
@@ -5311,7 +5311,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ThiefWeaponsBonus"));
 			}
 		}
-		public bool? RMArmor
+		public bool RMArmor
 		{
 			get => Flags.RMArmor;
 			set
@@ -5320,7 +5320,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("RMArmor"));
 			}
 		}
-		public bool? LegSwords
+		public bool LegSwords
 		{
 			get => Flags.LegSwords;
 			set
@@ -5329,7 +5329,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("LegSwords"));
 			}
 		}
-		public bool? WoodArmor
+		public bool WoodArmor
 		{
 			get => Flags.WoodArmor;
 			set
@@ -5338,7 +5338,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("WoodArmor"));
 			}
 		}
-		public bool? Lvl1MP2
+		public bool Lvl1MP2
 		{
 			get => Flags.Lvl1MP2;
 			set
@@ -5347,7 +5347,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Lvl1MP2"));
 			}
 		}
-		public bool? MP1All
+		public bool MP1All
 		{
 			get => Flags.MP1All;
 			set
@@ -5356,7 +5356,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("MP1All"));
 			}
 		}
-		public bool? AddSpell
+		public bool AddSpell
 		{
 			get => Flags.AddSpell;
 			set
@@ -5365,7 +5365,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("AddSpell"));
 			}
 		}
-		public bool? Telemagic
+		public bool Telemagic
 		{
 			get => Flags.Telemagic;
 			set
@@ -5374,7 +5374,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Telemagic"));
 			}
 		}
-		public bool? BuffMagic
+		public bool BuffMagic
 		{
 			get => Flags.Buffmagic;
 			set
@@ -5383,7 +5383,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BuffMagic"));
 			}
 		}
-		public bool? SelfMagic
+		public bool SelfMagic
 		{
 			get => Flags.Selfmagic;
 			set
@@ -5392,7 +5392,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SelfMagic"));
 			}
 		}
-		public bool? HealMagic
+		public bool HealMagic
 		{
 			get => Flags.Healmagic;
 			set
@@ -5401,7 +5401,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("HealMagic"));
 			}
 		}
-		public bool? HealMagicPlus
+		public bool HealMagicPlus
 		{
 			get => Flags.Healplusmagic;
 			set
@@ -5410,7 +5410,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("HealMagicPlus"));
 			}
 		}
-		public bool? ElemMagic
+		public bool ElemMagic
 		{
 			get => Flags.Elemmagic;
 			set
@@ -5419,7 +5419,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ElemMagic"));
 			}
 		}
-		public bool? ElemplusMagic
+		public bool ElemplusMagic
 		{
 			get => Flags.Elemplusmagic;
 			set
@@ -5428,7 +5428,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ElemPlusMagic"));
 			}
 		}
-		public bool? NukeMagic
+		public bool NukeMagic
 		{
 			get => Flags.Nukemagic;
 			set
@@ -5437,7 +5437,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("NukeMagic"));
 			}
 		}
-		public bool? DoomMagic
+		public bool DoomMagic
 		{
 			get => Flags.Doommagic;
 			set
@@ -5446,7 +5446,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("DoomMagic"));
 			}
 		}
-		public bool? CleanMagic
+		public bool CleanMagic
 		{
 			get => Flags.Cleanmagic;
 			set
@@ -5456,7 +5456,7 @@ namespace FF1Lib
 			}
 
 		}
-		public bool? MaxplusMPplus
+		public bool MaxplusMPplus
 		{
 			get => Flags.MaxplusMPplus;
 			set
@@ -5465,7 +5465,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("MaxPlusMPplus"));
 			}
 		}
-		public bool? ImpCatclaw
+		public bool ImpCatclaw
 		{
 			get => Flags.ImpCatclaw;
 			set
@@ -5474,7 +5474,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ImpCatclaw"));
 			}
 		}
-		public bool? ImpThor
+		public bool ImpThor
 		{
 			get => Flags.ImpThor;
 			set
@@ -5483,7 +5483,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ImpThor"));
 			}
 		}
-		public bool? HurtUndead
+		public bool HurtUndead
 		{
 			get => Flags.Hurtundead;
 			set
@@ -5492,7 +5492,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("HurtUndead"));
 			}
 		}
-		public bool? HurtDragon
+		public bool HurtDragon
 		{
 			get => Flags.Hurtdragon;
 			set
@@ -5501,7 +5501,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("HurtDragon"));
 			}
 		}
-		public bool? HurtAll
+		public bool HurtAll
 		{
 			get => Flags.Hurtall;
 			set
@@ -5510,7 +5510,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("HurtAll"));
 			}
 		}
-		public bool? PromoFiWeapons
+		public bool PromoFiWeapons
 		{
 			get => Flags.PromoFiweapons;
 			set
@@ -5520,7 +5520,7 @@ namespace FF1Lib
 			}
 
 		}
-		public bool? PromoSage
+		public bool PromoSage
 		{
 			get => Flags.PromoSage;
 			set
@@ -5529,7 +5529,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("PromoSage"));
 			}
 		}
-		public bool? XP50Percent
+		public bool XP50Percent
 		{
 			get => Flags.XP50percent;
 			set
@@ -5538,7 +5538,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("XP50Percent"));
 			}
 		}
-		public bool? EarlyLockpick
+		public bool EarlyLockpick
 		{
 			get => Flags.Earlylockpick;
 			set
@@ -5547,7 +5547,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("EarlyLockpick"));
 			}
 		}
-		public bool? ResistPoison
+		public bool ResistPoison
 		{
 			get => Flags.ResistPosion;
 			set
@@ -5556,7 +5556,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ResistPoison"));
 			}
 		}
-		public bool? ResistEarth
+		public bool ResistEarth
 		{
 			get => Flags.ResistEarth;
 			set
@@ -5565,7 +5565,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ResistEarth"));
 			}
 		}
-		public bool? ResistDeath
+		public bool ResistDeath
 		{
 			get => Flags.ResistDeath;
 			set
@@ -5574,7 +5574,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ResistDeath"));
 			}
 		}
-		public bool? ResistTime
+		public bool ResistTime
 		{
 			get => Flags.ResistTime;
 			set
@@ -5583,7 +5583,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ResistTime"));
 			}
 		}
-		public bool? ResistStatus
+		public bool ResistStatus
 		{
 			get => Flags.ResistStatus;
 			set
@@ -5592,7 +5592,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ResistStatus"));
 			}
 		}
-		public bool? ResistIce
+		public bool ResistIce
 		{
 			get => Flags.ResistIce;
 			set
@@ -5601,7 +5601,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ResistIce"));
 			}
 		}
-		public bool? ResistLit
+		public bool ResistLit
 		{
 			get => Flags.ResistLit;
 			set
@@ -5610,7 +5610,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ResistLit"));
 			}
 		}
-		public bool? ResistFire
+		public bool ResistFire
 		{
 			get => Flags.ResistFire;
 			set
@@ -5619,7 +5619,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ResistFire"));
 			}
 		}
-		public bool? StartGold200
+		public bool StartGold200
 		{
 			get => Flags.Startgold200;
 			set
@@ -5628,7 +5628,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("StartGold200"));
 			}
 		}
-		public bool? StartGold400
+		public bool StartGold400
 		{
 			get => Flags.Startgold400;
 			set
@@ -5637,7 +5637,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("StartGold400"));
 			}
 		}
-		public bool? StartGold600
+		public bool StartGold600
 		{
 			get => Flags.Startgold600;
 			set
@@ -5646,7 +5646,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("StartGold600"));
 			}
 		}
-		public bool? StartGold800
+		public bool StartGold800
 		{
 			get => Flags.Startgold800;
 			set
@@ -5655,7 +5655,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("StartGold800"));
 			}
 		}
-		public bool? StartGold1500
+		public bool StartGold1500
 		{
 			get => Flags.Startgold1500;
 			set
@@ -5664,7 +5664,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("StartGold1500"));
 			}
 		}
-		public bool? StartGold5000
+		public bool StartGold5000
 		{
 			get => Flags.Startgold5000;
 			set
@@ -5673,7 +5673,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("StartGold5000"));
 			}
 		}
-		public bool? StartGold20000
+		public bool StartGold20000
 		{
 			get => Flags.Startgold20000;
 			set
@@ -5682,7 +5682,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("StartGold20000"));
 			}
 		}
-		public bool? Add40Str
+		public bool Add40Str
 		{
 			get => Flags.Add40Str;
 			set
@@ -5691,7 +5691,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Add40Str"));
 			}
 		}
-		public bool? Add50Agi
+		public bool Add50Agi
 		{
 			get => Flags.Add50Agi;
 			set
@@ -5700,7 +5700,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Add50Agi"));
 			}
 		}
-		public bool? Add40Vit
+		public bool Add40Vit
 		{
 			get => Flags.Add40Vit;
 			set
@@ -5709,7 +5709,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Add40Vit"));
 			}
 		}
-		public bool? Add15Luck
+		public bool Add15Luck
 		{
 			get => Flags.Add15Luck;
 			set
@@ -5718,7 +5718,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Add15Luck"));
 			}
 		}
-		public bool? Add80HP
+		public bool Add80HP
 		{
 			get => Flags.Add80HP;
 			set
@@ -5727,7 +5727,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Add80HP"));
 			}
 		}
-		public bool? Mdef2Lvl
+		public bool Mdef2Lvl
 		{
 			get => Flags.Mdef2lvl;
 			set
@@ -5736,7 +5736,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Mdef2Lvl"));
 			}
 		}
-		public bool? FiWeapons
+		public bool FiWeapons
 		{
 			get => Flags.FiWeapons;
 			set
@@ -5745,7 +5745,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FiWeapons"));
 			}
 		}
-		public bool? FiArmor
+		public bool FiArmor
 		{
 			get => Flags.FiArmor;
 			set
@@ -5754,7 +5754,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FiArmor"));
 			}
 		}
-		public bool? ImprovedMP
+		public bool ImprovedMP
 		{
 			get => Flags.ImprovedMP;
 			set
@@ -5763,7 +5763,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ImprovedMP"));
 			}
 		}
-		public bool? Sage
+		public bool Sage
 		{
 			get => Flags.Sage;
 			set
@@ -5772,7 +5772,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Sage"));
 			}
 		}
-		public bool? SteelFast
+		public bool SteelFast
 		{
 			get => Flags.Steelfast;
 			set
@@ -5781,7 +5781,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SteelFast"));
 			}
 		}
-		public bool? FiBB50XP
+		public bool FiBB50XP
 		{
 			get => Flags.FiBB50XP;
 			set
@@ -5790,7 +5790,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FiBB50XP"));
 			}
 		}
-		public bool? XP100Percent
+		public bool XP100Percent
 		{
 			get => Flags.XP100Percent;
 			set
@@ -5799,7 +5799,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("XP100Percent"));
 			}
 		}
-		public bool? Down10Str
+		public bool Down10Str
 		{
 			get => Flags.Down10Str;
 			set
@@ -5808,7 +5808,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Down10Str"));
 			}
 		}
-		public bool? Down20Str
+		public bool Down20Str
 		{
 			get => Flags.Down20Str;
 			set
@@ -5817,7 +5817,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Down20Str"));
 			}
 		}
-		public bool? Down10Agi
+		public bool Down10Agi
 		{
 			get => Flags.Down10Agi;
 			set
@@ -5826,7 +5826,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Down10Agi"));
 			}
 		}
-		public bool? Down20Agi
+		public bool Down20Agi
 		{
 			get => Flags.Down20Agi;
 			set
@@ -5835,7 +5835,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Down20Agi"));
 			}
 		}
-		public bool? Down10Vit
+		public bool Down10Vit
 		{
 			get => Flags.Down10Vit;
 			set
@@ -5844,7 +5844,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Down10Vit"));
 			}
 		}
-		public bool? Down20Vit
+		public bool Down20Vit
 		{
 			get => Flags.Down20Vit;
 			set
@@ -5853,7 +5853,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Down20Vit"));
 			}
 		}
-		public bool? Down5Luck
+		public bool Down5Luck
 		{
 			get => Flags.Down5Luck;
 			set
@@ -5862,7 +5862,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Down5Luck"));
 			}
 		}
-		public bool? Down10Luck
+		public bool Down10Luck
 		{
 			get => Flags.Down10Luck;
 			set
@@ -5871,7 +5871,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Down10Luck"));
 			}
 		}
-		public bool? Down15HP
+		public bool Down15HP
 		{
 			get => Flags.Down15HP;
 			set
@@ -5880,7 +5880,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Down15HP"));
 			}
 		}
-		public bool? Down30HP
+		public bool Down30HP
 		{
 			get => Flags.Down30HP;
 			set
@@ -5889,7 +5889,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Down15HP"));
 			}
 		}
-		public bool? BMHP
+		public bool BMHP
 		{
 			get => Flags.BMHP;
 			set
@@ -5898,7 +5898,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BMHP"));
 			}
 		}
-		public bool? Down1HitPercent
+		public bool Down1HitPercent
 		{
 			get => Flags.Down1Hitpercent;
 			set
@@ -5907,7 +5907,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Down1HitPercent"));
 			}
 		}
-		public bool? Down1MDef
+		public bool Down1MDef
 		{
 			get => Flags.Down1Mdef;
 			set
@@ -5916,7 +5916,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Down1MDef"));
 			}
 		}
-		public bool? NoBracelets
+		public bool NoBracelets
 		{
 			get => Flags.Nobrace;
 			set
@@ -5925,7 +5925,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("NoBracelets"));
 			}
 		}
-		public bool? NoMasa
+		public bool NoMasa
 		{
 			get => Flags.NoMasa;
 			set
@@ -5934,7 +5934,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("NoMasa"));
 			}
 		}
-		public bool? NoRibbon
+		public bool NoRibbon
 		{
 			get => Flags.NoRibbon;
 			set
@@ -5943,7 +5943,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("NoRibbon"));
 			}
 		}
-		public bool? NoProRing
+		public bool NoProRing
 		{
 			get => Flags.NoProring;
 			set
@@ -5952,7 +5952,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("NoProRing"));
 			}
 		}
-		public bool? LateLockPicking
+		public bool LateLockPicking
 		{
 			get => Flags.LateLockpick;
 			set
@@ -5961,7 +5961,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("LateLockpick"));
 			}
 		}
-		public bool? ThWeaponMal
+		public bool ThWeaponMal
 		{
 			get => Flags.ThiefweaponsMalus;
 			set
@@ -5970,7 +5970,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ThWeaponMal"));
 			}
 		}
-		public bool? Down4MaxMP
+		public bool Down4MaxMP
 		{
 			get => Flags.Down4MaxMP;
 			set
@@ -5980,7 +5980,7 @@ namespace FF1Lib
 			}
 		}
 
-		public bool? NoSpell
+		public bool NoSpell
 		{
 			get => Flags.NoSpell;
 			set
@@ -5989,7 +5989,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("NoSpell"));
 			}
 		}
-		public bool? NoFiPromoArmor
+		public bool NoFiPromoArmor
 		{
 			get => Flags.NoFiPromoArmor;
 			set
@@ -5998,7 +5998,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("NoFiPromoArmor"));
 			}
 		}
-		public bool? PromoRmArmor
+		public bool PromoRmArmor
 		{
 			get => Flags.PromoRMArmor;
 			set
@@ -6007,7 +6007,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("PromoRMArmor"));
 			}
 		}
-		public bool? NoPromoSpells
+		public bool NoPromoSpells
 		{
 			get => Flags.NoPromoSpells;
 			set
@@ -6016,7 +6016,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("NoPromoSpells"));
 			}
 		}
-		public bool? Down50GP
+		public bool Down50GP
 		{
 			get => Flags.Down50GP;
 			set
@@ -6025,7 +6025,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Down50GP"));
 			}
 		}
-		public bool? Down100GP
+		public bool Down100GP
 		{
 			get => Flags.Down100GP;
 			set
@@ -6034,7 +6034,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Down100GP"));
 			}
 		}
-		public bool? Down150GP
+		public bool Down150GP
 		{
 			get => Flags.Down150GP;
 			set
@@ -6043,7 +6043,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Down150GP"));
 			}
 		}
-		public bool? Down350GP
+		public bool Down350GP
 		{
 			get => Flags.Down350GP;
 			set
@@ -6052,7 +6052,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Down350GP"));
 			}
 		}
-		public bool? Down1100GP
+		public bool Down1100GP
 		{
 			get => Flags.Down1100GP;
 			set
@@ -6061,7 +6061,7 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Down1100GP"));
 			}
 		}
-		public bool? Down4500GP
+		public bool Down4500GP
 		{
 			get => Flags.Down4500gp;
 			set
@@ -6070,7 +6070,15 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Down4500GP"));
 			}
 		}
-
+		public bool StartCrown
+		{
+			get => Flags.Startcrown;
+			set
+			{
+				Flags.Startcrown = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("StartCrown"));
+			}
+		}
 
 		#endregion
 

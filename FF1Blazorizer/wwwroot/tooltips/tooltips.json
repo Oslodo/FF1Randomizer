@@ -1696,7 +1696,7 @@
 	{
 		"Id": "WhiteNinjaKeep",
 		"title": "White Ninja Keep Permissions",
-		"screenshot":  null,
+		"screenshot": null,
 		"description": "Keeps the normal black magic permissions but changes the magic to white magic."
 	},
 	{
@@ -2451,5 +2451,17 @@
 		"title": "Procedurally Generated Earth Cave",
 		"screenshot": "procgenEarth.png",
 		"description": "Randomly selects new Earth Cave maps from a set of procedurally generated maps."
+	},
+	{
+		"Id": "Startcrown",
+		"title": "Start With Crown",
+		"screenshot": null,
+		"description": "Start With Crown."
+	},
+	{
+		"Id": "Down4500GP",
+		"title": "-4500GP",
+		"screenshot": null,
+		"description": "GP at game start down by 4500GP."
 	}
 ]

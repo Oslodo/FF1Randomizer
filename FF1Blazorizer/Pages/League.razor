@@ -1,3 +1,4 @@
+@using FF1Lib.League;
 @using FF1Lib;
 @using Microsoft.AspNetCore.Components.Web
 @using Newtonsoft.Json;
@@ -5,6 +6,7 @@
 @using System.ComponentModel;
 @using System.IO;
 @using System.Web;
+    using FF1Lib.League;
 @inject Blazored.LocalStorage.ILocalStorageService LocalStorage
 @inject IJSRuntime JSRuntime
 
@@ -12,6 +14,8 @@
 
 
 @page "/League"
+
+<ToolTip @ref="ToolTipElement" ToolTipId="@ToolTipId" />
 
 <div class="content px-4 tinted">
     <div class="nes-container is-dark col-xs-12">
@@ -42,16 +46,29 @@
 @*Again, ingore below, it isn't there for any good reason, place holder for future use*@
 
 @code{
-    [Parameter] public FF1Lib.FlagsViewModel Flags { get; set; }
-    [Parameter] public Action<string> SetStatusMessage { get; set; }
-    [Parameter] public string StatusMessage { get; set; }
-    [Parameter] public Action<string, MouseEventArgs> UpdateToolTipID { get; set; }
-    [Parameter] public bool IsOpen { get; set; } = true;
-    [Parameter] public bool showChaos { get; set; }
+    private LeaugeFlagsViewModel Flags { get; set; } = new LeaugeFlagsViewModel();
+    private string ToolTipId = "unupdated";
+    private ToolTip ToolTipElement;
+    private string StatusMessage = "";
+
+    private string SpriteSheetMessage { get; set; } = "Load custom player sprites:";
 
     private string BlursingsText = "";
     private string RomMessage = "";
     private byte[] _fileData;
+
+    private void UpdateToolTipID(string Id, MouseEventArgs e)
+    {
+        ToolTipId = Id;
+        ToolTipElement.UpdatePos(ToolTipId, e);
+        StateHasChanged();
+    }
+
+    void SetStatusMessage(string message)
+    {
+        StatusMessage = message;
+        StateHasChanged();
+    }
 
     async Task OnFileChanged(ChangeEventArgs e)
     {

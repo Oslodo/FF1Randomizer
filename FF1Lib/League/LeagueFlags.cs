@@ -52,6 +52,13 @@ namespace FF1Lib
 			public bool FiResistIce { get; set; } = false;
 			public bool FiResistLit { get; set; } = false;
 			public bool FiResistFire { get; set; } = false;
+			public bool FiStartgold200 { get; set; } = false;
+			public bool FiStartgold400 { get; set; } = false;
+			public bool FiStartgold600 { get; set; } = false;
+			public bool FiStartgold800 { get; set; } = false;
+			public bool FiStartgold1500 { get; set; } = false;
+			public bool FiStartgold5000 { get; set; } = false;
+			public bool FiStartgold20000 { get; set; } = false;
 			public bool FiAdd40Str { get; set; } = false;
 			public bool FiAdd50Agi { get; set; } = false;
 			public bool FiAdd40Vit { get; set; } = false;
@@ -79,56 +86,106 @@ namespace FF1Lib
 			public bool ThEquipShirt { get; set; } = false;
 			public bool ThEquipShields { get; set; } = false;
 			public bool ThEquipBonkHelm { get; set; } = false;
-			public bool RMArmor { get; set; } = false;
-			public bool LegSwords { get; set; } = false;
-			public bool WoodArmor { get; set; } = false;
-			public bool Telemagic { get; set; } = false;
-			public bool Buffmagic { get; set; } = false;
-			public bool Selfmagic { get; set; } = false;
-			public bool Healmagic { get; set; } = false;
-			public bool Healplusmagic { get; set; } = false;
-			public bool Elemmagic { get; set; } = false;
-			public bool Elemplusmagic { get; set; } = false;
-			public bool Cleanmagic { get; set; } = false;
-			public bool MaxplusMPplus { get; set; } = false;
-			public bool ImpCatclaw { get; set; } = false;
-			public bool ImpThor { get; set; } = false;
-			public bool Hurtundead { get; set; } = false;
-			public bool Hurtdragon { get; set; } = false;
-			public bool Hurtall { get; set; } = false;
-			public bool PromoFiweapons { get; set; } = false;
-			public bool PromoSage { get; set; } = false;
-			public bool XP50percent { get; set; } = false;
-			public bool Earlylockpick { get; set; } = false;
-			public bool ResistPosion { get; set; } = false;
-			public bool ResistEarth { get; set; } = false;
-			public bool ResistDeath { get; set; } = false;
-			public bool ResistTime { get; set; } = false;
-			public bool ResistStatus { get; set; } = false;
-			public bool ResistIce { get; set; } = false;
-			public bool ResistLit { get; set; } = false;
-			public bool ResistFire { get; set; } = false;
-			public bool Startgold200 { get; set; } = false;
-			public bool Startgold400 { get; set; } = false;
-			public bool Startgold600 { get; set; } = false;
-			public bool Startgold800 { get; set; } = false;
-			public bool Startgold1500 { get; set; } = false;
-			public bool Startgold5000 { get; set; } = false;
-			public bool Startgold20000 { get; set; } = false;
-			public bool Add40Str { get; set; } = false;
-			public bool Add50Agi { get; set; } = false;
-			public bool Add40Vit { get; set; } = false;
-			public bool Add15Luck { get; set; } = false;
-			public bool Add80HP { get; set; } = false;
-			public bool Mdef2lvl { get; set; } = false;
-			public bool FiWeapons { get; set; } = false;
-			public bool FiArmor { get; set; } = false;
-			public bool ImprovedMP { get; set; } = false;
-			public bool Sage { get; set; } = false;
-			public bool Steelfast { get; set; } = false;
-			public bool FiBB50XP { get; set; } = false;
-			public bool XP100Percent { get; set; } = false;
+			public bool ThRMArmor { get; set; } = false;
+			public bool ThLegSwords { get; set; } = false;
+			public bool ThWoodArmor { get; set; } = false;
+			public bool ThTelemagic { get; set; } = false;
+			public bool ThBuffmagic { get; set; } = false;
+			public bool ThSelfmagic { get; set; } = false;
+			public bool ThHealmagic { get; set; } = false;
+			public bool ThHealplusmagic { get; set; } = false;
+			public bool ThElemmagic { get; set; } = false;
+			public bool ThElemplusmagic { get; set; } = false;
+			public bool ThCleanmagic { get; set; } = false;
+			public bool ThImpCatclaw { get; set; } = false;
+			public bool ThImpThor { get; set; } = false;
+			public bool ThHurtundead { get; set; } = false;
+			public bool ThHurtdragon { get; set; } = false;
+			public bool ThHurtall { get; set; } = false;
+			public bool ThXP50percent { get; set; } = false;
+			public bool ThEarlylockpick { get; set; } = false;
+			public bool ThResistPosion { get; set; } = false;
+			public bool ThResistEarth { get; set; } = false;
+			public bool ThResistDeath { get; set; } = false;
+			public bool ThResistTime { get; set; } = false;
+			public bool ThResistStatus { get; set; } = false;
+			public bool ThResistIce { get; set; } = false;
+			public bool ThResistLit { get; set; } = false;
+			public bool ThResistFire { get; set; } = false;
+			public bool ThStartgold200 { get; set; } = false;
+			public bool ThStartgold400 { get; set; } = false;
+			public bool ThStartgold600 { get; set; } = false;
+			public bool ThStartgold800 { get; set; } = false;
+			public bool ThStartgold1500 { get; set; } = false;
+			public bool ThStartgold5000 { get; set; } = false;
+			public bool SThtartgold20000 { get; set; } = false;
+			public bool ThAdd40Str { get; set; } = false;
+			public bool ThAdd50Agi { get; set; } = false;
+			public bool ThAdd40Vit { get; set; } = false;
+			public bool ThAdd80HP { get; set; } = false;
+			public bool ThMdef2lvl { get; set; } = false;
+			public bool ThFiWeapons { get; set; } = false;
+			public bool ThFiArmor { get; set; } = false;
+			public bool ThXP100Percent { get; set; } = false;
 
+		#endregion
+		#region BlackBeltBonus
+			public bool BBAdd10Str { get; set; } = false;
+			public bool BBAdd20Str { get; set; } = false;
+			public bool BBAdd15Agi { get; set; } = false;
+			public bool BBAdd20Agi { get; set; } = false;
+			public bool BBAdd25Agi { get; set; } = false;
+			public bool BBAdd10Vit { get; set; } = false;
+			public bool BBAdd20Vit { get; set; } = false;
+			public bool BBAdd5Luck { get; set; } = false;
+			public bool BBAdd10Luck { get; set; } = false;
+			public bool BBAdd20HP { get; set; } = false;
+			public bool BBAdd40HP { get; set; } = false;
+			public bool BBAdd10PerHit { get; set; } = false;
+			public bool BBAdd20PerHit { get; set; } = false;
+			public bool BBEquipAxe { get; set; } = false;
+			public bool BBEquipShirt { get; set; } = false;
+			public bool BBEquipShields { get; set; } = false;
+			public bool BBEquipBonkHelm { get; set; } = false;
+			public bool BBThiefWeaponsBonus { get; set; } = false;
+			public bool BBRMArmor { get; set; } = false;
+			public bool BBLegSwords { get; set; } = false;
+			public bool BBWoodArmor { get; set; } = false;
+			public bool BBTelemagic { get; set; } = false;
+			public bool BBBuffmagic { get; set; } = false;
+			public bool BBSelfmagic { get; set; } = false;
+			public bool BBHealmagic { get; set; } = false;
+			public bool BBHealplusmagic { get; set; } = false;
+			public bool BBElemmagic { get; set; } = false;
+			public bool BBElemplusmagic { get; set; } = false;
+			public bool BBCleanmagic { get; set; } = false;
+			public bool BBHurtundead { get; set; } = false;
+			public bool BBHurtdragon { get; set; } = false;
+			public bool BBHurtall { get; set; } = false;
+			public bool BBPromoFiarmor { get; set; } = false;
+			public bool BBResistPosion { get; set; } = false;
+			public bool BBResistEarth { get; set; } = false;
+			public bool BBResistDeath { get; set; } = false;
+			public bool BBResistTime { get; set; } = false;
+			public bool BBResistStatus { get; set; } = false;
+			public bool BBResistIce { get; set; } = false;
+			public bool BBResistLit { get; set; } = false;
+			public bool BBResistFire { get; set; } = false;
+			public bool BBStartgold200 { get; set; } = false;
+			public bool BBStartgold400 { get; set; } = false;
+			public bool BBStartgold600 { get; set; } = false;
+			public bool BBStartgold800 { get; set; } = false;
+			public bool BBStartgold1500 { get; set; } = false;
+			public bool BBStartgold5000 { get; set; } = false;
+			public bool BBStartgold20000 { get; set; } = false;
+			public bool BBAdd40Str { get; set; } = false;
+			public bool BBAdd50Agi { get; set; } = false;
+			public bool BBAdd40Vit { get; set; } = false;
+			public bool BBAdd15Luck { get; set; } = false;
+			public bool BBAdd80HP { get; set; } = false;
+			public bool BBFiWeapons { get; set; } = false;
+			public bool BBFiArmor { get; set; } = false;
+			public bool BB50XPFiBB { get; set; } = false;
 		#endregion
 		#endregion
 		#region LeagueMalus
@@ -157,10 +214,37 @@ namespace FF1Lib
 			public bool FiDown1100GP { get; set; } = false;
 			public bool FiDown4500gp { get; set; } = false;
 		#endregion
+		#region TheifMalus
+			public bool ThDown10Str { get; set; } = false;
+			public bool ThDown20Str { get; set; } = false;
+			public bool ThDown10Agi { get; set; } = false;
+			public bool ThDown20Agi { get; set; } = false;
+			public bool ThDown10Vit { get; set; } = false;
+			public bool ThDown5Luck { get; set; } = false;
+			public bool ThDown10Luck { get; set; } = false;
+			public bool ThDown15HP { get; set; } = false;
+			public bool ThDown30HP { get; set; } = false;
+			public bool ThDown1Hitpercent { get; set; } = false;
+			public bool ThDown1Mdef { get; set; } = false;
+			public bool ThNobrace { get; set; } = false;
+			public bool ThNoMasa { get; set; } = false;
+			public bool ThNoRibbon { get; set; } = false;
+			public bool ThNoProring { get; set; } = false;
+			public bool ThPromoRMArmor { get; set; } = false;
+			public bool ThNoPromoSpells { get; set; } = false;
+			public bool ThLateLockpick { get; set; } = false;
+			public bool ThDown50GP { get; set; } = false;
+			public bool ThDown100GP { get; set; } = false;
+			public bool ThDown150GP { get; set; } = false;
+			public bool ThDown350GP { get; set; } = false;
+			public bool ThDown1100GP { get; set; } = false;
+			public bool ThDown4500gp { get; set; } = false;
+
+		#endregion
 		#endregion
 		#region League KI
-			#region	FighterKI	
-				public bool FiStartCrown { get; set; } = false;
+		#region	FighterKI	
+		public bool FiStartCrown { get; set; } = false;
 				public bool FiStartCrystal { get; set; } = false;
 				public bool FiStartHerb { get; set; } = false;
 				public bool FiStartTNT { get; set; } = false;
@@ -175,7 +259,25 @@ namespace FF1Lib
 				public bool FiStartLute { get; set; } = false;
 				public bool FiStartTail { get; set; } = false;
 				public bool FiStartkey { get; set; } = false;
-			#endregion
+		#endregion
+		#region ThiefKI
+				public bool ThStartCrown { get; set; } = false;
+				public bool ThStartCrystal { get; set; } = false;
+				public bool ThStartHerb { get; set; } = false;
+				public bool ThStartTNT { get; set; } = false;
+				public bool ThStartAdamant { get; set; } = false;
+				public bool ThStartSlab { get; set; } = false;
+				public bool ThStartRuby { get; set; } = false;
+				public bool ThStartRod { get; set; } = false;
+				public bool ThStartChime { get; set; } = false;
+				public bool ThStartCube { get; set; } = false;
+				public bool ThStartBottle { get; set; } = false;
+				public bool ThStartOxyale { get; set; } = false;
+				public bool ThStartLute { get; set; } = false;
+				public bool ThStartTail { get; set; } = false;
+				public bool ThStartkey { get; set; } = false;
+
+		#endregion
 		#endregion
 
 		#endregion

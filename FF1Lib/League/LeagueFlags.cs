@@ -187,6 +187,214 @@ namespace FF1Lib
 			public bool BBFiArmor { get; set; } = false;
 			public bool BB50XPFiBB { get; set; } = false;
 		#endregion
+		#region RMBonus
+			public bool RmAdd10Str { get; set; } = false;
+			public bool RmAdd20Str { get; set; } = false;
+			public bool RmAdd15Agi { get; set; } = false;
+			public bool RmAdd20Agi { get; set; } = false;
+			public bool RmAdd25Agi { get; set; } = false;
+			public bool RmAdd10Vit { get; set; } = false;
+			public bool RmAdd20Vit { get; set; } = false;
+			public bool RmAdd5Luck { get; set; } = false;
+			public bool RmAdd10Luck { get; set; } = false;
+			public bool RmAdd20HP { get; set; } = false;
+			public bool RmAdd40HP { get; set; } = false;
+			public bool RmAdd10PerHit { get; set; } = false;
+			public bool RmAdd20PerHit { get; set; } = false;
+			public bool RmEquipAxe { get; set; } = false;
+			public bool RMEquipShirt { get; set; } = false;
+			public bool RmEquipShields { get; set; } = false;
+			public bool RmEquipBonkHelm { get; set; } = false;
+			public bool RmLegSwords { get; set; } = false;
+			public bool RmWoodArmor { get; set; } = false;
+			public bool RmLvl1MP2 { get; set; } = false;
+			public bool RmMP1All { get; set; } = false;
+			public bool RmAddSpell { get; set; } = false; // will need extra work to get the spell list
+			public bool TRmelemagic { get; set; } = false;
+			public bool RmBuffmagic { get; set; } = false;
+			public bool RmSelfmagic { get; set; } = false;
+			public bool RmHealmagic { get; set; } = false;
+			public bool RmHealplusmagic { get; set; } = false;
+			public bool RmElemmagic { get; set; } = false;
+			public bool RmElemplusmagic { get; set; } = false;
+			public bool RmNukemagic { get; set; } = false;
+			public bool RmDoommagic { get; set; } = false;
+			public bool RmCleanmagic { get; set; } = false;
+			public bool RMImpCatclaw { get; set; } = false;
+			public bool RMHurtundead { get; set; } = false;
+			public bool RmHurtdragon { get; set; } = false;
+			public bool RmHurtall { get; set; } = false;
+			public bool RmPromoFiArmor { get; set; } = false;
+			public bool RmPromoSage { get; set; } = false;
+			public bool RmXP50percent { get; set; } = false;
+			public bool RmResistPosion { get; set; } = false;
+			public bool RMResistEarth { get; set; } = false;
+			public bool RmResistDeath { get; set; } = false;
+			public bool RmResistTime { get; set; } = false;
+			public bool RmResistStatus { get; set; } = false;
+			public bool RmResistIce { get; set; } = false;
+			public bool RmResistLit { get; set; } = false;
+			public bool RmResistFire { get; set; } = false;
+			public bool RmStartgold200 { get; set; } = false;
+			public bool RmStartgold400 { get; set; } = false;
+			public bool RMStartgold600 { get; set; } = false;
+			public bool RmStartgold800 { get; set; } = false;
+			public bool RmStartgold1500 { get; set; } = false;
+			public bool RmStartgold5000 { get; set; } = false;
+			public bool RmStartgold20000 { get; set; } = false;
+			public bool RmAdd40Str { get; set; } = false;
+			public bool RmAdd50Agi { get; set; } = false;
+			public bool RmAdd40Vit { get; set; } = false;
+			public bool RmAdd15Luck { get; set; } = false;
+			public bool RmAdd80HP { get; set; } = false;
+			public bool RmMdef2lvl { get; set; } = false;
+			public bool RmFiArmor { get; set; } = false;
+			public bool RmImprovedMP { get; set; } = false;
+			public bool RmSage { get; set; } = false;
+			public bool RmXP100Percent { get; set; } = false;
+
+		#endregion
+		#region WmBonus
+			public bool WmAdd10Str { get; set; } = false;
+			public bool WmAdd20Str { get; set; } = false;
+			public bool WmAdd15Agi { get; set; } = false;
+			public bool WmAdd20Agi { get; set; } = false;
+			public bool WmAdd25Agi { get; set; } = false;
+			public bool WmAdd10Vit { get; set; } = false;
+			public bool WmAdd20Vit { get; set; } = false;
+			public bool WmAdd5Luck { get; set; } = false;
+			public bool WmAdd10Luck { get; set; } = false;
+			public bool WmAdd20HP { get; set; } = false;
+			public bool WmAdd40HP { get; set; } = false;
+			public bool WmAdd10PerHit { get; set; } = false;
+			public bool WmAdd20PerHit { get; set; } = false;
+			public bool WmEquipAxe { get; set; } = false;
+			public bool WmEquipShirt { get; set; } = false;
+			public bool WmEquipShields { get; set; } = false;
+			public bool WmEquipBonkHelm { get; set; } = false;
+			public bool WmThiefWeaponsBonus { get; set; } = false;
+			public bool WmRMArmor { get; set; } = false;
+			public bool WmLegSwords { get; set; } = false;
+			public bool WmWoodArmor { get; set; } = false;
+			public bool WmLvl1MP2 { get; set; } = false;
+			public bool WmMP1All { get; set; } = false;
+			public bool WmAddSpell { get; set; } = false; // will need extra work to get the spell list
+			public bool WmTelemagic { get; set; } = false;
+			public bool WmBuffmagic { get; set; } = false;
+			public bool WmSelfmagic { get; set; } = false;
+			public bool WmHealmagic { get; set; } = false;
+			public bool WmHealplusmagic { get; set; } = false;
+			public bool WmElemmagic { get; set; } = false;
+			public bool WmElemplusmagic { get; set; } = false;
+			public bool WmNukemagic { get; set; } = false;
+			public bool WmDoommagic { get; set; } = false;
+			public bool WmCleanmagic { get; set; } = false;
+			public bool WmImpThor { get; set; } = false;
+			public bool WmHurtundead { get; set; } = false;
+			public bool WmHurtdragon { get; set; } = false;
+			public bool WmHurtall { get; set; } = false;
+			public bool WmPromoFiArmor { get; set; } = false;
+			public bool WmXP50percent { get; set; } = false;
+			public bool WmResistPosion { get; set; } = false;
+			public bool WmResistEarth { get; set; } = false;
+			public bool WmResistDeath { get; set; } = false;
+			public bool WmResistTime { get; set; } = false;
+			public bool WMResistStatus { get; set; } = false;
+			public bool WmResistIce { get; set; } = false;
+			public bool WmResistLit { get; set; } = false;
+			public bool WmResistFire { get; set; } = false;
+			public bool WmStartgold200 { get; set; } = false;
+			public bool WmStartgold400 { get; set; } = false;
+			public bool WmStartgold600 { get; set; } = false;
+			public bool WmStartgold800 { get; set; } = false;
+			public bool WmStartgold1500 { get; set; } = false;
+			public bool WmStartgold5000 { get; set; } = false;
+			public bool WmStartgold20000 { get; set; } = false;
+			public bool WmAdd40Str { get; set; } = false;
+			public bool WmAdd50Agi { get; set; } = false;
+			public bool WmAdd40Vit { get; set; } = false;
+			public bool WmAdd15Luck { get; set; } = false;
+			public bool WmAdd80HP { get; set; } = false;
+			public bool WmMdef2lvl { get; set; } = false;
+			public bool WmFiWeapons { get; set; } = false;
+			public bool WmFiArmor { get; set; } = false;
+			public bool WmImprovedMP { get; set; } = false;
+			public bool WmXP100Percent { get; set; } = false;
+		#endregion
+		#region BmBonus
+			public bool BmAdd10Str { get; set; } = false;
+			public bool BmAdd20Str { get; set; } = false;
+			public bool BmAdd15Agi { get; set; } = false;
+			public bool BmAdd20Agi { get; set; } = false;
+			public bool BmAdd25Agi { get; set; } = false;
+			public bool BmAdd10Vit { get; set; } = false;
+			public bool BmAdd20Vit { get; set; } = false;
+			public bool BmAdd5Luck { get; set; } = false;
+			public bool BmAdd10Luck { get; set; } = false;
+			public bool BmAdd20HP { get; set; } = false;
+			public bool BMAdd40HP { get; set; } = false;
+			public bool BmAdd10PerHit { get; set; } = false;
+			public bool BmAdd20PerHit { get; set; } = false;
+			public bool BmEquipAxe { get; set; } = false;
+			public bool BmEquipShirt { get; set; } = false;
+			public bool EquipShields { get; set; } = false;
+			public bool EquipBonkHelm { get; set; } = false;
+			public bool ThiefWeaponsBonus { get; set; } = false;
+			public bool RMArmor { get; set; } = false;
+			public bool LegSwords { get; set; } = false;
+			public bool WoodArmor { get; set; } = false;
+			public bool Lvl1MP2 { get; set; } = false;
+			public bool MP1All { get; set; } = false;
+			public bool AddSpell { get; set; } = false; // will need extra work to get the spell list
+			public bool Telemagic { get; set; } = false;
+			public bool Buffmagic { get; set; } = false;
+			public bool Selfmagic { get; set; } = false;
+			public bool Healmagic { get; set; } = false;
+			public bool Healplusmagic { get; set; } = false;
+			public bool Elemmagic { get; set; } = false;
+			public bool Elemplusmagic { get; set; } = false;
+			public bool Nukemagic { get; set; } = false;
+			public bool Doommagic { get; set; } = false;
+			public bool Cleanmagic { get; set; } = false;
+			public bool MaxplusMPplus { get; set; } = false;
+			public bool ImpCatclaw { get; set; } = false;
+			public bool ImpThor { get; set; } = false;
+			public bool Hurtundead { get; set; } = false;
+			public bool Hurtdragon { get; set; } = false;
+			public bool Hurtall { get; set; } = false;
+			public bool PromoFiArmor { get; set; } = false;
+			public bool PromoSage { get; set; } = false;
+			public bool XP50percent { get; set; } = false;
+			public bool Earlylockpick { get; set; } = false;
+			public bool ResistPosion { get; set; } = false;
+			public bool ResistEarth { get; set; } = false;
+			public bool ResistDeath { get; set; } = false;
+			public bool ResistTime { get; set; } = false;
+			public bool ResistStatus { get; set; } = false;
+			public bool ResistIce { get; set; } = false;
+			public bool ResistLit { get; set; } = false;
+			public bool ResistFire { get; set; } = false;
+			public bool Startgold200 { get; set; } = false;
+			public bool Startgold400 { get; set; } = false;
+			public bool Startgold600 { get; set; } = false;
+			public bool Startgold800 { get; set; } = false;
+			public bool Startgold1500 { get; set; } = false;
+			public bool Startgold5000 { get; set; } = false;
+			public bool Startgold20000 { get; set; } = false;
+			public bool Add40Str { get; set; } = false;
+			public bool Add50Agi { get; set; } = false;
+			public bool Add40Vit { get; set; } = false;
+			public bool Add15Luck { get; set; } = false;
+			public bool Add80HP { get; set; } = false;
+			public bool Mdef2lvl { get; set; } = false;
+			public bool FiWeapons { get; set; } = false;
+			public bool FiArmor { get; set; } = false;
+			public bool ImprovedMP { get; set; } = false;
+			public bool Sage { get; set; } = false;
+			public bool Steelfast { get; set; } = false;
+			public bool FiBB50XP { get; set; } = false;
+			public bool XP100Percent { get; set; } = false;
+		#endregion
 		#endregion
 		#region LeagueMalus
 		#region FighterMalus
@@ -241,6 +449,74 @@ namespace FF1Lib
 			public bool ThDown4500gp { get; set; } = false;
 
 		#endregion
+		#region BlackBeltMalus
+			public bool BBDown10Str { get; set; } = false;
+			public bool BBDown10Agi { get; set; } = false;
+			public bool BBDown10Vit { get; set; } = false;
+			public bool BBDown20Vit { get; set; } = false;
+			public bool BBDown5Luck { get; set; } = false;
+			public bool BBDown10Luck { get; set; } = false;
+			public bool BBDown15HP { get; set; } = false;
+			public bool BBDown30HP { get; set; } = false;
+			public bool BBDown1Hitpercent { get; set; } = false;
+			public bool BBDown1Mdef { get; set; } = false;
+			public bool BBNobrace { get; set; } = false;
+			public bool BBNoMasa { get; set; } = false;
+			public bool BBNoRibbon { get; set; } = false;
+			public bool BBNoProring { get; set; } = false;
+			public bool BBDown50GP { get; set; } = false;
+			public bool BBDown100GP { get; set; } = false;
+			public bool BBDown150GP { get; set; } = false;
+			public bool BBDown350GP { get; set; } = false;
+			public bool BBDown1100GP { get; set; } = false;
+			public bool BBDown4500gp { get; set; } = false;
+
+		#endregion
+		#region RMMalus
+			public bool RmDown10Str { get; set; } = false;
+			public bool RmDown10Agi { get; set; } = false;
+			public bool RmDown10Vit { get; set; } = false;
+			public bool RmDown5Luck { get; set; } = false;
+			public bool RmDown15HP { get; set; } = false;
+			public bool RmDown30HP { get; set; } = false;
+			public bool RmDown1Hitpercent { get; set; } = false;
+			public bool RmDown1Mdef { get; set; } = false;
+			public bool RmNobrace { get; set; } = false;
+			public bool RmNoMasa { get; set; } = false;
+			public bool RmNoRibbon { get; set; } = false;
+			public bool RmNoProring { get; set; } = false;
+			public bool RmThiefweaponsMalus { get; set; } = false;
+			public bool RmDown4MaxMP { get; set; } = false;
+			public bool RmNoSpell { get; set; } = false; //this one might need some added items to get the spell
+			public bool RmDown50GP { get; set; } = false;
+			public bool RmDown100GP { get; set; } = false;
+			public bool RmDown150GP { get; set; } = false;
+			public bool RmDown350GP { get; set; } = false;
+			public bool RmDown1100GP { get; set; } = false;
+			public bool RmDown4500gp { get; set; } = false;
+		#endregion
+		#region WmMalus
+			public bool WmDown10Str { get; set; } = false;
+			public bool WmDown10Agi { get; set; } = false;
+			public bool WmDown10Vit { get; set; } = false;
+			public bool WmDown5Luck { get; set; } = false;
+			public bool WmDown15HP { get; set; } = false;
+			public bool WmDown30HP { get; set; } = false;
+			public bool WmDown1Hitpercent { get; set; } = false;
+			public bool WmDown1Mdef { get; set; } = false;
+			public bool WmNobrace { get; set; } = false;
+			public bool WmNoMasa { get; set; } = false;
+			public bool WmNoRibbon { get; set; } = false;
+			public bool WmNoProring { get; set; } = false;
+			public bool WmDown4MaxMP { get; set; } = false;
+			public bool WmNoSpell { get; set; } = false; //this one might need some added items to get the spell
+			public bool WmDown50GP { get; set; } = false;
+			public bool WmDown100GP { get; set; } = false;
+			public bool WmDown150GP { get; set; } = false;
+			public bool WmDown350GP { get; set; } = false;
+			public bool WmDown1100GP { get; set; } = false;
+			public bool WmDown4500gp { get; set; } = false;
+		#endregion
 		#endregion
 		#region League KI
 		#region	FighterKI	
@@ -277,6 +553,58 @@ namespace FF1Lib
 				public bool ThStartTail { get; set; } = false;
 				public bool ThStartkey { get; set; } = false;
 
+		#endregion
+		#region BBKI
+			public bool BBStartCrown { get; set; } = false;
+			public bool BBStartCrystal { get; set; } = false;
+			public bool BBStartHerb { get; set; } = false;
+			public bool BBStartTNT { get; set; } = false;
+			public bool BBStartAdamant { get; set; } = false;
+			public bool BBStartSlab { get; set; } = false;
+			public bool BBStartRuby { get; set; } = false;
+			public bool BBStartRod { get; set; } = false;
+			public bool BBStartChime { get; set; } = false;
+			public bool BBStartCube { get; set; } = false;
+			public bool BBStartBottle { get; set; } = false;
+			public bool BBStartOxyale { get; set; } = false;
+			public bool BBStartLute { get; set; } = false;
+			public bool BBStartTail { get; set; } = false;
+			public bool BBStartkey { get; set; } = false;
+		#endregion
+		#region RmKi
+			public bool RmStartCrown { get; set; } = false;
+			public bool RmStartCrystal { get; set; } = false;
+			public bool RMStartHerb { get; set; } = false;
+			public bool RmStartTNT { get; set; } = false;
+			public bool RmStartAdamant { get; set; } = false;
+			public bool RMStartSlab { get; set; } = false;
+			public bool RmStartRuby { get; set; } = false;
+			public bool RmStartRod { get; set; } = false;
+			public bool RmStartChime { get; set; } = false;
+			public bool RmStartCube { get; set; } = false;
+			public bool RMStartBottle { get; set; } = false;
+			public bool RmStartOxyale { get; set; } = false;
+			public bool RmStartLute { get; set; } = false;
+			public bool RMStartTail { get; set; } = false;
+			public bool RmStartkey { get; set; } = false;
+
+		#endregion
+		#region WmKI
+			public bool WmStartCrown { get; set; } = false;
+			public bool WmStartCrystal { get; set; } = false;
+			public bool WmStartHerb { get; set; } = false;
+			public bool WmStartTNT { get; set; } = false;
+			public bool WmStartAdamant { get; set; } = false;
+			public bool WmStartSlab { get; set; } = false;
+			public bool WmStartRuby { get; set; } = false;
+			public bool WmStartRod { get; set; } = false;
+			public bool WmStartChime { get; set; } = false;
+			public bool WmStartCube { get; set; } = false;
+			public bool WmStartBottle { get; set; } = false;
+			public bool WmStartOxyale { get; set; } = false;
+			public bool WmStartLute { get; set; } = false;
+			public bool WmStartTail { get; set; } = false;
+			public bool WmStartkey { get; set; } = false;
 		#endregion
 		#endregion
 

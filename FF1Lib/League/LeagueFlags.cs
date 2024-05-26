@@ -337,63 +337,56 @@ namespace FF1Lib
 			public bool BmAdd20PerHit { get; set; } = false;
 			public bool BmEquipAxe { get; set; } = false;
 			public bool BmEquipShirt { get; set; } = false;
-			public bool EquipShields { get; set; } = false;
-			public bool EquipBonkHelm { get; set; } = false;
-			public bool ThiefWeaponsBonus { get; set; } = false;
-			public bool RMArmor { get; set; } = false;
-			public bool LegSwords { get; set; } = false;
-			public bool WoodArmor { get; set; } = false;
-			public bool Lvl1MP2 { get; set; } = false;
-			public bool MP1All { get; set; } = false;
-			public bool AddSpell { get; set; } = false; // will need extra work to get the spell list
-			public bool Telemagic { get; set; } = false;
-			public bool Buffmagic { get; set; } = false;
-			public bool Selfmagic { get; set; } = false;
-			public bool Healmagic { get; set; } = false;
-			public bool Healplusmagic { get; set; } = false;
-			public bool Elemmagic { get; set; } = false;
-			public bool Elemplusmagic { get; set; } = false;
-			public bool Nukemagic { get; set; } = false;
-			public bool Doommagic { get; set; } = false;
-			public bool Cleanmagic { get; set; } = false;
-			public bool MaxplusMPplus { get; set; } = false;
-			public bool ImpCatclaw { get; set; } = false;
-			public bool ImpThor { get; set; } = false;
-			public bool Hurtundead { get; set; } = false;
-			public bool Hurtdragon { get; set; } = false;
-			public bool Hurtall { get; set; } = false;
-			public bool PromoFiArmor { get; set; } = false;
-			public bool PromoSage { get; set; } = false;
-			public bool XP50percent { get; set; } = false;
-			public bool Earlylockpick { get; set; } = false;
-			public bool ResistPosion { get; set; } = false;
-			public bool ResistEarth { get; set; } = false;
-			public bool ResistDeath { get; set; } = false;
-			public bool ResistTime { get; set; } = false;
-			public bool ResistStatus { get; set; } = false;
-			public bool ResistIce { get; set; } = false;
-			public bool ResistLit { get; set; } = false;
-			public bool ResistFire { get; set; } = false;
-			public bool Startgold200 { get; set; } = false;
-			public bool Startgold400 { get; set; } = false;
-			public bool Startgold600 { get; set; } = false;
-			public bool Startgold800 { get; set; } = false;
-			public bool Startgold1500 { get; set; } = false;
-			public bool Startgold5000 { get; set; } = false;
-			public bool Startgold20000 { get; set; } = false;
-			public bool Add40Str { get; set; } = false;
-			public bool Add50Agi { get; set; } = false;
-			public bool Add40Vit { get; set; } = false;
-			public bool Add15Luck { get; set; } = false;
-			public bool Add80HP { get; set; } = false;
-			public bool Mdef2lvl { get; set; } = false;
-			public bool FiWeapons { get; set; } = false;
-			public bool FiArmor { get; set; } = false;
-			public bool ImprovedMP { get; set; } = false;
-			public bool Sage { get; set; } = false;
-			public bool Steelfast { get; set; } = false;
-			public bool FiBB50XP { get; set; } = false;
-			public bool XP100Percent { get; set; } = false;
+			public bool BmEquipShields { get; set; } = false;
+			public bool BmEquipBonkHelm { get; set; } = false;
+			public bool BmThiefWeaponsBonus { get; set; } = false;
+			public bool BmRMArmor { get; set; } = false;
+			public bool BmLegSwords { get; set; } = false;
+			public bool BmWoodArmor { get; set; } = false;
+			public bool BmLvl1MP2 { get; set; } = false;
+			public bool BmMP1All { get; set; } = false;
+			public bool BmAddSpell { get; set; } = false; // will need extra work to get the spell list
+			public bool BmTelemagic { get; set; } = false;
+			public bool BmBuffmagic { get; set; } = false;
+			public bool BmSelfmagic { get; set; } = false;
+			public bool BmHealmagic { get; set; } = false;
+			public bool BmHealplusmagic { get; set; } = false;
+			public bool BmElemmagic { get; set; } = false;
+			public bool BmElemplusmagic { get; set; } = false;
+			public bool BmNukemagic { get; set; } = false;
+			public bool BmDoommagic { get; set; } = false;
+			public bool BMCleanmagic { get; set; } = false;
+			public bool BmImpCatclaw { get; set; } = false;
+			public bool BmHurtundead { get; set; } = false;
+			public bool BmHurtdragon { get; set; } = false;
+			public bool BmHurtall { get; set; } = false;
+			public bool BmPromoFiArmor { get; set; } = false;
+			public bool BmXP50percent { get; set; } = false;
+			public bool BMResistPosion { get; set; } = false;
+			public bool BmResistEarth { get; set; } = false;
+			public bool BmResistDeath { get; set; } = false;
+			public bool BmResistTime { get; set; } = false;
+			public bool BmResistStatus { get; set; } = false;
+			public bool BmResistIce { get; set; } = false;
+			public bool BmResistLit { get; set; } = false;
+			public bool BmResistFire { get; set; } = false;
+			public bool BmStartgold200 { get; set; } = false;
+			public bool BmStartgold400 { get; set; } = false;
+			public bool BmStartgold600 { get; set; } = false;
+			public bool BmStartgold800 { get; set; } = false;
+			public bool BmStartgold1500 { get; set; } = false;
+			public bool BmStartgold5000 { get; set; } = false;
+			public bool BmStartgold20000 { get; set; } = false;
+			public bool BmAdd40Str { get; set; } = false;
+			public bool BmAdd50Agi { get; set; } = false;
+			public bool BmAdd40Vit { get; set; } = false;
+			public bool BmAdd15Luck { get; set; } = false;
+			public bool BmAdd80HP { get; set; } = false;
+			public bool BmMdef2lvl { get; set; } = false;
+			public bool BmFiWeapons { get; set; } = false;
+			public bool BmFiArmor { get; set; } = false;
+			public bool BmImprovedMP { get; set; } = false;
+			public bool BmXP100Percent { get; set; } = false;
 		#endregion
 		#endregion
 		#region LeagueMalus
@@ -517,6 +510,29 @@ namespace FF1Lib
 			public bool WmDown1100GP { get; set; } = false;
 			public bool WmDown4500gp { get; set; } = false;
 		#endregion
+		#region BmMalus
+
+			public bool BmDown10Agi { get; set; } = false;
+			public bool BmDown5Luck { get; set; } = false;
+			public bool BmDown10Luck { get; set; } = false;
+			public bool BmDown15HP { get; set; } = false;
+			public bool BmDown30HP { get; set; } = false;
+			public bool Down1Hitpercent { get; set; } = false;
+			public bool BmDown1Mdef { get; set; } = false;
+			public bool BmNobrace { get; set; } = false;
+			public bool BmNoMasa { get; set; } = false;
+			public bool BmNoRibbon { get; set; } = false;
+			public bool BmNoProring { get; set; } = false;
+			public bool BmDown4MaxMP { get; set; } = false;
+			public bool BmNoSpell { get; set; } = false; //this one might need some added items to get the spell
+			public bool BmDown50GP { get; set; } = false;
+			public bool BmDown100GP { get; set; } = false;
+			public bool BmDown150GP { get; set; } = false;
+			public bool BmDown350GP { get; set; } = false;
+			public bool BmDown1100GP { get; set; } = false;
+			public bool BmDown4500gp { get; set; } = false;
+
+		#endregion
 		#endregion
 		#region League KI
 		#region	FighterKI	
@@ -605,6 +621,24 @@ namespace FF1Lib
 			public bool WmStartLute { get; set; } = false;
 			public bool WmStartTail { get; set; } = false;
 			public bool WmStartkey { get; set; } = false;
+		#endregion
+		#region BmKI
+			public bool BmStartCrown { get; set; } = false;
+			public bool BmStartCrystal { get; set; } = false;
+			public bool BmStartHerb { get; set; } = false;
+			public bool BmStartTNT { get; set; } = false;
+			public bool BmStartAdamant { get; set; } = false;
+			public bool BmStartSlab { get; set; } = false;
+			public bool BmStartRuby { get; set; } = false;
+			public bool BmStartRod { get; set; } = false;
+			public bool BmStartChime { get; set; } = false;
+			public bool BmStartCube { get; set; } = false;
+			public bool BMStartBottle { get; set; } = false;
+			public bool BmStartOxyale { get; set; } = false;
+			public bool BmStartLute { get; set; } = false;
+			public bool BmStartTail { get; set; } = false;
+			public bool BmStartkey { get; set; } = false;
+
 		#endregion
 		#endregion
 

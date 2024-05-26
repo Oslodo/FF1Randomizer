@@ -40,7 +40,9 @@ namespace FF1Lib.League
 			}
 		}
 		#region League
+		#region Fighter
 
+		#endregion
 		public bool Add10Str
 		{
 			get => Leagueflags.Add10Str;

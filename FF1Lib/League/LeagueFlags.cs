@@ -638,7 +638,7 @@ namespace FF1Lib
 			public bool BmStartRod { get; set; } = false;
 			public bool BmStartChime { get; set; } = false;
 			public bool BmStartCube { get; set; } = false;
-			public bool BMStartBottle { get; set; } = false;
+			public bool BmStartBottle { get; set; } = false;
 			public bool BmStartOxyale { get; set; } = false;
 			public bool BmStartLute { get; set; } = false;
 			public bool BmStartTail { get; set; } = false;

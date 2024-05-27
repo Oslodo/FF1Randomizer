@@ -26,7 +26,7 @@ namespace FF1Lib
 			public bool FiAdd10Luck { get; set; } = false;
 			public bool FiAdd20HP { get; set; } = false;
 			public bool FiAdd40HP { get; set; } = false;
-			public bool AFidd10PerHit { get; set; } = false;
+			public bool FiAdd10PerHit { get; set; } = false;
 			public bool FiAdd20PerHit { get; set; } = false;
 			public bool FiEquipShirt { get; set; } = false;
 			public bool FiLegSwords { get; set; } = false;
@@ -34,6 +34,7 @@ namespace FF1Lib
 			public bool FiTelemagic { get; set; } = false;
 			public bool FiBuffmagic { get; set; } = false;
 			public bool FiSelfmagic { get; set; } = false;
+			public bool FiHealmagic {  get; set; } = false;
 			public bool FiHealplusmagic { get; set; } = false;
 			public bool FiElemmagic { get; set; } = false;
 			public bool FiElemplusmagic { get; set; } = false; 
@@ -118,7 +119,7 @@ namespace FF1Lib
 			public bool ThStartgold800 { get; set; } = false;
 			public bool ThStartgold1500 { get; set; } = false;
 			public bool ThStartgold5000 { get; set; } = false;
-			public bool SThtartgold20000 { get; set; } = false;
+			public bool ThStartgold20000 { get; set; } = false;
 			public bool ThAdd40Str { get; set; } = false;
 			public bool ThAdd50Agi { get; set; } = false;
 			public bool ThAdd40Vit { get; set; } = false;
@@ -162,6 +163,7 @@ namespace FF1Lib
 			public bool BBHurtundead { get; set; } = false;
 			public bool BBHurtdragon { get; set; } = false;
 			public bool BBHurtall { get; set; } = false;
+			public bool BBPromoFiweapons { get; set; } = false;
 			public bool BBPromoFiarmor { get; set; } = false;
 			public bool BBResistPosion { get; set; } = false;
 			public bool BBResistEarth { get; set; } = false;
@@ -210,7 +212,7 @@ namespace FF1Lib
 			public bool RmLvl1MP2 { get; set; } = false;
 			public bool RmMP1All { get; set; } = false;
 			public bool RmAddSpell { get; set; } = false; // will need extra work to get the spell list
-			public bool TRmelemagic { get; set; } = false;
+			public bool RmTelemagic { get; set; } = false;
 			public bool RmBuffmagic { get; set; } = false;
 			public bool RmSelfmagic { get; set; } = false;
 			public bool RmHealmagic { get; set; } = false;
@@ -220,15 +222,15 @@ namespace FF1Lib
 			public bool RmNukemagic { get; set; } = false;
 			public bool RmDoommagic { get; set; } = false;
 			public bool RmCleanmagic { get; set; } = false;
-			public bool RMImpCatclaw { get; set; } = false;
-			public bool RMHurtundead { get; set; } = false;
+			public bool RmHurtundead { get; set; } = false;
 			public bool RmHurtdragon { get; set; } = false;
 			public bool RmHurtall { get; set; } = false;
+			public bool RmPromoFiweapons { get; set; } = false;
 			public bool RmPromoFiArmor { get; set; } = false;
 			public bool RmPromoSage { get; set; } = false;
 			public bool RmXP50percent { get; set; } = false;
 			public bool RmResistPosion { get; set; } = false;
-			public bool RMResistEarth { get; set; } = false;
+			public bool RmResistEarth { get; set; } = false;
 			public bool RmResistDeath { get; set; } = false;
 			public bool RmResistTime { get; set; } = false;
 			public bool RmResistStatus { get; set; } = false;
@@ -237,7 +239,7 @@ namespace FF1Lib
 			public bool RmResistFire { get; set; } = false;
 			public bool RmStartgold200 { get; set; } = false;
 			public bool RmStartgold400 { get; set; } = false;
-			public bool RMStartgold600 { get; set; } = false;
+			public bool RmStartgold600 { get; set; } = false;
 			public bool RmStartgold800 { get; set; } = false;
 			public bool RmStartgold1500 { get; set; } = false;
 			public bool RmStartgold5000 { get; set; } = false;
@@ -248,6 +250,7 @@ namespace FF1Lib
 			public bool RmAdd15Luck { get; set; } = false;
 			public bool RmAdd80HP { get; set; } = false;
 			public bool RmMdef2lvl { get; set; } = false;
+			public bool RmFiWeapons { get; set; } = false;
 			public bool RmFiArmor { get; set; } = false;
 			public bool RmImprovedMP { get; set; } = false;
 			public bool RmSage { get; set; } = false;
@@ -293,13 +296,14 @@ namespace FF1Lib
 			public bool WmHurtundead { get; set; } = false;
 			public bool WmHurtdragon { get; set; } = false;
 			public bool WmHurtall { get; set; } = false;
+			public bool WmPromoFiweapons { get; set; } = false;
 			public bool WmPromoFiArmor { get; set; } = false;
 			public bool WmXP50percent { get; set; } = false;
 			public bool WmResistPosion { get; set; } = false;
 			public bool WmResistEarth { get; set; } = false;
 			public bool WmResistDeath { get; set; } = false;
 			public bool WmResistTime { get; set; } = false;
-			public bool WMResistStatus { get; set; } = false;
+			public bool WmResistStatus { get; set; } = false;
 			public bool WmResistIce { get; set; } = false;
 			public bool WmResistLit { get; set; } = false;
 			public bool WmResistFire { get; set; } = false;
@@ -355,14 +359,15 @@ namespace FF1Lib
 			public bool BmElemplusmagic { get; set; } = false;
 			public bool BmNukemagic { get; set; } = false;
 			public bool BmDoommagic { get; set; } = false;
-			public bool BMCleanmagic { get; set; } = false;
+			public bool BmCleanmagic { get; set; } = false;
 			public bool BmImpCatclaw { get; set; } = false;
 			public bool BmHurtundead { get; set; } = false;
 			public bool BmHurtdragon { get; set; } = false;
 			public bool BmHurtall { get; set; } = false;
+			public bool BmPromoFiweapons { get; set; } = false;
 			public bool BmPromoFiArmor { get; set; } = false;
 			public bool BmXP50percent { get; set; } = false;
-			public bool BMResistPosion { get; set; } = false;
+			public bool BmResistPosion { get; set; } = false;
 			public bool BmResistEarth { get; set; } = false;
 			public bool BmResistDeath { get; set; } = false;
 			public bool BmResistTime { get; set; } = false;
@@ -517,7 +522,7 @@ namespace FF1Lib
 			public bool BmDown10Luck { get; set; } = false;
 			public bool BmDown15HP { get; set; } = false;
 			public bool BmDown30HP { get; set; } = false;
-			public bool Down1Hitpercent { get; set; } = false;
+			public bool BmDown1Hitpercent { get; set; } = false;
 			public bool BmDown1Mdef { get; set; } = false;
 			public bool BmNobrace { get; set; } = false;
 			public bool BmNoMasa { get; set; } = false;
@@ -536,7 +541,7 @@ namespace FF1Lib
 		#endregion
 		#region League KI
 		#region	FighterKI	
-		public bool FiStartCrown { get; set; } = false;
+				public bool FiStartCrown { get; set; } = false;
 				public bool FiStartCrystal { get; set; } = false;
 				public bool FiStartHerb { get; set; } = false;
 				public bool FiStartTNT { get; set; } = false;
@@ -550,7 +555,7 @@ namespace FF1Lib
 				public bool FiStartOxyale { get; set; } = false;
 				public bool FiStartLute { get; set; } = false;
 				public bool FiStartTail { get; set; } = false;
-				public bool FiStartkey { get; set; } = false;
+				public bool FiStartKey { get; set; } = false;
 		#endregion
 		#region ThiefKI
 				public bool ThStartCrown { get; set; } = false;
@@ -567,7 +572,7 @@ namespace FF1Lib
 				public bool ThStartOxyale { get; set; } = false;
 				public bool ThStartLute { get; set; } = false;
 				public bool ThStartTail { get; set; } = false;
-				public bool ThStartkey { get; set; } = false;
+				public bool ThStartKey { get; set; } = false;
 
 		#endregion
 		#region BBKI
@@ -585,24 +590,24 @@ namespace FF1Lib
 			public bool BBStartOxyale { get; set; } = false;
 			public bool BBStartLute { get; set; } = false;
 			public bool BBStartTail { get; set; } = false;
-			public bool BBStartkey { get; set; } = false;
+			public bool BBStartKey { get; set; } = false;
 		#endregion
 		#region RmKi
 			public bool RmStartCrown { get; set; } = false;
 			public bool RmStartCrystal { get; set; } = false;
-			public bool RMStartHerb { get; set; } = false;
+			public bool RmStartHerb { get; set; } = false;
 			public bool RmStartTNT { get; set; } = false;
 			public bool RmStartAdamant { get; set; } = false;
-			public bool RMStartSlab { get; set; } = false;
+			public bool RmStartSlab { get; set; } = false;
 			public bool RmStartRuby { get; set; } = false;
 			public bool RmStartRod { get; set; } = false;
 			public bool RmStartChime { get; set; } = false;
 			public bool RmStartCube { get; set; } = false;
-			public bool RMStartBottle { get; set; } = false;
+			public bool RmStartBottle { get; set; } = false;
 			public bool RmStartOxyale { get; set; } = false;
 			public bool RmStartLute { get; set; } = false;
-			public bool RMStartTail { get; set; } = false;
-			public bool RmStartkey { get; set; } = false;
+			public bool RmStartTail { get; set; } = false;
+			public bool RmStartKey { get; set; } = false;
 
 		#endregion
 		#region WmKI
@@ -620,7 +625,7 @@ namespace FF1Lib
 			public bool WmStartOxyale { get; set; } = false;
 			public bool WmStartLute { get; set; } = false;
 			public bool WmStartTail { get; set; } = false;
-			public bool WmStartkey { get; set; } = false;
+			public bool WmStartKey { get; set; } = false;
 		#endregion
 		#region BmKI
 			public bool BmStartCrown { get; set; } = false;
@@ -637,7 +642,7 @@ namespace FF1Lib
 			public bool BmStartOxyale { get; set; } = false;
 			public bool BmStartLute { get; set; } = false;
 			public bool BmStartTail { get; set; } = false;
-			public bool BmStartkey { get; set; } = false;
+			public bool BmStartKey { get; set; } = false;
 
 		#endregion
 		#endregion

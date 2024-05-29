@@ -45,7 +45,7 @@ namespace FF1Lib
 			public bool FiHurtdragon { get; set; } = false;
 			public bool FiHurtall { get; set; } = false;
 			public bool FiXP50percent { get; set; } = false;
-			public bool FiResistPosion { get; set; } = false;
+			public bool FiResistPoison { get; set; } = false;
 			public bool FiResistEarth { get; set; } = false;
 			public bool FiResistDeath { get; set; } = false;
 			public bool FiResistTime { get; set; } = false;
@@ -396,7 +396,7 @@ namespace FF1Lib
 		#endregion
 		#region LeagueMalus
 		#region FighterMalus
-		public bool FiDown10Str { get; set; } = false;
+			public bool FiDown10Str { get; set; } = false;
 			public bool FiDown20Str { get; set; } = false;
 			public bool FiDown10Agi { get; set; } = false;
 			public bool FiDown10Vit { get; set; } = false;
@@ -645,6 +645,7 @@ namespace FF1Lib
 			public bool BmStartKey { get; set; } = false;
 
 		#endregion
+		public bool StartCrown { get; set; } = false;
 		#endregion
 
 		#endregion

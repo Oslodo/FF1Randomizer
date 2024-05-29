@@ -12,12 +12,12 @@ namespace FF1Lib.League
 	{
 
 		//is this needed? Need to Check later....
-		/*public LeagueFlagsViewModel()
+
+		public LeaugeFlagsViewModel()
 		{
 			Leagueflags = new LeagueFlags();
-
-		}*/
-
+		}
+		
 		public string Encoded => LeagueFlags.EncodeFlagsText(Leagueflags);
 
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -246,7 +246,7 @@ namespace FF1Lib.League
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FiElemMagic"));
 			}
 		}
-		public bool ElemplusMagic
+		public bool FiElemplusMagic
 		{
 			get => Leagueflags.FiElemplusmagic;
 			set
@@ -322,10 +322,10 @@ namespace FF1Lib.League
 		}
 		public bool FiResistPoison
 		{
-			get => Leagueflags.FiResistPosion;
+			get => Leagueflags.FiResistPoison;
 			set
 			{
-				Leagueflags.FiResistPosion = value;
+				Leagueflags.FiResistPoison = value;
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FiResistPoison"));
 			}
 		}
@@ -5328,6 +5328,15 @@ namespace FF1Lib.League
 			}
 		}
 		#endregion
+		public bool StartCrown
+		{
+			get => Leagueflags.StartCrown;
+			set
+			{
+				Leagueflags.StartCrown = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("StartCrown"));
+			}
+		}
 		#endregion
 		#endregion
 

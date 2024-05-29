@@ -1,61 +1,95 @@
-@using FF1Lib.League;
+﻿@using FF1Lib.League;
 @using FF1Lib;
-@using Microsoft.AspNetCore.Components.Web
-@using Newtonsoft.Json;
 @using RomUtilities;
-@using System.ComponentModel;
-@using System.IO;
-@using System.Web;
-    using FF1Lib.League;
 @inject Blazored.LocalStorage.ILocalStorageService LocalStorage
 @inject IJSRuntime JSRuntime
-
-@*Ingore the code here, it is just a place holder for the future work, we are no where NEAR ready for this*@
-
-
 @page "/League"
 
 <ToolTip @ref="ToolTipElement" ToolTipId="@ToolTipId" />
 
-<div class="content px-4 tinted">
-    <div class="nes-container is-dark col-xs-12">
-        <input type="file" id="fileInput" accept=".nes" @onchange="@OnFileChanged" />
-        <br />
-        @RomMessage
-    </div>
-</div>
-@*The code below works only if the Checkbox code is removed or commented out*@
+
 
 <div id="Blusrings" class="framed-content">
 
     <h4>League Blursing Settings</h4>
     <p>
-        This section allows runners to select the blursings for the NFFRL or just for fun. Choose your classes from the drop down and set the blursings and then upload a pre-randomized rom.<br>
-        For runners in the NFFRL if you do not set all six classes with your teams blursings you will be unable to take any non-set classes.
+        This section allows runners to select the blursings for the NFFRL or just for fun. Fill in your selected blursings, for your classes and then upload a pre-randomized rom.<br>
+        For runners in the NFFRL if you do not set all six classes with your teams blursings you will be unable to take any non-set classes. <br />
+        Remember that there is a maximum of 3 Bonuses and 3 maluses allowed for a class but a resistance only counts as 1.
     </p>
 
-  <div id="fighter blursings" class="framed-content"
-      <h4>Fighter Blursings</h4>
-     <CheckBox UpdateToolTip="@UpdateToolTipID" Id="Startcrown" @bind-Value="Flags.StartCrown">Start With Crown</CheckBox> 
-
-    <div class="checkbox-cell"></div>
-   </div>
+    <div id="fighter blursings" class="framed-content">
+        <h4>Fighter Blursings</h4>
+        <h4>Normal Bonuses</h4>
+        <div class="row">
+        <div class="col1">
+           <h5>Stat Increases</h5>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiAdd10Str" @bind-Value="Flags.FiAdd10Str">Plus 10 Str</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiAdd10Str" @bind-Value="Flags.FiAdd20Str">Plus 20 Str</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiAdd15Agi" @bind-Value="Flags.FiAdd15Agi">Plus 15 Agi</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiAdd20Agi" @bind-Value="Flags.FiAdd20Agi">Plus 20 Agi</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiAdd25Agi" @bind-Value="Flags.FiAdd25Agi">Plus 25 Agi</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiAdd10Vit" @bind-Value="Flags.FiAdd10Vit">Plus 10 Vit</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiAdd20Vit" @bind-Value="Flags.FiAdd20Vit">Plus 20 Vit</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiAdd5Luck" @bind-Value="Flags.FiAdd5Luck">Plus 5 Luck</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiAdd10Luck" @bind-Value="Flags.FiAdd10Luck">Plus 10 Luck</CheckBox>
+            <h5>Extra Damage</h5>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiHurtUndead" @bind-Value="Flags.FiHurtUndead">Hurt Undead</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiHurtDragon" @bind-Value="Flags.FiHurtDragon">Hurt Dragons</CheckBox>
+            <h5>Resistances(Max 3)</h5>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiResistPoison" @bind-Value="Flags.FiResistPoison">Resist Poison</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiResistEarth" @bind-Value="Flags.FiResistEarth">Resist Earth</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiResistDeath" @bind-Value="Flags.FiResistDeath">Resist Death</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiResistTime" @bind-Value="Flags.FiResistTime">Resist Time</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiResistStatus" @bind-Value="Flags.FiResistStatus">Resist Status</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiResistIce" @bind-Value="Flags.FiResistIce">Resist Ice</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiResistLit" @bind-Value="Flags.FiResistLit">Resist Lit</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiResistFire" @bind-Value="Flags.FiResistFire">Resist Fire</CheckBox>
+         </div>
+        <div class="col2">
+             <h5>Weapons And Armor</h5>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiEquipShirt" @bind-Value="Flags.FiEquipShirt">Equip Shirt</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiLegSwords" @bind-Value="Flags.FiLegSwords">Legendary Swords</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiWoodArmor" @bind-Value="Flags.FiWoodArmor">Wood Adept</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiImpCatclaw" @bind-Value="Flags.FiImpCatclaw">Improved Cat Claw</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiImpThor" @bind-Value="Flags.FiImpThor">Improved Thor Hammer</CheckBox>
+         <div class="col3">
+               <h5>Magic</h5>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiTelemagic" @bind-Value="Flags.FiTelemagic">Tele Magic</CheckBox>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiBuffmagic" @bind-Value="Flags.FiBuffMagic">Buff Magic</CheckBox>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiSelfmagic" @bind-Value="Flags.FiSelfMagic">Self Magic</CheckBox>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiHealmagic" @bind-Value="Flags.FiHealMagic">Heal Magic</CheckBox>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiHealplusmagic" @bind-Value="Flags.FiHealMagicPlus">Heal Plus Magic</CheckBox>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiElemmagic" @bind-Value="Flags.FiElemMagic">Elemental Magic</CheckBox>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiElemplusmagic" @bind-Value="Flags.FiElemplusMagic">Elemental Plus Magic</CheckBox>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiCleanMagic" @bind-Value="Flags.FiCleanMagic">Clean Magic</CheckBox>
+                <h5>Starting Gold Increase</h5>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiStartgold200" @bind-Value="Flags.FiStartGold200">+200GP</CheckBox>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiStartgold400" @bind-Value="Flags.FiStartGold400">+400GP</CheckBox>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiStartgold600" @bind-Value="Flags.FiStartGold600">+600GP</CheckBox>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiStartgold800" @bind-Value="Flags.FiStartGold800">+800GP</CheckBox>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiStartgold1500" @bind-Value="Flags.FiStartGold1500">+1500GP</CheckBox>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiStartgold5000" @bind-Value="Flags.FiStartGold1500">+5000GP</CheckBox>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiStartgold20000" @bind-Value="Flags.FiStartGold20000">+20000GP</CheckBox>
+         </div>
+        </div>
+        </div>
+    </div>
 </div>
 
 
-@*Again, ingore below, it isn't there for any good reason, place holder for future use*@
 
-@code{
+
+
+
+
+@code {
     private LeaugeFlagsViewModel Flags { get; set; } = new LeaugeFlagsViewModel();
     private string ToolTipId = "unupdated";
     private ToolTip ToolTipElement;
     private string StatusMessage = "";
 
-    private string SpriteSheetMessage { get; set; } = "Load custom player sprites:";
 
-    private string BlursingsText = "";
-    private string RomMessage = "";
-    private byte[] _fileData;
 
     private void UpdateToolTipID(string Id, MouseEventArgs e)
     {
@@ -70,33 +104,5 @@
         StateHasChanged();
     }
 
-    async Task OnFileChanged(ChangeEventArgs e)
-    {
-        var encoded = await JSRuntime.InvokeAsync<string>("handleFileSelect", "fileInput");
-        SetFileData(encoded);
-    }
-    void SetFileData(string encoded)
-    {
-        _fileData = Convert.FromBase64String(encoded);
-        using (var stream = new MemoryStream(_fileData))
-        {
-            FF1Rom temprom = new FF1Rom(stream);
-            if (temprom.HeaderLength != 16)
-            {
-                RomMessage = "ROM header length is incorrect, try a different ROM";
-                return;
-            }
-            try
-            {
-                BlursingsText = temprom.SpoilBlursings();
-                RomMessage = "Classes Blursings Loaded";
-
-                StateHasChanged();
-            }
-            catch (FF1Lib.FF1Rom.TournamentSafeException)
-            {
-                RomMessage = "Detected ROM hash does not match the expected hash.\nResults may vary.";
-            }
-        }
-    } 
 }
+

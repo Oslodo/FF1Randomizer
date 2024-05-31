@@ -527,6 +527,24 @@ namespace FF1Lib.League
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Fi50XPFiBB"));
 			}
 		}
+		public bool FiResistAll
+		{
+			get => Leagueflags.FiResistAll;
+			set
+			{
+				Leagueflags.FiResistAll = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FiResistAll"));
+			}
+		}
+		public bool FiResistPEDTS
+		{
+			get => Leagueflags.FiResistPEDTS;
+			set
+			{
+				Leagueflags.FiResistPEDTS = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FiResistPEDTS"));
+			}
+		}
 		#endregion
 		#region ThiefBonus
 		public bool ThAdd10Str
@@ -4606,7 +4624,7 @@ namespace FF1Lib.League
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FiStartBottle"));
 			}
 		}
-		public bool FiStartOxrale
+		public bool FiStartOxyale
 		{
 			get => Leagueflags.FiStartOxyale;
 			set

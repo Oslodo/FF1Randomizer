@@ -17,9 +17,9 @@
         For runners in the NFFRL if you do not set all six classes with your teams blursings you will be unable to take any non-set classes. <br />
         Remember that there is a maximum of 3 Bonuses and 3 maluses allowed for a class but a resistance only counts as 1.
     </p>
-
-    <div id="fighter blursings" class="framed-content">
-        <h4>Fighter Blursings</h4>
+    <h4>Fighter Blursings</h4>
+    <div id="fighter Normal Bonuses" class="framed-content">
+        
         <h4>Normal Bonuses</h4>
         <div class="row">
         <div class="col1">
@@ -45,6 +45,7 @@
                 <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiResistIce" @bind-Value="Flags.FiResistIce">Resist Ice</CheckBox>
                 <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiResistLit" @bind-Value="Flags.FiResistLit">Resist Lit</CheckBox>
                 <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiResistFire" @bind-Value="Flags.FiResistFire">Resist Fire</CheckBox>
+            <div class="checkbox-cell"></div>
          </div>
         <div class="col2">
              <h5>Weapons And Armor</h5>
@@ -71,11 +72,101 @@
                     <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiStartgold1500" @bind-Value="Flags.FiStartGold1500">+1500GP</CheckBox>
                     <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiStartgold5000" @bind-Value="Flags.FiStartGold1500">+5000GP</CheckBox>
                     <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiStartgold20000" @bind-Value="Flags.FiStartGold20000">+20000GP</CheckBox>
+                 <div class="checkbox-cell"></div>
+             </div>
          </div>
         </div>
+      </div>
+    <div id="fighter Strong Bonuses" class="framed-content">
+    <h4>Strong Bonuses</h4>
+    <div class="row">
+        <div class="col1">
+            <h5>Stat Increases</h5>
+            <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiAdd40Str" @bind-Value="Flags.FiAdd40Str">Plus 40 Str</CheckBox>
+            <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiAdd50Agi" @bind-Value="Flags.FiAdd50Agi">Plus 50 Agi</CheckBox>
+            <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiAdd40Vit" @bind-Value="Flags.FiAdd40Vit">Plus 40 Vit</CheckBox>
+            <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiAdd15Luck" @bind-Value="Flags.FiAdd15Luck">Plus 15 Luck</CheckBox>
+            <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiAdd80HP" @bind-Value="Flags.FiAdd80HP">Plus 80 HP</CheckBox>
+            <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiMdef2Lvl" @bind-Value="Flags.FiMdef2Lvl">Plus 2 Mdef/Lvl</CheckBox>
+                <div class="checkbox-cell"></div>
+        </div>
+        <div class="col2">
+            <h5>Other Bonuses</h5>
+            <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiSteelFast" @bind-Value="Flags.FiSteelFast">Steel Lord</CheckBox>
+            <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiHurtAll" @bind-Value="Flags.FiHurtAll">Hurt All</CheckBox>
+            <CheckBox UpdateToolTip="@UpdateToolTipID" Id="Fi50XPFiBB" @bind-Value="Flags.Fi50XPFiBB">Plus 50% EXP</CheckBox>
+            <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiResistAll" @bind-Value="Flags.FiResistAll">Resist All</CheckBox>
+            <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiResistPEDTS" @bind-Value="Flags.FiResistPEDTS">Resist PEDTS</CheckBox>
+                <div class="checkbox-cell"></div>
         </div>
     </div>
 </div>
+    <div id="fighter maluses" class="framed-content">
+        <h4>Maluses</h4>
+        <div class="row">
+            <div class="col1">
+                <h5>Stat Decreases</h5>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiDown10Str" @bind-Value="Flags.FiDown10Str">Down 10 Str</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiDown20Str" @bind-Value="Flags.FiDown20Str">Down 20 Str</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiDown10Agi" @bind-Value="Flags.FiDown10Agi">Down 10 Agi</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiDown10Vit" @bind-Value="Flags.FiDown10Vit">Down 10 Vit</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiDown5Luck" @bind-Value="Flags.FiDown5Luck">Down 5 Luck</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiDown15HP" @bind-Value="Flags.FiDown15HP">Down 15 HP</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiDown30HP" @bind-Value="Flags.FiDown30HP">Down 30 HP</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiBMHP" @bind-Value="Flags.FiBMHP">Black Mage HP</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiDown1HitPercent" @bind-Value="Flags.FiDown1HitPercent">Down 1% Hit/Lvl</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiDown1MDef" @bind-Value="Flags.FiDown1MDef">Down 1Mdef/Lvl</CheckBox>
+                <h5>Starting Gold Decreases</h5>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiDown100GP" @bind-Value="Flags.FiDown100GP">Minus 100GP</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiDown150GP" @bind-Value="Flags.FiDown150GP">Minus 150GP</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiDown350GP" @bind-Value="Flags.FiDown350GP">Minus 350GP</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiDown1100GP" @bind-Value="Flags.FiDown1100GP">Minus 1100GP</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiDown4500GP" @bind-Value="Flags.FiDown4500GP">Minus 4500GP</CheckBox>
+                <div class="checkbox-cell"></div>
+            </div>
+        <div class="col2">
+            <h5>Equipment Restrictions</h5>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiNoBracelets" @bind-Value="Flags.FiNoBracelets">No Bracelets</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiNoMasa" @bind-Value="Flags.FiNoMasa">No Masa</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiNoRibbon" @bind-Value="Flags.FiNoRibbon">No Ribbon</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiNoProRing" @bind-Value="Flags.FiNoProRing">No Proring</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiThWeaponMal" @bind-Value="Flags.FiThWeaponMal">Thief Weapons</CheckBox>
+            <h5>Promotion Restrictions</h5>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiNoFiPromoArmor" @bind-Value="Flags.FiNoFiPromoArmor">No Promotion Armor</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiNoPromoSpells" @bind-Value="Flags.FiNoPromoSpells">No Promotion Spells</CheckBox>
+             <div class="checkbox-cell"></div>
+            </div>
+        </div>
+    </div>
+   <div id="fighter KI" class="framed-content">
+        <h4>Start with Key Items</h4>
+        <div class="row">
+            <div class="col1">
+               
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiStartCrown" @bind-Value="Flags.FiStartCrown">Crown</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiStartCrystal" @bind-Value="Flags.FiStartCrystal">Crystal</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiStartHerb" @bind-Value="Flags.FiStartHerb">Herb</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiStartTNT" @bind-Value="Flags.FiStartTNT">TNT</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiStartAdamant" @bind-Value="Flags.FiStartAdamant">Adamant</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiStartSlab" @bind-Value="Flags.FiStartSlab">Slab</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiStartRuby" @bind-Value="Flags.FiStartRuby">Ruby</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiStartRod" @bind-Value="Flags.FiStartRod">Rod</CheckBox>
+                <div class="checkbox-cell"></div>
+            </div>
+            <div class="col2">
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiStartChime" @bind-Value="Flags.FiStartChime">Chime</CheckBox>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiStartCube" @bind-Value="Flags.FiStartCube">Cube</CheckBox>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiStartBottle" @bind-Value="Flags.FiStartBottle">Bottle</CheckBox>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiStartOxyale" @bind-Value="Flags.FiStartOxyale">Oxyale</CheckBox>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiStartLute" @bind-Value="Flags.FiStartLute">Lute</CheckBox>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiStartTail" @bind-Value="Flags.FiStartTail">Tail</CheckBox>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiStartKey" @bind-Value="Flags.FiStartKey">Key</CheckBox>
+                    <div class="checkbox-cell"></div>
+            </div>
+            </div>
+        </div>
+    </div>
+
 
 
 

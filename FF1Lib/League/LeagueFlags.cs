@@ -68,6 +68,8 @@ namespace FF1Lib
 			public bool FiMdef2lvl { get; set; } = false;
 			public bool FiSteelfast { get; set; } = false;
 			public bool Fi50XPFiBB { get; set; } = false;
+			public bool FiResistAll { get; set; } = false;
+			public bool FiResistPEDTS { get; set; } = false;
 		#endregion
 		#region ThiefBonus
 			public bool ThAdd10Str { get; set; } = false;

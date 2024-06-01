@@ -17,7 +17,7 @@
         For runners in the NFFRL if you do not set all six classes with your teams blursings you will be unable to take any non-set classes. <br />
         Remember that there is a maximum of 3 Bonuses and 3 maluses allowed for a class but a resistance only counts as 1.
     </p>
-    <h4>Fighter Blursings</h4>
+    <h3>Fighter Blursings</h3>
     <div id="fighter Normal Bonuses" class="framed-content">
         
         <h4>Normal Bonuses</h4>
@@ -33,6 +33,12 @@
                 <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiAdd20Vit" @bind-Value="Flags.FiAdd20Vit">Plus 20 Vit</CheckBox>
                 <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiAdd5Luck" @bind-Value="Flags.FiAdd5Luck">Plus 5 Luck</CheckBox>
                 <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiAdd10Luck" @bind-Value="Flags.FiAdd10Luck">Plus 10 Luck</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiAdd20HP" @bind-Value="Flags.FiAdd20HP">Plus 20 HP</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiAdd40HP" @bind-Value="Flags.FiAdd40HP">Plus 40 HP</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiAdd10PerHit" @bind-Value="Flags.FiAdd10PerHit">10% Hit/Lvl</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiAdd20PerHit" @bind-Value="Flags.FiAdd20PerHit">20% Hit/Lvl</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiAdd10Mdef" @bind-Value="Flags.FiAdd10Mdef">Plus 10 Mdef</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiAdd20Mdef" @bind-Value="Flags.FiAdd20Mdef">Plus 20 Mdef</CheckBox>
             <h5>Extra Damage</h5>
                 <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiHurtUndead" @bind-Value="Flags.FiHurtUndead">Hurt Undead</CheckBox>
                 <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiHurtDragon" @bind-Value="Flags.FiHurtDragon">Hurt Dragons</CheckBox>
@@ -70,7 +76,7 @@
                     <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiStartgold600" @bind-Value="Flags.FiStartGold600">+600GP</CheckBox>
                     <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiStartgold800" @bind-Value="Flags.FiStartGold800">+800GP</CheckBox>
                     <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiStartgold1500" @bind-Value="Flags.FiStartGold1500">+1500GP</CheckBox>
-                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiStartgold5000" @bind-Value="Flags.FiStartGold1500">+5000GP</CheckBox>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiStartgold5000" @bind-Value="Flags.FiStartGold5000">+5000GP</CheckBox>
                     <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiStartgold20000" @bind-Value="Flags.FiStartGold20000">+20000GP</CheckBox>
                  <div class="checkbox-cell"></div>
              </div>
@@ -117,6 +123,7 @@
                 <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiDown1HitPercent" @bind-Value="Flags.FiDown1HitPercent">Down 1% Hit/Lvl</CheckBox>
                 <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiDown1MDef" @bind-Value="Flags.FiDown1MDef">Down 1Mdef/Lvl</CheckBox>
                 <h5>Starting Gold Decreases</h5>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiDown50GP" @bind-Value="Flags.FiDown50GP">Minus 50GP</CheckBox>
                 <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiDown100GP" @bind-Value="Flags.FiDown100GP">Minus 100GP</CheckBox>
                 <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiDown150GP" @bind-Value="Flags.FiDown150GP">Minus 150GP</CheckBox>
                 <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiDown350GP" @bind-Value="Flags.FiDown350GP">Minus 350GP</CheckBox>
@@ -165,7 +172,202 @@
             </div>
             </div>
         </div>
+    <h3>Thief Blursings</h3>
+    <div id="Thief Normal Bonuses" class="framed-content">
+        <h4>Normal Bonuses</h4>
+        <div class="row">
+            <div class="col1">
+                <h5>Stat Increases</h5>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThAdd10Str" @bind-Value="Flags.ThAdd10Str">Plus 10 Str</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThAdd10Str" @bind-Value="Flags.ThAdd20Str">Plus 20 Str</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThAdd15Agi" @bind-Value="Flags.ThAdd15Agi">Plus 15 Agi</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThAdd20Agi" @bind-Value="Flags.ThAdd20Agi">Plus 20 Agi</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThAdd25Agi" @bind-Value="Flags.ThAdd25Agi">Plus 25 Agi</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThAdd10Vit" @bind-Value="Flags.ThAdd10Vit">Plus 10 Vit</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThAdd20Vit" @bind-Value="Flags.ThAdd20Vit">Plus 20 Vit</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThAdd5Luck" @bind-Value="Flags.ThAdd5Luck">Plus 5 Luck</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThAdd10Luck" @bind-Value="Flags.ThAdd10Luck">Plus 10 Luck</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThAdd20HP" @bind-Value="Flags.ThAdd20HP">Plus 20 HP</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThAdd40HP" @bind-Value="Flags.ThAdd40HP">Plus 40 HP</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThAdd10PerHit" @bind-Value="Flags.ThAdd10PerHit">10% Hit/Lvl</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiAdd20PerHit" @bind-Value="Flags.ThAdd20PerHit">20% Hit/Lvl</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThAdd10Mdef" @bind-Value="Flags.ThAdd10Mdef">Plus 10 Mdef</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThAdd20Mdef" @bind-Value="Flags.ThAdd20Mdef">Plus 20 Mdef</CheckBox>
+                <h5>Extra Damage</h5>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThHurtUndead" @bind-Value="Flags.ThHurtUndead">Hurt Undead</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThHurtDragon" @bind-Value="Flags.ThHurtDragon">Hurt Dragons</CheckBox>
+                <h5>Resistances(Max 3)</h5>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThResistPoison" @bind-Value="Flags.ThResistPoison">Resist Poison</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThResistEarth" @bind-Value="Flags.ThResistEarth">Resist Earth</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThResistDeath" @bind-Value="Flags.ThResistDeath">Resist Death</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThResistTime" @bind-Value="Flags.ThResistTime">Resist Time</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThResistStatus" @bind-Value="Flags.ThResistStatus">Resist Status</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThResistIce" @bind-Value="Flags.ThResistIce">Resist Ice</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThResistLit" @bind-Value="Flags.ThResistLit">Resist Lit</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThResistThre" @bind-Value="Flags.ThResistFire">Resist Thre</CheckBox>
+                <h5>Other Bonuses</h5>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThEarlyLockpick" @bind-Value="Flags.ThEarlyLockpick">Early Lockpicking</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThXP50Percent" @bind-Value="Flags.ThXP50Percent">Plus 50% EXP</CheckBox>
+                <div class="checkbox-cell"></div>
+            </div>
+            <div class="col2">
+                <h5>Weapons And Armor</h5>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThEquipShirt" @bind-Value="Flags.ThEquipShirt">Equip Shirt</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThEquipAxe" @bind-Value="Flags.ThEquipAxe">Equip Axe</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThEquipShields" @bind-Value="Flags.ThEquipShields">Equip Shields</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThEquipBonkHelm" @bind-Value="Flags.ThEquipBonkHelm">Equip Helms & Gauntlet</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThRMArmor" @bind-Value="Flags.ThRMArmor">Equip Red Mage Armor</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThLegSwords" @bind-Value="Flags.ThLegSwords">Legendary Swords</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThWoodArmor" @bind-Value="Flags.ThWoodArmor">Wood Adept</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThImpCatclaw" @bind-Value="Flags.ThImpCatclaw">Improved Cat Claw</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThImpThor" @bind-Value="Flags.ThImpThor">Improved Thor Hammer</CheckBox>
+                <div class="col3">
+                    <h5>Magic</h5>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThTelemagic" @bind-Value="Flags.ThTelemagic">Tele Magic</CheckBox>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThBuffmagic" @bind-Value="Flags.ThBuffMagic">Buff Magic</CheckBox>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThSelfmagic" @bind-Value="Flags.ThSelfMagic">Self Magic</CheckBox>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThHealmagic" @bind-Value="Flags.ThHealMagic">Heal Magic</CheckBox>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThHealplusmagic" @bind-Value="Flags.ThHealMagicPlus">Heal Plus Magic</CheckBox>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThElemmagic" @bind-Value="Flags.ThElemMagic">Elemental Magic</CheckBox>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThElemplusmagic" @bind-Value="Flags.ThElemplusMagic">Elemental Plus Magic</CheckBox>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThCleanMagic" @bind-Value="Flags.ThCleanMagic">Clean Magic</CheckBox>
+                    <h5>Starting Gold Increase</h5>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThStartgold200" @bind-Value="Flags.ThStartGold200">+200GP</CheckBox>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThStartgold400" @bind-Value="Flags.ThStartGold400">+400GP</CheckBox>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThStartgold600" @bind-Value="Flags.ThStartGold600">+600GP</CheckBox>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThStartgold800" @bind-Value="Flags.ThStartGold800">+800GP</CheckBox>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThStartgold1500" @bind-Value="Flags.ThStartGold1500">+1500GP</CheckBox>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThStartgold5000" @bind-Value="Flags.ThStartGold5000">+5000GP</CheckBox>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThStartgold20000" @bind-Value="Flags.ThStartGold20000">+20000GP</CheckBox>
+                    <div class="checkbox-cell"></div>
+                </div>
+            </div>
+        </div>
     </div>
+        <div id="thief Strong Bonuses" class="framed-content">
+            <h4>Strong Bonuses</h4>
+            <div class="row">
+                <div class="col1">
+                    <h5>Stat Increases</h5>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThAdd40Str" @bind-Value="Flags.ThAdd40Str">Plus 40 Str</CheckBox>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThAdd50Agi" @bind-Value="Flags.ThAdd50Agi">Plus 50 Agi</CheckBox>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThAdd40Vit" @bind-Value="Flags.ThAdd40Vit">Plus 40 Vit</CheckBox>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThAdd80HP" @bind-Value="Flags.ThAdd80HP">Plus 80 HP</CheckBox>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThMdef2Lvl" @bind-Value="Flags.ThMdef2Lvl">Plus 2 Mdef/Lvl</CheckBox>
+                    <h5>Weapons and Armor</h5>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThFiWeapons" @bind-Value="Flags.ThFiWeapons">Fighter Weapons</CheckBox>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThFiArmor" @bind-Value="Flags.ThFiArmor">Fighter Armor</CheckBox>
+                    <div class="checkbox-cell"></div>
+                </div>
+                <div class="col2">
+                    <h5>Other Bonuses</h5>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThHurtAll" @bind-Value="Flags.ThHurtAll">Hurt All</CheckBox>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThResistAll" @bind-Value="Flags.ThResistAll">Resist All</CheckBox>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThResistPEDTS" @bind-Value="Flags.ThResistPEDTS">Resist PEDTS</CheckBox>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThXP100Percent" @bind-Value="Flags.ThXP100Percent">Plus 100% EXP</CheckBox>
+                    <h5>Starting Gold</h5>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThStartgold1400" @bind-Value="Flags.ThStartgold1400">+1400GP</CheckBox>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThStartgold2000" @bind-Value="Flags.ThStartgold2000">+2000GP</CheckBox>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThStartgold3000" @bind-Value="Flags.ThStartgold3000">+3000GP</CheckBox>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThStartgold4000" @bind-Value="Flags.ThStartgold4000">+4000GP</CheckBox>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThStartgold6000" @bind-Value="Flags.ThStartgold6000">+6000GP</CheckBox>
+                    <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThStartgold20000St" @bind-Value="Flags.ThStartgold20000St">+20000GP</CheckBox>
+                    <div class="checkbox-cell"></div>
+                </div>
+            </div>
+        </div>
+    
+    <div id="thief maluses" class="framed-content">
+        <h4>Maluses</h4>
+        <div class="row">
+            <div class="col1">
+                <h5>Stat Decreases</h5>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThDown10Str" @bind-Value="Flags.ThDown10Str">Down 10 Str</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThDown20Str" @bind-Value="Flags.ThDown20Str">Down 20 Str</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThDown10Agi" @bind-Value="Flags.ThDown10Agi">Down 10 Agi</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThDown20Agi" @bind-Value="Flags.ThDown20Agi">Down 20 Agi</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThDown10Vit" @bind-Value="Flags.ThDown10Vit">Down 10 Vit</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThDown5Luck" @bind-Value="Flags.ThDown5Luck">Down 5 Luck</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThDown10Luck" @bind-Value="Flags.ThDown10Luck">Down 10 Luck</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThDown15HP" @bind-Value="Flags.ThDown15HP">Down 15 HP</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThDown30HP" @bind-Value="Flags.ThDown30HP">Down 30 HP</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThDown1HitPercent" @bind-Value="Flags.ThDown1HitPercent">Down 1% Hit/Lvl</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThDown1MDef" @bind-Value="Flags.ThDown1MDef">Down 1Mdef/Lvl</CheckBox>
+                <h5>Starting Gold Decreases</h5>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThDown100GP" @bind-Value="Flags.ThDown100GP">Minus 100GP</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThDown150GP" @bind-Value="Flags.ThDown150GP">Minus 150GP</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThDown350GP" @bind-Value="Flags.ThDown350GP">Minus 350GP</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThDown1100GP" @bind-Value="Flags.ThDown1100GP">Minus 1100GP</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThDown4500GP" @bind-Value="Flags.ThDown4500GP">Minus 4500GP</CheckBox>
+                <div class="checkbox-cell"></div>
+            </div>
+            <div class="col2">
+                <h5>Equipment Restrictions</h5>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThNoBracelets" @bind-Value="Flags.ThNoBracelets">No Bracelets</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThNoMasa" @bind-Value="Flags.ThNoMasa">No Masa</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThNoRibbon" @bind-Value="Flags.ThNoRibbon">No Ribbon</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThNoProRing" @bind-Value="Flags.ThNoProRing">No Proring</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThPromoRMArmor" @bind-Value="Flags.ThPromoRmArmor">Red Mage Armor</CheckBox>
+                 <h5>Promotion Restrictions</h5>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThNoPromoSpells" @bind-Value="Flags.ThNoPromoSpells">No Promotion Spells</CheckBox>
+                <h5>Other Maluses</h5>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThLateLockPicking" @bind-Value="Flags.ThLateLockPicking">Late Lockpicking</CheckBox>
+                <div class="checkbox-cell"></div>
+            </div>
+        </div>
+    </div>
+    <div id="thief KI" class="framed-content">
+        <h4>Start with Key Items</h4>
+        <div class="row">
+            <div class="col1">
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThStartCrown" @bind-Value="Flags.ThStartCrown">Crown</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThStartCrystal" @bind-Value="Flags.ThStartCrystal">Crystal</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThStartHerb" @bind-Value="Flags.ThStartHerb">Herb</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThStartTNT" @bind-Value="Flags.ThStartTNT">TNT</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThStartAdamant" @bind-Value="Flags.ThStartAdamant">Adamant</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThStartSlab" @bind-Value="Flags.ThStartSlab">Slab</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThStartRuby" @bind-Value="Flags.ThStartRuby">Ruby</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThStartRod" @bind-Value="Flags.ThStartRod">Rod</CheckBox>
+                <div class="checkbox-cell"></div>
+            </div>
+            <div class="col2">
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThStartChime" @bind-Value="Flags.ThStartChime">Chime</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThStartCube" @bind-Value="Flags.ThStartCube">Cube</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThStartBottle" @bind-Value="Flags.ThStartBottle">Bottle</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThStartOxyale" @bind-Value="Flags.ThStartOxyale">Oxyale</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThStartLute" @bind-Value="Flags.ThStartLute">Lute</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThStartTail" @bind-Value="Flags.ThStartTail">Tail</CheckBox>
+                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThStartKey" @bind-Value="Flags.ThStartKey">Key</CheckBox>
+                <div class="checkbox-cell"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
 
 
 

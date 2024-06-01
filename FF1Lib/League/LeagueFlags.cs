@@ -28,6 +28,8 @@ namespace FF1Lib
 			public bool FiAdd40HP { get; set; } = false;
 			public bool FiAdd10PerHit { get; set; } = false;
 			public bool FiAdd20PerHit { get; set; } = false;
+			public bool FiAdd10Mdef { get; set; } = false;
+			public bool FiAdd20Mdef { get; set; } = false;
 			public bool FiEquipShirt { get; set; } = false;
 			public bool FiLegSwords { get; set; } = false;
 			public bool FiWoodArmor { get; set; } = false;
@@ -85,6 +87,8 @@ namespace FF1Lib
 			public bool ThAdd40HP { get; set; } = false;
 			public bool ThAdd10PerHit { get; set; } = false;
 			public bool ThAdd20PerHit { get; set; } = false;
+			public bool ThAdd10Mdef { get; set; } = false;
+			public bool ThAdd20Mdef { get; set; } = false;
 			public bool ThEquipAxe { get; set; } = false;
 			public bool ThEquipShirt { get; set; } = false;
 			public bool ThEquipShields { get; set; } = false;
@@ -130,10 +134,18 @@ namespace FF1Lib
 			public bool ThFiWeapons { get; set; } = false;
 			public bool ThFiArmor { get; set; } = false;
 			public bool ThXP100Percent { get; set; } = false;
+			public bool ThResistAll { get; set; } = false;
+			public bool ThResistPEDTS { get; set; } = false;
+			public bool ThStartgold1400 { get; set; } = false;
+			public bool ThStartgold2000 { get; set; } = false;
+			public bool ThStartgold3000 { get; set; } = false;
+			public bool ThStartgold4000 { get; set; } = false;
+			public bool ThStartgold6000 { get; set; } = false;
+			public bool ThStartgold20000St { get; set; } = false;
 
 		#endregion
 		#region BlackBeltBonus
-			public bool BBAdd10Str { get; set; } = false;
+		public bool BBAdd10Str { get; set; } = false;
 			public bool BBAdd20Str { get; set; } = false;
 			public bool BBAdd15Agi { get; set; } = false;
 			public bool BBAdd20Agi { get; set; } = false;

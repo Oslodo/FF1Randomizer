@@ -165,6 +165,24 @@ namespace FF1Lib.League
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FiAdd20PerHit"));
 			}
 		}
+		public bool FiAdd10Mdef
+		{
+			get => Leagueflags.FiAdd10Mdef;
+			set
+			{
+				Leagueflags.FiAdd10Mdef = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FiAdd10Mdef"));
+			}
+		}
+		public bool FiAdd20Mdef
+		{
+			get => Leagueflags.FiAdd20Mdef;
+			set
+			{
+				Leagueflags.FiAdd20Mdef = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FiAdd20Mdef"));
+			}
+		}
 		public bool FiEquipShirt
 		{
 			get => Leagueflags.FiEquipShirt;
@@ -670,6 +688,24 @@ namespace FF1Lib.League
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ThAdd20PerHit"));
 			}
 		}
+		public bool ThAdd10Mdef
+		{
+			get => Leagueflags.ThAdd10Mdef;
+			set
+			{
+				Leagueflags.ThAdd10Mdef = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ThAdd10Mdef"));
+			}
+		}
+		public bool ThAdd20Mdef
+		{
+			get => Leagueflags.ThAdd20Mdef;
+			set
+			{
+				Leagueflags.ThAdd20Mdef = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ThAdd20Mdef"));
+			}
+		}
 		public bool ThEquipAxe
 		{
 			get => Leagueflags.ThEquipAxe;
@@ -1074,6 +1110,78 @@ namespace FF1Lib.League
 			{
 				Leagueflags.ThXP100Percent = value;
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ThXP100Percent"));
+			}
+		}
+		public bool ThResistAll
+		{
+			get => Leagueflags.ThResistAll;
+			set
+			{
+				Leagueflags.ThResistAll = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ThResistAll"));
+			}
+		}
+		public bool ThResistPEDTS
+		{
+			get => Leagueflags.ThResistPEDTS;
+			set
+			{
+				Leagueflags.ThResistPEDTS = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ThResistPEDTS"));
+			}
+		}
+		public bool ThStartgold1400
+		{
+			get => Leagueflags.ThStartgold1400;
+			set
+			{
+				Leagueflags.ThStartgold1400 = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ThStartgold1400"));
+			}
+		}
+		public bool ThStartgold2000
+		{
+			get => Leagueflags.ThStartgold2000;
+			set
+			{
+				Leagueflags.ThStartgold2000 = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ThStartgold2000"));
+			}
+		}
+		public bool ThStartgold3000
+		{
+			get => Leagueflags.ThStartgold3000;
+			set
+			{
+				Leagueflags.ThStartgold3000 = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ThStartgold3000"));
+			}
+		}
+		public bool ThStartgold4000
+		{
+			get => Leagueflags.ThStartgold4000;
+			set
+			{
+				Leagueflags.ThStartgold4000 = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ThStartgold4000"));
+			}
+		}
+		public bool ThStartgold6000
+		{
+			get => Leagueflags.ThStartgold6000;
+			set
+			{
+				Leagueflags.ThStartgold6000 = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ThStartgold6000"));
+			}
+		}
+		public bool ThStartgold20000St
+		{
+			get => Leagueflags.ThStartgold20000St;
+			set
+			{
+				Leagueflags.ThStartgold20000St = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ThStartgold20000St"));
 			}
 		}
 		#endregion
@@ -4761,7 +4869,7 @@ namespace FF1Lib.League
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ThStartBottle"));
 			}
 		}
-		public bool ThStartOxrale
+		public bool ThStartOxyale
 		{
 			get => Leagueflags.ThStartOxyale;
 			set

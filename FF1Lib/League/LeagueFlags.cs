@@ -18,7 +18,6 @@ namespace FF1Lib
 			public bool FiAdd10Str { get; set; } = false;
 			public bool FiAdd20Str { get; set; } = false;
 			public bool FiAdd15Agi { get; set; } = false;
-			public bool FiAdd20Agi { get; set; } = false;
 			public bool FiAdd25Agi { get; set; } = false;
 			public bool FiAdd10Vit { get; set; } = false;
 			public bool FiAdd20Vit { get; set; } = false;
@@ -77,7 +76,6 @@ namespace FF1Lib
 			public bool ThAdd10Str { get; set; } = false;
 			public bool ThAdd20Str { get; set; } = false;
 			public bool ThAdd15Agi { get; set; } = false;
-			public bool ThAdd20Agi { get; set; } = false;
 			public bool ThAdd25Agi { get; set; } = false;
 			public bool ThAdd10Vit { get; set; } = false;
 			public bool ThAdd20Vit { get; set; } = false;
@@ -145,10 +143,9 @@ namespace FF1Lib
 
 		#endregion
 		#region BlackBeltBonus
-		public bool BBAdd10Str { get; set; } = false;
+			public bool BBAdd10Str { get; set; } = false;
 			public bool BBAdd20Str { get; set; } = false;
 			public bool BBAdd15Agi { get; set; } = false;
-			public bool BBAdd20Agi { get; set; } = false;
 			public bool BBAdd25Agi { get; set; } = false;
 			public bool BBAdd10Vit { get; set; } = false;
 			public bool BBAdd20Vit { get; set; } = false;
@@ -158,6 +155,8 @@ namespace FF1Lib
 			public bool BBAdd40HP { get; set; } = false;
 			public bool BBAdd10PerHit { get; set; } = false;
 			public bool BBAdd20PerHit { get; set; } = false;
+			public bool BBAdd10Mdef { get; set; } = false;
+			public bool BBAdd20Mdef { get; set; } = false;
 			public bool BBEquipAxe { get; set; } = false;
 			public bool BBEquipShirt { get; set; } = false;
 			public bool BBEquipShields { get; set; } = false;
@@ -187,6 +186,8 @@ namespace FF1Lib
 			public bool BBResistIce { get; set; } = false;
 			public bool BBResistLit { get; set; } = false;
 			public bool BBResistFire { get; set; } = false;
+			public bool BBResistAll { get; set; } = false;
+			public bool BBResistPEDTS { get; set; } = false;
 			public bool BBStartgold200 { get; set; } = false;
 			public bool BBStartgold400 { get; set; } = false;
 			public bool BBStartgold600 { get; set; } = false;
@@ -207,7 +208,6 @@ namespace FF1Lib
 			public bool RmAdd10Str { get; set; } = false;
 			public bool RmAdd20Str { get; set; } = false;
 			public bool RmAdd15Agi { get; set; } = false;
-			public bool RmAdd20Agi { get; set; } = false;
 			public bool RmAdd25Agi { get; set; } = false;
 			public bool RmAdd10Vit { get; set; } = false;
 			public bool RmAdd20Vit { get; set; } = false;
@@ -275,7 +275,6 @@ namespace FF1Lib
 			public bool WmAdd10Str { get; set; } = false;
 			public bool WmAdd20Str { get; set; } = false;
 			public bool WmAdd15Agi { get; set; } = false;
-			public bool WmAdd20Agi { get; set; } = false;
 			public bool WmAdd25Agi { get; set; } = false;
 			public bool WmAdd10Vit { get; set; } = false;
 			public bool WmAdd20Vit { get; set; } = false;
@@ -343,7 +342,6 @@ namespace FF1Lib
 			public bool BmAdd10Str { get; set; } = false;
 			public bool BmAdd20Str { get; set; } = false;
 			public bool BmAdd15Agi { get; set; } = false;
-			public bool BmAdd20Agi { get; set; } = false;
 			public bool BmAdd25Agi { get; set; } = false;
 			public bool BmAdd10Vit { get; set; } = false;
 			public bool BmAdd20Vit { get; set; } = false;
@@ -434,9 +432,8 @@ namespace FF1Lib
 			public bool FiDown1100GP { get; set; } = false;
 			public bool FiDown4500gp { get; set; } = false;
 		#endregion
-		#region TheifMalus
+		#region ThiefMalus
 			public bool ThDown10Str { get; set; } = false;
-			public bool ThDown20Str { get; set; } = false;
 			public bool ThDown10Agi { get; set; } = false;
 			public bool ThDown20Agi { get; set; } = false;
 			public bool ThDown10Vit { get; set; } = false;

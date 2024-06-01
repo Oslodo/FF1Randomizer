@@ -71,16 +71,6 @@ namespace FF1Lib.League
 			}
 		}
 
-		public bool FiAdd20Agi
-		{
-			get => Leagueflags.FiAdd20Agi;
-			set
-			{
-				Leagueflags.FiAdd20Agi = value;
-				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FiAdd20Agi"));
-			}
-		}
-
 		public bool FiAdd25Agi
 		{
 			get => Leagueflags.FiAdd25Agi;
@@ -591,16 +581,6 @@ namespace FF1Lib.League
 			{
 				Leagueflags.ThAdd15Agi = value;
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ThAdd15Agi"));
-			}
-		}
-
-		public bool ThAdd20Agi
-		{
-			get => Leagueflags.ThAdd20Agi;
-			set
-			{
-				Leagueflags.ThAdd20Agi = value;
-				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ThAdd20Agi"));
 			}
 		}
 
@@ -1215,16 +1195,6 @@ namespace FF1Lib.League
 			}
 		}
 
-		public bool BBAdd20Agi
-		{
-			get => Leagueflags.BBAdd20Agi;
-			set
-			{
-				Leagueflags.BBAdd20Agi = value;
-				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BBAdd20Agi"));
-			}
-		}
-
 		public bool BBAdd25Agi
 		{
 			get => Leagueflags.BBAdd25Agi;
@@ -1307,6 +1277,24 @@ namespace FF1Lib.League
 			{
 				Leagueflags.BBAdd20PerHit = value;
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BBAdd20PerHit"));
+			}
+		}
+		public bool BBAdd10Mdef
+		{
+			get => Leagueflags.BBAdd10Mdef;
+			set
+			{
+				Leagueflags.BBAdd10Mdef = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BBAdd10Mdef"));
+			}
+		}
+		public bool BBAdd20Mdef
+		{
+			get => Leagueflags.BBAdd20Mdef;
+			set
+			{
+				Leagueflags.BBAdd20Mdef = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BBAdd20Mdef"));
 			}
 		}
 		public bool BBEquipAxe
@@ -1491,6 +1479,16 @@ namespace FF1Lib.League
 			}
 
 		}
+		public bool BBPromoFiarmor
+		{
+			get => Leagueflags.BBPromoFiarmor;
+			set
+			{
+				Leagueflags.BBPromoFiarmor = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BBPromoFiarmor"));
+			}
+
+		}
 		public bool BBResistPoison
 		{
 			get => Leagueflags.BBResistPosion;
@@ -1561,6 +1559,24 @@ namespace FF1Lib.League
 			{
 				Leagueflags.BBResistFire = value;
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BBResistFire"));
+			}
+		}
+		public bool BBResistAll
+		{
+			get => Leagueflags.BBResistAll;
+			set
+			{
+				Leagueflags.BBResistAll = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BBResistAll"));
+			}
+		}
+		public bool BBResistPEDTS
+		{
+			get => Leagueflags.BBResistPEDTS;
+			set
+			{
+				Leagueflags.BBResistPEDTS = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BBResistPEDTS"));
 			}
 		}
 		public bool BBStartGold200
@@ -1729,15 +1745,6 @@ namespace FF1Lib.League
 			}
 		}
 
-		public bool RmAdd20Agi
-		{
-			get => Leagueflags.RmAdd20Agi;
-			set
-			{
-				Leagueflags.RmAdd20Agi = value;
-				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("RmAdd20Agi"));
-			}
-		}
 
 		public bool RmAdd25Agi
 		{
@@ -2306,15 +2313,6 @@ namespace FF1Lib.League
 			}
 		}
 
-		public bool WmAdd20Agi
-		{
-			get => Leagueflags.WmAdd20Agi;
-			set
-			{
-				Leagueflags.WmAdd20Agi = value;
-				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("WmAdd20Agi"));
-			}
-		}
 
 		public bool WmAdd25Agi
 		{
@@ -2898,16 +2896,6 @@ namespace FF1Lib.League
 			{
 				Leagueflags.BmAdd15Agi = value;
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BmAdd15Agi"));
-			}
-		}
-
-		public bool BmAdd20Agi
-		{
-			get => Leagueflags.BmAdd20Agi;
-			set
-			{
-				Leagueflags.BmAdd20Agi = value;
-				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BmAdd20Agi"));
 			}
 		}
 
@@ -3688,15 +3676,6 @@ namespace FF1Lib.League
 			{
 				Leagueflags.ThDown10Str = value;
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ThDown10Str"));
-			}
-		}
-		public bool ThDown20Str
-		{
-			get => Leagueflags.ThDown20Str;
-			set
-			{
-				Leagueflags.ThDown20Str = value;
-				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ThDown20Str"));
 			}
 		}
 		public bool ThDown10Agi
@@ -4906,7 +4885,7 @@ namespace FF1Lib.League
 			}
 		}
 		#endregion
-		#region BlackBeltMalus
+		#region BlackBeltItems
 		public bool BBStartCrown
 		{
 			get => Leagueflags.BBStartCrown;
@@ -5006,7 +4985,7 @@ namespace FF1Lib.League
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BBStartBottle"));
 			}
 		}
-		public bool BBStartOxrale
+		public bool BBStartOxyale
 		{
 			get => Leagueflags.BBStartOxyale;
 			set
@@ -5143,7 +5122,7 @@ namespace FF1Lib.League
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("RmStartBottle"));
 			}
 		}
-		public bool RmStartOxrale
+		public bool RmStartOxyale
 		{
 			get => Leagueflags.RmStartOxyale;
 			set
@@ -5280,7 +5259,7 @@ namespace FF1Lib.League
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("WmStartBottle"));
 			}
 		}
-		public bool WmStartOxrale
+		public bool WmStartOxyale
 		{
 			get => Leagueflags.WmStartOxyale;
 			set
@@ -5417,7 +5396,7 @@ namespace FF1Lib.League
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BmStartBottle"));
 			}
 		}
-		public bool BmStartOxrale
+		public bool BmStartOxyale
 		{
 			get => Leagueflags.BmStartOxyale;
 			set
@@ -5454,15 +5433,7 @@ namespace FF1Lib.League
 			}
 		}
 		#endregion
-		public bool StartCrown
-		{
-			get => Leagueflags.StartCrown;
-			set
-			{
-				Leagueflags.StartCrown = value;
-				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("StartCrown"));
-			}
-		}
+
 		#endregion
 		#endregion
 

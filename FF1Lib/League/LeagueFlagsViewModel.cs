@@ -1893,13 +1893,13 @@ namespace FF1Lib.League
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("MP1All"));
 			}
 		}
-		public bool RmAddSpell
+		public LeagueMagicPool AddRMSpell
 		{
 			get => Leagueflags.RmAddSpell;
 			set
 			{
 				Leagueflags.RmAddSpell = value;
-				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("RmAddSpell"));
+				RaisePropertyChanged();
 			}
 		}
 		public bool RmTelemagic

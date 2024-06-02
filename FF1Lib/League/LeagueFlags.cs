@@ -5,6 +5,7 @@ using System.IO.Compression;
 using static FF1Lib.FF1Rom;
 using FF1Lib.Sanity;
 using System.Diagnostics.SymbolStore;
+using FF1Lib.League;
 
 namespace FF1Lib
 {
@@ -225,7 +226,7 @@ namespace FF1Lib
 			public bool RmWoodArmor { get; set; } = false;
 			public bool RmLvl1MP2 { get; set; } = false;
 			public bool RmMP1All { get; set; } = false;
-			public bool RmAddSpell { get; set; } = false; // will need extra work to get the spell list
+			public LeagueMagicPool RmAddSpell { get; set; } = LeagueMagicPool.None; // Testing with a new idea
 			public bool RmTelemagic { get; set; } = false;
 			public bool RmBuffmagic { get; set; } = false;
 			public bool RmSelfmagic { get; set; } = false;

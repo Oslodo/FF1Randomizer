@@ -813,7 +813,7 @@ namespace FF1Lib
 			return spellBlursings;
 		}
 
-		public (List<BonusMalus>, List<BonusMalus>) CreateMagicBonusesLeague(FF1Rom rom, MT19337 rng, Flags flags)
+		public (List<BonusMalus>, List<BonusMalus>) CreateMagicBonusesLeague(FF1Rom rom, MT19337 rng, Flags flags) //this is for the different magic types
 		{
 			List<BonusMalus> spellBlursingsStrong = new();
 			List<BonusMalus> spellBlursingsNormal = new();

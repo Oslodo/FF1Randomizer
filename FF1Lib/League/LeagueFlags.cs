@@ -218,12 +218,15 @@ namespace FF1Lib
 			public bool RmAdd40HP { get; set; } = false;
 			public bool RmAdd10PerHit { get; set; } = false;
 			public bool RmAdd20PerHit { get; set; } = false;
+			public bool RmAdd10Mdef { get; set; } = false;
+			public bool RmAdd20Mdef { get; set; } = false;
 			public bool RmEquipAxe { get; set; } = false;
 			public bool RMEquipShirt { get; set; } = false;
 			public bool RmEquipShields { get; set; } = false;
 			public bool RmEquipBonkHelm { get; set; } = false;
 			public bool RmLegSwords { get; set; } = false;
 			public bool RmWoodArmor { get; set; } = false;
+			public bool RmImpCatclaw { get; set; } = false;
 			public bool RmLvl1MP2 { get; set; } = false;
 			public bool RmMP1All { get; set; } = false;
 			public LeagueMagicPool RmAddSpell { get; set; } = LeagueMagicPool.None; // Testing with a new idea
@@ -252,6 +255,8 @@ namespace FF1Lib
 			public bool RmResistIce { get; set; } = false;
 			public bool RmResistLit { get; set; } = false;
 			public bool RmResistFire { get; set; } = false;
+			public bool RmResistAll { get; set; } = false;
+			public bool RmResistPEDTS { get; set; } = false;
 			public bool RmStartgold200 { get; set; } = false;
 			public bool RmStartgold400 { get; set; } = false;
 			public bool RmStartgold600 { get; set; } = false;
@@ -267,7 +272,7 @@ namespace FF1Lib
 			public bool RmMdef2lvl { get; set; } = false;
 			public bool RmFiWeapons { get; set; } = false;
 			public bool RmFiArmor { get; set; } = false;
-			public bool RmImprovedMP { get; set; } = false;
+			//public bool RmImprovedMP { get; set; } = false; Not a major flag, removed for now
 			public bool RmSage { get; set; } = false;
 			public bool RmXP100Percent { get; set; } = false;
 
@@ -285,6 +290,8 @@ namespace FF1Lib
 			public bool WmAdd40HP { get; set; } = false;
 			public bool WmAdd10PerHit { get; set; } = false;
 			public bool WmAdd20PerHit { get; set; } = false;
+			public bool WmAdd10Mdef { get; set; } = false;
+			public bool WmAdd20Mdef { get; set; } = false;
 			public bool WmEquipAxe { get; set; } = false;
 			public bool WmEquipShirt { get; set; } = false;
 			public bool WmEquipShields { get; set; } = false;
@@ -295,7 +302,7 @@ namespace FF1Lib
 			public bool WmWoodArmor { get; set; } = false;
 			public bool WmLvl1MP2 { get; set; } = false;
 			public bool WmMP1All { get; set; } = false;
-			public bool WmAddSpell { get; set; } = false; // will need extra work to get the spell list
+			public LeagueMagicPool WmAddSpell { get; set; } = LeagueMagicPool.None; 
 			public bool WmTelemagic { get; set; } = false;
 			public bool WmBuffmagic { get; set; } = false;
 			public bool WmSelfmagic { get; set; } = false;
@@ -336,8 +343,10 @@ namespace FF1Lib
 			public bool WmMdef2lvl { get; set; } = false;
 			public bool WmFiWeapons { get; set; } = false;
 			public bool WmFiArmor { get; set; } = false;
-			public bool WmImprovedMP { get; set; } = false;
+			//public bool WmImprovedMP { get; set; } = false;
 			public bool WmXP100Percent { get; set; } = false;
+			public bool WmResistAll { get; set; } = false;
+			public bool WmResistPEDTS { get; set; } = false;
 		#endregion
 		#region BmBonus
 			public bool BmAdd10Str { get; set; } = false;
@@ -349,9 +358,11 @@ namespace FF1Lib
 			public bool BmAdd5Luck { get; set; } = false;
 			public bool BmAdd10Luck { get; set; } = false;
 			public bool BmAdd20HP { get; set; } = false;
-			public bool BMAdd40HP { get; set; } = false;
+			public bool BmAdd40HP { get; set; } = false;
 			public bool BmAdd10PerHit { get; set; } = false;
 			public bool BmAdd20PerHit { get; set; } = false;
+			public bool BmAdd10Mdef { get; set; } = false;
+			public bool BmAdd20Mdef { get; set; } = false;
 			public bool BmEquipAxe { get; set; } = false;
 			public bool BmEquipShirt { get; set; } = false;
 			public bool BmEquipShields { get; set; } = false;
@@ -362,7 +373,7 @@ namespace FF1Lib
 			public bool BmWoodArmor { get; set; } = false;
 			public bool BmLvl1MP2 { get; set; } = false;
 			public bool BmMP1All { get; set; } = false;
-			public bool BmAddSpell { get; set; } = false; // will need extra work to get the spell list
+			public LeagueMagicPool BmAddSpell { get; set; } = LeagueMagicPool.None;
 			public bool BmTelemagic { get; set; } = false;
 			public bool BmBuffmagic { get; set; } = false;
 			public bool BmSelfmagic { get; set; } = false;
@@ -388,6 +399,8 @@ namespace FF1Lib
 			public bool BmResistIce { get; set; } = false;
 			public bool BmResistLit { get; set; } = false;
 			public bool BmResistFire { get; set; } = false;
+			public bool BmResistAll { get; set; } = false;
+			public bool BmResistPEDTS { get; set; } = false;
 			public bool BmStartgold200 { get; set; } = false;
 			public bool BmStartgold400 { get; set; } = false;
 			public bool BmStartgold600 { get; set; } = false;
@@ -403,7 +416,7 @@ namespace FF1Lib
 			public bool BmMdef2lvl { get; set; } = false;
 			public bool BmFiWeapons { get; set; } = false;
 			public bool BmFiArmor { get; set; } = false;
-			public bool BmImprovedMP { get; set; } = false;
+			//public bool BmImprovedMP { get; set; } = false;
 			public bool BmXP100Percent { get; set; } = false;
 		#endregion
 		#endregion
@@ -497,7 +510,7 @@ namespace FF1Lib
 			public bool RmNoProring { get; set; } = false;
 			public bool RmThiefweaponsMalus { get; set; } = false;
 			public bool RmDown4MaxMP { get; set; } = false;
-			public bool RmNoSpell { get; set; } = false; //this one might need some added items to get the spell
+			public LeagueMagicPool RmRemoveSpell { get; set; } = LeagueMagicPool.None; // Testing with a new idea	
 			public bool RmDown50GP { get; set; } = false;
 			public bool RmDown100GP { get; set; } = false;
 			public bool RmDown150GP { get; set; } = false;
@@ -519,7 +532,7 @@ namespace FF1Lib
 			public bool WmNoRibbon { get; set; } = false;
 			public bool WmNoProring { get; set; } = false;
 			public bool WmDown4MaxMP { get; set; } = false;
-			public bool WmNoSpell { get; set; } = false; //this one might need some added items to get the spell
+			public LeagueMagicPool WmRemoveSpell { get; set; } = LeagueMagicPool.None;
 			public bool WmDown50GP { get; set; } = false;
 			public bool WmDown100GP { get; set; } = false;
 			public bool WmDown150GP { get; set; } = false;
@@ -541,7 +554,7 @@ namespace FF1Lib
 			public bool BmNoRibbon { get; set; } = false;
 			public bool BmNoProring { get; set; } = false;
 			public bool BmDown4MaxMP { get; set; } = false;
-			public bool BmNoSpell { get; set; } = false; //this one might need some added items to get the spell
+			public LeagueMagicPool BmRemoveSpell { get; set; } = LeagueMagicPool.None;
 			public bool BmDown50GP { get; set; } = false;
 			public bool BmDown100GP { get; set; } = false;
 			public bool BmDown150GP { get; set; } = false;

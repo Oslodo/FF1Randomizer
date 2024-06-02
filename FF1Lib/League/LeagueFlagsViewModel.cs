@@ -1830,6 +1830,25 @@ namespace FF1Lib.League
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("RmAdd20PerHit"));
 			}
 		}
+		public bool RmAdd10Mdef
+		{
+			get => Leagueflags.RmAdd10Mdef;
+			set
+			{
+				Leagueflags.RmAdd10Mdef = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("RmAdd10Mdef"));
+			}
+		}
+		public bool RmAdd20Mdef
+		{
+			get => Leagueflags.RmAdd20Mdef;
+			set
+			{
+				Leagueflags.RmAdd20Mdef = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("RmAdd20Mdef"));
+			}
+		}
+
 		public bool RmEquipAxe
 		{
 			get => Leagueflags.RmEquipAxe;
@@ -1837,6 +1856,15 @@ namespace FF1Lib.League
 			{
 				Leagueflags.RmEquipAxe = value;
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("RmEquipAxe"));
+			}
+		}
+		public bool RmEquipShirt
+		{
+			get => Leagueflags.RMEquipShirt;
+			set
+			{
+				Leagueflags.RMEquipShirt = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("RmEquipShirt"));
 			}
 		}
 		public bool RmEquipShields
@@ -1875,6 +1903,15 @@ namespace FF1Lib.League
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("RmWoodArmor"));
 			}
 		}
+		public bool RmImpCatclaw
+		{
+			get => Leagueflags.RmImpCatclaw;
+			set
+			{
+				Leagueflags.RmImpCatclaw = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("RmImpCatclaw"));
+			}
+		}
 		public bool RmLvl1MP2
 		{
 			get => Leagueflags.RmLvl1MP2;
@@ -1893,7 +1930,7 @@ namespace FF1Lib.League
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("MP1All"));
 			}
 		}
-		public LeagueMagicPool AddRMSpell
+		public LeagueMagicPool RMAddSpell
 		{
 			get => Leagueflags.RmAddSpell;
 			set
@@ -2120,6 +2157,24 @@ namespace FF1Lib.League
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("RmResistFire"));
 			}
 		}
+		public bool RmResistAll
+		{
+			get => Leagueflags.RmResistAll;
+			set
+			{
+				Leagueflags.RmResistAll = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("RmResistAll"));
+			}
+		}
+		public bool RmResistPEDTS
+		{
+			get => Leagueflags.RmResistPEDTS;
+			set
+			{
+				Leagueflags.RmResistPEDTS = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("RmResistPEDTS"));
+			}
+		}
 		public bool RmStartGold200
 		{
 			get => Leagueflags.RmStartgold200;
@@ -2255,7 +2310,16 @@ namespace FF1Lib.League
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("RmFiArmor"));
 			}
 		}
-		public bool RmImprovedMP
+		public bool RmPromoFiArmor
+		{
+			get => Leagueflags.RmPromoFiArmor;
+			set
+			{
+				Leagueflags.RmPromoFiArmor = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("RmPromoFiArmor"));
+			}
+		}
+		/*public bool RmImprovedMP
 		{
 			get => Leagueflags.RmImprovedMP;
 			set
@@ -2263,7 +2327,7 @@ namespace FF1Lib.League
 				Leagueflags.RmImprovedMP = value;
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ImprovedMP"));
 			}
-		}
+		}*/
 		public bool RmSage
 		{
 			get => Leagueflags.RmSage;
@@ -2312,8 +2376,6 @@ namespace FF1Lib.League
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("WmAdd15Agi"));
 			}
 		}
-
-
 		public bool WmAdd25Agi
 		{
 			get => Leagueflags.WmAdd25Agi;
@@ -2398,6 +2460,24 @@ namespace FF1Lib.League
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("WmAdd20PerHit"));
 			}
 		}
+		public bool WmAdd10Mdef
+		{
+			get => Leagueflags.WmAdd10Mdef;
+			set
+			{
+				Leagueflags.WmAdd10Mdef = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("WmAdd10Mdef"));
+			}
+		}
+		public bool WmAdd20Mdef
+		{
+			get => Leagueflags.WmAdd20Mdef;
+			set
+			{
+				Leagueflags.WmAdd20Mdef = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("WmAdd20Mdef"));
+			}
+		}
 		public bool WmEquipAxe
 		{
 			get => Leagueflags.WmEquipAxe;
@@ -2432,6 +2512,15 @@ namespace FF1Lib.League
 			{
 				Leagueflags.WmEquipBonkHelm = value;
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("WmEquipBonkHelm"));
+			}
+		}
+		public bool WmPromoFiArmor
+		{
+			get => Leagueflags.WmPromoFiArmor;
+			set
+			{
+				Leagueflags.WmPromoFiArmor = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("WmPromoFiArmor"));
 			}
 		}
 		public bool WmThiefWeaponsBonus
@@ -2488,13 +2577,13 @@ namespace FF1Lib.League
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("WmMP1All"));
 			}
 		}
-		public bool WmAddSpell
+		public LeagueMagicPool WmAddSpell
 		{
 			get => Leagueflags.WmAddSpell;
 			set
 			{
 				Leagueflags.WmAddSpell = value;
-				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("WmAddSpell"));
+				RaisePropertyChanged();
 			}
 		}
 		public bool WmTelemagic
@@ -2569,7 +2658,7 @@ namespace FF1Lib.League
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("WmNukeMagic"));
 			}
 		}
-		public bool DoomMagic
+		public bool WmDoomMagic
 		{
 			get => Leagueflags.WmDoommagic;
 			set
@@ -2850,7 +2939,7 @@ namespace FF1Lib.League
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("WmFiArmor"));
 			}
 		}
-		public bool WmImprovedMP
+		/*public bool WmImprovedMP
 		{
 			get => Leagueflags.WmImprovedMP;
 			set
@@ -2858,7 +2947,7 @@ namespace FF1Lib.League
 				Leagueflags.WmImprovedMP = value;
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("WmImprovedMP"));
 			}
-		}
+		}*/
 		public bool WmXP100Percent
 		{
 			get => Leagueflags.WmXP100Percent;
@@ -2866,6 +2955,24 @@ namespace FF1Lib.League
 			{
 				Leagueflags.WmXP100Percent = value;
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("WmXP100Percent"));
+			}
+		}
+		public bool WmResistAll
+		{
+			get => Leagueflags.WmResistAll;
+			set
+			{
+				Leagueflags.WmResistAll = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("WmResistAll"));
+			}
+		}
+		public bool WmResistPEDTS
+		{
+			get => Leagueflags.WmResistPEDTS;
+			set
+			{
+				Leagueflags.WmResistPEDTS = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("WmResistPEDTS"));
 			}
 		}
 		#endregion
@@ -2958,10 +3065,10 @@ namespace FF1Lib.League
 		}
 		public bool BmAdd40HP
 		{
-			get => Leagueflags.BmAdd80HP;
+			get => Leagueflags.BmAdd40HP;
 			set
 			{
-				Leagueflags.BmAdd80HP = value;
+				Leagueflags.BmAdd40HP = value;
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BmAdd40HP"));
 			}
 		}
@@ -2981,6 +3088,24 @@ namespace FF1Lib.League
 			{
 				Leagueflags.BmAdd20PerHit = value;
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BmAdd20PerHit"));
+			}
+		}
+		public bool BmAdd10Mdef
+		{
+			get => Leagueflags.BmAdd10Mdef;
+			set
+			{
+				Leagueflags.BmAdd10Mdef = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BmAdd10Mdef"));
+			}
+		}
+		public bool BmAdd20Mdef
+		{
+			get => Leagueflags.BmAdd20Mdef;
+			set
+			{
+				Leagueflags.BmAdd20Mdef = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BmAdd20Mdef"));
 			}
 		}
 		public bool BmEquipAxe
@@ -3073,13 +3198,13 @@ namespace FF1Lib.League
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BmMP1All"));
 			}
 		}
-		public bool BmAddSpell
+		public LeagueMagicPool BmAddSpell
 		{
 			get => Leagueflags.BmAddSpell;
 			set
 			{
 				Leagueflags.BmAddSpell = value;
-				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BmAddSpell"));
+				RaisePropertyChanged();
 			}
 		}
 		public bool BmTelemagic
@@ -3219,6 +3344,16 @@ namespace FF1Lib.League
 			}
 
 		}
+		public bool BmPromoFiArmor
+		{
+			get => Leagueflags.BmPromoFiArmor;
+			set
+			{
+				Leagueflags.BmPromoFiArmor = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BmPromoFiArmor"));
+			}
+
+		}
 		public bool BmXP50Percent
 		{
 			get => Leagueflags.BmXP50percent;
@@ -3298,6 +3433,24 @@ namespace FF1Lib.League
 			{
 				Leagueflags.BmResistFire = value;
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BmResistFire"));
+			}
+		}
+		public bool BmResistAll
+		{
+			get => Leagueflags.BmResistAll;
+			set
+			{
+				Leagueflags.BmResistAll = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BmResistAll"));
+			}
+		}
+		public bool BmResistPEDTS
+		{
+			get => Leagueflags.BmResistPEDTS;
+			set
+			{
+				Leagueflags.BmResistPEDTS = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BmResistPEDTS"));
 			}
 		}
 		public bool BmStartGold200
@@ -3435,7 +3588,7 @@ namespace FF1Lib.League
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BmFiArmor"));
 			}
 		}
-		public bool BmImprovedMP
+		/*public bool BmImprovedMP
 		{
 			get => Leagueflags.BmImprovedMP;
 			set
@@ -3443,7 +3596,7 @@ namespace FF1Lib.League
 				Leagueflags.BmImprovedMP = value;
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BmImprovedMP"));
 			}
-		}
+		}*/
 		public bool BmXP100Percent
 		{
 			get => Leagueflags.BmXP100Percent;
@@ -3822,7 +3975,7 @@ namespace FF1Lib.League
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ThNoPromoSpells"));
 			}
 		}
-		public bool Down50GP
+		public bool ThDown50GP
 		{
 			get => Leagueflags.ThDown50GP;
 			set
@@ -4187,13 +4340,13 @@ namespace FF1Lib.League
 			}
 		}
 
-		public bool RmNoSpell
+		public LeagueMagicPool RmRemoveSpell
 		{
-			get => Leagueflags.RmNoSpell;
+			get => Leagueflags.RmRemoveSpell;
 			set
 			{
-				Leagueflags.RmNoSpell = value;
-				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("RmNoSpell"));
+				Leagueflags.RmRemoveSpell = value;
+				RaisePropertyChanged();
 			}
 		}
 		public bool RmDown50GP
@@ -4205,7 +4358,7 @@ namespace FF1Lib.League
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("RmDown50GP"));
 			}
 		}
-		public bool Down100GP
+		public bool RmDown100GP
 		{
 			get => Leagueflags.RmDown100GP;
 			set
@@ -4371,15 +4524,6 @@ namespace FF1Lib.League
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("WmDown4MaxMP"));
 			}
 		}
-		public bool WmNoSpell
-		{
-			get => Leagueflags.WmNoSpell;
-			set
-			{
-				Leagueflags.WmNoSpell = value;
-				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("WmNoSpell"));
-			}
-		}
 		public bool WmDown50GP
 		{
 			get => Leagueflags.WmDown50GP;
@@ -4432,6 +4576,15 @@ namespace FF1Lib.League
 			{
 				Leagueflags.WmDown4500gp = value;
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("WmDown4500GP"));
+			}
+		}
+		public LeagueMagicPool WmRemoveSpell
+		{
+			get => Leagueflags.WmRemoveSpell;
+			set
+			{
+				Leagueflags.WmRemoveSpell = value;
+				RaisePropertyChanged();
 			}
 		}
 		#endregion
@@ -4545,13 +4698,13 @@ namespace FF1Lib.League
 			}
 		}
 
-		public bool BmNoSpell
+		public LeagueMagicPool BmRemoveSpell
 		{
-			get => Leagueflags.BmNoSpell;
+			get => Leagueflags.BmRemoveSpell;
 			set
 			{
-				Leagueflags.BmNoSpell = value;
-				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BmNoSpell"));
+				Leagueflags.BmRemoveSpell = value;
+				RaisePropertyChanged();
 			}
 		}
 		public bool BmDown50GP

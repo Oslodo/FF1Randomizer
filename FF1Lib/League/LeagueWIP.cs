@@ -282,7 +282,7 @@ namespace FF1Lib
 
 
 
-			// Single Spells Bonus/Malus
+			// Single Spells Bonus/Malus Might remove this code and add them all to the master list
 			bonusNormal.AddRange(CreateSpellBonusesLeagueWIP(rom, rng, flags));
 			malusNormal.AddRange(CreateSpellMalusesLeagueWIP(rom, rng, flags));
 
@@ -311,13 +311,13 @@ namespace FF1Lib
 
 			var descriptionList = new List<string>();
 
-			// Distribute bonuses and maluses
+			// Distribute bonuses and maluses (odds are also not needed for plando code)
 			int maxbonus = flags.RandomizeClassMaxBonus;
 			int maxmalus = flags.RandomizeClassMaxMalus;
 
 			bool validBlursingsDistribution = false;
 
-			var startWithKiBlursesLeageWIP = StartWithKeyItems(flags, rng, olditemnames);
+			var startWithKiBlursesLeageWIP = StartWithKeyItems(flags, rng, olditemnames); //this will not be used but the code will be left here to reference when building
 
 			while (!validBlursingsDistribution)
 			{

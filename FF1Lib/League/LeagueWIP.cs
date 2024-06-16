@@ -692,7 +692,8 @@ namespace FF1Lib
 			return new BonusMalusLeagueWIP(BonusMalusAction.InnateResist, description, mod: innateResistValue);
 		}
 
-		public List<BonusMalusLeagueWIP> CreateSpellBonusesLeagueWIP(FF1Rom rom, MT19337 rng, Flags flags)
+		public List<BonusMalusLeagueWIP> CreateSpellBonusesLeagueWIP(FF1Rom rom, MT19337 rng, Flags flags)  //to make this work  within the plando
+																											//, we would take this list and run the if statement to find the correct spells
 		{
 			List<BonusMalusLeagueWIP> spellBlursings = new();
 

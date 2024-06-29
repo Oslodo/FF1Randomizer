@@ -300,24 +300,23 @@ namespace FF1Lib
 			bonusNormal.Add(CreateRandomResistBonusMalusLeagueWIP(rng));
 
 
-
 			var assignedBonusMalus = new List<List<BonusMalusLeagueWIP>> { new List<BonusMalusLeagueWIP>(), new List<BonusMalusLeagueWIP>(), new List<BonusMalusLeagueWIP>(), new List<BonusMalusLeagueWIP>(), new List<BonusMalusLeagueWIP>(), new List<BonusMalusLeagueWIP>() };
-
+			
 			// Shuffle bonuses and maluses (odds are not needed for the plando code)
-			bonusStrong.Shuffle(rng);
+			/*bonusStrong.Shuffle(rng);
 			bonusNormal.AddRange(bonusStrong.GetRange(0, 3));
 			bonusNormal.Shuffle(rng);
-			malusNormal.Shuffle(rng);
+			malusNormal.Shuffle(rng); */
 
 			var descriptionList = new List<string>();
 
 			// Distribute bonuses and maluses (odds are also not needed for plando code)
-			int maxbonus = flags.RandomizeClassMaxBonus;
-			int maxmalus = flags.RandomizeClassMaxMalus;
+			/* int maxbonus = flags.RandomizeClassMaxBonus;
+			int maxmalus = flags.RandomizeClassMaxMalus; */
 
 			bool validBlursingsDistribution = false;
 
-			var startWithKiBlursesLeageWIP = StartWithKeyItems(flags, rng, olditemnames); //this will not be used but the code will be left here to reference when building
+			// var startWithKiBlursesLeageWIP = StartWithKeyItems(flags, rng, olditemnames); //this will not be used but the code will be left here to reference when building
 
 			while (!validBlursingsDistribution)
 			{
@@ -338,7 +337,6 @@ namespace FF1Lib
 						tempstring.Add((0, assignedBonusMalus[i].First().Description));
 					}*/
 
-					while (bonuscount < maxbonus)
 					{
 						var validBonuses = bonusNormal.Where(x => x.ClassList.Contains((Classes)i) && !assignedBonusMalus[i].Select(y => y.Action).ToList().Contains(x.Action)).ToList();
 
@@ -355,8 +353,6 @@ namespace FF1Lib
 						bonuscount++;
 					}
 
-					while (maluscount < maxmalus)
-					{
 						var validMaluses = malusNormal.Where(x => x.ClassList.Contains((Classes)i) && //This seems to be the code to stop both learning and losing a spell, shouldn't be needed for this code.
 							!assignedBonusMalus[i].Select(y => y.Action).ToList().Contains(x.Action) &&
 							!(x.Action == BonusMalusAction.CantLearnSpell && assignedBonusMalus[i].Where(y => y.Action == BonusMalusAction.InnateSpells).SelectMany(x => x.SpellsMod).ToList().Contains(x.SpellSlotMod)) &&
@@ -369,7 +365,6 @@ namespace FF1Lib
 							break;
 						}
 
-						validMaluses.Shuffle(rng);
 						assignedBonusMalus[i].Add(validMaluses.First());
 						if (validMaluses.First().Action == BonusMalusAction.IntMod)
 						{
@@ -382,7 +377,7 @@ namespace FF1Lib
 
 						malusNormal.Remove(validMaluses.First());
 						maluscount++;
-					}
+					
 
 					if (!validBlursingsDistribution)
 					{
@@ -406,6 +401,7 @@ namespace FF1Lib
 					.ToList()
 					.Concat(assignedBonusMalus[i].Where(x => priorityAction.Contains(x.Action)).ToList())
 					.ToList();
+
 
 				foreach (var bonusmalus in assignedBonusMalus[i])
 				{

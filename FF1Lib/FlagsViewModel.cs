@@ -872,6 +872,16 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ShuffleScriptsEnemies"));
 			}
 		}
+		public bool? RemoveBossScripts
+		{
+			get => Flags.RemoveBossScripts;
+			set
+			{
+				Flags.RemoveBossScripts = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("RemoveBossScripts"));
+			}
+		}
+
 
 		public bool? ShuffleSkillsSpellsEnemies
 		{
@@ -1384,15 +1394,6 @@ namespace FF1Lib
 			{
 				Flags.MapOpenProgressionExtended = value;
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("MapOpenProgressionExtended"));
-			}
-		}
-		public bool? MapDwarvesNorthwest
-		{
-			get => Flags.MapDwarvesNorthwest;
-			set
-			{
-				Flags.MapDwarvesNorthwest = value;
-				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("MapDwarvesNorthwest"));
 			}
 		}
 		public bool? MapAirshipDock
@@ -4941,16 +4942,6 @@ namespace FF1Lib
 		}
 
 		public bool SpoilerBatsDontCheckOrbsEnabled => !SkyWarriorSpoilerBats.Equals(SpoilerBatHints.Vanilla);
-
-		public bool SanityCheckerV2
-		{
-			get => Flags.SanityCheckerV2;
-			set
-			{
-				Flags.SanityCheckerV2 = value;
-				RaisePropertyChanged();
-			}
-		}
 
 		public int MapGenSeed
 		{

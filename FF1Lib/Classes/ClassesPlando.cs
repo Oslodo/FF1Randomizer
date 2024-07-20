@@ -12,6 +12,8 @@ namespace FF1Lib
 
 	public enum FiStrpool
 	{
+		[Description("None")]
+		FiStrpoolnone,
 		[Description("+10 Str")]
 		Fiadd10Str,
 		[Description("+20 Str")]
@@ -26,6 +28,8 @@ namespace FF1Lib
 	}
 	public enum FiAgipool
 	{
+		[Description("None")]
+		FiAgpoolinone,
 		[Description("+15 Agi")]
 		Fiadd15Agi,
 		[Description("+25 Agi")]
@@ -37,6 +41,8 @@ namespace FF1Lib
 	}
 	public enum FiVitpool
 	{
+		[Description("None")]
+		FiVitpoolNone,
 		[Description("+10 Vit")]
 		Fiadd10Vit,
 		[Description("+20 Vit")]
@@ -48,6 +54,8 @@ namespace FF1Lib
 	}
 	public enum FiLuckpool
 	{
+		[Description("None")]
+		FiLuckpoolNone,
 		[Description("+5 Luck")]
 		Fiadd5Luck,
 		[Description("+10 Luck")]
@@ -60,6 +68,8 @@ namespace FF1Lib
 	}
 	public enum FiHPPool
 	{
+		[Description("None")]
+		FiHPPoolNone,
 		[Description("+20 HP")]
 		Fiadd20HP,
 		[Description("+40 HP")]
@@ -73,6 +83,8 @@ namespace FF1Lib
 	}
 	public enum FiHitPercentpool
 	{
+		[Description("None")]
+		FiHitPercentpoolNone,
 		[Description("+10 Hit%")]
 		Fiadd10hit,
 		[Description("+20 Hit%")]
@@ -82,6 +94,8 @@ namespace FF1Lib
 	}
 	public enum FiMdefpool
 	{
+		[Description("None")]
+		FiMdefpoolNone,
 		[Description("+10 MDef")]
 		Fiadd10mdef,
 		[Description("+20 MDef")]
@@ -91,6 +105,8 @@ namespace FF1Lib
 	}
 	public enum FiIntpool
 	{
+		[Description("None")]
+		FiIntpoolNone,
 		[Description("+10 Int")]
 		Fiadd10int,
 		[Description("+20 Int")]
@@ -100,6 +116,8 @@ namespace FF1Lib
 	}
 	public enum FiGoldpool
 	{
+		[Description("None")]
+		FiGoldpoolNone,
 		[Description("+200 Gold")]
 		Fiadd200gold,
 		[Description("+400 Gold")]
@@ -127,6 +145,8 @@ namespace FF1Lib
 	}
 	public enum ThStrpool
 	{
+		[Description("None")]
+		ThStrpoolNone,
 		[Description("+10 Str")]
 		Thadd10Str,
 		[Description("+20 Str")]
@@ -138,6 +158,8 @@ namespace FF1Lib
 	}
 	public enum ThAgipool
 	{
+		[Description("None")]
+		ThAgipoolNone,
 		[Description("+15 Agi")]
 		Thadd15Agi,
 		[Description("+25 Agi")]
@@ -151,6 +173,8 @@ namespace FF1Lib
 	}
 	public enum ThVitpool
 	{
+		[Description("None")]
+		ThVitpoolNone,
 		[Description("+10 Vit")]
 		Thadd10Vit,
 		[Description("+20 Vit")]
@@ -162,6 +186,8 @@ namespace FF1Lib
 	}
 	public enum ThLuckpool
 	{
+		[Description ("None")]
+		ThLuckpoolNone,
 		[Description("+5 Luck")]
 		Thadd5Luck,
 		[Description("+10 Luck")]
@@ -173,6 +199,8 @@ namespace FF1Lib
 	}
 	public enum ThHPPool
 	{
+		[Description("None")]
+		ThHPPoolNone,
 		[Description("+20 HP")]
 		Thadd20HP,
 		[Description("+40 HP")]
@@ -186,6 +214,8 @@ namespace FF1Lib
 	}
 	public enum ThHitPercentpool
 	{
+		[Description("None")]
+		ThHitPercentpoolNone,
 		[Description("+10 Hit%")]
 		Thadd10hit,
 		[Description("+20 Hit%")]
@@ -195,6 +225,8 @@ namespace FF1Lib
 	}
 	public enum ThMdefpool
 	{
+		[Description("None")]
+		ThMdefpoolNone,
 		[Description("+10 MDef")]
 		Thadd10mdef,
 		[Description("+20 MDef")]
@@ -204,6 +236,8 @@ namespace FF1Lib
 	}
 	public enum ThIntpool
 	{
+		[Description("None")]
+		ThIntpoolNone,
 		[Description("+10 Int")]
 		Thadd10int,
 		[Description("+20 Int")]
@@ -215,6 +249,8 @@ namespace FF1Lib
 	}
 	public enum ThGoldpool
 	{
+		[Description("None")]
+		ThGoldpoolNone,
 		[Description("+200 Gold")]
 		Thadd200gold,
 		[Description("+400 Gold")]
@@ -252,6 +288,8 @@ namespace FF1Lib
 	}
 	public enum BBStrpool
 	{
+		[Description("None")]
+		BBStrpoolNone,
 		[Description("+10 Str")]
 		BBadd10Str,
 		[Description("+20 Str")]
@@ -263,6 +301,8 @@ namespace FF1Lib
 	}
 	public enum BBAgipool
 	{
+		[Description("None")]
+		BBAgipoolNone,
 		[Description("+15 Agi")]
 		BBadd15Agi,
 		[Description("+25 Agi")]
@@ -274,6 +314,8 @@ namespace FF1Lib
 	}
 	public enum BBVitpool
 	{
+		[Description("None")]
+		BBVitpoolNone,
 		[Description("+10 Vit")]
 		BBadd10Vit,
 		[Description("+20 Vit")]
@@ -287,6 +329,8 @@ namespace FF1Lib
 	}
 	public enum BBLuckpool
 	{
+		[Description("None")]
+		BBBLuckpoolNone,
 		[Description("+5 Luck")]
 		BBadd5Luck,
 		[Description("+10 Luck")]
@@ -298,6 +342,8 @@ namespace FF1Lib
 	}
 	public enum BBHPPool
 	{
+		[Description("None")]
+		BBHPPoolNone,
 		[Description("+20 HP")]
 		BBadd20HP,
 		[Description("+40 HP")]
@@ -311,6 +357,8 @@ namespace FF1Lib
 	}
 	public enum BBHitPercentpool
 	{
+		[Description("None")]
+		BBHitPercentpoolNone,
 		[Description("+10 Hit%")]
 		BBadd10hit,
 		[Description("+20 Hit%")]
@@ -320,6 +368,8 @@ namespace FF1Lib
 	}
 	public enum BBMdefpool
 	{
+		[Description("None")]
+		BBBMdefpoolNone,
 		[Description("+10 MDef")]
 		BBadd10mdef,
 		[Description("+20 MDef")]
@@ -329,6 +379,8 @@ namespace FF1Lib
 	}
 	public enum BBGoldpool
 	{
+		[Description("None")]
+		BBGoldpoolNone,
 		[Description("+200 Gold")]
 		BBadd200gold,
 		[Description("+400 Gold")]
@@ -356,6 +408,8 @@ namespace FF1Lib
 	}
 	public enum RMStrpool
 	{
+		[Description("None")]
+		RMStrpoolNone,
 		[Description("+10 Str")]
 		RMadd10Str,
 		[Description("+20 Str")]
@@ -367,6 +421,8 @@ namespace FF1Lib
 	}
 	public enum RMAgipool
 	{
+		[Description("None")]
+		RMAgipoolNone,
 		[Description("+15 Agi")]
 		RMadd15Agi,
 		[Description("+25 Agi")]
@@ -378,6 +434,8 @@ namespace FF1Lib
 	}
 	public enum RMVitpool
 	{
+		[Description("None")]
+		RMmVitpoolNone,
 		[Description("+10 Vit")]
 		RMadd10Vit,
 		[Description("+20 Vit")]
@@ -389,6 +447,8 @@ namespace FF1Lib
 	}
 	public enum RMLuckpool
 	{
+		[Description ("None")]
+		RMmLuckpoolNone,
 		[Description("+5 Luck")]
 		RMadd5Luck,
 		[Description("+10 Luck")]
@@ -400,6 +460,8 @@ namespace FF1Lib
 	}
 	public enum RMHPPool
 	{
+		[Description("None")]
+		RMHPPoolNone,
 		[Description("+20 HP")]
 		RMadd20HP,
 		[Description("+40 HP")]
@@ -413,6 +475,8 @@ namespace FF1Lib
 	}
 	public enum RMHitPercentpool
 	{
+		[Description("None")]
+		RMHitPercentpoolNone,
 		[Description("+10 Hit%")]
 		RMadd10hit,
 		[Description("+20 Hit%")]
@@ -422,6 +486,8 @@ namespace FF1Lib
 	}
 	public enum RMMdefpool
 	{
+		[Description("None")]
+		RMdefpoolNone,
 		[Description("+10 MDef")]
 		RMadd10mdef,
 		[Description("+20 MDef")]
@@ -431,6 +497,8 @@ namespace FF1Lib
 	}
 	public enum RMIntpool
 	{
+		[Description("None")]
+		RMIntpoolNone,
 		[Description("+10 Int")]
 		RMadd10int,
 		[Description("+20 Int")]
@@ -444,6 +512,8 @@ namespace FF1Lib
 	}
 	public enum RMGoldpool
 	{
+		[Description("None")]
+		RMGoldpoolNone,
 		[Description("+200 Gold")]
 		RMadd200gold,
 		[Description("+400 Gold")]
@@ -471,6 +541,8 @@ namespace FF1Lib
 	}
 	public enum WMStrpool
 	{
+		[Description("None")]
+		WMStrpoolNone,
 		[Description("+10 Str")]
 		WMadd10Str,
 		[Description("+20 Str")]
@@ -482,6 +554,8 @@ namespace FF1Lib
 	}
 	public enum WMAgipool
 	{
+		[Description("None")]
+		WMAgipoolNone,
 		[Description("+15 Agi")]
 		WMadd15Agi,
 		[Description("+25 Agi")]
@@ -493,6 +567,8 @@ namespace FF1Lib
 	}
 	public enum WMVitpool
 	{
+		[Description("None")]
+		WMVitpoolNone,
 		[Description("+10 Vit")]
 		WMadd10Vit,
 		[Description("+20 Vit")]
@@ -504,6 +580,8 @@ namespace FF1Lib
 	}
 	public enum WMLuckpool
 	{
+		[Description("None")]
+		WMLuckpoolNone,
 		[Description("+5 Luck")]
 		WMadd5Luck,
 		[Description("+10 Luck")]
@@ -515,6 +593,8 @@ namespace FF1Lib
 	}
 	public enum WMHPPool
 	{
+		[Description("None")]
+		WMHPPoolNone,
 		[Description("+20 HP")]
 		WMadd20HP,
 		[Description("+40 HP")]
@@ -528,6 +608,8 @@ namespace FF1Lib
 	}
 	public enum WMHitPercentpool
 	{
+		[Description("None")]
+		WMHitPercentpoolNone,
 		[Description("+10 Hit%")]
 		WMadd10hit,
 		[Description("+20 Hit%")]
@@ -537,6 +619,8 @@ namespace FF1Lib
 	}
 	public enum WMMdefpool
 	{
+		[Description("None")]
+		WMMdefpoolNone,
 		[Description("+10 MDef")]
 		WMadd10mdef,
 		[Description("+20 MDef")]
@@ -546,6 +630,8 @@ namespace FF1Lib
 	}
 	public enum WMIntpool
 	{
+		[Description("None")]
+		WMIntpoolNone,
 		[Description("+10 Int")]
 		WMadd10int,
 		[Description("+20 Int")]
@@ -559,6 +645,8 @@ namespace FF1Lib
 	}
 	public enum WMGoldpool
 	{
+		[Description("None")]
+		WMGoldpoolNone,
 		[Description("+200 Gold")]
 		WMadd200gold,
 		[Description("+400 Gold")]
@@ -586,6 +674,8 @@ namespace FF1Lib
 	}
 	public enum BMStrpool
 	{
+		[Description("None")]
+		BMStrpoolnone,
 		[Description("+10 Str")]
 		BMadd10Str,
 		[Description("+20 Str")]
@@ -597,6 +687,8 @@ namespace FF1Lib
 	}
 	public enum BMAgipool
 	{
+		[Description("None")]
+		BMAgipoolnone,
 		[Description("+15 Agi")]
 		BMadd15Agi,
 		[Description("+25 Agi")]
@@ -608,6 +700,8 @@ namespace FF1Lib
 	}
 	public enum BMVitpool
 	{
+		[Description("None")]
+		BMVitpoolnone,
 		[Description("+10 Vit")]
 		BMadd10Vit,
 		[Description("+20 Vit")]
@@ -619,6 +713,8 @@ namespace FF1Lib
 	}
 	public enum BMLuckpool
 	{
+		[Description("None")]
+		BMLuckpoolnone,
 		[Description("+5 Luck")]
 		BMadd5Luck,
 		[Description("+10 Luck")]
@@ -632,6 +728,8 @@ namespace FF1Lib
 	}
 	public enum BMHPPool
 	{
+		[Description("None")]
+		BMHPPoolnone,
 		[Description("+20 HP")]
 		BMadd20HP,
 		[Description("+40 HP")]
@@ -645,6 +743,8 @@ namespace FF1Lib
 	}
 	public enum BMHitPercentpool
 	{
+		[Description("None")]
+		BMHitPercentpoolnone,
 		[Description("+10 Hit%")]
 		BMadd10hit,
 		[Description("+20 Hit%")]
@@ -654,6 +754,8 @@ namespace FF1Lib
 	}
 	public enum BMMdefpool
 	{
+		[Description("None")]
+		BMMdefpoolnone,
 		[Description("+10 MDef")]
 		BMadd10mdef,
 		[Description("+20 MDef")]
@@ -663,6 +765,8 @@ namespace FF1Lib
 	}
 	public enum BMGoldpool
 	{
+		[Description("None")]
+		BMGoldpoolnone,
 		[Description("+200 Gold")]
 		BMadd200gold,
 		[Description("+400 Gold")]

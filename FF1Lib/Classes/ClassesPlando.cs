@@ -66,7 +66,7 @@ namespace FF1Lib
 		Fiminus5Luck,
 
 	}
-	public enum FiHPPool
+	public enum FiHPpool
 	{
 		[Description("None")]
 		FiHPPoolNone,
@@ -763,6 +763,21 @@ namespace FF1Lib
 		[Description("-10 MDef")]
 		BMminus10mdef,
 	}
+	public enum BMIntpool
+	{
+		[Description("None")]
+		BMIntpoolNone,
+		[Description("+10 Int")]
+		BMadd10int,
+		[Description("+20 Int")]
+		BMadd20int,
+		[Description("+40 Int")]
+		BMadd40int,
+		[Description("-10 Int")]
+		BMminus10int,
+		[Description("-20 Int")]
+		BMmins20int,
+	}
 	public enum BMGoldpool
 	{
 		[Description("None")]
@@ -793,9 +808,5 @@ namespace FF1Lib
 		BMminus1100gold,
 	}
 
-}
-	internal class Class1
-	{
-	}
 }
 

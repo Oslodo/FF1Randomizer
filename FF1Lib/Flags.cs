@@ -5,6 +5,7 @@ using System.IO.Compression;
 using static FF1Lib.FF1Rom;
 using FF1Lib.Sanity;
 using System.Diagnostics.SymbolStore;
+using System.Runtime.Intrinsics.X86;
 
 namespace FF1Lib
 {
@@ -662,6 +663,60 @@ namespace FF1Lib
 		public bool ExclusiveLegendaryWhiteShop { get; set; } = false;
 		public bool ExclusiveLegendaryItemShop { get; set; } = false;
 		public ClassRandomizationMode RandomizeClassMode { get; set; } = ClassRandomizationMode.None;
+
+		public FiStrpool Fighterstr { get; set; } = FiStrpool.FiStrpoolnone;
+		public FiAgipool Fighteragi { get; set; } = FiAgipool.FiAgpoolinone;
+		public FiVitpool Fightervit { get; set; } = FiVitpool.FiVitpoolNone;
+		public FiLuckpool Fighterluck { get; set; } = FiLuckpool.FiLuckpoolNone;
+		public FiHPpool FighterHP { get; set; } = FiHPpool.FiHPPoolNone;
+		public FiHitPercentpool FighterHit { get; set; } = FiHitPercentpool.FiHitPercentpoolNone;
+		public FiMdefpool FighterMdef { get; set; } = FiMdefpool.FiMdefpoolNone;
+		public FiIntpool FighterInt { get; set; } = FiIntpool.FiIntpoolNone;
+		public FiGoldpool Fightergold { get; set; } = FiGoldpool.FiGoldpoolNone;
+		public ThStrpool Thiefstr { get; set; } = ThStrpool.ThStrpoolNone;
+		public ThAgipool Thiefagi { get; set; } = ThAgipool.ThAgipoolNone;
+		public ThVitpool Thiefvit { get; set; } = ThVitpool.ThVitpoolNone;
+		public ThLuckpool Thiefluck { get; set; } = ThLuckpool.ThLuckpoolNone;
+		public ThHPPool ThiefHP { get; set; } = ThHPPool.ThHPPoolNone;
+		public ThHitPercentpool Thiefhit { get; set; } = ThHitPercentpool.ThHitPercentpoolNone;
+		public ThMdefpool ThiefMdef { get; set; } = ThMdefpool.ThMdefpoolNone;
+		public ThIntpool ThiefInt { get; set; } = ThIntpool.ThIntpoolNone;
+		public ThGoldpool Thiefgold { get; set; } = ThGoldpool.ThGoldpoolNone;
+		public BBStrpool BBstr { get; set; } = BBStrpool.BBStrpoolNone;
+		public BBAgipool BBagi { get; set; } = BBAgipool.BBAgipoolNone;
+		public BBVitpool BBvit { get; set; } = BBVitpool.BBVitpoolNone;
+		public BBLuckpool BBluck { get; set; } = BBLuckpool.BBBLuckpoolNone;
+		public BBHPPool BBHP { get; set; } = BBHPPool.BBHPPoolNone;
+		public BBHitPercentpool BBhit { get; set; } = BBHitPercentpool.BBHitPercentpoolNone;
+		public BBMdefpool BBmdef { get; set; } = BBMdefpool.BBBMdefpoolNone;
+		public BBGoldpool BBgold { get; set; } = BBGoldpool.BBGoldpoolNone;
+		public RMStrpool Rmstr { get; set; } = RMStrpool.RMStrpoolNone;
+		public RMAgipool Rmagi { get; set; } = RMAgipool.RMAgipoolNone;
+		public RMVitpool RmVit { get; set; } = RMVitpool.RMmVitpoolNone;
+		public RMLuckpool Rmluck { get; set; } = RMLuckpool.RMmLuckpoolNone;
+		public RMHPPool RmHP { get; set; } = RMHPPool.RMHPPoolNone;
+		public RMHitPercentpool Rmhit { get; set; } = RMHitPercentpool.RMHitPercentpoolNone;
+		public RMMdefpool Rmmdef { get; set; } = RMMdefpool.RMdefpoolNone;
+		public RMIntpool Rmint { get; set; } = RMIntpool.RMIntpoolNone;
+		public RMGoldpool Rmgold { get; set; } = RMGoldpool.RMGoldpoolNone;
+		public WMStrpool Wmstr { get; set; } = WMStrpool.WMStrpoolNone;
+		public WMAgipool Wmagi { get; set; } = WMAgipool.WMAgipoolNone;
+		public WMVitpool Wmvit { get; set; } = WMVitpool.WMVitpoolNone;
+		public WMLuckpool Wmluck { get; set; } = WMLuckpool.WMLuckpoolNone;
+		public WMHPPool WmHP { get; set; } = WMHPPool.WMHPPoolNone;
+		public WMHitPercentpool Wmhit { get; set; } = WMHitPercentpool.WMHitPercentpoolNone;
+		public WMMdefpool Wmmdef { get; set; } = WMMdefpool.WMMdefpoolNone;
+		public WMIntpool Wmint { get; set; } = WMIntpool.WMIntpoolNone;
+		public WMGoldpool Wmgold { get; set; } = WMGoldpool.WMGoldpoolNone;
+		public BMStrpool Bmstr { get; set; } = BMStrpool.BMStrpoolnone;
+		public BMAgipool Bmagi { get; set; } = BMAgipool.BMAgipoolnone;
+		public BMVitpool Bmvit { get; set; } = BMVitpool.BMVitpoolnone;
+		public BMLuckpool Bmluck { get; set; } = BMLuckpool.BMLuckpoolnone;
+		public BMHPPool BmHP { get; set; } = BMHPPool.BMHPPoolnone;
+		public BMHitPercentpool Bmhit { get; set; } = BMHitPercentpool.BMHitPercentpoolnone;
+		public BMMdefpool Bmmdef { get; set; } = BMMdefpool.BMMdefpoolnone;
+		public BMIntpool Bmint { get; set; } = BMIntpool.BMIntpoolNone;
+		public BMGoldpool Bmgold { get; set; } = BMGoldpool.BMGoldpoolnone;
 
 		[IntegerFlag(0, 3)]
 		public int RandomizeClassMaxBonus { get; set; } = 2;

@@ -67,6 +67,8 @@ namespace FF1Lib
 		None = 0,
 		[Description("Blursings")]
 		Blursings,
+		[Description("Plando")]
+		Plando,
 		[Description("Transmooglifier")]
 		Transmooglifier,
 		[Description("Chaos")]

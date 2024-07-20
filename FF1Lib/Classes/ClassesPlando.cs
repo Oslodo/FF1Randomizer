@@ -24,7 +24,6 @@ namespace FF1Lib
 		Fiminus20Str,
 
 	}
-
 	public enum FiAgipool
 	{
 		[Description("+15 Agi")]
@@ -36,7 +35,6 @@ namespace FF1Lib
 		[Description("-10 Agi")]
 		Fiminus10Agi,
 	}
-
 	public enum FiVitpool
 	{
 		[Description("+10 Vit")]
@@ -48,7 +46,6 @@ namespace FF1Lib
 		[Description("-10 Vit")]
 		Fiminus10Vit,
 	}
-
 	public enum FiLuckpool
 	{
 		[Description("+5 Luck")]
@@ -61,7 +58,6 @@ namespace FF1Lib
 		Fiminus5Luck,
 
 	}
-
 	public enum FiHPPool
 	{
 		[Description("+20 HP")]
@@ -75,7 +71,6 @@ namespace FF1Lib
 		[Description("-30 HP")]
 		Fiminus30HP,
 	}
-
 	public enum FiHitPercentpool
 	{
 		[Description("+10 Hit%")]
@@ -85,7 +80,6 @@ namespace FF1Lib
 		[Description("-10 Hit%")]
 		Fiminus10hit,
 	}
-
 	public enum FiMdefpool
 	{
 		[Description("+10 MDef")]
@@ -95,7 +89,6 @@ namespace FF1Lib
 		[Description("-10 MDef")]
 		Fiminus10mdef,
 	}
-
 	public enum FiIntpool
 	{
 		[Description("+10 Int")]
@@ -105,7 +98,6 @@ namespace FF1Lib
 		[Description("+40 Int")]
 		Fiadd40int,
 	}
-
 	public enum FiGoldpool
 	{
 		[Description("+200 Gold")]
@@ -133,7 +125,6 @@ namespace FF1Lib
 		[Description("-1100 Gold")]
 		Fiminus1100gold,
 	}
-
 	public enum ThStrpool
 	{
 		[Description("+10 Str")]
@@ -145,7 +136,6 @@ namespace FF1Lib
 		[Description("-10 Str")]
 		Thminus10Str,
 	}
-
 	public enum ThAgipool
 	{
 		[Description("+15 Agi")]
@@ -159,7 +149,6 @@ namespace FF1Lib
 		[Description("-20 Agi")]
 		Thminus20Agi
 	}
-
 	public enum ThVitpool
 	{
 		[Description("+10 Vit")]
@@ -171,7 +160,6 @@ namespace FF1Lib
 		[Description("-10 Vit")]
 		Thminus10Vit,
 	}
-
 	public enum ThLuckpool
 	{
 		[Description("+5 Luck")]
@@ -183,7 +171,6 @@ namespace FF1Lib
 		[Description("-10 Luck")]
 		Thminus10Luck,
 	}
-
 	public enum ThHPPool
 	{
 		[Description("+20 HP")]
@@ -197,7 +184,6 @@ namespace FF1Lib
 		[Description("-30 HP")]
 		Thminus30HP,
 	}
-
 	public enum ThHitPercentpool
 	{
 		[Description("+10 Hit%")]
@@ -207,7 +193,6 @@ namespace FF1Lib
 		[Description("-10 Hit%")]
 		Thminus10hit,
 	}
-
 	public enum ThMdefpool
 	{
 		[Description("+10 MDef")]
@@ -265,7 +250,6 @@ namespace FF1Lib
 		[Description("-1100 Gold")]
 		Thminus1100gold,
 	}
-
 	public enum BBStrpool
 	{
 		[Description("+10 Str")]
@@ -343,9 +327,371 @@ namespace FF1Lib
 		[Description("-10 MDef")]
 		BBminus10mdef,
 	}
+	public enum BBGoldpool
+	{
+		[Description("+200 Gold")]
+		BBadd200gold,
+		[Description("+400 Gold")]
+		BBadd400gold,
+		[Description("+600 Gold")]
+		BBadd600gold,
+		[Description("+800 Gold")]
+		BBadd800gold,
+		[Description("+1500 Gold")]
+		BBadd1500gold,
+		[Description("+5000 Gold")]
+		BBadd5000gold,
+		[Description("+20,000 Gold")]
+		BBadd20000gold,
+		[Description("-50 Gold")]
+		BBminus50gold,
+		[Description("-100 Gold")]
+		BBminus100gold,
+		[Description("-150 Gold")]
+		BBminus150gold,
+		[Description("-350 Gold")]
+		BBminus350gold,
+		[Description("-1100 Gold")]
+		BBminus1100gold,
+	}
+	public enum RMStrpool
+	{
+		[Description("+10 Str")]
+		RMadd10Str,
+		[Description("+20 Str")]
+		RMadd20Str,
+		[Description("+40 Str")]
+		RMadd40Str,
+		[Description("-10 Str")]
+		RMminus10Str,
+	}
+	public enum RMAgipool
+	{
+		[Description("+15 Agi")]
+		RMadd15Agi,
+		[Description("+25 Agi")]
+		RMadd25Agi,
+		[Description("+50 Agi")]
+		RMadd50Agi,
+		[Description("-10 Agi")]
+		RMminus10Agi,
+	}
+	public enum RMVitpool
+	{
+		[Description("+10 Vit")]
+		RMadd10Vit,
+		[Description("+20 Vit")]
+		RMadd20Vit,
+		[Description("+40 Vit")]
+		RMadd40Vit,
+		[Description("-10 Vit")]
+		RMminus10Vit,
+	}
+	public enum RMLuckpool
+	{
+		[Description("+5 Luck")]
+		RMadd5Luck,
+		[Description("+10 Luck")]
+		RMadd10Luck,
+		[Description("+15 Luck")]
+		RMadd15Luck,
+		[Description("-5 Luck")]
+		RMminus5luck,
+	}
+	public enum RMHPPool
+	{
+		[Description("+20 HP")]
+		RMadd20HP,
+		[Description("+40 HP")]
+		RMadd40HP,
+		[Description("+80 HP")]
+		RMadd80HP,
+		[Description("-15 HP")]
+		RMminus15HP,
+		[Description("-30 HP")]
+		RMminus30HP,
+	}
+	public enum RMHitPercentpool
+	{
+		[Description("+10 Hit%")]
+		RMadd10hit,
+		[Description("+20 Hit%")]
+		RMadd20hit,
+		[Description("-10 Hit%")]
+		RMminus10hit,
+	}
+	public enum RMMdefpool
+	{
+		[Description("+10 MDef")]
+		RMadd10mdef,
+		[Description("+20 MDef")]
+		RMadd20mdef,
+		[Description("-10 MDef")]
+		RMminus10mdef,
+	}
+	public enum RMIntpool
+	{
+		[Description("+10 Int")]
+		RMadd10int,
+		[Description("+20 Int")]
+		RMadd20int,
+		[Description("+40 Int")]
+		RMadd40int,
+		[Description("-10 Int")]
+		RMminus10int,
+		[Description("-20 Int")]
+		RMmins20int,
+	}
+	public enum RMGoldpool
+	{
+		[Description("+200 Gold")]
+		RMadd200gold,
+		[Description("+400 Gold")]
+		RMadd400gold,
+		[Description("+600 Gold")]
+		RMadd600gold,
+		[Description("+800 Gold")]
+		RMadd800gold,
+		[Description("+1500 Gold")]
+		RMadd1500gold,
+		[Description("+5000 Gold")]
+		RMadd5000gold,
+		[Description("+20,000 Gold")]
+		RMadd20000gold,
+		[Description("-50 Gold")]
+		RMminus50gold,
+		[Description("-100 Gold")]
+		RMminus100gold,
+		[Description("-150 Gold")]
+		RMminus150gold,
+		[Description("-350 Gold")]
+		RMminus350gold,
+		[Description("-1100 Gold")]
+		RMminus1100gold,
+	}
+	public enum WMStrpool
+	{
+		[Description("+10 Str")]
+		WMadd10Str,
+		[Description("+20 Str")]
+		WMadd20Str,
+		[Description("+40 Str")]
+		WMadd40Str,
+		[Description("-10 Str")]
+		WMminus10Str,
+	}
+	public enum WMAgipool
+	{
+		[Description("+15 Agi")]
+		WMadd15Agi,
+		[Description("+25 Agi")]
+		WMadd25Agi,
+		[Description("+50 Agi")]
+		WMadd50Agi,
+		[Description("-10 Agi")]
+		WMminus10Agi,
+	}
+	public enum WMVitpool
+	{
+		[Description("+10 Vit")]
+		WMadd10Vit,
+		[Description("+20 Vit")]
+		WMadd20Vit,
+		[Description("+40 Vit")]
+		WMadd40Vit,
+		[Description("-10 Vit")]
+		WMminus10Vit,
+	}
+	public enum WMLuckpool
+	{
+		[Description("+5 Luck")]
+		WMadd5Luck,
+		[Description("+10 Luck")]
+		WMadd10Luck,
+		[Description("+15 Luck")]
+		WMadd15Luck,
+		[Description("-5 Luck")]
+		WMminus5luck,
+	}
+	public enum WMHPPool
+	{
+		[Description("+20 HP")]
+		WMadd20HP,
+		[Description("+40 HP")]
+		WMadd40HP,
+		[Description("+80 HP")]
+		WMadd80HP,
+		[Description("-15 HP")]
+		WMminus15HP,
+		[Description("-30 HP")]
+		WMminus30HP,
+	}
+	public enum WMHitPercentpool
+	{
+		[Description("+10 Hit%")]
+		WMadd10hit,
+		[Description("+20 Hit%")]
+		WMadd20hit,
+		[Description("-10 Hit%")]
+		WMminus10hit,
+	}
+	public enum WMMdefpool
+	{
+		[Description("+10 MDef")]
+		WMadd10mdef,
+		[Description("+20 MDef")]
+		WMadd20mdef,
+		[Description("-10 MDef")]
+		WMminus10mdef,
+	}
+	public enum WMIntpool
+	{
+		[Description("+10 Int")]
+		WMadd10int,
+		[Description("+20 Int")]
+		WMadd20int,
+		[Description("+40 Int")]
+		WMadd40int,
+		[Description("-10 Int")]
+		WMminus10int,
+		[Description("-20 Int")]
+		WMmins20int,
+	}
+	public enum WMGoldpool
+	{
+		[Description("+200 Gold")]
+		WMadd200gold,
+		[Description("+400 Gold")]
+		WMadd400gold,
+		[Description("+600 Gold")]
+		WMadd600gold,
+		[Description("+800 Gold")]
+		WMadd800gold,
+		[Description("+1500 Gold")]
+		WMadd1500gold,
+		[Description("+5000 Gold")]
+		WMadd5000gold,
+		[Description("+20,000 Gold")]
+		WMadd20000gold,
+		[Description("-50 Gold")]
+		WMminus50gold,
+		[Description("-100 Gold")]
+		WMminus100gold,
+		[Description("-150 Gold")]
+		WMminus150gold,
+		[Description("-350 Gold")]
+		WMminus350gold,
+		[Description("-1100 Gold")]
+		WMminus1100gold,
+	}
+	public enum BMStrpool
+	{
+		[Description("+10 Str")]
+		BMadd10Str,
+		[Description("+20 Str")]
+		BMadd20Str,
+		[Description("+40 Str")]
+		BMadd40Str,
+		[Description("-10 Str")]
+		BMminus10Str,
+	}
+	public enum BMAgipool
+	{
+		[Description("+15 Agi")]
+		BMadd15Agi,
+		[Description("+25 Agi")]
+		BMadd25Agi,
+		[Description("+50 Agi")]
+		BMadd50Agi,
+		[Description("-10 Agi")]
+		BMminus10Agi,
+	}
+	public enum BMVitpool
+	{
+		[Description("+10 Vit")]
+		BMadd10Vit,
+		[Description("+20 Vit")]
+		BMadd20Vit,
+		[Description("+40 Vit")]
+		BMadd40Vit,
+		[Description("-10 Vit")]
+		BMminus10Vit,
+	}
+	public enum BMLuckpool
+	{
+		[Description("+5 Luck")]
+		BMadd5Luck,
+		[Description("+10 Luck")]
+		BMadd10Luck,
+		[Description("+15 Luck")]
+		BMadd15Luck,
+		[Description("-5 Luck")]
+		BMminus5luck,
+		[Description("-10 Luck")]
+		BMminus10Luck,
+	}
+	public enum BMHPPool
+	{
+		[Description("+20 HP")]
+		BMadd20HP,
+		[Description("+40 HP")]
+		BMadd40HP,
+		[Description("+80 HP")]
+		BMadd80HP,
+		[Description("-15 HP")]
+		BMminus15HP,
+		[Description("-30 HP")]
+		BMminus30HP,
+	}
+	public enum BMHitPercentpool
+	{
+		[Description("+10 Hit%")]
+		BMadd10hit,
+		[Description("+20 Hit%")]
+		BMadd20hit,
+		[Description("-10 Hit%")]
+		BMminus10hit,
+	}
+	public enum BMMdefpool
+	{
+		[Description("+10 MDef")]
+		BMadd10mdef,
+		[Description("+20 MDef")]
+		BMadd20mdef,
+		[Description("-10 MDef")]
+		BMminus10mdef,
+	}
+	public enum BMGoldpool
+	{
+		[Description("+200 Gold")]
+		BMadd200gold,
+		[Description("+400 Gold")]
+		BMadd400gold,
+		[Description("+600 Gold")]
+		BMadd600gold,
+		[Description("+800 Gold")]
+		BMadd800gold,
+		[Description("+1500 Gold")]
+		BMadd1500gold,
+		[Description("+5000 Gold")]
+		BMadd5000gold,
+		[Description("+20,000 Gold")]
+		BMadd20000gold,
+		[Description("-50 Gold")]
+		BMminus50gold,
+		[Description("-100 Gold")]
+		BMminus100gold,
+		[Description("-150 Gold")]
+		BMminus150gold,
+		[Description("-350 Gold")]
+		BMminus350gold,
+		[Description("-1100 Gold")]
+		BMminus1100gold,
+	}
 
-
+}
 	internal class Class1
 	{
 	}
 }
+

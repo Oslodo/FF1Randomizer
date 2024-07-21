@@ -4445,6 +4445,491 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("RandomizeClassMaxMalus"));
 			}
 		}
+
+		public FiStrpool Fighterstr
+		{
+			get => Flags.Fighterstr;
+			set
+			{
+				Flags.Fighterstr = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FighterStr"));
+			}
+
+		}
+		public FiAgipool Fighteragi
+		{
+			get => Flags.Fighteragi;
+			set
+			{
+				Flags.Fighteragi = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FighterAgi"));
+			}
+		}
+		public FiVitpool Fightervit
+		{
+			get => Flags.Fightervit;
+			set
+			{
+				Flags.Fightervit = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FighterVit"));
+			}
+		}
+		public FiLuckpool Fighterluck
+		{
+			get => Flags.Fighterluck;
+			set
+			{
+				Flags.Fighterluck = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FighterLuck"));
+			}
+		}
+		public FiHPPool FighterHP
+		{
+			get => Flags.FighterHP;
+				set
+				{
+					Flags.FighterHP = value;
+					PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FighterHP"));
+				}
+		}
+		public FiHitPercentpool FighterHit
+		{
+			get => Flags.FighterHit;
+			set
+			{
+				Flags.FighterHit = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FighterHit"));
+			}
+		}
+		public FiMdefpool FighterMdef
+		{
+			get => Flags.FighterMdef;
+			set
+			{
+				Flags.FighterMdef = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FighterMdef"));
+			}
+		}
+		public FiIntpool FighterInt
+		{
+			get => Flags.FighterInt;
+			set
+			{
+				Flags.FighterInt = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FighterInt"));
+			}
+		}
+		public FiGoldpool Fightergold
+		{
+			get => Flags.Fightergold;
+			set
+			{
+				Flags.Fightergold = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Fightergold"));
+			}
+		}
+
+		public ThStrpool Thiefstr
+		{
+			get => Flags.Thiefstr;
+			set
+			{
+				Flags.Thiefstr = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ThiefStr"));
+			}
+
+		}
+		public ThAgipool Thiefagi
+		{
+			get => Flags.Thiefagi;
+			set
+			{
+				Flags.Thiefagi = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ThiefAgi"));
+			}
+		}
+		public ThVitpool Thiefvit
+		{
+			get => Flags.Thiefvit;
+			set
+			{
+				Flags.Thiefvit = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ThiefVit"));
+			}
+		}
+		public ThLuckpool Thiefluck
+		{
+			get => Flags.Thiefluck;
+			set
+			{
+				Flags.Thiefluck = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ThiefLuck"));
+			}
+		}
+		public ThHPPool ThiefHP
+		{
+			get => Flags.ThiefHP;
+			set
+			{
+				Flags.ThiefHP = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ThiefHP"));
+			}
+		}
+		public ThHitPercentpool ThiefHit
+		{
+			get => Flags.ThiefHit;
+			set
+			{
+				Flags.ThiefHit = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ThiefHit"));
+			}
+		}
+		public ThMdefpool ThiefMdef
+		{
+			get => Flags.ThiefMdef;
+			set
+			{
+				Flags.ThiefMdef = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ThiefMdef"));
+			}
+		}
+		public ThIntpool ThiefInt
+		{
+			get => Flags.ThiefInt;
+			set
+			{
+				Flags.ThiefInt = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ThiefInt"));
+			}
+		}
+		public ThGoldpool Thiefgold
+		{
+			get => Flags.Thiefgold;
+			set
+			{
+				Flags.Thiefgold = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Thiefgold"));
+			}
+		}
+		public BBStrpool BBstr
+		{
+			get => Flags.BBstr;
+			set
+			{
+				Flags.BBstr = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BBStr"));
+			}
+
+		}
+		public BBAgipool BBagi
+		{
+			get => Flags.BBagi;
+			set
+			{
+				Flags.BBagi = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BBAgi"));
+			}
+		}
+		public BBVitpool BBvit
+		{
+			get => Flags.BBvit;
+			set
+			{
+				Flags.BBvit = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BBVit"));
+			}
+		}
+		public BBLuckpool BBluck
+		{
+			get => Flags.BBluck;
+			set
+			{
+				Flags.BBluck = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BBLuck"));
+			}
+		}
+		public BBHPPool BBHP
+		{
+			get => Flags.BBHP;
+			set
+			{
+				Flags.BBHP = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BBHP"));
+			}
+		}
+		public BBHitPercentpool BBhit
+		{
+			get => Flags.BBhit;
+			set
+			{
+				Flags.BBhit = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BBHit"));
+			}
+		}
+		public BBMdefpool BBmdef
+		{
+			get => Flags.BBmdef;
+			set
+			{
+				Flags.BBmdef = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BBMdef"));
+			}
+		}
+		public BBGoldpool BBgold
+		{
+			get => Flags.BBgold;
+			set
+			{
+				Flags.BBgold = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BBgold"));
+			}
+		}
+		public RMStrpool Rmstr
+		{
+			get => Flags.Rmstr;
+			set
+			{
+				Flags.Rmstr = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("RmStr"));
+			}
+
+		}
+		public RMAgipool Rmagi
+		{
+			get => Flags.Rmagi;
+			set
+			{
+				Flags.Rmagi = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("RmAgi"));
+			}
+		}
+		public RMVitpool Rmvit
+		{
+			get => Flags.Rmvit;
+			set
+			{
+				Flags.Rmvit = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("RmVit"));
+			}
+		}
+		public RMLuckpool Rmluck
+		{
+			get => Flags.Rmluck;
+			set
+			{
+				Flags.Rmluck = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("RmLuck"));
+			}
+		}
+		public RMHPPool RmHP
+		{
+			get => Flags.RmHP;
+			set
+			{
+				Flags.RmHP = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("RmHP"));
+			}
+		}
+		public RMHitPercentpool Rmhit
+		{
+			get => Flags.Rmhit;
+			set
+			{
+				Flags.Rmhit = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("RmHit"));
+			}
+		}
+		public RMMdefpool Rmmdef
+		{
+			get => Flags.Rmmdef;
+			set
+			{
+				Flags.Rmmdef = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("RmMdef"));
+			}
+		}
+		public RMIntpool Rmint
+		{
+			get => Flags.Rmint;
+			set
+			{
+				Flags.Rmint = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("RmInt"));
+			}
+		}
+		public RMGoldpool Rmgold
+		{
+			get => Flags.Rmgold;
+			set
+			{
+				Flags.Rmgold = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Rmgold"));
+			}
+		}
+		public WMStrpool Wmstr
+		{
+			get => Flags.Wmstr;
+			set
+			{
+				Flags.Wmstr = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("WmStr"));
+			}
+
+		}
+		public WMAgipool Wmagi
+		{
+			get => Flags.Wmagi;
+			set
+			{
+				Flags.Wmagi = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("WmAgi"));
+			}
+		}
+		public WMVitpool Wmvit
+		{
+			get => Flags.Wmvit;
+			set
+			{
+				Flags.Wmvit = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("WmVit"));
+			}
+		}
+		public WMLuckpool Wmluck
+		{
+			get => Flags.Wmluck;
+			set
+			{
+				Flags.Wmluck = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("WmLuck"));
+			}
+		}
+		public WMHPPool WmHP
+		{
+			get => Flags.WmHP;
+			set
+			{
+				Flags.WmHP = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("WmHP"));
+			}
+		}
+		public WMHitPercentpool Wmhit
+		{
+			get => Flags.Wmhit;
+			set
+			{
+				Flags.Wmhit = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("WmHit"));
+			}
+		}
+		public WMMdefpool Wmmdef
+		{
+			get => Flags.Wmmdef;
+			set
+			{
+				Flags.Wmmdef = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("WmMdef"));
+			}
+		}
+		public WMIntpool Wmint
+		{
+			get => Flags.Wmint;
+			set
+			{
+				Flags.Wmint = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("WmInt"));
+			}
+		}
+		public WMGoldpool Wmgold
+		{
+			get => Flags.Wmgold;
+			set
+			{
+				Flags.Wmgold = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Wmgold"));
+			}
+		}
+		public BMStrpool Bmstr
+		{
+			get => Flags.Bmstr;
+			set
+			{
+				Flags.Bmstr = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BmStr"));
+			}
+
+		}
+		public BMAgipool Bmagi
+		{
+			get => Flags.Bmagi;
+			set
+			{
+				Flags.Bmagi = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BmAgi"));
+			}
+		}
+		public BMVitpool Bmvit
+		{
+			get => Flags.Bmvit;
+			set
+			{
+				Flags.Bmvit = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BmVit"));
+			}
+		}
+		public BMLuckpool Bmluck
+		{
+			get => Flags.Bmluck;
+			set
+			{
+				Flags.Bmluck = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BmLuck"));
+			}
+		}
+		public BMHPPool BmHP
+		{
+			get => Flags.BmHP;
+			set
+			{
+				Flags.BmHP = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BmHP"));
+			}
+		}
+		public BMHitPercentpool Bmhit
+		{
+			get => Flags.Bmhit;
+			set
+			{
+				Flags.Bmhit = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BmHit"));
+			}
+		}
+		public BMMdefpool Bmmdef
+		{
+			get => Flags.Bmmdef;
+			set
+			{
+				Flags.Bmmdef = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BmMdef"));
+			}
+		}
+		public BMIntpool Bmint
+		{
+			get => Flags.Bmint;
+			set
+			{
+				Flags.Bmint = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BmInt"));
+			}
+		}
+		public BMGoldpool Bmgold
+		{
+			get => Flags.Bmgold;
+			set
+			{
+				Flags.Bmgold = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Bmgold"));
+			}
+		}
 		public bool? AlternateFiends
 		{
 			get => Flags.AlternateFiends;

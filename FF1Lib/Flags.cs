@@ -668,7 +668,7 @@ namespace FF1Lib
 		public FiAgipool Fighteragi { get; set; } = FiAgipool.FiAgpoolinone;
 		public FiVitpool Fightervit { get; set; } = FiVitpool.FiVitpoolNone;
 		public FiLuckpool Fighterluck { get; set; } = FiLuckpool.FiLuckpoolNone;
-		public FiHPpool FighterHP { get; set; } = FiHPpool.FiHPPoolNone;
+		public FiHPPool FighterHP { get; set; } = FiHPPool.FiHPPoolNone;
 		public FiHitPercentpool FighterHit { get; set; } = FiHitPercentpool.FiHitPercentpoolNone;
 		public FiMdefpool FighterMdef { get; set; } = FiMdefpool.FiMdefpoolNone;
 		public FiIntpool FighterInt { get; set; } = FiIntpool.FiIntpoolNone;
@@ -678,7 +678,7 @@ namespace FF1Lib
 		public ThVitpool Thiefvit { get; set; } = ThVitpool.ThVitpoolNone;
 		public ThLuckpool Thiefluck { get; set; } = ThLuckpool.ThLuckpoolNone;
 		public ThHPPool ThiefHP { get; set; } = ThHPPool.ThHPPoolNone;
-		public ThHitPercentpool Thiefhit { get; set; } = ThHitPercentpool.ThHitPercentpoolNone;
+		public ThHitPercentpool ThiefHit { get; set; } = ThHitPercentpool.ThHitPercentpoolNone;
 		public ThMdefpool ThiefMdef { get; set; } = ThMdefpool.ThMdefpoolNone;
 		public ThIntpool ThiefInt { get; set; } = ThIntpool.ThIntpoolNone;
 		public ThGoldpool Thiefgold { get; set; } = ThGoldpool.ThGoldpoolNone;
@@ -692,7 +692,7 @@ namespace FF1Lib
 		public BBGoldpool BBgold { get; set; } = BBGoldpool.BBGoldpoolNone;
 		public RMStrpool Rmstr { get; set; } = RMStrpool.RMStrpoolNone;
 		public RMAgipool Rmagi { get; set; } = RMAgipool.RMAgipoolNone;
-		public RMVitpool RmVit { get; set; } = RMVitpool.RMmVitpoolNone;
+		public RMVitpool Rmvit { get; set; } = RMVitpool.RMmVitpoolNone;
 		public RMLuckpool Rmluck { get; set; } = RMLuckpool.RMmLuckpoolNone;
 		public RMHPPool RmHP { get; set; } = RMHPPool.RMHPPoolNone;
 		public RMHitPercentpool Rmhit { get; set; } = RMHitPercentpool.RMHitPercentpoolNone;

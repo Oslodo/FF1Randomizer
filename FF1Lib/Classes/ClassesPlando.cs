@@ -66,7 +66,7 @@ namespace FF1Lib
 		Fiminus5Luck,
 
 	}
-	public enum FiHPpool
+	public enum FiHPPool
 	{
 		[Description("None")]
 		FiHPPoolNone,

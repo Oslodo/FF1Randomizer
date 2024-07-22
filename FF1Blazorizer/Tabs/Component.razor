@@ -1,0 +1,30 @@
+﻿@using FF1Lib;
+
+<div id="classblursings" class="tabcontent framed-content clearfix">
+    <h3>Planto Blurings</h3>
+    <div class="col1">
+        <h4>Fighter</h4>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="FiStrpooldropdown" @bind-Value="Flags.Fighterstr">Strength</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="FiAgipooldropdown" @bind-Value="Flags.Fighteragi">Agility</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="FiVitpooldropdown" @bind-Value="Flags.Fightervit">Vitality</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="FiLuckpooldropdown" @bind-Value="Flags.Fighterluck">Luck</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="FiHPPooldropdown" @bind-Value="Flags.FighterHP">HP</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="FiHitPercentpool" @bind-Value="Flags.FighterHit">Hit Percentage</EnumDropDown>
+
+
+
+    </div>
+
+
+
+</div>
+
+
+@code {
+        [Parameter] public FF1Lib.FlagsViewModel Flags { get; set; }
+        [Parameter] public Action<string, MouseEventArgs> UpdateToolTipID { get; set; }
+        [Parameter] public bool noTabLayout { get; set; }
+        [Parameter] public bool IsOpen { get; set; } = true;
+    }
+
+

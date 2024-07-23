@@ -4528,7 +4528,60 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Fightergold"));
 			}
 		}
-
+		public bool FiEquipShirts
+		{
+			get => Flags.FiEquipShirts;
+			set
+			{
+				Flags.FiEquipShirts = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FiEquipShirts"));
+			}
+		}
+		public bool FiImpThor
+		{
+			get => Flags.FiImpThor;
+			set
+			{
+				Flags.FiImpThor = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FiImpThor"));
+			}
+		}
+		public bool FiHurtUndead
+		{
+			get => Flags.FiHurtUndead;
+			set
+			{
+				Flags.FiHurtUndead = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FiHurtUndead"));
+			}
+		}
+		public bool FiHurtDragon
+		{
+			get => Flags.FiHurtDragon;
+			set
+			{
+				Flags.FiHurtDragon = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FiHurtDragon"));
+			}
+		}
+		public bool FiResistPEDTS
+		{
+			get => Flags.FiResistPEDTS;
+			set
+			{
+				Flags.FiResistPEDTS = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FiResistPEDTS"));
+			}
+		}
+		public bool FiResistAll
+		{
+			get => Flags.FiResistAll;
+			set
+			{
+				Flags.FiResistAll = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FiResistAll"));
+			}
+		}
 		public ThStrpool Thiefstr
 		{
 			get => Flags.Thiefstr;
@@ -4611,40 +4664,40 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Thiefgold"));
 			}
 		}
-		public BBStrpool BBstr
+		public BBStrpool BBStr
 		{
-			get => Flags.BBstr;
+			get => Flags.BBStr;
 			set
 			{
-				Flags.BBstr = value;
+				Flags.BBStr = value;
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BBStr"));
 			}
 
 		}
 		public BBAgipool BBagi
 		{
-			get => Flags.BBagi;
+			get => Flags.BBAgi;
 			set
 			{
-				Flags.BBagi = value;
+				Flags.BBAgi = value;
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BBAgi"));
 			}
 		}
 		public BBVitpool BBvit
 		{
-			get => Flags.BBvit;
+			get => Flags.BBVit;
 			set
 			{
-				Flags.BBvit = value;
+				Flags.BBVit = value;
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BBVit"));
 			}
 		}
 		public BBLuckpool BBluck
 		{
-			get => Flags.BBluck;
+			get => Flags.BBLuck;
 			set
 			{
-				Flags.BBluck = value;
+				Flags.BBLuck = value;
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BBLuck"));
 			}
 		}
@@ -4659,28 +4712,28 @@ namespace FF1Lib
 		}
 		public BBHitPercentpool BBhit
 		{
-			get => Flags.BBhit;
+			get => Flags.BBHit;
 			set
 			{
-				Flags.BBhit = value;
+				Flags.BBHit = value;
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BBHit"));
 			}
 		}
 		public BBMdefpool BBmdef
 		{
-			get => Flags.BBmdef;
+			get => Flags.BBMdef;
 			set
 			{
-				Flags.BBmdef = value;
+				Flags.BBMdef = value;
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BBMdef"));
 			}
 		}
 		public BBGoldpool BBgold
 		{
-			get => Flags.BBgold;
+			get => Flags.BBGold;
 			set
 			{
-				Flags.BBgold = value;
+				Flags.BBGold = value;
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BBgold"));
 			}
 		}

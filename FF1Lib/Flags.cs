@@ -673,6 +673,14 @@ namespace FF1Lib
 		public FiMdefpool FighterMdef { get; set; } = FiMdefpool.FiMdefpoolNone;
 		public FiIntpool FighterInt { get; set; } = FiIntpool.FiIntpoolNone;
 		public FiGoldpool Fightergold { get; set; } = FiGoldpool.FiGoldpoolNone;
+		public bool FiEquipShirts { get; set; } = false;
+		public bool FiImpThor { get; set; } = false;
+		public bool FiHurtUndead { get; set; } = false;
+		public bool FiHurtDragon { get; set; } = false;
+		public bool FiResistPEDTS { get; set; } = false;
+		public bool FiResistAll { get; set; } = false;
+
+
 		public ThStrpool Thiefstr { get; set; } = ThStrpool.ThStrpoolNone;
 		public ThAgipool Thiefagi { get; set; } = ThAgipool.ThAgipoolNone;
 		public ThVitpool Thiefvit { get; set; } = ThVitpool.ThVitpoolNone;
@@ -682,14 +690,14 @@ namespace FF1Lib
 		public ThMdefpool ThiefMdef { get; set; } = ThMdefpool.ThMdefpoolNone;
 		public ThIntpool ThiefInt { get; set; } = ThIntpool.ThIntpoolNone;
 		public ThGoldpool Thiefgold { get; set; } = ThGoldpool.ThGoldpoolNone;
-		public BBStrpool BBstr { get; set; } = BBStrpool.BBStrpoolNone;
-		public BBAgipool BBagi { get; set; } = BBAgipool.BBAgipoolNone;
-		public BBVitpool BBvit { get; set; } = BBVitpool.BBVitpoolNone;
-		public BBLuckpool BBluck { get; set; } = BBLuckpool.BBBLuckpoolNone;
+		public BBStrpool BBStr { get; set; } = BBStrpool.BBStrpoolNone;
+		public BBAgipool BBAgi { get; set; } = BBAgipool.BBAgipoolNone;
+		public BBVitpool BBVit { get; set; } = BBVitpool.BBVitpoolNone;
+		public BBLuckpool BBLuck { get; set; } = BBLuckpool.BBBLuckpoolNone;
 		public BBHPPool BBHP { get; set; } = BBHPPool.BBHPPoolNone;
-		public BBHitPercentpool BBhit { get; set; } = BBHitPercentpool.BBHitPercentpoolNone;
-		public BBMdefpool BBmdef { get; set; } = BBMdefpool.BBBMdefpoolNone;
-		public BBGoldpool BBgold { get; set; } = BBGoldpool.BBGoldpoolNone;
+		public BBHitPercentpool BBHit { get; set; } = BBHitPercentpool.BBHitPercentpoolNone;
+		public BBMdefpool BBMdef { get; set; } = BBMdefpool.BBBMdefpoolNone;
+		public BBGoldpool BBGold { get; set; } = BBGoldpool.BBGoldpoolNone;
 		public RMStrpool Rmstr { get; set; } = RMStrpool.RMStrpoolNone;
 		public RMAgipool Rmagi { get; set; } = RMAgipool.RMAgipoolNone;
 		public RMVitpool Rmvit { get; set; } = RMVitpool.RMmVitpoolNone;

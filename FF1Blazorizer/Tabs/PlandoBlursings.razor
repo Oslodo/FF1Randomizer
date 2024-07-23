@@ -1,0 +1,97 @@
+﻿@using FF1Lib;
+
+<div id="classblursings" class="tabcontent framed-content clearfix">
+    <h3>Planto Blurings</h3>
+    <div class="col1">
+        <h4>Fighter</h4>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="FiStrpooldropdown" @bind-Value="Flags.Fighterstr">Strength</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="FiAgipooldropdown" @bind-Value="Flags.Fighteragi">Agility</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="FiVitpooldropdown" @bind-Value="Flags.Fightervit">Vitality</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="FiLuckpooldropdown" @bind-Value="Flags.Fighterluck">Luck</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="FiHPPooldropdown" @bind-Value="Flags.FighterHP">HP</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="FiHitPercentpooldropdown" @bind-Value="Flags.FighterHit">Hit Percentage</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="FiMDefpooldropdown" @bind-Value="Flags.FighterMdef">Magic Defense</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="FiIntpooldropdown" @bind-Value="Flags.FighterInt">Intelligence</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="FiGoldpooldropdown" @bind-Value="Flags.Fightergold">Starting Gold</EnumDropDown>
+
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiEquipShirtscheckbox" @bind-Value="Flags.FighterEquipShirts">Equip Shirts</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiImThorcheckbox" @bind-Value="Flags.FiImpThor">Improved Thor Hammer</CheckBox>
+
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiHurtUndeadcheckbox" @bind-Value="Flags.FiHurtUndead">Hurt Undead</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiHurtDragoncheckbox" @bind-Value="Flags.FiHurtDragon">Hurt Dragon</CheckBox>
+
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiResistPEDTScheckbox" @bind-Value="Flags.FiResistPEDTS">Resist PEDTS</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiResistAllcheckbox" @bind-Value="Flags.FiResistAll">Resist All</CheckBox>
+        
+        <h4>BlackBelt</h4>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="BBStrpooldropdown" @bind-Value="Flags.BBStr">Strength</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="BBAgipooldropdown" @bind-Value="Flags.BBagi">Agility</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="BBVitpooldropdown" @bind-Value="Flags.BBvit">Vitality</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="BBLuckpooldropdown" @bind-Value="Flags.BBluck">Luck</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="BBHPPooldropdown" @bind-Value="Flags.BBHP">HP</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="BBHitPercentpooldropdown" @bind-Value="Flags.BBhit">Hit Percentage</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="BBMDefpooldropdown" @bind-Value="Flags.BBmdef">Magic Defense</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="BBGoldpooldropdown" @bind-Value="Flags.BBgold">Starting Gold</EnumDropDown>
+
+        <h4>White Mage</h4>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="WmStrpooldropdown" @bind-Value="Flags.Wmstr">Strength</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="WmAgipooldropdown" @bind-Value="Flags.Wmagi">Agility</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="WmVitpooldropdown" @bind-Value="Flags.Wmvit">Vitality</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="WmLuckpooldropdown" @bind-Value="Flags.Wmluck">Luck</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="WmHPPooldropdown" @bind-Value="Flags.WmHP">HP</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="WmHitPercentpooldropdown" @bind-Value="Flags.Wmhit">Hit Percentage</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="WmMDefpooldropdown" @bind-Value="Flags.Wmmdef">Magic Defense</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="WmIntpooldropdown" @bind-Value="Flags.Wmint">Intelligence</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="WmGoldpooldropdown" @bind-Value="Flags.Wmgold">Starting Gold</EnumDropDown>
+
+        <div class="checkbox-cell"></div>
+    </div>
+    <div class="col2">
+        <h4>Thief</h4>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="ThStrpooldropdown" @bind-Value="Flags.Thiefstr">Strength</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="ThAgipooldropdown" @bind-Value="Flags.Thiefagi">Agility</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="ThVitpooldropdown" @bind-Value="Flags.Thiefvit">Vitality</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="ThLuckpooldropdown" @bind-Value="Flags.Thiefluck">Luck</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="ThHPPooldropdown" @bind-Value="Flags.ThiefHP">HP</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="ThHitPercentpooldropdown" @bind-Value="Flags.ThiefHit">Hit Percentage</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="ThMDefpooldropdown" @bind-Value="Flags.ThiefMdef">Magic Defense</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="ThIntpooldropdown" @bind-Value="Flags.ThiefInt">Intelligence</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="ThGoldpooldropdown" @bind-Value="Flags.Thiefgold">Starting Gold</EnumDropDown>
+
+        <h4>Red Mage</h4>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="RmStrpooldropdown" @bind-Value="Flags.Rmstr">Strength</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="RmAgipooldropdown" @bind-Value="Flags.Rmagi">Agility</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="RmVitpooldropdown" @bind-Value="Flags.Rmvit">Vitality</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="RmLuckpooldropdown" @bind-Value="Flags.Rmluck">Luck</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="RmHPPooldropdown" @bind-Value="Flags.RmHP">HP</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="RmHitPercentpooldropdown" @bind-Value="Flags.Rmhit">Hit Percentage</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="RmMDefpooldropdown" @bind-Value="Flags.Rmmdef">Magic Defense</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="RmIntpooldropdown" @bind-Value="Flags.Rmint">Intelligence</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="RmGoldpooldropdown" @bind-Value="Flags.Rmgold">Starting Gold</EnumDropDown>
+
+        <h4>Black Mage</h4>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="BmStrpooldropdown" @bind-Value="Flags.Bmstr">Strength</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="BmAgipooldropdown" @bind-Value="Flags.Bmagi">Agility</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="BmVitpooldropdown" @bind-Value="Flags.Bmvit">Vitality</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="BmLuckpooldropdown" @bind-Value="Flags.Bmluck">Luck</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="BmHPPooldropdown" @bind-Value="Flags.BmHP">HP</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="BmHitPercentpooldropdown" @bind-Value="Flags.Bmhit">Hit Percentage</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="BmMDefpooldropdown" @bind-Value="Flags.Bmmdef">Magic Defense</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="BmIntpooldropdown" @bind-Value="Flags.Bmint">Intelligence</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="BmGoldpooldropdown" @bind-Value="Flags.Bmgold">Starting Gold</EnumDropDown>
+
+        <div class="checkbox-cell"></div>
+    </div>
+
+
+</div>
+
+
+@code {
+        [Parameter] public FF1Lib.FlagsViewModel Flags { get; set; }
+        [Parameter] public Action<string, MouseEventArgs> UpdateToolTipID { get; set; }
+        [Parameter] public bool noTabLayout { get; set; }
+        [Parameter] public bool IsOpen { get; set; } = true;
+    }
+
+

@@ -679,8 +679,14 @@ namespace FF1Lib
 		public bool FiHurtDragon { get; set; } = false;
 		public bool FiResistPEDTS { get; set; } = false;
 		public bool FiResistAll { get; set; } = false;
-
-
+		public bool FiImpCatclaw { get; set; } = false;
+		public FiMasaCurse FighterMasaCurse { get; set; } = FiMasaCurse.FiMasaCurseNone;
+		public FiRibbonCurse FighterRibbonCurse { get; set; } = FiRibbonCurse.FiRibbonCurseNone;
+		public bool FiWoodAdept { get; set; } = false;
+		public bool FiSteelLord { get; set; } = false;
+		public bool FiPlus50XP { get; set; } = false;
+		public bool FiMaxMPPlus { get; set; } = false;
+		public bool FiNoProRing { get; set; } = false;
 		public ThStrpool Thiefstr { get; set; } = ThStrpool.ThStrpoolNone;
 		public ThAgipool Thiefagi { get; set; } = ThAgipool.ThAgipoolNone;
 		public ThVitpool Thiefvit { get; set; } = ThVitpool.ThVitpoolNone;

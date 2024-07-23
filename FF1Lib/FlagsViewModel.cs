@@ -4582,6 +4582,78 @@ namespace FF1Lib
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FiResistAll"));
 			}
 		}
+		public bool FiImpCatclaw
+		{
+			get => Flags.FiImpCatclaw;
+			set
+			{
+				Flags.FiImpCatclaw = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FiImpCatclaw"));
+			}
+		}
+		public FiMasaCurse FighterMasaCurse
+		{
+			get => Flags.FighterMasaCurse;
+			set
+			{
+				Flags.FighterMasaCurse = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FighterMasaCurse"));
+			}
+		}
+		public FiRibbonCurse FighterRibbonCurse
+		{
+			get => Flags.FighterRibbonCurse;
+			set
+			{
+				Flags.FighterRibbonCurse = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FighterRibbonCurse"));
+			}
+		}
+		public bool FiWoodAdept
+		{
+			get => Flags.FiWoodAdept;
+			set
+			{
+				Flags.FiWoodAdept = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FiWoodAdept"));
+			}
+		}
+		public bool FiSteelLord
+		{
+			get => Flags.FiSteelLord;
+			set
+			{
+				Flags.FiSteelLord = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FiSteelLord"));
+			}
+		}
+		public bool FiPlus50XP
+		{
+			get => Flags.FiPlus50XP;
+			set
+			{
+				Flags.FiPlus50XP = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FiPlus50XP"));
+			}
+		}
+		public bool FiMaxMPPlus
+		{
+			get => Flags.FiMaxMPPlus;
+			set
+			{
+				Flags.FiMaxMPPlus = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FiMaxMPPlus"));
+			}
+		}
+		public bool FiNoProRing
+		{
+			get => Flags.FiNoProRing;
+			set
+			{
+				Flags.FiNoProRing = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FiNoProRing"));
+			}
+		}
 		public ThStrpool Thiefstr
 		{
 			get => Flags.Thiefstr;

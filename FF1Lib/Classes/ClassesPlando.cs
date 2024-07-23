@@ -143,6 +143,32 @@ namespace FF1Lib
 		[Description("-1100 Gold")]
 		Fiminus1100gold,
 	}
+	public enum FiMasaCurse
+	{
+		[Description("None")]
+		FiMasaCurseNone,
+		[Description("Poison")]
+		FIMasaPoison,
+		[Description("Stun")]
+		FiMasaStun,
+		[Description("Sleep")]
+		FiMasaSleep,
+		[Description("Mute")]
+		FiMasaMute,
+	}
+	public enum FiRibbonCurse
+	{
+		[Description("None")]
+		FiRibbonCurseNone,
+		[Description("Poison")]
+		FiRibbonCursePoison,
+		[Description("Stun")]
+		FiRibbonCurseStun,
+		[Description("Sleep")]
+		FiRibbonCurseSleep,
+		[Description("Mute")]
+		FiRibbonCurseMute,
+	}
 	public enum ThStrpool
 	{
 		[Description("None")]

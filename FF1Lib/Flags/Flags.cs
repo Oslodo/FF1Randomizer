@@ -671,6 +671,7 @@ namespace FF1Lib
 		public bool FiImpThor { get; set; } = false;
 		public bool FiHurtUndead { get; set; } = false;
 		public bool FiHurtDragon { get; set; } = false;
+		public bool FiHurtAll { get; set; } = false;
 		public bool FiResistPEDTS { get; set; } = false;
 		public bool FiResistAll { get; set; } = false;
 		public bool FiResistSelect { get; set; } = false;
@@ -689,13 +690,20 @@ namespace FF1Lib
 		public bool FiNoPromoArmor { get; set; } = false;
 		public bool FiNoPromoSpells { get; set; } = false;
 		public bool FiImpCatclaw { get; set; } = false;
+		public bool FiPlus2MdefLevel { get; set; } = false;
 		public FiMasaCurse FighterMasaCurse { get; set; } = FiMasaCurse.FiMasaCurseNone;
 		public FiRibbonCurse FighterRibbonCurse { get; set; } = FiRibbonCurse.FiRibbonCurseNone;
 		public bool FiWoodAdept { get; set; } = false;
 		public bool FiSteelLord { get; set; } = false;
+		public bool FiLegendarySwords { get; set; } = false;
 		public bool FiPlus50XP { get; set; } = false;
 		public bool FiMaxMPPlus { get; set; } = false;
 		public bool FiNoProRing { get; set; } = false;
+		public bool FiMinusOneHit { get; set; } = false;
+		public bool FiMinusOneMdef { get; set; } = false;
+		public FiKeyItems FighterKI { get; set; } = FiKeyItems.FiKeyItemsNone;
+
+
 		public ThStrpool Thiefstr { get; set; } = ThStrpool.ThStrpoolNone;
 		public ThAgipool Thiefagi { get; set; } = ThAgipool.ThAgipoolNone;
 		public ThVitpool Thiefvit { get; set; } = ThVitpool.ThVitpoolNone;
@@ -705,6 +713,9 @@ namespace FF1Lib
 		public ThMdefpool ThiefMdef { get; set; } = ThMdefpool.ThMdefpoolNone;
 		public ThIntpool ThiefInt { get; set; } = ThIntpool.ThIntpoolNone;
 		public ThGoldpool Thiefgold { get; set; } = ThGoldpool.ThGoldpoolNone;
+		public bool ThEquipShirts { get; set; } = false;
+
+
 		public BBStrpool BBStr { get; set; } = BBStrpool.BBStrpoolNone;
 		public BBAgipool BBAgi { get; set; } = BBAgipool.BBAgipoolNone;
 		public BBVitpool BBVit { get; set; } = BBVitpool.BBVitpoolNone;
@@ -713,6 +724,39 @@ namespace FF1Lib
 		public BBHitPercentpool BBHit { get; set; } = BBHitPercentpool.BBHitPercentpoolNone;
 		public BBMdefpool BBMdef { get; set; } = BBMdefpool.BBBMdefpoolNone;
 		public BBGoldpool BBGold { get; set; } = BBGoldpool.BBGoldpoolNone;
+		public bool BBEquipShirts { get; set; } = false;
+		public bool BBEquipAxes { get; set; } = false;
+		public bool BBEquipShields { get; set; } = false;
+		public bool BBEquipHelmBonk { get; set;} = false;
+		public bool BBEquipThWeapons { get; set; } = false;
+		public bool BBLegendarySwords { get; set; } = false;
+		public bool BBRMArmor { get; set; } = false;
+		public bool BBHurtUndead { get; set; } = false;
+		public bool BBHurtDragon { get; set; } = false;
+		public bool BBHurtAll { get; set; } = false;
+		public bool BBResistSelect { get; set; } = false;
+		public bool BBResistStatus { get; set; } = false;
+		public bool BBResistPoison { get; set; } = false;
+		public bool BBResistTime { get; set; } = false;
+		public bool BBResistDeath { get; set; } = false;
+		public bool BBResistFire { get; set; }	= false;
+		public bool BBResistIce { get; set; } = false;
+		public bool BBResistLit { get; set; } = false;
+		public bool BBResistEarth { get; set;} = false;
+		public bool BBFighterWeapons { get; set; } = false;
+		public bool BBMinusOneHit { get; set; } = false;
+		public bool BBMinusOneMdef { get; set; } = false;
+		public bool BBNoBracelet { get; set; } = false;
+		public BBMasaCruse BBMasaCurse { get; set; } = BBMasaCruse.BBMasaCurseNone;
+		public BBRibbonCurse BBRibbonCurse { get; set; } = BBRibbonCurse.BBRibbonCurseNone;
+		public bool BBUnarmed { get; set; } = false;
+		public bool BBMasterMdef { get; set; } = false;
+		public bool BBWoodAdept { get; set; } = false;
+		public bool BBNoProRing { get; set; } = false;
+		public bool BBPlus50XP { get; set; } = false;
+		public BBMagicBonus BBMagicBonus { get; set; } = BBMagicBonus.BBMagicBonusNone;
+		public BBKeyItems BBKeyItems { get; set; } = BBKeyItems.BBKeyItemsNone;
+
 		public RMStrpool Rmstr { get; set; } = RMStrpool.RMStrpoolNone;
 		public RMAgipool Rmagi { get; set; } = RMAgipool.RMAgipoolNone;
 		public RMVitpool Rmvit { get; set; } = RMVitpool.RMmVitpoolNone;

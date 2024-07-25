@@ -190,6 +190,41 @@ namespace FF1Lib
 		[Description("Tele Magic")]
 		FiMagicBonusTele,
 	}
+	public enum FiKeyItems
+	{
+		[Description("None")]
+		FiKeyItemsNone,
+		[Description("Crown")]
+		FiKeyItemsCrown,
+		[Description("Crystal")]
+		FiKeyItemsCrystal,
+		[Description("Herb")]
+		FiKeyItemsHerb,
+		[Description("TNT")]
+		FiKeyItemsTNT,
+		[Description("Adamant")]
+		FiKeyItemsAdamant,
+		[Description("Slab")]
+		FiKeyItemsSlab,
+		[Description("Ruby")]
+		FiKeyItemsRuby,
+		[Description("Rod")]
+		FiKeyItemsRod,
+		[Description("Chime")]
+		FiKeyItemsChime,
+		[Description("Cube")]
+		FiKeyItemsCube,
+		[Description("Bottle")]
+		FiKeyItemsBottle,
+		[Description("Oxyale")]
+		FiKeyItemsOxyale,
+		[Description("Lute")]
+		FiKeyItemsLute,
+		[Description("Tail")]
+		FiKeyItemsTail,
+		[Description("Key")]
+		FiKeyItemsKey,
+	}
 	public enum ThStrpool
 	{
 		[Description("None")]
@@ -452,6 +487,89 @@ namespace FF1Lib
 		BBminus350gold,
 		[Description("-1100 Gold")]
 		BBminus1100gold,
+	}
+	public enum BBMasaCruse
+	{
+		[Description("None")]
+		BBMasaCurseNone,
+		[Description("Poison")]
+		BBMasaPoison,
+		[Description("Stun")]
+		BBMasaStun,
+		[Description("Sleep")]
+		BBMasaSleep,
+		[Description("Mute")]
+		BBMasaMute,
+	}
+	public enum BBRibbonCurse
+	{
+		[Description("None")]
+		BBRibbonCurseNone,
+		[Description("Poison")]
+		BBRibbonCursePoison,
+		[Description("Stun")]
+		BBRibbonCurseStun,
+		[Description("Sleep")]
+		BBRibbonCurseSleep,
+		[Description("Mute")]
+		BBRibbonCurseMute,
+	}
+	public enum BBMagicBonus
+	{
+	
+		[Description("None")]
+		BBMagicBonusNone,
+		[Description("Elem Magic")]
+		BBMagicBonusElem,
+		[Description("Elem+ Magic")]
+		BBMagicBonusElemPlus,
+		[Description("Clean Magic")]
+		BBMagicBonusClean,
+		[Description("Heal Magic")]
+		BBMagicBonusHeal,
+		[Description("Heal+ Magic")]
+		BBMagicBonusHealPlus,
+		[Description("Self Magic")]
+		BBMagicBonusSelf,
+		[Description("Buff Magic")]
+		BBMagicBonusBuff,
+		[Description("Tele Magic")]
+		BBMagicBonusTele,
+	}
+	public enum BBKeyItems
+	{
+		[Description("None")]
+		BBKeyItemsNone,
+		[Description("Crown")]
+		BBKeyItemsCrown,
+		[Description("Crystal")]
+		BBKeyItemsCrystal,
+		[Description("Herb")]
+		BBKeyItemsHerb,
+		[Description("TNT")]
+		BBKeyItemsTNT,
+		[Description("Adamant")]
+		BBKeyItemsAdamant,
+		[Description("Slab")]
+		BBKeyItemsSlab,
+		[Description("Ruby")]
+		BBKeyItemsRuby,
+		[Description("Rod")]
+		BBKeyItemsRod,
+		[Description("Chime")]
+		BBKeyItemsChime,
+		[Description("Cube")]
+		BBKeyItemsCube,
+		[Description("Bottle")]
+		BBKeyItemsBottle,
+		[Description("Oxyale")]
+		BBKeyItemsOxyale,
+		[Description("Lute")]
+		BBKeyItemsLute,
+		[Description("Tail")]
+		BBKeyItemsTail,
+		[Description("Key")]
+		BBKeyItemsKey,
 	}
 	public enum RMStrpool
 	{

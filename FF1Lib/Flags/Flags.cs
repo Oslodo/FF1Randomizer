@@ -766,6 +766,8 @@ namespace FF1Lib
 		public RMMdefpool Rmmdef { get; set; } = RMMdefpool.RMdefpoolNone;
 		public RMIntpool Rmint { get; set; } = RMIntpool.RMIntpoolNone;
 		public RMGoldpool Rmgold { get; set; } = RMGoldpool.RMGoldpoolNone;
+
+
 		public WMStrpool Wmstr { get; set; } = WMStrpool.WMStrpoolNone;
 		public WMAgipool Wmagi { get; set; } = WMAgipool.WMAgipoolNone;
 		public WMVitpool Wmvit { get; set; } = WMVitpool.WMVitpoolNone;
@@ -775,6 +777,34 @@ namespace FF1Lib
 		public WMMdefpool Wmmdef { get; set; } = WMMdefpool.WMMdefpoolNone;
 		public WMIntpool Wmint { get; set; } = WMIntpool.WMIntpoolNone;
 		public WMGoldpool Wmgold { get; set; } = WMGoldpool.WMGoldpoolNone;
+
+		public bool WMEquipAxes { get; set; } = false;
+		public bool WMEquipShirts { get; set; } = false;
+		public bool WMEquipShields { get; set; } = false;
+		public bool WMEquipHelmBonk { get; set; } = false;
+		public bool WMEquipThWeapons { get; set; } = false;
+		public bool WMPlus2lvl1MP { get; set; } = false;
+		public bool WMLegendarySwords { get; set; } = false;
+		public bool WMRMArmor { get; set; } = false;
+		public bool WMPlus1MPAll { get; set; } = false;
+		public bool WMImpThor { get; set; } = false;
+		public bool WMHurtUndead { get; set; } = false;
+		public bool WMHurtDragon { get; set; } = false;
+		public bool WMResistPEDTS { get; set; } = false;
+		public bool WMResistSelect { get; set; } = false;
+		public bool WMResistStatus { get; set; } = false;
+		public bool WMResistPoison { get; set; } = false;
+		public bool WMResistTime { get; set; } = false;
+		public bool WMResistDeath { get; set; } = false;
+		public bool WMResistFire { get; set; } = false;
+		public bool WMResistIce { get; set; } = false;
+		public bool WMResistLit { get; set; } = false;
+		public bool WMResistEarth { get; set; } = false;
+		public bool WMPlus2Mdef { get; set; } = false;
+		public bool WMFiSwords { get; set; } = false;
+		public bool WMFiArmor { get; set; } = false;
+		public bool WMImpMP { get; set; } = false;
+
 		public BMStrpool Bmstr { get; set; } = BMStrpool.BMStrpoolnone;
 		public BMAgipool Bmagi { get; set; } = BMAgipool.BMAgipoolnone;
 		public BMVitpool Bmvit { get; set; } = BMVitpool.BMVitpoolnone;

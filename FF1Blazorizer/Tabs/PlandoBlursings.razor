@@ -125,7 +125,7 @@
         <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="BBKIdropdown" @bind-Value="Flags.BBKeyItems">Start with Key Item</EnumDropDown>
 
         <h4>White Mage</h4>
-        <h4>Blessings</h4>
+        <h4>Stats and Gold</h4>
         <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="WmStrpooldropdown" @bind-Value="Flags.Wmstr">Strength</EnumDropDown>
         <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="WmAgipooldropdown" @bind-Value="Flags.Wmagi">Agility</EnumDropDown>
         <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="WmVitpooldropdown" @bind-Value="Flags.Wmvit">Vitality</EnumDropDown>
@@ -135,6 +135,42 @@
         <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="WmMDefpooldropdown" @bind-Value="Flags.Wmmdef">Magic Defense</EnumDropDown>
         <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="WmIntpooldropdown" @bind-Value="Flags.Wmint">Intelligence</EnumDropDown>
         <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="WmGoldpooldropdown" @bind-Value="Flags.Wmgold">Starting Gold</EnumDropDown>
+
+        <h4>Blessings</h4>
+
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMEquipAxescheckbox" @bind-Value="Flags.WMEquipAxes">Equip Axes</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMEquipShirtscheckbox" @bind-Value="Flags.WMEquipShirts">Equip Shirts</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMEquipShieldscheckbox" @bind-Value="Flags.WMEquipShields">Equip Shields</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMEquipHelmBonkcheckbox" @bind-Value="Flags.WMEquipHelmBonk">Equip Helm and Gauntlets</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMEquipThWeaponscheckbox" @bind-Value="Flags.WMEquipThWeapons">Equip Thief Weapons</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMLegendarySwordsheckbox" @bind-Value="Flags.WMLegendarySwords">Equip Legendary Swords</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMImpThorcheckbox" @bind-Value="Flags.WMImpThor"></CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMRMArmorcheckbox" @bind-Value="Flags.WMRMArmor">Equip Red Mage Armor</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMFiSwordscheckbox" @bind-Value="Flags.WMFiSwords">Fighter Swords</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMFiArmorcheckbox" @bind-Value="Flags.WMFiArmor">Fighter Armor</CheckBox>
+
+ 
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMResistSelectcheckbox" @bind-Value="Flags.WMResistSelect">Resistances</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.WMResistSelect != false)" Id="WMResistStatuscheckbox" @bind-Value="Flags.WMResistStatus">Status</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.WMResistSelect != false)" Id="WMResistPoisoncheckbox" @bind-Value="Flags.WMResistPoison">Poison</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.WMResistSelect != false)" Id="WMResistTimecheckbox" @bind-Value="Flags.WMResistTime">Time</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.WMResistSelect != false)" Id="WMResistDeathcheckbox" @bind-Value="Flags.WMResistDeath">Death</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.WMResistSelect != false)" Id="WMResistFirecheckbox" @bind-Value="Flags.WMResistFire">WMre</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.WMResistSelect != false)" Id="WMResistIcecheckbox" @bind-Value="Flags.WMResistIce">Ice</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.WMResistSelect != false)" Id="WMResistLitcheckbox" @bind-Value="Flags.WMResistLit">Lightning</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.WMResistSelect != false)" Id="WMResistEarthcheckbox" @bind-Value="Flags.WMResistEarth">Earth</CheckBox>
+
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMHurtUndeadcheckbox" @bind-Value="Flags.WMHurtUndead">Hurt Undead</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMHurtDragonscheckbox" @bind-Value="Flags.WMHurtDragon">Hurt Dragon</CheckBox>
+
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMResistPEDTScheckbox" @bind-Value="Flags.WMResistPEDTS">Resist PEDTS</CheckBox>
+
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMPlus2lvl1MP" @bind-Value="Flags.WMPlus2lvl1MP">+2 MP lvl 1</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMPlus1MPAllcheckbox" @bind-Value="Flags.WMPlus1MPAll">+1 MP All Levels</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMImpMPcheckbox" @bind-Value="Flags.WMImpMP">Improved MP</CheckBox>
+
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMPlus2Mdef" @bind-Value="Flags.WMPlus2Mdef">+2 MDef/Lvl</CheckBox>
+
 
         <div class="checkbox-cell"></div>
     </div>

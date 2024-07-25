@@ -169,6 +169,27 @@ namespace FF1Lib
 		[Description("Mute")]
 		FiRibbonCurseMute,
 	}
+	public enum FiMagicBonus
+	{
+		[Description("None")]
+		FiMagicBonusNone,
+		[Description("Elem Magic")]
+		FiMagicBonusElem,
+		[Description("Elem+ Magic")]
+		FiMagicBonusElemPlus,
+		[Description("Clean Magic")]
+		FiMagicBonusClean,
+		[Description("Heal Magic")]
+		FiMagicBonusHeal,
+		[Description("Heal+ Magic")]
+		FiMagicBonusHealPlus,
+		[Description("Self Magic")]
+		FiMagicBonusSelf,
+		[Description("Buff Magic")]
+		FiMagicBonusBuff,
+		[Description("Tele Magic")]
+		FiMagicBonusTele,
+	}
 	public enum ThStrpool
 	{
 		[Description("None")]

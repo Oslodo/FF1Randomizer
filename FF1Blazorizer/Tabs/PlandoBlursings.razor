@@ -217,7 +217,7 @@
         <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThEquipAxescheckbox" @bind-Value="Flags.ThEquipAxes">Equip Axes</CheckBox>
         <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThEquipShirtscheckbox" @bind-Value="Flags.ThEquipShirts">Equip Shirts</CheckBox>
         <CheckBox UpdateToolTip="@UpdateToolTipID" Id="TheEquipShieldscheckbox" @bind-Value="Flags.ThEquipShields">Equip Shields</CheckBox>
-        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThEquipHelmBonkcheckbox" @bind-Value="Flags.ThEquipHelmBonk">Equip Helm and Gauntlet</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThEquipHelmBonkcheckbox" @bind-Value="Flags.ThEquipHelmBonk">Equip Helm and Gauntlets</CheckBox>
         <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThLegendarySwordscheckbox" @bind-Value="Flags.ThLegendarySwords">Equip Legendary Swords</CheckBox>
         <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThRmArmorcheckbox"@bind-Value="Flags.ThRMArmor">Equip RM Armor</CheckBox>
         <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThImpThorcheckbox" @bind-Value="Flags.ThImpThor">Improved Thor Hammer</CheckBox>
@@ -265,7 +265,7 @@
 
 
         <h4>Red Mage</h4>
-        <h4>Blessings</h4>
+        <h4>Stats and Gold</h4>
         <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="RmStrpooldropdown" @bind-Value="Flags.Rmstr">Strength</EnumDropDown>
         <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="RmAgipooldropdown" @bind-Value="Flags.Rmagi">Agility</EnumDropDown>
         <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="RmVitpooldropdown" @bind-Value="Flags.Rmvit">Vitality</EnumDropDown>
@@ -275,6 +275,44 @@
         <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="RmMDefpooldropdown" @bind-Value="Flags.Rmmdef">Magic Defense</EnumDropDown>
         <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="RmIntpooldropdown" @bind-Value="Flags.Rmint">Intelligence</EnumDropDown>
         <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="RmGoldpooldropdown" @bind-Value="Flags.Rmgold">Starting Gold</EnumDropDown>
+
+        <h4>Blessing</h4>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmEquipAxescheckbox" @bind-Value="Flags.RmEquipAxes">Equip Axes</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmEquipShirtscheckbox" @bind-Value="Flags.RmEquipShirts">Equip Shirts</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmEquipShieldschecbox" @bind-Value="Flags.RmEquipShields">Equip Sheilds</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmEquipHelmBonkcheckbox" @bind-Value="Flags.RmEquipHelmBonk">Equip Helms and Gauntlets</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmLegendarySwordscheckbox" @bind-Value="Flags.RmLegendarySwords">Equip Legendary Swords</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmFighterWeaponscheckbox" @bind-Value="Flags.RmFiWeapons">Equip Fighter Weapons</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmFighterArmorcheckbox" @bind-Value="Flags.RmFiArmor">Equip Fighter Armor</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmImpCatclawcheckbox" @bind-Value="Flags.RmImpCatclaw">Improved Catclaw</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmPromoFighterArmorcheckbox" @bind-value="Flags.RmPromoFiArmor">Promo Fighter Armor</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmWoodAdeptcheckbox" @bind-Value="Flags.RmWoodAdept">Wood Adept</CheckBox>
+
+
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmPlus2lvl1MPcheckbox" @bind-Value="Flags.RmPlus2lvl1MP">+2 MP lvl 1</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmPlus1MPAllcheckbox" @bind-Value="Flags.RmPlus1MPAll">+1 MP All Levels</CheckBox>
+
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmHurtUndeadcheckbox" @bind-Value="Flags.RmHurtUndead">Hurt Undead</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmHurtDragoncheckbox" @bind-Value="Flags.RmHurtDragon">Hurt Dragon</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmHurtAllcheckbox" @bind-Value="Flags.RmHurtAll">Hurt All</CheckBox>
+
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmResistSelectcheckbox" @bind-Value="Flags.RmResistSelect">Resistances</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.RmResistSelect != false)" Id="RmResistStatuscheckbox" @bind-Value="Flags.RmResistStatus">Status</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.RmResistSelect != false)" Id="RmResistPoisoncheckbox" @bind-Value="Flags.RmResistPoison">Poison</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.RmResistSelect != false)" Id="RmResistTimecheckbox" @bind-Value="Flags.RmResistTime">Time</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.RmResistSelect != false)" Id="RmResistDeathcheckbox" @bind-Value="Flags.RmResistDeath">Death</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.RmResistSelect != false)" Id="RmResistFirecheckbox" @bind-Value="Flags.RmResistFire">Fire</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.RmResistSelect != false)" Id="RmResistIcecheckbox" @bind-Value="Flags.RmResistIce">Ice</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.RmResistSelect != false)" Id="RmResistLitcheckbox" @bind-Value="Flags.RmResistLit">Lightning</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.RmResistSelect != false)" Id="RmResistEarthcheckbox" @bind-Value="Flags.RmResistEarth">Earth</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmResistPEDTScheckbox" @bind-Value="Flags.RmResistPEDTS">Resist PEDTS</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmResistAllcheckbox" @bind-Value="Flags.RmResistAll">Resist All</CheckBox>
+
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmPlus2Mdefcheckbox" @bind-Value="Flags.RmPlus2Mdef">+2 Mdef/Lvl</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmImprovedMPcheckbox" @bind-Value="Flags.RmImprovedMP">Improved MP</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmSagecheckbox" @bind-Value="Flags.RmSage">Sage</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmPromosagecheckbox" @bind-Value="Flags.RmPromoSage">Promo Sage</CheckBox>
+
 
         <h4>Black Mage</h4>
         <h4>Blessings</h4>

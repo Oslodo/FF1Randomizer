@@ -805,6 +805,36 @@ namespace FF1Lib
 		public RMMdefpool Rmmdef { get; set; } = RMMdefpool.RMdefpoolNone;
 		public RMIntpool Rmint { get; set; } = RMIntpool.RMIntpoolNone;
 		public RMGoldpool Rmgold { get; set; } = RMGoldpool.RMGoldpoolNone;
+		public bool RmEquipAxes { get; set; } = false;
+		public bool RmEquipShirts { get; set; } = false;
+		public bool RmEquipShields { get; set; } = false;
+		public bool RmEquipHelmBonk { get; set; } = false;
+		public bool RmPlus2lvl1MP { get; set; } = false;
+		public bool RmLegendarySwords { get; set; } = false;
+		public bool RmPlus1MPAll { get; set; } = false;
+		public bool RmHurtUndead { get; set; } = false;
+		public bool RmHurtDragon { get; set; } = false;
+		public bool RmHurtAll { get; set; } = false;
+		public bool RmResistPEDTS { get; set; } = false;
+		public bool RmResistSelect { get; set; } = false;
+		public bool RmResistStatus { get; set; } = false;
+		public bool RmResistPoison { get; set; } = false;
+		public bool RmResistTime { get; set; } = false;
+		public bool RmResistDeath { get; set; } = false;
+		public bool RmResistFire { get; set; } = false;
+		public bool RmResistIce { get; set; } = false;
+		public bool RmResistLit { get; set; } = false;
+		public bool RmResistEarth { get; set; } = false;
+		public bool RmResistAll { get; set; } = false;
+		public bool RmPlus2Mdef { get; set; } = false;
+		public bool RmFiWeapons { get; set; } = false;
+		public bool RmFiArmor { get; set; } = false;
+		public bool RmImprovedMP { get; set; } = false;
+		public bool RmSage { get; set; } = false;
+		public bool RmImpCatclaw { get; set; } = false;
+		public bool RmPromoFiArmor { get; set; } = false;
+		public bool RmPromoSage { get; set; } = false;
+		public bool RmWoodAdept { get; set; } = false;
 
 
 		public WMStrpool Wmstr { get; set; } = WMStrpool.WMStrpoolNone;
@@ -860,6 +890,7 @@ namespace FF1Lib
 		public WMMasaCurse WMMasaCurse { get; set; } = WMMasaCurse.WMMasaCurseNone;
 		public WMRibbonCurse WmRibbonCurse { get; set; } = WMRibbonCurse.WMRibbonCurseNone;
 		public WMSpellRemove WMSpellRemove { get; set; } = WMSpellRemove.WmSpellRemoveNone;
+
 		public BMStrpool Bmstr { get; set; } = BMStrpool.BMStrpoolnone;
 		public BMAgipool Bmagi { get; set; } = BMAgipool.BMAgipoolnone;
 		public BMVitpool Bmvit { get; set; } = BMVitpool.BMVitpoolnone;

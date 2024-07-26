@@ -183,8 +183,11 @@
 
         <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WmNoBracletcheckbox" @bind-Value="Flags.WMNoBracelet">No Bracelets</CheckBox>
         <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WmNoProRingcheckbox" @bind-Value="Flags.WMNoProRing">No ProRing</CheckBox>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="WmMasaCursedropdown" @bind-Value="Flags.WMMasaCurse">Masamune Curse</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="WmRibbonCursedropdown" @bind-Value="Flags.WmRibbonCurse">Ribbon Curse</EnumDropDown>
 
-        <CheckBox UpdateToolTip="UpdateToolTipID" Id="WMMinus4MaxMPcheckbox" @bind-Value="Flags.WMMinus4MaxMP">-4 Max MP</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMMinus4MaxMPcheckbox" @bind-Value="Flags.WMMinus4MaxMP">-4 Max MP</CheckBox>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="WMSpellRemovedropdown" @bind-Value="Flags.WMSpellRemove">Single Spell Remove</EnumDropDown>
 
         <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMMinusOnehitcheckbox" @bind-Value="Flags.WMMinusOneHit">-1Hit%/Lvl</CheckBox>
         <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMMinusOneMdefcheckbox" @bind-Value="Flags.WMMinusOneMdef">-1Mdef/Lvl</CheckBox>

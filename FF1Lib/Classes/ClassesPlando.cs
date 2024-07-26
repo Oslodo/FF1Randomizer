@@ -852,6 +852,32 @@ namespace FF1Lib
 		[Description("-1100 Gold")]
 		WMminus1100gold,
 	}
+	public enum WMMasaCurse
+	{
+		[Description("None")]
+		WMMasaCurseNone,
+		[Description("Poison")]
+		FIMasaPoison,
+		[Description("Stun")]
+		WMMasaStun,
+		[Description("Sleep")]
+		WMMasaSleep,
+		[Description("Mute")]
+		WMMasaMute,
+	}
+	public enum WMRibbonCurse
+	{
+		[Description("None")]
+		WMRibbonCurseNone,
+		[Description("Poison")]
+		WMRibbonCursePoison,
+		[Description("Stun")]
+		WMRibbonCurseStun,
+		[Description("Sleep")]
+		WMRibbonCurseSleep,
+		[Description("Mute")]
+		WMRibbonCurseMute,
+	}
 	public enum WMSpellAdd
 	{
 		[Description("None")]
@@ -866,6 +892,25 @@ namespace FF1Lib
 		WMSpellAddHel2,
 		[Description("Exit")]
 		WMSpellAddExit,
+	}
+	public enum WMSpellRemove
+	{
+		[Description("None")]
+		WmSpellRemoveNone,
+		[Description("Life")]
+		WmSpellRemoveLife,
+		[Description("Inv2")]
+		WmSpellRemoveInv2,
+		[Description("Fade")]
+		WmSpellRemoveFade,
+		[Description("Exit")]
+		WMSpellRemoveExit,
+		[Description("Cur3")]
+		WmSpellRemoveCur3,
+		[Description("Hel3")]
+		WmSpellRemoveHel3,
+		[Description("Wall")]
+		WmSpellRemoveWall,
 	}
 	public enum WMMagicBonus
 	{

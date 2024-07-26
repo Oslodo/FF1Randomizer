@@ -817,7 +817,9 @@ namespace FF1Lib
 		public bool WMNoBracelet { get; set; } = false;
 		public bool WMMinus4MaxMP { get; set;} = false;
 		public bool WMNoProRing { get; set; } = false;
-
+		public WMMasaCurse WMMasaCurse { get; set; } = WMMasaCurse.WMMasaCurseNone;
+		public WMRibbonCurse WmRibbonCurse { get; set; } = WMRibbonCurse.WMRibbonCurseNone;
+		public WMSpellRemove WMSpellRemove { get; set; } = WMSpellRemove.WmSpellRemoveNone;
 		public BMStrpool Bmstr { get; set; } = BMStrpool.BMStrpoolnone;
 		public BMAgipool Bmagi { get; set; } = BMAgipool.BMAgipoolnone;
 		public BMVitpool Bmvit { get; set; } = BMVitpool.BMVitpoolnone;

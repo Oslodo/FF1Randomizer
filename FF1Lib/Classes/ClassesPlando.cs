@@ -704,6 +704,21 @@ namespace FF1Lib
 		[Description("-1100 Gold")]
 		RMminus1100gold,
 	}
+	public enum RMSpellAdd
+	{
+		[Description("None")]
+		RMSpellAddNone,
+		[Description("Life")]
+		RMSpellAddLife,
+		[Description("Inv2")]
+		RMSpellAddInv2,
+		[Description("Cur3")]
+		RMSPellAddCur3,
+		[Description("Hel2")]
+		RMSpellAddHel2,
+		[Description("Exit")]
+		RMSpellAddExit,
+	}
 	public enum WMStrpool
 	{
 		[Description("None")]
@@ -836,6 +851,82 @@ namespace FF1Lib
 		WMminus350gold,
 		[Description("-1100 Gold")]
 		WMminus1100gold,
+	}
+	public enum WMSpellAdd
+	{
+		[Description("None")]
+		WMSpellAddNone,
+		[Description("Life")]
+		WMSpellAddLife,
+		[Description("Inv2")]
+		WMSpellAddInv2,
+		[Description("Cur3")]
+		WMSPellAddCur3,
+		[Description("Hel2")]
+		WMSpellAddHel2,
+		[Description("Exit")]
+		WMSpellAddExit,
+	}
+	public enum WMMagicBonus
+	{
+
+		[Description("None")]
+		WMMagicBonusNone,
+		[Description("Nuke")]
+		WMMagicBonusNuke,
+		[Description("Elem Magic")]
+		WMMagicBonusElem,
+		[Description("Elem+ Magic")]
+		WMMagicBonusElemPlus,
+		[Description("Clean Magic")]
+		WMMagicBonusClean,
+		[Description("Doom Magic")]
+		WMMagicBonusDoom,
+		[Description("Heal Magic")]
+		WMMagicBonusHeal,
+		[Description("Heal+ Magic")]
+		WMMagicBonusHealPlus,
+		[Description("Self Magic")]
+		WMMagicBonusSelf,
+		[Description("Buff Magic")]
+		WMMagicBonusBuff,
+		[Description("Tele Magic")]
+		WMMagicBonusTele,
+	}
+	public enum WMKeyItems
+	{
+		[Description("None")]
+		WMKeyItemsNone,
+		[Description("Crown")]
+		WMKeyItemsCrown,
+		[Description("Crystal")]
+		WMKeyItemsCrystal,
+		[Description("Herb")]
+		WMKeyItemsHerb,
+		[Description("TNT")]
+		WMKeyItemsTNT,
+		[Description("Adamant")]
+		WMKeyItemsAdamant,
+		[Description("Slab")]
+		WMKeyItemsSlab,
+		[Description("Ruby")]
+		WMKeyItemsRuby,
+		[Description("Rod")]
+		WMKeyItemsRod,
+		[Description("Chime")]
+		WMKeyItemsChime,
+		[Description("Cube")]
+		WMKeyItemsCube,
+		[Description("Bottle")]
+		WMKeyItemsBottle,
+		[Description("Oxyale")]
+		WMKeyItemsOxyale,
+		[Description("Lute")]
+		WMKeyItemsLute,
+		[Description("Tail")]
+		WMKeyItemsTail,
+		[Description("Key")]
+		WMKeyItemsKey,
 	}
 	public enum BMStrpool
 	{

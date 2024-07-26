@@ -777,7 +777,6 @@ namespace FF1Lib
 		public WMMdefpool Wmmdef { get; set; } = WMMdefpool.WMMdefpoolNone;
 		public WMIntpool Wmint { get; set; } = WMIntpool.WMIntpoolNone;
 		public WMGoldpool Wmgold { get; set; } = WMGoldpool.WMGoldpoolNone;
-
 		public bool WMEquipAxes { get; set; } = false;
 		public bool WMEquipShirts { get; set; } = false;
 		public bool WMEquipShields { get; set; } = false;
@@ -790,6 +789,7 @@ namespace FF1Lib
 		public bool WMImpThor { get; set; } = false;
 		public bool WMHurtUndead { get; set; } = false;
 		public bool WMHurtDragon { get; set; } = false;
+		public bool WMHurtAll { get; set; } = false;
 		public bool WMResistPEDTS { get; set; } = false;
 		public bool WMResistSelect { get; set; } = false;
 		public bool WMResistStatus { get; set; } = false;
@@ -800,10 +800,23 @@ namespace FF1Lib
 		public bool WMResistIce { get; set; } = false;
 		public bool WMResistLit { get; set; } = false;
 		public bool WMResistEarth { get; set; } = false;
+		public bool WMResistAll { get; set; } = false;
 		public bool WMPlus2Mdef { get; set; } = false;
 		public bool WMFiSwords { get; set; } = false;
 		public bool WMFiArmor { get; set; } = false;
 		public bool WMImpMP { get; set; } = false;
+		public bool WMPlus50XP { get; set;} = false;
+		public bool WMPlus100XP { get; set; } = false;
+		public bool WMMaxMPPlus { get; set; } = false;
+		public bool WMWoodAdept { get; set; } = false;
+		public WMSpellAdd WMSpellAdd { get; set; } = WMSpellAdd.WMSpellAddNone;
+		public WMMagicBonus WMSpellBonus { get; set; } = WMMagicBonus.WMMagicBonusNone;
+		public WMKeyItems WMKeyItems { get; set; } = WMKeyItems.WMKeyItemsNone;
+		public bool WMMinusOneHit { get; set; } = false;
+		public bool WMMinusOneMdef { get; set; } = false;
+		public bool WMNoBracelet { get; set; } = false;
+		public bool WMMinus4MaxMP { get; set;} = false;
+		public bool WMNoProRing { get; set; } = false;
 
 		public BMStrpool Bmstr { get; set; } = BMStrpool.BMStrpoolnone;
 		public BMAgipool Bmagi { get; set; } = BMAgipool.BMAgipoolnone;

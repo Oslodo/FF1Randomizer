@@ -43,7 +43,7 @@
 
         <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiPlus50XPcheckbox" @bind-Value="Flags.FiPlus50XP">Plus 50% XP</CheckBox>
         <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiPlus2MdefLevelcheckbox" @bind-Value="Flags.FiPlus2MdefLevel">+2 Mdef/Lvl</CheckBox>
-        <EnumDropDown UpdateToolTip="UpdateToolTipID" Id="FiMagicdropdown" @bind-Value="Flags.FighterMagicBonus">Spell Bonus</EnumDropDown>
+        <EnumDropDown UpdateToolTip="UpdateToolTipID" Id="FiMagicdropdown" @bind-Value="Flags.FighterMagicBonus">Spell Class Bonus</EnumDropDown>
         <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="Flags.MpGainOnMaxGainMode == MpGainOnMaxGain.Blursed" Id="FiMaxMPPluscheckbox" @bind-Value="Flags.FiMaxMPPlus">Max+Mp+</CheckBox>
 
         <h4>Maluses</h4>
@@ -105,13 +105,13 @@
         <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.BBResistSelect != false)" Id="BBResistEarthcheckbox" @bind-Value="Flags.BBResistEarth">Earth</CheckBox>
 
         <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BBPlus50XPcheckbox" @bind-Value="Flags.BBPlus50XP">+50% XP</CheckBox>
-        <EnumDropDown UpdateToolTip="UpdateToolTipID" Id="BBMagicdropdown" @bind-Value="Flags.BBMagicBonus"> Spell Bonus</EnumDropDown>
+        <EnumDropDown UpdateToolTip="UpdateToolTipID" Id="BBMagicdropdown" @bind-Value="Flags.BBMagicBonus"> Spell Class Bonus</EnumDropDown>
         <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="Flags.MDefMode == MDEFGrowthMode.None" Id="BBMasterMdefcheckbox" @bind-Value="Flags.BBMasterMdef">Master +3Mdef/Lvl</CheckBox>
 
         <h4>Maluses</h4>
 
         <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BBMinusOneHitcheckbox" @bind-Value="Flags.BBMinusOneHit">-1Hit%/Lvl</CheckBox>
-        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BBMinusOneMdefcheckbox" @bind-Value="Flags.BBMinusOneMdef"></CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BBMinusOneMdefcheckbox" @bind-Value="Flags.BBMinusOneMdef">-1Mdef/Lvl</CheckBox>
         <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BBUnarmedcheckbox" @bind-Value="Flags.BBUnarmed">Unarmed Only After Promo</CheckBox>
 
         <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BBNoBraceletscheckbox" @bind-Value="Flags.BBNoBracelet">No Bracelets</CheckBox>
@@ -148,6 +148,7 @@
         <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMRMArmorcheckbox" @bind-Value="Flags.WMRMArmor">Equip Red Mage Armor</CheckBox>
         <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMFiSwordscheckbox" @bind-Value="Flags.WMFiSwords">Fighter Swords</CheckBox>
         <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMFiArmorcheckbox" @bind-Value="Flags.WMFiArmor">Fighter Armor</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMWoodAdeptcheckbox" @bind-Value="Flags.WMWoodAdept">Wood Adept</CheckBox>
 
  
         <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMResistSelectcheckbox" @bind-Value="Flags.WMResistSelect">Resistances</CheckBox>
@@ -159,18 +160,37 @@
         <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.WMResistSelect != false)" Id="WMResistIcecheckbox" @bind-Value="Flags.WMResistIce">Ice</CheckBox>
         <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.WMResistSelect != false)" Id="WMResistLitcheckbox" @bind-Value="Flags.WMResistLit">Lightning</CheckBox>
         <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.WMResistSelect != false)" Id="WMResistEarthcheckbox" @bind-Value="Flags.WMResistEarth">Earth</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMResistAllcheckbox" @bind-Value="Flags.WMResistAll">Resist All</CheckBox>
 
         <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMHurtUndeadcheckbox" @bind-Value="Flags.WMHurtUndead">Hurt Undead</CheckBox>
         <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMHurtDragonscheckbox" @bind-Value="Flags.WMHurtDragon">Hurt Dragon</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMHurtAllcheckbox" @bind-Value="Flags.WMHurtAll">Hurt All</CheckBox>
 
         <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMResistPEDTScheckbox" @bind-Value="Flags.WMResistPEDTS">Resist PEDTS</CheckBox>
 
         <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMPlus2lvl1MP" @bind-Value="Flags.WMPlus2lvl1MP">+2 MP lvl 1</CheckBox>
         <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMPlus1MPAllcheckbox" @bind-Value="Flags.WMPlus1MPAll">+1 MP All Levels</CheckBox>
         <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMImpMPcheckbox" @bind-Value="Flags.WMImpMP">Improved MP</CheckBox>
-
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMPlus50XPcheckbox" @bind-Value="Flags.WMPlus50XP">+50%XP</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMPlus100XPcheckbox" @bind-Value="Flags.WMPlus100XP">+100%XP</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="Flags.MpGainOnMaxGainMode == MpGainOnMaxGain.Blursed" Id="WMMaxMPPluscheckbox" @bind-Value="Flags.WMMaxMPPlus">Max+Mp+</CheckBox>
         <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMPlus2Mdef" @bind-Value="Flags.WMPlus2Mdef">+2 MDef/Lvl</CheckBox>
 
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="WMSpellAdddropdown" @bind-Value="Flags.WMSpellAdd">Single Spell Bonus</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="WMSpellBonusdropdown" @bind-Value="Flags.WMSpellBonus">Spell Class Bonus</EnumDropDown>
+
+        <h4>Maluses</h4>
+
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WmNoBracletcheckbox" @bind-Value="Flags.WMNoBracelet">No Bracelets</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WmNoProRingcheckbox" @bind-Value="Flags.WMNoProRing">No ProRing</CheckBox>
+
+        <CheckBox UpdateToolTip="UpdateToolTipID" Id="WMMinus4MaxMPcheckbox" @bind-Value="Flags.WMMinus4MaxMP">-4 Max MP</CheckBox>
+
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMMinusOnehitcheckbox" @bind-Value="Flags.WMMinusOneHit">-1Hit%/Lvl</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMMinusOneMdefcheckbox" @bind-Value="Flags.WMMinusOneMdef">-1Mdef/Lvl</CheckBox>
+
+        <h4>Key Items</h4>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="WMKIdropdown" @bind-Value="Flags.WMKeyItems">Start with Key Item</EnumDropDown>
 
         <div class="checkbox-cell"></div>
     </div>

@@ -312,6 +312,16 @@
         <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmImprovedMPcheckbox" @bind-Value="Flags.RmImprovedMP">Improved MP</CheckBox>
         <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmSagecheckbox" @bind-Value="Flags.RmSage">Sage</CheckBox>
         <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmPromosagecheckbox" @bind-Value="Flags.RmPromoSage">Promo Sage</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RMPlus50XPcheckbox" @bind-Value="Flags.RmPlus50XP">+50% XP</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmPlus100XPcheckbox" @bind-Value="Flags.RmPlus100XP">+100% XP</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="Flags.MpGainOnMaxGainMode == MpGainOnMaxGain.Blursed" Id="RmMaxMPPluscheckbox" @bind-Value="Flags.RmMaxMPPlus">Max+Mp+</CheckBox>
+
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="RmSpellAdddropdown" @bind-Value="Flags.RmSpellAdd">Single Spell Add</EnumDropDown>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="RmMagicBonusdropdown" @bind-Value="Flags.RmSpellBonus">Spell Class Bonus</EnumDropDown>
+
+        <h4>Maluses</h4>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmMinusOneHitcheckbox" @bind-Value="Flags.RmMinusOneHit">-1 Hit%/Lvl</CheckBox>
+
 
 
         <h4>Black Mage</h4>

@@ -835,6 +835,15 @@ namespace FF1Lib
 		public bool RmPromoFiArmor { get; set; } = false;
 		public bool RmPromoSage { get; set; } = false;
 		public bool RmWoodAdept { get; set; } = false;
+		public bool RmPlus50XP { get; set; } = false;
+		public bool RmPlus100XP { get; set; } = false;
+		public bool RmMaxMPPlus { get; set; } = false;
+		public RmSpellAdd RmSpellAdd { get; set; } = RmSpellAdd.RMSpellAddNone;
+		public RmMagicBonus RmSpellBonus { get; set; } = RmMagicBonus.RmMagicBonusNone;
+		public bool RmMinusOneHit { get; set; } = false;
+
+		
+
 
 
 		public WMStrpool Wmstr { get; set; } = WMStrpool.WMStrpoolNone;

@@ -751,7 +751,7 @@ namespace FF1Lib
 		[Description("-1100 Gold")]
 		RMminus1100gold,
 	}
-	public enum RMSpellAdd
+	public enum RmSpellAdd
 	{
 		[Description("None")]
 		RMSpellAddNone,
@@ -765,6 +765,51 @@ namespace FF1Lib
 		RMSpellAddHel2,
 		[Description("Exit")]
 		RMSpellAddExit,
+	}
+	public enum RmSpellRemove
+	{
+		[Description("None")]
+		RmSpellRemoveNone,
+		[Description("Life")]
+		RmSpellRemoveLife,
+		[Description("Inv2")]
+		RmSpellRemoveInv2,
+		[Description("Fade")]
+		RmSpellRemoveFade,
+		[Description("Exit")]
+		WMSpellRemoveExit,
+		[Description("Cur3")]
+		RmSpellRemoveCur3,
+		[Description("Hel3")]
+		RmSpellRemoveHel3,
+		[Description("Wall")]
+		RmSpellRemoveWall,
+	}
+	public enum RmMagicBonus
+	{
+
+		[Description("None")]
+		RmMagicBonusNone,
+		[Description("Nuke")]
+		RmMagicBonusNuke,
+		[Description("Elem Magic")]
+		RmMagicBonusElem,
+		[Description("Elem+ Magic")]
+		RmMagicBonusElemPlus,
+		[Description("Clean Magic")]
+		RmMagicBonusClean,
+		[Description("Doom Magic")]
+		RmMagicBonusDoom,
+		[Description("Heal Magic")]
+		RmMagicBonusHeal,
+		[Description("Heal+ Magic")]
+		RmMagicBonusHealPlus,
+		[Description("Self Magic")]
+		RmMagicBonusSelf,
+		[Description("Buff Magic")]
+		RmMagicBonusBuff,
+		[Description("Tele Magic")]
+		RmMagicBonusTele,
 	}
 	public enum WMStrpool
 	{

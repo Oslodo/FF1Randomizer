@@ -5,6 +5,7 @@ using System.IO.Compression;
 using static FF1Lib.FF1Rom;
 using FF1Lib.Sanity;
 using System.ComponentModel;
+using System.Diagnostics.SymbolStore;
 
 namespace FF1Lib
 {
@@ -713,8 +714,45 @@ namespace FF1Lib
 		public ThMdefpool ThiefMdef { get; set; } = ThMdefpool.ThMdefpoolNone;
 		public ThIntpool ThiefInt { get; set; } = ThIntpool.ThIntpoolNone;
 		public ThGoldpool Thiefgold { get; set; } = ThGoldpool.ThGoldpoolNone;
+		public bool ThEquipAxes { get; set; } = false;
 		public bool ThEquipShirts { get; set; } = false;
-
+		public bool ThEquipShields { get; set; } = false;
+		public bool ThEquipHelmBonk { get; set; } = false;
+		public bool ThLegendarySwords { get; set; } = false;
+		public bool ThRMArmor { get; set; } = false;
+		public bool ThImpThor { get; set; } = false;
+		public bool ThHuntUndead { get; set; } = false;
+		public bool ThHurtDragon { get; set; } = false;
+		public bool ThHurtAll { get; set; } = false;
+		public bool ThResistPEDTS { get; set; } = false;
+		public bool ThResistAll { get; set; } = false;
+		public bool ThResistSelect { get; set; } = false;
+		public bool ThResistStatus { get; set; } = false;
+		public bool ThResistPoison { get; set; } = false;
+		public bool ThResistTime { get; set; } = false;
+		public bool ThResistDeath { get; set; } = false;
+		public bool ThResistFire { get; set; } = false;
+		public bool ThResistIce { get; set; } = false;
+		public bool ThResistLit { get; set; } = false;
+		public bool ThResistEarth { get; set; } = false;
+		public bool ThPlus2MdefLvl { get; set; } = false;
+		public bool ThFiWeapons { get; set; } = false;
+		public bool ThFiArmor { get; set; } = false;
+		public bool ThImpCatclaw { get; set; } = false;
+		public bool ThDualWield { get; set; } = false;
+		public bool ThWoodAdept { get; set; } = false;
+		public bool ThEarlyLockpick { get; set; } = false;
+		public bool ThPlus50XP { get; set; } = false;
+		public bool ThPlus100XP { get; set; } = false;
+		public bool ThMaxMPPlus { get; set; } = false;
+		public ThMagicBonus ThMagicBonus { get; set; } = ThMagicBonus.ThMagicBonusNone;
+		public bool ThMinusOneHit { get; set; } = false;
+		public bool ThMinusOneMdef { get; set; } = false;
+		public bool ThNoBracelets { get; set; } = false;
+		public ThMasaCurse ThMasaCurse { get; set; } = ThMasaCurse.ThMasaCurseNone;
+		public ThRibbonCurse ThRibbonCurse { get; set; } = ThRibbonCurse.ThMasaCurseNone;
+		public bool ThNoProring { get; set; } = false;
+		public bool ThLateLockpicking { get; set; } = false;
 
 		public BBStrpool BBStr { get; set; } = BBStrpool.BBStrpoolNone;
 		public BBAgipool BBAgi { get; set; } = BBAgipool.BBAgipoolNone;
@@ -754,6 +792,7 @@ namespace FF1Lib
 		public bool BBWoodAdept { get; set; } = false;
 		public bool BBNoProRing { get; set; } = false;
 		public bool BBPlus50XP { get; set; } = false;
+		public bool BBPromoFiArmor { get; set; } = false;
 		public BBMagicBonus BBMagicBonus { get; set; } = BBMagicBonus.BBMagicBonusNone;
 		public BBKeyItems BBKeyItems { get; set; } = BBKeyItems.BBKeyItemsNone;
 
@@ -809,6 +848,7 @@ namespace FF1Lib
 		public bool WMPlus100XP { get; set; } = false;
 		public bool WMMaxMPPlus { get; set; } = false;
 		public bool WMWoodAdept { get; set; } = false;
+		public bool WMPromoFiArmor { get; set; } = false;
 		public WMSpellAdd WMSpellAdd { get; set; } = WMSpellAdd.WMSpellAddNone;
 		public WMMagicBonus WMSpellBonus { get; set; } = WMMagicBonus.WMMagicBonusNone;
 		public WMKeyItems WMKeyItems { get; set; } = WMKeyItems.WMKeyItemsNone;

@@ -148,7 +148,7 @@ namespace FF1Lib
 		[Description("None")]
 		FiMasaCurseNone,
 		[Description("Poison")]
-		FIMasaPoison,
+		FiMasaPoison,
 		[Description("Stun")]
 		FiMasaStun,
 		[Description("Sleep")]
@@ -367,6 +367,53 @@ namespace FF1Lib
 		Thminus350gold,
 		[Description("-1100 Gold")]
 		Thminus1100gold,
+	}
+	public enum ThMagicBonus
+	{
+		[Description("None")]
+		ThMagicBonusNone,
+		[Description("Elem Magic")]
+		ThMagicBonusElem,
+		[Description("Elem+ Magic")]
+		ThMagicBonusElemPlus,
+		[Description("Clean Magic")]
+		ThMagicBonusClean,
+		[Description("Heal Magic")]
+		ThMagicBonusHeal,
+		[Description("Heal+ Magic")]
+		ThMagicBonusHealPlus,
+		[Description("Self Magic")]
+		ThMagicBonusSelf,
+		[Description("Buff Magic")]
+		ThMagicBonusBuff,
+		[Description("Tele Magic")]
+		ThMagicBonusTele,
+	}
+	public enum ThMasaCurse
+	{
+		[Description("None")]
+		ThMasaCurseNone,
+		[Description("Poison")]
+		ThMasaPoison,
+		[Description("Stun")]
+		ThMasaStun,
+		[Description("Sleep")]
+		ThMasaSleep,
+		[Description("Mute")]
+		ThMasaMute,
+	}
+	public enum ThRibbonCurse
+	{
+		[Description("None")]
+		ThMasaCurseNone,
+		[Description("Poison")]
+		ThMasaPoison,
+		[Description("Stun")]
+		ThMasaStun,
+		[Description("Sleep")]
+		ThMasaSleep,
+		[Description("Mute")]
+		ThMasaMute,
 	}
 	public enum BBStrpool
 	{

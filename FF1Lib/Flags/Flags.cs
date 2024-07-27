@@ -841,9 +841,15 @@ namespace FF1Lib
 		public RmSpellAdd RmSpellAdd { get; set; } = RmSpellAdd.RMSpellAddNone;
 		public RmMagicBonus RmSpellBonus { get; set; } = RmMagicBonus.RmMagicBonusNone;
 		public bool RmMinusOneHit { get; set; } = false;
+		public bool RmMinusOneMdef { get; set; } = false;
+		public bool RmNoBracelet { get; set; } = false;
+		public bool RmThWeapons { get; set; } = false;
+		public bool RmMinus4MaxMP { get; set; } = false;
+		public RmMasaCurse RmMasaCurse { get; set; } = RmMasaCurse.RmMasaCurseNone;
+		public RmRibbonCurse RmRibbonCurse { get; set; } = RmRibbonCurse.RmRibbonCurseNone;
+		public bool RmNoProRing { get; set; } = false;
 
 		
-
 
 
 		public WMStrpool Wmstr { get; set; } = WMStrpool.WMStrpoolNone;

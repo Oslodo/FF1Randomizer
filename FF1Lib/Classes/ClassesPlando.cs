@@ -765,6 +765,17 @@ namespace FF1Lib
 		RMSpellAddHel2,
 		[Description("Exit")]
 		RMSpellAddExit,
+		[Description("Fast")]
+		RMSpellAddFast,
+		[Description("Tmpr")]
+		RMSpellAddTmpr,
+		[Description("Warp")]
+		RMSpellAddWarp,
+		[Description("Lock")]
+		RMSpellAddLock,
+		[Description("Lok2")]
+		RMSpellAddLok2,
+
 	}
 	public enum RmSpellRemove
 	{
@@ -784,6 +795,9 @@ namespace FF1Lib
 		RmSpellRemoveHel3,
 		[Description("Wall")]
 		RmSpellRemoveWall,
+		[Description("Fast")]
+		RmSpellRemoveFast,
+
 	}
 	public enum RmMagicBonus
 	{
@@ -810,6 +824,32 @@ namespace FF1Lib
 		RmMagicBonusBuff,
 		[Description("Tele Magic")]
 		RmMagicBonusTele,
+	}
+	public enum RmMasaCurse
+	{
+		[Description("None")]
+		RmMasaCurseNone,
+		[Description("Poison")]
+		RmMasaCursePoison,
+		[Description("Stun")]
+		RmMasaCurseStun,
+		[Description("Sleep")]
+		RmMasaCurseSleep,
+		[Description("Mute")]
+		RmMasaCurseMute,
+	}
+	public enum RmRibbonCurse
+	{
+		[Description("None")]
+		RmRibbonCurseNone,
+		[Description("Poison")]
+		RmRibbonCursePoison,
+		[Description("Stun")]
+		RmRibbonCurseStun,
+		[Description("Sleep")]
+		RmRibbonCurseSleep,
+		[Description("Mute")]
+		RmRibbonCurseMute,
 	}
 	public enum WMStrpool
 	{

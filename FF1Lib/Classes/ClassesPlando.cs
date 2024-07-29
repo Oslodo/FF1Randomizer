@@ -415,6 +415,42 @@ namespace FF1Lib
 		[Description("Mute")]
 		ThMasaMute,
 	}
+	public enum ThKeyItems
+	{
+		[Description("None")]
+		ThKeyItemsNone,
+		[Description("Crown")]
+		ThKeyItemsCrown,
+		[Description("Crystal")]
+		ThKeyItemsCrystal,
+		[Description("Herb")]
+		ThKeyItemsHerb,
+		[Description("TNT")]
+		ThKeyItemsTNT,
+		[Description("Adamant")]
+		ThKeyItemsAdamant,
+		[Description("Slab")]
+		ThKeyItemsSlab,
+		[Description("Ruby")]
+		ThKeyItemsRuby,
+		[Description("Rod")]
+		ThKeyItemsRod,
+		[Description("Chime")]
+		ThKeyItemsChime,
+		[Description("Cube")]
+		ThKeyItemsCube,
+		[Description("Bottle")]
+		ThKeyItemsBottle,
+		[Description("Oxyale")]
+		ThKeyItemsOxyale,
+		[Description("Lute")]
+		ThKeyItemsLute,
+		[Description("Tail")]
+		ThKeyItemsTail,
+		[Description("Key")]
+		ThKeyItemsKey,
+	}
+
 	public enum BBStrpool
 	{
 		[Description("None")]
@@ -797,7 +833,22 @@ namespace FF1Lib
 		RmSpellRemoveWall,
 		[Description("Fast")]
 		RmSpellRemoveFast,
-
+		[Description("Tmpr")]
+		RmSpellRemoveTmpr,
+		[Description("Nuke")]
+		RmSpellRemoveNuke,
+		[Description("Fir3")]
+		RmSpellRemoveFir3,
+		[Description("Ice3")]
+		RmSpellRemoveIce3,
+		[Description("Lit3")]
+		RmSpellRemoveLit3,
+		[Description("Warp")]
+		RmSpellRemoveWarp,
+		[Description("Lock")]
+		RmSpellRemoveLock,
+		[Description("Lok2")]
+		RmSpellRemoveLok2,
 	}
 	public enum RmMagicBonus
 	{
@@ -850,6 +901,41 @@ namespace FF1Lib
 		RmRibbonCurseSleep,
 		[Description("Mute")]
 		RmRibbonCurseMute,
+	}
+	public enum RmKeyItems
+	{
+		[Description("None")]
+		RmKeyItemsNone,
+		[Description("Crown")]
+		RmKeyItemsCrown,
+		[Description("Crystal")]
+		RmKeyItemsCrystal,
+		[Description("Herb")]
+		RmKeyItemsHerb,
+		[Description("TNT")]
+		RmKeyItemsTNT,
+		[Description("Adamant")]
+		RmKeyItemsAdamant,
+		[Description("Slab")]
+		RmKeyItemsSlab,
+		[Description("Ruby")]
+		RmKeyItemsRuby,
+		[Description("Rod")]
+		RmKeyItemsRod,
+		[Description("Chime")]
+		RmKeyItemsChime,
+		[Description("Cube")]
+		RmKeyItemsCube,
+		[Description("Bottle")]
+		RmKeyItemsBottle,
+		[Description("Oxyale")]
+		RmKeyItemsOxyale,
+		[Description("Lute")]
+		RmKeyItemsLute,
+		[Description("Tail")]
+		RmKeyItemsTail,
+		[Description("Key")]
+		RmKeyItemsKey,
 	}
 	public enum WMStrpool
 	{

@@ -692,6 +692,9 @@ namespace FF1Lib
 		public bool FiNoPromoSpells { get; set; } = false;
 		public bool FiImpCatclaw { get; set; } = false;
 		public bool FiPlus2MdefLevel { get; set; } = false;
+		public bool FiLampBonus { get; set; } = false;
+		public bool FiAspellBonus { get; set; } = false;
+
 		public FiMasaCurse FighterMasaCurse { get; set; } = FiMasaCurse.FiMasaCurseNone;
 		public FiRibbonCurse FighterRibbonCurse { get; set; } = FiRibbonCurse.FiRibbonCurseNone;
 		public bool FiWoodAdept { get; set; } = false;
@@ -745,6 +748,9 @@ namespace FF1Lib
 		public bool ThPlus50XP { get; set; } = false;
 		public bool ThPlus100XP { get; set; } = false;
 		public bool ThMaxMPPlus { get; set; } = false;
+		public bool ThDarkBonus { get; set; } = false;
+		public bool ThSlowBonus { get; set; } = false;
+		public bool ThSleepBonus { get; set; } = false;
 		public ThMagicBonus ThMagicBonus { get; set; } = ThMagicBonus.ThMagicBonusNone;
 		public bool ThMinusOneHit { get; set; } = false;
 		public bool ThMinusOneMdef { get; set; } = false;
@@ -753,6 +759,7 @@ namespace FF1Lib
 		public ThRibbonCurse ThRibbonCurse { get; set; } = ThRibbonCurse.ThMasaCurseNone;
 		public bool ThNoProring { get; set; } = false;
 		public bool ThLateLockpicking { get; set; } = false;
+		public ThKeyItems ThKeyItems { get; set; } = ThKeyItems.ThKeyItemsNone;
 
 		public BBStrpool BBStr { get; set; } = BBStrpool.BBStrpoolNone;
 		public BBAgipool BBAgi { get; set; } = BBAgipool.BBAgipoolNone;
@@ -838,6 +845,11 @@ namespace FF1Lib
 		public bool RmPlus50XP { get; set; } = false;
 		public bool RmPlus100XP { get; set; } = false;
 		public bool RmMaxMPPlus { get; set; } = false;
+		public bool RmLampBonus { get; set; } = false;
+		public bool RmAspellBonus { get; set; } = false;
+		public bool RmDarkBonus { get; set; } = false;
+		public bool RmSleepBonus { get; set; } = false;
+		public bool RmSlowBonus { get; set; } = false;
 		public RmSpellAdd RmSpellAdd { get; set; } = RmSpellAdd.RMSpellAddNone;
 		public RmMagicBonus RmSpellBonus { get; set; } = RmMagicBonus.RmMagicBonusNone;
 		public bool RmMinusOneHit { get; set; } = false;
@@ -848,8 +860,8 @@ namespace FF1Lib
 		public RmMasaCurse RmMasaCurse { get; set; } = RmMasaCurse.RmMasaCurseNone;
 		public RmRibbonCurse RmRibbonCurse { get; set; } = RmRibbonCurse.RmRibbonCurseNone;
 		public bool RmNoProRing { get; set; } = false;
-
-		
+		public RmSpellRemove RmSpellRemove { get; set; } = RmSpellRemove.RmSpellRemoveNone;
+		public RmKeyItems RmKeyItems { get; set; } = RmKeyItems.RmKeyItemsNone;
 
 
 		public WMStrpool Wmstr { get; set; } = WMStrpool.WMStrpoolNone;
@@ -894,6 +906,10 @@ namespace FF1Lib
 		public bool WMMaxMPPlus { get; set; } = false;
 		public bool WMWoodAdept { get; set; } = false;
 		public bool WMPromoFiArmor { get; set; } = false;
+		public bool WMPromoSage { get; set; } = false;
+		public bool WMLampBonus { get; set; } = false;
+		public bool WMAspellsBonus { get; set; } = false;
+
 		public WMSpellAdd WMSpellAdd { get; set; } = WMSpellAdd.WMSpellAddNone;
 		public WMMagicBonus WMSpellBonus { get; set; } = WMMagicBonus.WMMagicBonusNone;
 		public WMKeyItems WMKeyItems { get; set; } = WMKeyItems.WMKeyItemsNone;

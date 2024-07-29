@@ -45,6 +45,8 @@
         <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiPlus2MdefLevelcheckbox" @bind-Value="Flags.FiPlus2MdefLevel">+2 Mdef/Lvl</CheckBox>
         <EnumDropDown UpdateToolTip="UpdateToolTipID" Id="FiMagicdropdown" @bind-Value="Flags.FighterMagicBonus">Spell Class Bonus</EnumDropDown>
         <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="Flags.MpGainOnMaxGainMode == MpGainOnMaxGain.Blursed" Id="FiMaxMPPluscheckbox" @bind-Value="Flags.FiMaxMPPlus">Max+Mp+</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiLampBonuscheckbox" @bind-Value="Flags.FiLampBonus">Lamp Bonus</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiAspellBonuscheckbox" @bind-Value="Flags.FiAspellBonus">A-Spells Bonus</CheckBox>
 
         <h4>Maluses</h4>
 
@@ -172,15 +174,19 @@
 
 
         <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMPlus2lvl1MP" @bind-Value="Flags.WMPlus2lvl1MP">+2 MP lvl 1</CheckBox>
-        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMPlus1MPAllcheckbox" @bind-Value="Flags.WMPlus1MPAll">+1 MP All Levels</CheckBox>
-        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMImpMPcheckbox" @bind-Value="Flags.WMImpMP">Improved MP</CheckBox>
         <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMPlus50XPcheckbox" @bind-Value="Flags.WMPlus50XP">+50%XP</CheckBox>
         <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMPlus100XPcheckbox" @bind-Value="Flags.WMPlus100XP">+100%XP</CheckBox>
         <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="Flags.MpGainOnMaxGainMode == MpGainOnMaxGain.Blursed" Id="WMMaxMPPluscheckbox" @bind-Value="Flags.WMMaxMPPlus">Max+Mp+</CheckBox>
         <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMPlus2Mdef" @bind-Value="Flags.WMPlus2Mdef">+2 MDef/Lvl</CheckBox>
 
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMPlus2lvl1MP" @bind-Value="Flags.WMPlus2lvl1MP">+2 MP lvl 1</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMPlus1MPAllcheckbox" @bind-Value="Flags.WMPlus1MPAll">+1 MP All Levels</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMImpMPcheckbox" @bind-Value="Flags.WMImpMP">Improved MP</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WmPromoSagecheckbox" @bind-Value="Flags.WMPromoSage">Promo Sage</CheckBox>
         <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="WMSpellAdddropdown" @bind-Value="Flags.WMSpellAdd">Single Spell Bonus</EnumDropDown>
         <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="WMSpellBonusdropdown" @bind-Value="Flags.WMSpellBonus">Spell Class Bonus</EnumDropDown>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WmLampBonuscheckbox" @bind-Value="Flags.WMLampBonus">Lamp Bonus</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WmAspellBonuscheckbox" @bind-Value="Flags.WMAspellsBonus">A-Spells Bonus</CheckBox>
 
         <h4>Maluses</h4>
 
@@ -245,7 +251,9 @@
 
         <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThPlus2MdefLvlcheckbox" @bind-Value="Flags.ThPlus2MdefLvl">+2 Mdef/Lvl</CheckBox>
         <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThEarlyLockpickcheckbox" @bind-Value="Flags.ThEarlyLockpick">Early Lockpick</CheckBox>
-
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThDarkBonuscheckbox" @bind-Value="Flags.ThDarkBonus">Dark Bonus</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThSleepBonuscheckbox" @bind-Value="Flags.ThSleepBonus">Sleep Bonus</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThSlowBonuscheckbox" @bind-Value="Flags.ThSlowBonus">Slow Bonus</CheckBox>
         <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThPlus50XPcheckbox" @bind-Value="Flags.ThPlus50XP">+50% XP</CheckBox>
         <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThPlus100XPcheckbox" @bind-Value="Flags.ThPlus100XP">+100% XP</CheckBox>
         <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="Flags.MpGainOnMaxGainMode == MpGainOnMaxGain.Blursed" Id="ThMaxMPPluscheckbox" @bind-Value="Flags.ThMaxMPPlus">Max+Mp+</CheckBox>
@@ -263,6 +271,8 @@
 
         <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThLateLockpickcheckbox" @bind-Value="Flags.ThLateLockpicking">Late Lockpicking</CheckBox>
 
+        <h4>Key Items</h4>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="ThKeyItemsdropdown" @bind-Value="Flags.ThKeyItems">Key Items</EnumDropDown>
 
         <h4>Red Mage</h4>
         <h4>Stats and Gold</h4>
@@ -312,6 +322,12 @@
         <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmImprovedMPcheckbox" @bind-Value="Flags.RmImprovedMP">Improved MP</CheckBox>
         <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmSagecheckbox" @bind-Value="Flags.RmSage">Sage</CheckBox>
         <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmPromosagecheckbox" @bind-Value="Flags.RmPromoSage">Promo Sage</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmLampBonuscheckbox" @bind-Value="Flags.RmLampBonus">Lamp Bonus</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmAspellBonuscheckbox" @bind-Value="Flags.RmAspellBonus">A-Spells Bonus</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmDarkBonuscheckbox" @bind-Value="Flags.RmDarkBonus">Dark Bonus</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmSleepBonuscheckbox" @bind-Value="Flags.RmSleepBonus">Sleep Bonus</CheckBox>
+        <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmSlowBonuscheckbox" @bind-Value="Flags.RmSlowBonus">Slow Bonus</CheckBox>
+
         <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RMPlus50XPcheckbox" @bind-Value="Flags.RmPlus50XP">+50% XP</CheckBox>
         <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmPlus100XPcheckbox" @bind-Value="Flags.RmPlus100XP">+100% XP</CheckBox>
         <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="Flags.MpGainOnMaxGainMode == MpGainOnMaxGain.Blursed" Id="RmMaxMPPluscheckbox" @bind-Value="Flags.RmMaxMPPlus">Max+Mp+</CheckBox>
@@ -331,9 +347,11 @@
 
 
         <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmMinus4MaxMPcheckbox" @bind-Value="Flags.RmMinus4MaxMP">-4 MP Max</CheckBox>
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="RmSpellRemovedropdown" @bind-Value="Flags.RmSpellRemove">Single Spell Remove</EnumDropDown>
 
+        <h4>Key Items</h4>
 
-
+        <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="RmKeyItemsdropdown" @bind-Value="Flags.RmKeyItems">Key Items</EnumDropDown>
 
         <h4>Black Mage</h4>
         <h4>Blessings</h4>

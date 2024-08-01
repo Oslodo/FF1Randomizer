@@ -1326,6 +1326,127 @@ namespace FF1Lib
 		[Description("-1100 Gold")]
 		BMminus1100gold,
 	}
+	public enum BMMasaCurse
+	{
+		[Description("None")]
+		BMMasaCurseNone,
+		[Description("Poison")]
+		FIMasaPoison,
+		[Description("Stun")]
+		BMMasaStun,
+		[Description("Sleep")]
+		BMMasaSleep,
+		[Description("Mute")]
+		BMMasaMute,
+	}
+	public enum BMRibbonCurse
+	{
+		[Description("None")]
+		BMRibbonCurseNone,
+		[Description("Poison")]
+		FIRibbonPoison,
+		[Description("Stun")]
+		BMRibbonStun,
+		[Description("Sleep")]
+		BMRibbonSleep,
+		[Description("Mute")]
+		BMRibbonMute,
+	}
+	public enum BMSpellAdd
+	{
+		[Description("Fast")]
+		BMSpellAddFast,
+		[Description("Tmpr")]
+		BMSpellAddTmpr,
+		[Description("Warp")]
+		BMSpellAddWarp,
+		[Description("Lock")]
+		BMSpellAddLock,
+		[Description("Lok2")]
+		BMSpellAddLok2,
+	}
+	public enum BMSpellRemove
+	{
+		[Description("Fast")]
+		BMSpellRemoveFast,
+		[Description("Tmpr")]
+		BMSpellRemoveTmpr,
+		[Description("Nuke")]
+		BMSpellRemoveNuke,
+		[Description("Fir3")]
+		BMSpellRemoveFir3,
+		[Description("Ice3")]
+		BMSpellRemoveIce3,
+		[Description("Lit3")]
+		BMSpellRemoveLit3,
+		[Description("Warp")]
+		BMSpellRemoveWarp,
+		[Description("Lock")]
+		BMSpellRemoveLock,
+		[Description("Lok2")]
+		BMSpellRemoveLok2,
+	}
+	public enum BMSpellBonus
+	{
+		[Description("None")]
+		BMMagicBonusNone,
+		[Description("Nuke")]
+		BMMagicBonusNuke,
+		[Description("Elem Magic")]
+		BMMagicBonusElem,
+		[Description("Elem+ Magic")]
+		BMMagicBonusElemPlus,
+		[Description("Clean Magic")]
+		BMMagicBonusClean,
+		[Description("Doom Magic")]
+		BMMagicBonusDoom,
+		[Description("Heal Magic")]
+		BMMagicBonusHeal,
+		[Description("Heal+ Magic")]
+		BMMagicBonusHealPlus,
+		[Description("Self Magic")]
+		BMMagicBonusSelf,
+		[Description("Buff Magic")]
+		BMMagicBonusBuff,
+		[Description("Tele Magic")]
+		BMMagicBonusTele,
+	}
+	public enum BMKeyItems
+	{
+		[Description("None")]
+		BMKeyItemsNone,
+		[Description("Crown")]
+		BMKeyItemsCrown,
+		[Description("Crystal")]
+		BMKeyItemsCrystal,
+		[Description("Herb")]
+		BMKeyItemsHerb,
+		[Description("TNT")]
+		BMKeyItemsTNT,
+		[Description("Adamant")]
+		BMKeyItemsAdamant,
+		[Description("Slab")]
+		BMKeyItemsSlab,
+		[Description("Ruby")]
+		BMKeyItemsRuby,
+		[Description("Rod")]
+		BMKeyItemsRod,
+		[Description("Chime")]
+		BMKeyItemsChime,
+		[Description("Cube")]
+		BMKeyItemsCube,
+		[Description("Bottle")]
+		BMKeyItemsBottle,
+		[Description("Oxyale")]
+		BMKeyItemsOxyale,
+		[Description("Lute")]
+		BMKeyItemsLute,
+		[Description("Tail")]
+		BMKeyItemsTail,
+		[Description("Key")]
+		BMKeyItemsKey,
+	}
+
 
 }
 

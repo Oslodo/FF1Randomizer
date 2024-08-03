@@ -800,6 +800,8 @@ namespace FF1Lib
 		public bool BBNoProRing { get; set; } = false;
 		public bool BBPlus50XP { get; set; } = false;
 		public bool BBPromoFiArmor { get; set; } = false;
+		public bool BBFiArmor { get; set; } = false;
+
 		public BBMagicBonus BBMagicBonus { get; set; } = BBMagicBonus.BBMagicBonusNone;
 		public BBKeyItems BBKeyItems { get; set; } = BBKeyItems.BBKeyItemsNone;
 
@@ -909,7 +911,6 @@ namespace FF1Lib
 		public bool WMPromoSage { get; set; } = false;
 		public bool WMLampBonus { get; set; } = false;
 		public bool WMAspellsBonus { get; set; } = false;
-
 		public WMSpellAdd WMSpellAdd { get; set; } = WMSpellAdd.WMSpellAddNone;
 		public WMMagicBonus WMSpellBonus { get; set; } = WMMagicBonus.WMMagicBonusNone;
 		public WMKeyItems WMKeyItems { get; set; } = WMKeyItems.WMKeyItemsNone;
@@ -931,6 +932,56 @@ namespace FF1Lib
 		public BMMdefpool Bmmdef { get; set; } = BMMdefpool.BMMdefpoolnone;
 		public BMIntpool Bmint { get; set; } = BMIntpool.BMIntpoolNone;
 		public BMGoldpool Bmgold { get; set; } = BMGoldpool.BMGoldpoolnone;
+		public bool BMEquipAxes { get; set; } = false;
+		public bool BMEquipShirts { get; set; } = false;
+		public bool BMEquipShields { get; set; } = false;
+		public bool BMEquipHelmBonk { get; set; } = false;
+		public bool BMEquipThWeapons { get; set; } = false;
+		public bool BMPlus2Lvl1MP { get; set; } = false;
+		public bool BMLegendarySwords { get; set; } = false;
+		public bool BMRMArmor { get; set; } = false;
+		public bool BMPlus1MPAll { get; set; } = false;
+		public bool BMHurtUndead { get; set; } = false;
+		public bool BMHurtDragon { get; set; } = false;
+		public bool BMHurtAll { get; set; } = false;
+		public bool BMResistPEDTS { get; set; } = false;
+		public bool BMResistSelect { get; set; } = false;
+		public bool BMResistStatus { get; set; } = false;
+		public bool BMResistPoison { get; set; } = false;
+		public bool BMResistTime { get; set; } = false;
+		public bool BMResistDeath { get; set; } = false;
+		public bool BMResistFire { get; set; } = false;
+		public bool BMResistIce { get; set; } = false;
+		public bool BMResistLit { get; set; } = false;
+		public bool BMResistEarth { get; set; } = false;
+		public bool BMFiSwords { get; set; } = false;
+		public bool BMFiArmor { get; set; } = false;
+		public bool BMImpMP { get; set; } = false;
+		public bool BMResistAll { get; set; } = false;
+		public bool BMMinus1Hit { get; set; } = false;
+		public bool BMMinus1Mdef { get; set; } = false;
+		public bool BMMinus4MP { get; set; } = false;
+		public bool BMImpCatclaw { get; set; } = false;
+		public BMMasaCurse BMMasaCurse { get; set; } = BMMasaCurse.BMMasaCurseNone;
+		public BMRibbonCurse BMRibbonCurse { get; set; } = BMRibbonCurse.BMRibbonCurseNone;
+		public bool BMPromoSage { get; set; } = false;
+		public bool BMWoodAdept { get; set; } = false;
+		public bool BMNoProRing { get; set; } = false;
+		public bool BMPlus50XP { get; set; } = false;
+		public bool BMPlus100XP { get; set; } = false;
+		public bool BMMaxMPPlus { get; set; } = false;
+		public bool BMFiArmorPromo { get; set; } = false;
+		public bool BMPlus2Mdef { get; set; } = false;
+		public bool BMDarkBonus { get; set; } = false;
+		public bool BMSleepBonus { get; set; } = false;
+		public bool BMSlowBonus { get; set;	} = false;
+		public BMSpellAdd BMSpellAdd { get; set; } = BMSpellAdd.BMSpellAddNone;
+		public BMSpellRemove BMSpellRemove { get; set; } = BMSpellRemove.BMSpellRemoveNone;
+		public BMSpellBonus BMSpellBonus { get; set; } = BMSpellBonus.BMMagicBonusNone;
+		public bool BMNoBracelet { get; set; } = false;
+		public BMKeyItems BMKeyItems { get; set; } = BMKeyItems.BMKeyItemsNone;
+
+
 
 		[IntegerFlag(0, 3)]
 		public int RandomizeClassMaxBonus { get; set; } = 2;

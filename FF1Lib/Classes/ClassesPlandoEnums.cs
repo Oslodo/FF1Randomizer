@@ -1354,6 +1354,8 @@ namespace FF1Lib
 	}
 	public enum BMSpellAdd
 	{
+		[Description("None")]
+		BMSpellAddNone,
 		[Description("Fast")]
 		BMSpellAddFast,
 		[Description("Tmpr")]
@@ -1367,6 +1369,8 @@ namespace FF1Lib
 	}
 	public enum BMSpellRemove
 	{
+		[Description("None")]
+		BMSpellRemoveNone,
 		[Description("Fast")]
 		BMSpellRemoveFast,
 		[Description("Tmpr")]

@@ -759,6 +759,7 @@ namespace FF1Lib
 		public ThRibbonCurse ThRibbonCurse { get; set; } = ThRibbonCurse.ThMasaCurseNone;
 		public bool ThNoProring { get; set; } = false;
 		public bool ThLateLockpicking { get; set; } = false;
+		public bool ThNoPromoSpells { get; set; } = false;
 		public ThKeyItems ThKeyItems { get; set; } = ThKeyItems.ThKeyItemsNone;
 
 		public BBStrpool BBStr { get; set; } = BBStrpool.BBStrpoolNone;
@@ -900,7 +901,7 @@ namespace FF1Lib
 		public bool WMResistEarth { get; set; } = false;
 		public bool WMResistAll { get; set; } = false;
 		public bool WMPlus2Mdef { get; set; } = false;
-		public bool WMFiSwords { get; set; } = false;
+		public bool WMFiWeapons { get; set; } = false;
 		public bool WMFiArmor { get; set; } = false;
 		public bool WMImpMP { get; set; } = false;
 		public bool WMPlus50XP { get; set;} = false;

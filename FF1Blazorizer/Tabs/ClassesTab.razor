@@ -36,10 +36,6 @@
 				<TriStateCheckBox Indent UpdateToolTip="@UpdateToolTipID" Id="GuaranteeCustomClassCompositionCheckBox" @bind-Value="Flags.GuaranteeCustomClassComposition">Guarantee Custom Party Composition</TriStateCheckBox>
                 <TriStateCheckBox Indent UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.Weaponizer == false)" Id="MooglieWeaponBalanceCheckBox" @bind-Value="Flags.MooglieWeaponBalance">Balance Weapons for Customs</TriStateCheckBox>
             }
-            else if (Flags.RandomizeClassMode == ClassRandomizationMode.Plando)
-            {
-                <PlandoBlursings Flags="@Flags" UpdateToolTipID="@UpdateToolTipID" noTabLayout="@noTabLayout" />
-            }
 
 			<div class="checkbox-cell"></div>
 			<h4>Promotion</h4>

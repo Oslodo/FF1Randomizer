@@ -46,13 +46,15 @@
 			<ShopsTab Flags="@Flags" UpdateToolTipID="@UpdateToolTipID" noTabLayout="@noTabLayout" />
 			<EnemiesTab Flags="@Flags" UpdateToolTipID="@UpdateToolTipID" noTabLayout="@noTabLayout" />
 			<PartyTab Flags="@Flags" UpdateToolTipID="@UpdateToolTipID" noTabLayout="@noTabLayout" />
-			<ClassesTab Flags="@Flags" UpdateToolTipID="@UpdateToolTipID" noTabLayout="@noTabLayout" />
-			<ItemEquipmentTab Flags="@Flags" UpdateToolTipID="@UpdateToolTipID" noTabLayout="@noTabLayout" />
+            <ClassesTab Flags="@Flags" UpdateToolTipID="@UpdateToolTipID" noTabLayout="@noTabLayout" />
+            <PlandoBlursings Flags="@Flags" UpdateToolTipID="@UpdateToolTipID" noTabLayout="@noTabLayout" />
+            <ItemEquipmentTab Flags="@Flags" UpdateToolTipID="@UpdateToolTipID" noTabLayout="@noTabLayout" />
 			<AdjustmentsTab Flags="@Flags" UpdateToolTipID="@UpdateToolTipID" noTabLayout="@noTabLayout" />
 			<ExperimentalTab Flags="@Flags" UpdateToolTipID="@UpdateToolTipID" noTabLayout="@noTabLayout" />
-			<ExpandArrow noTabLayout="@noTabLayout" SetTabLayout="@SetTabLayout" />
-		}
-		else
+            <ExpandArrow noTabLayout="@noTabLayout" SetTabLayout="@SetTabLayout" />
+        }
+
+        else
 		{
 			<BSTabGroup ShowEvent="@Show" HiddenEvent="@Hidden" HideEvent="@Hide" ShownEvent="@Shown">
 				<div class="tab">
@@ -122,8 +124,14 @@
 							<BSTabLabel>Classes</BSTabLabel>
 							<BSTabContent>
 								<ClassesTab Flags="@Flags" UpdateToolTipID="@UpdateToolTipID" noTabLayout="@noTabLayout" />
-							</BSTabContent>
+                            </BSTabContent>
 						</BSTab>
+                        <BSTab>
+                            <BSTabLabel>Plando Blursings</BSTabLabel>
+                            <BSTabContent>
+                                <PlandoBlursings Flags="@Flags" UpdateToolTipID="@UpdateToolTipID" noTabLayout="@noTabLayout" />
+                            </BSTabContent>
+                        </BSTab>
 						<BSTab>
 							<BSTabLabel>Gear &amp; Items</BSTabLabel>
 							<BSTabContent>

@@ -5,7 +5,6 @@ using System.IO.Compression;
 using static FF1Lib.FF1Rom;
 using FF1Lib.Sanity;
 using System.ComponentModel;
-using System.Diagnostics.SymbolStore;
 
 namespace FF1Lib
 {
@@ -1032,7 +1031,9 @@ namespace FF1Lib
 		public bool? AllowUnsafeStartArea { get; set; } = false;
 
 		public bool? IncreaseDarkPenalty { get; set; } = false;
-		public PoisonModeOptions PoisonMode { get; set; } = PoisonModeOptions.Vanilla;
+		public PoisonModeOptions PoisonMode { get; set; } = PoisonModeOptions.Constant;
+		[IntegerFlag(1,500)]
+		public int PoisonSetDamageValue { get; set; } = 3;
 
 		public bool? TouchIncludeBosses { get; set; } = false;
 

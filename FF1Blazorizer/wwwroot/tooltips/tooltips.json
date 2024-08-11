@@ -204,6 +204,11 @@
 		"description": "Sets alternate background music when riding the Airship (or AirBoat).\n If Music is Shuffled, the alternate theme will be heard somewhere else, not necessarily when riding the Airship."
 	},
 	{
+		"Id": "newMusicCheckBox",
+		"title": "New Music",
+		"description": "Replaces all music in the game (except for item fanfare) with new tracks."
+	},
+	{
 		"Id": "disableDamageTileFlickerCheckBox",
 		"title": "Disable Damage Tile Flicker",
 		"screenshot": "disableDamageTileFlickerCheckBox.gif",
@@ -2552,15 +2557,9 @@
 		"description": "Randomly selects new Earth Cave maps from a set of procedurally generated maps."
 	},
 	{
-		"Id": "Startcrown",
-		"title": "Start With Crown",
-		"screenshot": null,
-		"description": "Start With Crown."
-	},
-	{
-		"Id": "Down4500GP",
-		"title": "-4500GP",
-		"screenshot": null,
-		"description": "GP at game start down by 4500GP."
+		"Id": "mapDerpCheckBox",
+		"title": "Map Derp",
+		"screenshot": "mapDerp.png",
+		"description": "Derp."
 	}
 ]

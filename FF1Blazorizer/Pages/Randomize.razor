@@ -32,9 +32,28 @@
 		<h1>Final Fantasy Randomizer</h1>
 		@if (Flags.BlindSeed)
 		{
-			<BlindSeedTab Flags="@Flags" UpdateAction="@UpdateAction" StatusMessage="@StatusMessage" SetStatusMessage="@SetStatusMessage" noTabLayout="@true" />
-		}
-		else if (noTabLayout)
+            <BlindSeedTab Flags="@Flags" UpdateAction="@UpdateAction" StatusMessage="@StatusMessage" SetStatusMessage="@SetStatusMessage" noTabLayout="@true" />
+        }
+        else if (noTabLayout & Flags.RandomizeClassMode == ClassRandomizationMode.Plando)
+        {
+            <PresetsTab Flags="@Flags" UpdateAction="@UpdateAction" SetStatusMessage="@SetStatusMessage" loadDefault="@loadDefault" SetDefaultLoaded="@SetDefaultLoaded" noTabLayout="@noTabLayout" presetName="@presetName" SetPresetName="@SetPresetName" />
+            <GoalTab Flags="@Flags" UpdateAction="@UpdateAction" Preferences="@Preferences" noTabLayout="@noTabLayout" />
+            <ScaleTab Flags="@Flags" UpdateAction="@UpdateAction" noTabLayout="@noTabLayout" />
+            <IncentivesTab Flags="@Flags" UpdateAction="@UpdateAction" noTabLayout="@noTabLayout" />
+            <OverworldTab Flags="@Flags" UpdateAction="@UpdateAction" noTabLayout="@noTabLayout" />
+            <DungeonsTab Flags="@Flags" UpdateAction="@UpdateAction" noTabLayout="@noTabLayout" />
+            <TreasuresTab Flags="@Flags" UpdateAction="@UpdateAction" noTabLayout="@noTabLayout" />
+            <ShopsTab Flags="@Flags" UpdateAction="@UpdateAction" noTabLayout="@noTabLayout" />
+            <EnemiesTab Flags="@Flags" UpdateAction="@UpdateAction" noTabLayout="@noTabLayout" />
+            <PartyTab Flags="@Flags" UpdateAction="@UpdateAction" noTabLayout="@noTabLayout" />
+            <ClassesTab Flags="@Flags" UpdateAction="@UpdateAction" noTabLayout="@noTabLayout" />
+            <PlandoBlursings Flags="@Flags" UpdateAction="UpdateAction" noTabLayout="@noTabLayout" />
+            <ItemEquipmentTab Flags="@Flags" UpdateAction="@UpdateAction" noTabLayout="@noTabLayout" />
+            <AdjustmentsTab Flags="@Flags" UpdateAction="@UpdateAction" noTabLayout="@noTabLayout" />
+            <ExperimentalTab Flags="@Flags" UpdateAction="@UpdateAction" noTabLayout="@noTabLayout" />
+            <ExpandArrow noTabLayout="@noTabLayout" SetTabLayout="@SetTabLayout" />
+        }
+        else if (noTabLayout & Flags.RandomizeClassMode != ClassRandomizationMode.Plando)
 		{
 			<PresetsTab Flags="@Flags" UpdateAction="@UpdateAction" SetStatusMessage="@SetStatusMessage" loadDefault="@loadDefault" SetDefaultLoaded="@SetDefaultLoaded" noTabLayout="@noTabLayout" presetName="@presetName" SetPresetName="@SetPresetName" />
 			<GoalTab Flags="@Flags" UpdateAction="@UpdateAction" Preferences="@Preferences" noTabLayout="@noTabLayout" />
@@ -47,7 +66,7 @@
 			<EnemiesTab Flags="@Flags" UpdateAction="@UpdateAction" noTabLayout="@noTabLayout" />
 			<PartyTab Flags="@Flags" UpdateAction="@UpdateAction" noTabLayout="@noTabLayout" />
 			<ClassesTab Flags="@Flags" UpdateAction="@UpdateAction" noTabLayout="@noTabLayout" />
-			<ItemEquipmentTab Flags="@Flags" UpdateAction="@UpdateAction" noTabLayout="@noTabLayout" />
+            <ItemEquipmentTab Flags="@Flags" UpdateAction="@UpdateAction" noTabLayout="@noTabLayout" />
 			<AdjustmentsTab Flags="@Flags" UpdateAction="@UpdateAction" noTabLayout="@noTabLayout" />
 			<ExperimentalTab Flags="@Flags" UpdateAction="@UpdateAction" noTabLayout="@noTabLayout" />
 			<ExpandArrow noTabLayout="@noTabLayout" SetTabLayout="@SetTabLayout" />
@@ -127,7 +146,7 @@
                         <BSTab>
                             <BSTabLabel>Plando Blursings</BSTabLabel>
                             <BSTabContent>
-                                <PlandoBlursings Flags="@Flags" UpdateToolTipID="@UpdateToolTipID" noTabLayout="@noTabLayout" />
+                                <PlandoBlursings Flags="@Flags" UpdateAction="@UpdateAction" noTabLayout="@noTabLayout" />
                             </BSTabContent>
                         </BSTab>
 						<BSTab>

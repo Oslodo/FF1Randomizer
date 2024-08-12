@@ -13,429 +13,429 @@
 
                 <h4>Fighter</h4>
                 <h4>Stats and Gold</h4>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="FiStrpooldropdown" @bind-Value="Flags.Fighterstr">Strength</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="FiAgipooldropdown" @bind-Value="Flags.Fighteragi">Agility</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="FiVitpooldropdown" @bind-Value="Flags.Fightervit">Vitality</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="FiLuckpooldropdown" @bind-Value="Flags.Fighterluck">Luck</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="FiHPPooldropdown" @bind-Value="Flags.FighterHP">HP</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="FiHitPercentpooldropdown" @bind-Value="Flags.FighterHit">Hit Percentage</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="FiMDefpooldropdown" @bind-Value="Flags.FighterMdef">Magic Defense</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.IntAffectsSpells)" Id="FiIntpooldropdown" @bind-Value="Flags.FighterInt">Intelligence</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="FiGoldpooldropdown" @bind-Value="Flags.Fightergold">Starting Gold</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="FiStrpooldropdown" @bind-Value="Flags.Fighterstr">Strength</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="FiAgipooldropdown" @bind-Value="Flags.Fighteragi">Agility</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="FiVitpooldropdown" @bind-Value="Flags.Fightervit">Vitality</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="FiLuckpooldropdown" @bind-Value="Flags.Fighterluck">Luck</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="FiHPPooldropdown" @bind-Value="Flags.FighterHP">HP</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="FiHitPercentpooldropdown" @bind-Value="Flags.FighterHit">Hit Percentage</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="FiMDefpooldropdown" @bind-Value="Flags.FighterMdef">Magic Defense</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" IsEnabled="@(Flags.IntAffectsSpells)" Id="FiIntpooldropdown" @bind-Value="Flags.FighterInt">Intelligence</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="FiGoldpooldropdown" @bind-Value="Flags.Fightergold">Starting Gold</EnumDropDown>
 
                 <h4>Blessings</h4>
 
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiEquipShirtscheckbox" @bind-Value="Flags.FiEquipShirts">Equip Shirts</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiImThorcheckbox" @bind-Value="Flags.FiImpThor">Improved Thor Hammer</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiLegendarySwordscheckbox" @bind-Value="Flags.FiLegendarySwords">Equip Legendary Swords</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.Weaponizer != true)" Id="FiImpCatclawcheckbox" @bind-Value="Flags.FiImpCatclaw">Improved Catclaw</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.ArmorCrafter != true)" Id="FiWoodAdeptcheckbox" @bind-Value="Flags.FiWoodAdept">Wood Adept</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.ArmorCrafter != true)" Id="FiSteelLordcheckbox" @bind-Value="Flags.FiSteelLord">Steel Lord</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="FiEquipShirtscheckbox" @bind-Value="Flags.FiEquipShirts">Equip Shirts</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="FiImThorcheckbox" @bind-Value="Flags.FiImpThor">Improved Thor Hammer</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="FiLegendarySwordscheckbox" @bind-Value="Flags.FiLegendarySwords">Equip Legendary Swords</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="@(Flags.Weaponizer != true)" Id="FiImpCatclawcheckbox" @bind-Value="Flags.FiImpCatclaw">Improved Catclaw</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="@(Flags.ArmorCrafter != true)" Id="FiWoodAdeptcheckbox" @bind-Value="Flags.FiWoodAdept">Wood Adept</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="@(Flags.ArmorCrafter != true)" Id="FiSteelLordcheckbox" @bind-Value="Flags.FiSteelLord">Steel Lord</CheckBox>
 
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiHurtUndeadcheckbox" @bind-Value="Flags.FiHurtUndead">Hurt Undead</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiHurtDragoncheckbox" @bind-Value="Flags.FiHurtDragon">Hurt Dragon</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiHurtAllcheckbox" @bind-Value="Flags.FiHurtAll">Hurt All</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="FiHurtUndeadcheckbox" @bind-Value="Flags.FiHurtUndead">Hurt Undead</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="FiHurtDragoncheckbox" @bind-Value="Flags.FiHurtDragon">Hurt Dragon</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="FiHurtAllcheckbox" @bind-Value="Flags.FiHurtAll">Hurt All</CheckBox>
 
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiFiResistSelectcheckbox" @bind-Value="Flags.FiResistSelect">Resistances</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.FiResistSelect != false)" Id="FiResistStatuscheckbox" @bind-Value="Flags.FiResistStatus">Status</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.FiResistSelect != false)" Id="FiResistPoisoncheckbox" @bind-Value="Flags.FiResistPoison">Poison</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.FiResistSelect != false)" Id="FiResistTimecheckbox" @bind-Value="Flags.FiResistTime">Time</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.FiResistSelect != false)" Id="FiResistDeathcheckbox" @bind-Value="Flags.FiResistDeath">Death</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.FiResistSelect != false)" Id="FiResistFirecheckbox" @bind-Value="Flags.FiResistFire">Fire</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.FiResistSelect != false)" Id="FiResistIcecheckbox" @bind-Value="Flags.FiResistIce">Ice</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.FiResistSelect != false)" Id="FiResistLitcheckbox" @bind-Value="Flags.FiResistLit">Lightning</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.FiResistSelect != false)" Id="FiResistEarthcheckbox" @bind-Value="Flags.FiResistEarth">Earth</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiResistPEDTScheckbox" @bind-Value="Flags.FiResistPEDTS">Resist PEDTS</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiResistAllcheckbox" @bind-Value="Flags.FiResistAll">Resist All</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="FiFiResistSelectcheckbox" @bind-Value="Flags.FiResistSelect">Resistances</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.FiResistSelect != false)" Id="FiResistStatuscheckbox" @bind-Value="Flags.FiResistStatus">Status</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.FiResistSelect != false)" Id="FiResistPoisoncheckbox" @bind-Value="Flags.FiResistPoison">Poison</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.FiResistSelect != false)" Id="FiResistTimecheckbox" @bind-Value="Flags.FiResistTime">Time</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.FiResistSelect != false)" Id="FiResistDeathcheckbox" @bind-Value="Flags.FiResistDeath">Death</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.FiResistSelect != false)" Id="FiResistFirecheckbox" @bind-Value="Flags.FiResistFire">Fire</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.FiResistSelect != false)" Id="FiResistIcecheckbox" @bind-Value="Flags.FiResistIce">Ice</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.FiResistSelect != false)" Id="FiResistLitcheckbox" @bind-Value="Flags.FiResistLit">Lightning</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.FiResistSelect != false)" Id="FiResistEarthcheckbox" @bind-Value="Flags.FiResistEarth">Earth</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="FiResistPEDTScheckbox" @bind-Value="Flags.FiResistPEDTS">Resist PEDTS</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="FiResistAllcheckbox" @bind-Value="Flags.FiResistAll">Resist All</CheckBox>
 
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiPlus2MdefLevelcheckbox" @bind-Value="Flags.FiPlus2MdefLevel">+2 Mdef/Lvl</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.GenerateNewSpellbook != true)" Id="FiLampBonuscheckbox" @bind-Value="Flags.FiLampBonus">Lamp Bonus</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.GenerateNewSpellbook != true)" Id="FiAspellBonuscheckbox" @bind-Value="Flags.FiAspellBonus">A-Spells Bonus</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="FiPlus2MdefLevelcheckbox" @bind-Value="Flags.FiPlus2MdefLevel">+2 Mdef/Lvl</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="@(Flags.GenerateNewSpellbook != true)" Id="FiLampBonuscheckbox" @bind-Value="Flags.FiLampBonus">Lamp Bonus</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="@(Flags.GenerateNewSpellbook != true)" Id="FiAspellBonuscheckbox" @bind-Value="Flags.FiAspellBonus">A-Spells Bonus</CheckBox>
 
-                <CheckBox UpdateToolTip="@UpdateToolTipID"  Id="FiPlus50XPcheckbox" @bind-Value="Flags.FiPlus50XP">Plus 50% XP</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="Flags.MpGainOnMaxGainMode == MpGainOnMaxGain.Blursed" Id="FiMaxMPPluscheckbox" @bind-Value="Flags.FiMaxMPPlus">Max+Mp+</CheckBox>
-                <EnumDropDown UpdateToolTip="UpdateToolTipID" Id="FiMagicdropdown" @bind-Value="Flags.FighterMagicBonus">Innate Magic Bonus</EnumDropDown>
+                <CheckBox UpdateAction="@UpdateAction"  Id="FiPlus50XPcheckbox" @bind-Value="Flags.FiPlus50XP">Plus 50% XP</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="Flags.MpGainOnMaxGainMode == MpGainOnMaxGain.Blursed" Id="FiMaxMPPluscheckbox" @bind-Value="Flags.FiMaxMPPlus">Max+Mp+</CheckBox>
+                <EnumDropDown UpdateAction="UpdateAction" Id="FiMagicdropdown" @bind-Value="Flags.FighterMagicBonus">Innate Magic Bonus</EnumDropDown>
 
                 <h4>Maluses</h4>
 
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiMinusOneHitcheckbox" @bind-Value="Flags.FiMinusOneHit">-1 Hit%/Lvl</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiMinusOneMdefcheckbox" @bind-Value="Flags.FiMinusOneMdef">-1 Mdef/Lvl</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiBMHPcheckbox" @bind-Value="Flags.FiBMHP">BlackMage HP</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="FiMinusOneHitcheckbox" @bind-Value="Flags.FiMinusOneHit">-1 Hit%/Lvl</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="FiMinusOneMdefcheckbox" @bind-Value="Flags.FiMinusOneMdef">-1 Mdef/Lvl</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="FiBMHPcheckbox" @bind-Value="Flags.FiBMHP">BlackMage HP</CheckBox>
 
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiThiefWeaponscheckbox" @bind-Value="Flags.FiThWeapons">Thief Weapons</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="FiNoBraceletcheckbox" @bind-Value="Flags.FiNoBracelet">No Bracelets</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.ArmorCrafter != true)" Id="FiNoProRingcheckbox" @bind-Value="Flags.FiNoProRing">No ProRing</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="FiThiefWeaponscheckbox" @bind-Value="Flags.FiThWeapons">Thief Weapons</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="FiNoBraceletcheckbox" @bind-Value="Flags.FiNoBracelet">No Bracelets</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="@(Flags.ArmorCrafter != true)" Id="FiNoProRingcheckbox" @bind-Value="Flags.FiNoProRing">No ProRing</CheckBox>
 
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.NoMasamune != true)" Id="FighterMasaCursedropdown" @bind-Value="Flags.FighterMasaCurse">Masamune Curse</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.RibbonMode == RibbonMode.Vanilla)" Id="FighterRibbonCursedropdown" @bind-Value="Flags.FighterRibbonCurse">Ribbon Curse</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" IsEnabled="@(Flags.NoMasamune != true)" Id="FighterMasaCursedropdown" @bind-Value="Flags.FighterMasaCurse">Masamune Curse</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" IsEnabled="@(Flags.RibbonMode == RibbonMode.Vanilla)" Id="FighterRibbonCursedropdown" @bind-Value="Flags.FighterRibbonCurse">Ribbon Curse</EnumDropDown>
 
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="@((Flags.NoTail =! false) & !Flags.FightBahamut)" Id="FighterNoPromoArmorcheckbox" @bind-Value="Flags.FiNoPromoArmor">No Armor on Promotion</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="@((Flags.NoTail =! false) & !Flags.FightBahamut)" Id="FighterNoPromoSpellscheckbox" @bind-Value="Flags.FiNoPromoSpells">No Spells on Promotion</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="@((Flags.NoTail =! false) & !Flags.FightBahamut)" Id="FighterNoPromoArmorcheckbox" @bind-Value="Flags.FiNoPromoArmor">No Armor on Promotion</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="@((Flags.NoTail =! false) & !Flags.FightBahamut)" Id="FighterNoPromoSpellscheckbox" @bind-Value="Flags.FiNoPromoSpells">No Spells on Promotion</CheckBox>
 
                 <h4>Key Items</h4>
 
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="FighterKIdropdown" @bind-Value="Flags.FighterKI">Start with Key Item</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="FighterKIdropdown" @bind-Value="Flags.FighterKI">Start with Key Item</EnumDropDown>
 
                 <h4>BlackBelt</h4>
                 <h4>Stats and Gold</h4>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="BBStrpooldropdown" @bind-Value="Flags.BBStr">Strength</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="BBAgipooldropdown" @bind-Value="Flags.BBAgi">Agility</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="BBVitpooldropdown" @bind-Value="Flags.BBVit">Vitality</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="BBLuckpooldropdown" @bind-Value="Flags.BBLuck">Luck</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="BBHPPooldropdown" @bind-Value="Flags.BBHP">HP</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="BBHitPercentpooldropdown" @bind-Value="Flags.BBHit">Hit Percentage</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="BBMDefpooldropdown" @bind-Value="Flags.BBMdef">Magic Defense</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="BBGoldpooldropdown" @bind-Value="Flags.BBGold">Starting Gold</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="BBStrpooldropdown" @bind-Value="Flags.BBStr">Strength</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="BBAgipooldropdown" @bind-Value="Flags.BBAgi">Agility</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="BBVitpooldropdown" @bind-Value="Flags.BBVit">Vitality</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="BBLuckpooldropdown" @bind-Value="Flags.BBLuck">Luck</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="BBHPPooldropdown" @bind-Value="Flags.BBHP">HP</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="BBHitPercentpooldropdown" @bind-Value="Flags.BBHit">Hit Percentage</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="BBMDefpooldropdown" @bind-Value="Flags.BBMdef">Magic Defense</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="BBGoldpooldropdown" @bind-Value="Flags.BBGold">Starting Gold</EnumDropDown>
 
                 <h4>Blessings</h4>
 
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="=BBEquipAxescheckbox" @bind-Value="Flags.BBEquipAxes">Equip Axes</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BBEquipShirtscheckbox" @bind-Value="Flags.BBEquipShirts">Equip Shirts</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BBequipSheildscheckbox" @bind-Value="Flags.BBEquipShields">Equip Shields</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BBEquipHempBonkcheckbox" @bind-Value="Flags.BBEquipHelmBonk">Equip Helms and Gauntlets</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BBLegendarySwordscheckbox" @bind-Value="Flags.BBLegendarySwords">Equip Legendary Swords</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BBFighterWeaponscheckbox" @bind-Value="Flags.BBFighterWeapons">Equip Fighter Weapons</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BBFiArmorcheckbox" @bind-Value="Flags.BBFiArmor">Fighter Armor</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BBThWeaponscheckbox" @bind-Value="Flags.BBEquipThWeapons">Equip Thief Weapons</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BBRMAmorcheckbox" @bind-Value="Flags.BBRMArmor">Equip Red Mage Armor</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BBPromoFiArmorcheckbox" @bind-Value="Flags.BBPromoFiArmor">Promo Fighter Armor</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.ArmorCrafter != true)" Id="BBWoodAdeptcheckbox" @bind-Value="Flags.BBWoodAdept">Wood Adept</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="=BBEquipAxescheckbox" @bind-Value="Flags.BBEquipAxes">Equip Axes</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="BBEquipShirtscheckbox" @bind-Value="Flags.BBEquipShirts">Equip Shirts</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="BBequipSheildscheckbox" @bind-Value="Flags.BBEquipShields">Equip Shields</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="BBEquipHempBonkcheckbox" @bind-Value="Flags.BBEquipHelmBonk">Equip Helms and Gauntlets</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="BBLegendarySwordscheckbox" @bind-Value="Flags.BBLegendarySwords">Equip Legendary Swords</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="BBFighterWeaponscheckbox" @bind-Value="Flags.BBFighterWeapons">Equip Fighter Weapons</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="BBFiArmorcheckbox" @bind-Value="Flags.BBFiArmor">Fighter Armor</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="BBThWeaponscheckbox" @bind-Value="Flags.BBEquipThWeapons">Equip Thief Weapons</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="BBRMAmorcheckbox" @bind-Value="Flags.BBRMArmor">Equip Red Mage Armor</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="BBPromoFiArmorcheckbox" @bind-Value="Flags.BBPromoFiArmor">Promo Fighter Armor</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="@(Flags.ArmorCrafter != true)" Id="BBWoodAdeptcheckbox" @bind-Value="Flags.BBWoodAdept">Wood Adept</CheckBox>
 
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BBHurtUndeadcheckbox" @bind-Value="Flags.BBHurtUndead">Hurt Undead</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BBHurtDragoncheckbox" @bind-Value="Flags.BBHurtDragon">Hurt Dragon</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BBHurtAllcheckbox" @bind-Value="Flags.BBHurtAll">Hurt All</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="BBHurtUndeadcheckbox" @bind-Value="Flags.BBHurtUndead">Hurt Undead</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="BBHurtDragoncheckbox" @bind-Value="Flags.BBHurtDragon">Hurt Dragon</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="BBHurtAllcheckbox" @bind-Value="Flags.BBHurtAll">Hurt All</CheckBox>
 
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BBResistSelectcheckbox" @bind-Value="Flags.BBResistSelect">Resistances</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.BBResistSelect != false)" Id="BBResistStatuscheckbox" @bind-Value="Flags.BBResistStatus">Status</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.BBResistSelect != false)" Id="BBResistPoisoncheckbox" @bind-Value="Flags.BBResistPoison">Poison</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.BBResistSelect != false)" Id="BBResistTimecheckbox" @bind-Value="Flags.BBResistTime">Time</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.BBResistSelect != false)" Id="BBResistDeathcheckbox" @bind-Value="Flags.BBResistDeath">Death</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.BBResistSelect != false)" Id="BBResistFirecheckbox" @bind-Value="Flags.BBResistFire">Fire</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.BBResistSelect != false)" Id="BBResistIcecheckbox" @bind-Value="Flags.BBResistIce">Ice</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.BBResistSelect != false)" Id="BBResistLitcheckbox" @bind-Value="Flags.BBResistLit">Lightning</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.BBResistSelect != false)" Id="BBResistEarthcheckbox" @bind-Value="Flags.BBResistEarth">Earth</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="BBResistSelectcheckbox" @bind-Value="Flags.BBResistSelect">Resistances</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.BBResistSelect != false)" Id="BBResistStatuscheckbox" @bind-Value="Flags.BBResistStatus">Status</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.BBResistSelect != false)" Id="BBResistPoisoncheckbox" @bind-Value="Flags.BBResistPoison">Poison</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.BBResistSelect != false)" Id="BBResistTimecheckbox" @bind-Value="Flags.BBResistTime">Time</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.BBResistSelect != false)" Id="BBResistDeathcheckbox" @bind-Value="Flags.BBResistDeath">Death</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.BBResistSelect != false)" Id="BBResistFirecheckbox" @bind-Value="Flags.BBResistFire">Fire</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.BBResistSelect != false)" Id="BBResistIcecheckbox" @bind-Value="Flags.BBResistIce">Ice</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.BBResistSelect != false)" Id="BBResistLitcheckbox" @bind-Value="Flags.BBResistLit">Lightning</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.BBResistSelect != false)" Id="BBResistEarthcheckbox" @bind-Value="Flags.BBResistEarth">Earth</CheckBox>
 
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BBPlus50XPcheckbox" @bind-Value="Flags.BBPlus50XP">+50% XP</CheckBox>
-                <EnumDropDown UpdateToolTip="UpdateToolTipID" Id="BBMagicdropdown" @bind-Value="Flags.BBMagicBonus"> Innate Magic Bonus</EnumDropDown>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="@((Flags.MDefMode == MDEFGrowthMode.None) & (Flags.NoTail =! false) & (!Flags.FightBahamut))" Id="BBMasterMdefcheckbox" @bind-Value="Flags.BBMasterMdef">Master +3Mdef/Lvl</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="BBPlus50XPcheckbox" @bind-Value="Flags.BBPlus50XP">+50% XP</CheckBox>
+                <EnumDropDown UpdateAction="UpdateAction" Id="BBMagicdropdown" @bind-Value="Flags.BBMagicBonus"> Innate Magic Bonus</EnumDropDown>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="@((Flags.MDefMode == MDEFGrowthMode.None) & (Flags.NoTail =! false) & (!Flags.FightBahamut))" Id="BBMasterMdefcheckbox" @bind-Value="Flags.BBMasterMdef">Master +3Mdef/Lvl</CheckBox>
 
                 <h4>Maluses</h4>
 
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BBMinusOneHitcheckbox" @bind-Value="Flags.BBMinusOneHit">-1 Hit%/Lvl</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BBMinusOneMdefcheckbox" @bind-Value="Flags.BBMinusOneMdef">-1 Mdef/Lvl</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BBUnarmedcheckbox" @bind-Value="Flags.BBUnarmed">Unarmed Only After Promo</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="BBMinusOneHitcheckbox" @bind-Value="Flags.BBMinusOneHit">-1 Hit%/Lvl</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="BBMinusOneMdefcheckbox" @bind-Value="Flags.BBMinusOneMdef">-1 Mdef/Lvl</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="BBUnarmedcheckbox" @bind-Value="Flags.BBUnarmed">Unarmed Only After Promo</CheckBox>
 
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BBNoBraceletscheckbox" @bind-Value="Flags.BBNoBracelet">No Bracelets</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.ArmorCrafter != true)" Id="BBNoProRingcheckbox" @bind-Value="Flags.BBNoProRing">No ProRing</CheckBox>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.NoMasamune != true)" Id="BBMasaCursedropdown" @bind-Value="Flags.BBMasaCurse">Masamune Curse</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.RibbonMode == RibbonMode.Vanilla)" Id="BBRibbonCursedropdown" @bind-Value="Flags.BBRibbonCurse">Ribbon Curse</EnumDropDown>
+                <CheckBox UpdateAction="@UpdateAction" Id="BBNoBraceletscheckbox" @bind-Value="Flags.BBNoBracelet">No Bracelets</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="@(Flags.ArmorCrafter != true)" Id="BBNoProRingcheckbox" @bind-Value="Flags.BBNoProRing">No ProRing</CheckBox>
+                <EnumDropDown UpdateAction="@UpdateAction" IsEnabled="@(Flags.NoMasamune != true)" Id="BBMasaCursedropdown" @bind-Value="Flags.BBMasaCurse">Masamune Curse</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" IsEnabled="@(Flags.RibbonMode == RibbonMode.Vanilla)" Id="BBRibbonCursedropdown" @bind-Value="Flags.BBRibbonCurse">Ribbon Curse</EnumDropDown>
 
                 <h4>Key Items</h4>
 
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="BBKIdropdown" @bind-Value="Flags.BBKeyItems">Start with Key Item</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="BBKIdropdown" @bind-Value="Flags.BBKeyItems">Start with Key Item</EnumDropDown>
 
                 <h4>White Mage</h4>
                 <h4>Stats and Gold</h4>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="WmStrpooldropdown" @bind-Value="Flags.Wmstr">Strength</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="WmAgipooldropdown" @bind-Value="Flags.Wmagi">Agility</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="WmVitpooldropdown" @bind-Value="Flags.Wmvit">Vitality</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="WmLuckpooldropdown" @bind-Value="Flags.Wmluck">Luck</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="WmHPPooldropdown" @bind-Value="Flags.WmHP">HP</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="WmHitPercentpooldropdown" @bind-Value="Flags.Wmhit">Hit Percentage</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="WmMDefpooldropdown" @bind-Value="Flags.Wmmdef">Magic Defense</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.IntAffectsSpells != false)" Id="WmIntpooldropdown" @bind-Value="Flags.Wmint">Intelligence</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="WmGoldpooldropdown" @bind-Value="Flags.Wmgold">Starting Gold</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="WmStrpooldropdown" @bind-Value="Flags.Wmstr">Strength</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="WmAgipooldropdown" @bind-Value="Flags.Wmagi">Agility</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="WmVitpooldropdown" @bind-Value="Flags.Wmvit">Vitality</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="WmLuckpooldropdown" @bind-Value="Flags.Wmluck">Luck</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="WmHPPooldropdown" @bind-Value="Flags.WmHP">HP</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="WmHitPercentpooldropdown" @bind-Value="Flags.Wmhit">Hit Percentage</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="WmMDefpooldropdown" @bind-Value="Flags.Wmmdef">Magic Defense</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" IsEnabled="@(Flags.IntAffectsSpells != false)" Id="WmIntpooldropdown" @bind-Value="Flags.Wmint">Intelligence</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="WmGoldpooldropdown" @bind-Value="Flags.Wmgold">Starting Gold</EnumDropDown>
 
                 <h4>Blessings</h4>
 
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMEquipAxescheckbox" @bind-Value="Flags.WMEquipAxes">Equip Axes</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMEquipShirtscheckbox" @bind-Value="Flags.WMEquipShirts">Equip Shirts</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMEquipShieldscheckbox" @bind-Value="Flags.WMEquipShields">Equip Shields</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMEquipHelmBonkcheckbox" @bind-Value="Flags.WMEquipHelmBonk">Equip Helm and Gauntlets</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMImpThorcheckbox" @bind-Value="Flags.WMImpThor">Improved Thor Hammer</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMLegendarySwordsheckbox" @bind-Value="Flags.WMLegendarySwords">Equip Legendary Swords</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMFiWeaponscheckbox" @bind-Value="Flags.WMFiWeapons">Fighter Weapons</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMFiArmorcheckbox" @bind-Value="Flags.WMFiArmor">Fighter Armor</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMEquipThWeaponscheckbox" @bind-Value="Flags.WMEquipThWeapons">Equip Thief Weapons</CheckBox>       
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMRMArmorcheckbox" @bind-Value="Flags.WMRMArmor">Equip Red Mage Armor</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="@((Flags.NoTail =! false) & !Flags.FightBahamut)" Id="WMPromoFiArmorcheckbox" @bind-Value="Flags.WMPromoFiArmor">Promo Fighhter Armor</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.ArmorCrafter != true)" Id="WMWoodAdeptcheckbox" @bind-Value="Flags.WMWoodAdept">Wood Adept</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="WMEquipAxescheckbox" @bind-Value="Flags.WMEquipAxes">Equip Axes</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="WMEquipShirtscheckbox" @bind-Value="Flags.WMEquipShirts">Equip Shirts</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="WMEquipShieldscheckbox" @bind-Value="Flags.WMEquipShields">Equip Shields</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="WMEquipHelmBonkcheckbox" @bind-Value="Flags.WMEquipHelmBonk">Equip Helm and Gauntlets</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="WMImpThorcheckbox" @bind-Value="Flags.WMImpThor">Improved Thor Hammer</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="WMLegendarySwordsheckbox" @bind-Value="Flags.WMLegendarySwords">Equip Legendary Swords</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="WMFiWeaponscheckbox" @bind-Value="Flags.WMFiWeapons">Fighter Weapons</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="WMFiArmorcheckbox" @bind-Value="Flags.WMFiArmor">Fighter Armor</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="WMEquipThWeaponscheckbox" @bind-Value="Flags.WMEquipThWeapons">Equip Thief Weapons</CheckBox>       
+                <CheckBox UpdateAction="@UpdateAction" Id="WMRMArmorcheckbox" @bind-Value="Flags.WMRMArmor">Equip Red Mage Armor</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="@((Flags.NoTail =! false) & !Flags.FightBahamut)" Id="WMPromoFiArmorcheckbox" @bind-Value="Flags.WMPromoFiArmor">Promo Fighhter Armor</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="@(Flags.ArmorCrafter != true)" Id="WMWoodAdeptcheckbox" @bind-Value="Flags.WMWoodAdept">Wood Adept</CheckBox>
 
 
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMResistSelectcheckbox" @bind-Value="Flags.WMResistSelect">Resistances</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.WMResistSelect != false)" Id="WMResistStatuscheckbox" @bind-Value="Flags.WMResistStatus">Status</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.WMResistSelect != false)" Id="WMResistPoisoncheckbox" @bind-Value="Flags.WMResistPoison">Poison</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.WMResistSelect != false)" Id="WMResistTimecheckbox" @bind-Value="Flags.WMResistTime">Time</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.WMResistSelect != false)" Id="WMResistDeathcheckbox" @bind-Value="Flags.WMResistDeath">Death</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.WMResistSelect != false)" Id="WMResistFirecheckbox" @bind-Value="Flags.WMResistFire">Fire</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.WMResistSelect != false)" Id="WMResistIcecheckbox" @bind-Value="Flags.WMResistIce">Ice</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.WMResistSelect != false)" Id="WMResistLitcheckbox" @bind-Value="Flags.WMResistLit">Lightning</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.WMResistSelect != false)" Id="WMResistEarthcheckbox" @bind-Value="Flags.WMResistEarth">Earth</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMResistPEDTScheckbox" @bind-Value="Flags.WMResistPEDTS">Resist PEDTS</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMResistAllcheckbox" @bind-Value="Flags.WMResistAll">Resist All</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="WMResistSelectcheckbox" @bind-Value="Flags.WMResistSelect">Resistances</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.WMResistSelect != false)" Id="WMResistStatuscheckbox" @bind-Value="Flags.WMResistStatus">Status</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.WMResistSelect != false)" Id="WMResistPoisoncheckbox" @bind-Value="Flags.WMResistPoison">Poison</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.WMResistSelect != false)" Id="WMResistTimecheckbox" @bind-Value="Flags.WMResistTime">Time</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.WMResistSelect != false)" Id="WMResistDeathcheckbox" @bind-Value="Flags.WMResistDeath">Death</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.WMResistSelect != false)" Id="WMResistFirecheckbox" @bind-Value="Flags.WMResistFire">Fire</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.WMResistSelect != false)" Id="WMResistIcecheckbox" @bind-Value="Flags.WMResistIce">Ice</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.WMResistSelect != false)" Id="WMResistLitcheckbox" @bind-Value="Flags.WMResistLit">Lightning</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.WMResistSelect != false)" Id="WMResistEarthcheckbox" @bind-Value="Flags.WMResistEarth">Earth</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="WMResistPEDTScheckbox" @bind-Value="Flags.WMResistPEDTS">Resist PEDTS</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="WMResistAllcheckbox" @bind-Value="Flags.WMResistAll">Resist All</CheckBox>
 
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMHurtUndeadcheckbox" @bind-Value="Flags.WMHurtUndead">Hurt Undead</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMHurtDragonscheckbox" @bind-Value="Flags.WMHurtDragon">Hurt Dragon</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMHurtAllcheckbox" @bind-Value="Flags.WMHurtAll">Hurt All</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="WMHurtUndeadcheckbox" @bind-Value="Flags.WMHurtUndead">Hurt Undead</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="WMHurtDragonscheckbox" @bind-Value="Flags.WMHurtDragon">Hurt Dragon</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="WMHurtAllcheckbox" @bind-Value="Flags.WMHurtAll">Hurt All</CheckBox>
 
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMPlus2lvl1MP" @bind-Value="Flags.WMPlus2lvl1MP">+2 MP lvl 1</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMPlus1MPAllcheckbox" @bind-Value="Flags.WMPlus1MPAll">+1 MP All Levels</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMPlus2Mdef" @bind-Value="Flags.WMPlus2Mdef">+2 MDef/Lvl</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMImpMPcheckbox" @bind-Value="Flags.WMImpMP">Improved MP</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="@((Flags.NoTail =! false) & !Flags.FightBahamut)" Id="WmPromoSagecheckbox" @bind-Value="Flags.WMPromoSage">Promo Sage</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.GenerateNewSpellbook != true)" Id="WmLampBonuscheckbox" @bind-Value="Flags.WMLampBonus">Lamp Bonus</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.GenerateNewSpellbook != true)" Id="WmAspellBonuscheckbox" @bind-Value="Flags.WMAspellsBonus">A-Spells Bonus</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="WMPlus2lvl1MP" @bind-Value="Flags.WMPlus2lvl1MP">+2 MP lvl 1</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="WMPlus1MPAllcheckbox" @bind-Value="Flags.WMPlus1MPAll">+1 MP All Levels</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="WMPlus2Mdef" @bind-Value="Flags.WMPlus2Mdef">+2 MDef/Lvl</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="WMImpMPcheckbox" @bind-Value="Flags.WMImpMP">Improved MP</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="@((Flags.NoTail =! false) & !Flags.FightBahamut)" Id="WmPromoSagecheckbox" @bind-Value="Flags.WMPromoSage">Promo Sage</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="@(Flags.GenerateNewSpellbook != true)" Id="WmLampBonuscheckbox" @bind-Value="Flags.WMLampBonus">Lamp Bonus</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="@(Flags.GenerateNewSpellbook != true)" Id="WmAspellBonuscheckbox" @bind-Value="Flags.WMAspellsBonus">A-Spells Bonus</CheckBox>
 
 
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMPlus50XPcheckbox" @bind-Value="Flags.WMPlus50XP">+50%XP</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMPlus100XPcheckbox" @bind-Value="Flags.WMPlus100XP">+100%XP</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="Flags.MpGainOnMaxGainMode == MpGainOnMaxGain.Blursed" Id="WMMaxMPPluscheckbox" @bind-Value="Flags.WMMaxMPPlus">Max+Mp+</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="WMPlus50XPcheckbox" @bind-Value="Flags.WMPlus50XP">+50%XP</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="WMPlus100XPcheckbox" @bind-Value="Flags.WMPlus100XP">+100%XP</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="Flags.MpGainOnMaxGainMode == MpGainOnMaxGain.Blursed" Id="WMMaxMPPluscheckbox" @bind-Value="Flags.WMMaxMPPlus">Max+Mp+</CheckBox>
 
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="WMSpellAdddropdown" @bind-Value="Flags.WMSpellAdd">Single Spell Bonus</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="WMSpellBonusdropdown" @bind-Value="Flags.WMSpellBonus">Innate Magic Bonus</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="WMSpellAdddropdown" @bind-Value="Flags.WMSpellAdd">Single Spell Bonus</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="WMSpellBonusdropdown" @bind-Value="Flags.WMSpellBonus">Innate Magic Bonus</EnumDropDown>
 
 
                 <h4>Maluses</h4>
 
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMMinusOnehitcheckbox" @bind-Value="Flags.WMMinusOneHit">-1 Hit%/Lvl</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMMinusOneMdefcheckbox" @bind-Value="Flags.WMMinusOneMdef">-1 Mdef/Lvl</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="WMMinusOnehitcheckbox" @bind-Value="Flags.WMMinusOneHit">-1 Hit%/Lvl</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="WMMinusOneMdefcheckbox" @bind-Value="Flags.WMMinusOneMdef">-1 Mdef/Lvl</CheckBox>
 
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WmNoBracletcheckbox" @bind-Value="Flags.WMNoBracelet">No Bracelets</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.ArmorCrafter != true)" Id="WmNoProRingcheckbox" @bind-Value="Flags.WMNoProRing">No ProRing</CheckBox>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.NoMasamune != true)" Id="WmMasaCursedropdown" @bind-Value="Flags.WMMasaCurse">Masamune Curse</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.RibbonMode == RibbonMode.Vanilla)" Id="WmRibbonCursedropdown" @bind-Value="Flags.WmRibbonCurse">Ribbon Curse</EnumDropDown>
+                <CheckBox UpdateAction="@UpdateAction" Id="WmNoBracletcheckbox" @bind-Value="Flags.WMNoBracelet">No Bracelets</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="@(Flags.ArmorCrafter != true)" Id="WmNoProRingcheckbox" @bind-Value="Flags.WMNoProRing">No ProRing</CheckBox>
+                <EnumDropDown UpdateAction="@UpdateAction" IsEnabled="@(Flags.NoMasamune != true)" Id="WmMasaCursedropdown" @bind-Value="Flags.WMMasaCurse">Masamune Curse</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" IsEnabled="@(Flags.RibbonMode == RibbonMode.Vanilla)" Id="WmRibbonCursedropdown" @bind-Value="Flags.WmRibbonCurse">Ribbon Curse</EnumDropDown>
 
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="WMMinus4MaxMPcheckbox" @bind-Value="Flags.WMMinus4MaxMP">-4 Max MP</CheckBox>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="WMSpellRemovedropdown" @bind-Value="Flags.WMSpellRemove">Single Spell Remove</EnumDropDown>
+                <CheckBox UpdateAction="@UpdateAction" Id="WMMinus4MaxMPcheckbox" @bind-Value="Flags.WMMinus4MaxMP">-4 Max MP</CheckBox>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="WMSpellRemovedropdown" @bind-Value="Flags.WMSpellRemove">Single Spell Remove</EnumDropDown>
 
                 <h4>Key Items</h4>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="WMKIdropdown" @bind-Value="Flags.WMKeyItems">Start with Key Item</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="WMKIdropdown" @bind-Value="Flags.WMKeyItems">Start with Key Item</EnumDropDown>
 
                 <div class="checkbox-cell"></div>
             </div>
             <div class="col2">
                 <h4>Thief</h4>
                 <h4>Stats and Gold </h4>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="ThStrpooldropdown" @bind-Value="Flags.Thiefstr">Strength</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="ThAgipooldropdown" @bind-Value="Flags.Thiefagi">Agility</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="ThVitpooldropdown" @bind-Value="Flags.Thiefvit">Vitality</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="ThLuckpooldropdown" @bind-Value="Flags.Thiefluck">Luck</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="ThHPPooldropdown" @bind-Value="Flags.ThiefHP">HP</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="ThHitPercentpooldropdown" @bind-Value="Flags.ThiefHit">Hit Percentage</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="ThMDefpooldropdown" @bind-Value="Flags.ThiefMdef">Magic Defense</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.IntAffectsSpells != false)" Id="ThIntpooldropdown" @bind-Value="Flags.ThiefInt">Intelligence</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="ThGoldpooldropdown" @bind-Value="Flags.Thiefgold">Starting Gold</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="ThStrpooldropdown" @bind-Value="Flags.Thiefstr">Strength</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="ThAgipooldropdown" @bind-Value="Flags.Thiefagi">Agility</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="ThVitpooldropdown" @bind-Value="Flags.Thiefvit">Vitality</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="ThLuckpooldropdown" @bind-Value="Flags.Thiefluck">Luck</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="ThHPPooldropdown" @bind-Value="Flags.ThiefHP">HP</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="ThHitPercentpooldropdown" @bind-Value="Flags.ThiefHit">Hit Percentage</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="ThMDefpooldropdown" @bind-Value="Flags.ThiefMdef">Magic Defense</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" IsEnabled="@(Flags.IntAffectsSpells != false)" Id="ThIntpooldropdown" @bind-Value="Flags.ThiefInt">Intelligence</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="ThGoldpooldropdown" @bind-Value="Flags.Thiefgold">Starting Gold</EnumDropDown>
 
                 <h4>Blessings</h4>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThEquipAxescheckbox" @bind-Value="Flags.ThEquipAxes">Equip Axes</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThEquipShirtscheckbox" @bind-Value="Flags.ThEquipShirts">Equip Shirts</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="TheEquipShieldscheckbox" @bind-Value="Flags.ThEquipShields">Equip Shields</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThEquipHelmBonkcheckbox" @bind-Value="Flags.ThEquipHelmBonk">Equip Helm and Gauntlets</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThImpThorcheckbox" @bind-Value="Flags.ThImpThor">Improved Thor Hammer</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThLegendarySwordscheckbox" @bind-Value="Flags.ThLegendarySwords">Equip Legendary Swords</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThFighterWeaponscheckbox" @bind-Value="Flags.ThFiWeapons">Fighter Weapons</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="@((Flags.NoTail =! false) & !Flags.FightBahamut)" Id="ThFighterArmorcheckbox" @bind-Value="Flags.ThFiArmor">Promo Fighter Armor</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThRmArmorcheckbox"@bind-Value="Flags.ThRMArmor">Equip RM Armor</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.Weaponizer != true)" Id="ThImpCatclawcheckbox" @bind-Value="Flags.ThImpCatclaw">Improved Catclaw</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.ArmorCrafter != true)" Id="ThWoodAdeptcheckbox" @bind-Value="Flags.ThWoodAdept">Wood Adept</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.Weaponizer != true)" Id="ThDualWieldcheckbox" @bind-Value="Flags.ThDualWield">Dual Wield</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="ThEquipAxescheckbox" @bind-Value="Flags.ThEquipAxes">Equip Axes</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="ThEquipShirtscheckbox" @bind-Value="Flags.ThEquipShirts">Equip Shirts</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="TheEquipShieldscheckbox" @bind-Value="Flags.ThEquipShields">Equip Shields</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="ThEquipHelmBonkcheckbox" @bind-Value="Flags.ThEquipHelmBonk">Equip Helm and Gauntlets</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="ThImpThorcheckbox" @bind-Value="Flags.ThImpThor">Improved Thor Hammer</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="ThLegendarySwordscheckbox" @bind-Value="Flags.ThLegendarySwords">Equip Legendary Swords</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="ThFighterWeaponscheckbox" @bind-Value="Flags.ThFiWeapons">Fighter Weapons</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="@((Flags.NoTail =! false) & !Flags.FightBahamut)" Id="ThFighterArmorcheckbox" @bind-Value="Flags.ThFiArmor">Promo Fighter Armor</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="ThRmArmorcheckbox"@bind-Value="Flags.ThRMArmor">Equip RM Armor</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="@(Flags.Weaponizer != true)" Id="ThImpCatclawcheckbox" @bind-Value="Flags.ThImpCatclaw">Improved Catclaw</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="@(Flags.ArmorCrafter != true)" Id="ThWoodAdeptcheckbox" @bind-Value="Flags.ThWoodAdept">Wood Adept</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="@(Flags.Weaponizer != true)" Id="ThDualWieldcheckbox" @bind-Value="Flags.ThDualWield">Dual Wield</CheckBox>
 
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThResistSelectcheckbox" @bind-Value="Flags.ThResistSelect">Resistances</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.ThResistSelect != false)" Id="ThResistStatuscheckbox" @bind-Value="Flags.ThResistStatus">Status</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.ThResistSelect != false)" Id="ThResistPoisoncheckbox" @bind-Value="Flags.ThResistPoison">Poison</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.ThResistSelect != false)" Id="ThResistTimecheckbox" @bind-Value="Flags.ThResistTime">Time</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.ThResistSelect != false)" Id="ThResistDeathcheckbox" @bind-Value="Flags.ThResistDeath">Death</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.ThResistSelect != false)" Id="ThResistFirecheckbox" @bind-Value="Flags.ThResistFire">Fire</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.ThResistSelect != false)" Id="ThResistIcecheckbox" @bind-Value="Flags.ThResistIce">Ice</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.ThResistSelect != false)" Id="ThResistLitcheckbox" @bind-Value="Flags.ThResistLit">Lightning</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.ThResistSelect != false)" Id="ThResistEarthcheckbox" @bind-Value="Flags.ThResistEarth">Earth</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThResistPEDTScheckbox" @bind-Value="Flags.ThResistPEDTS">Resist PEDTS</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="ThResistSelectcheckbox" @bind-Value="Flags.ThResistSelect">Resistances</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.ThResistSelect != false)" Id="ThResistStatuscheckbox" @bind-Value="Flags.ThResistStatus">Status</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.ThResistSelect != false)" Id="ThResistPoisoncheckbox" @bind-Value="Flags.ThResistPoison">Poison</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.ThResistSelect != false)" Id="ThResistTimecheckbox" @bind-Value="Flags.ThResistTime">Time</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.ThResistSelect != false)" Id="ThResistDeathcheckbox" @bind-Value="Flags.ThResistDeath">Death</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.ThResistSelect != false)" Id="ThResistFirecheckbox" @bind-Value="Flags.ThResistFire">Fire</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.ThResistSelect != false)" Id="ThResistIcecheckbox" @bind-Value="Flags.ThResistIce">Ice</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.ThResistSelect != false)" Id="ThResistLitcheckbox" @bind-Value="Flags.ThResistLit">Lightning</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.ThResistSelect != false)" Id="ThResistEarthcheckbox" @bind-Value="Flags.ThResistEarth">Earth</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="ThResistPEDTScheckbox" @bind-Value="Flags.ThResistPEDTS">Resist PEDTS</CheckBox>
 
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThHurtUndeadcheckbox" @bind-Value="Flags.ThHuntUndead">Hurt Undead</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThHurtDragoncheckbox" @bind-Value="Flags.ThHurtDragon">Hurt Dragon</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThHurtAllcheckbox" @bind-Value="Flags.ThHurtAll">Hurt All</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="ThHurtUndeadcheckbox" @bind-Value="Flags.ThHuntUndead">Hurt Undead</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="ThHurtDragoncheckbox" @bind-Value="Flags.ThHurtDragon">Hurt Dragon</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="ThHurtAllcheckbox" @bind-Value="Flags.ThHurtAll">Hurt All</CheckBox>
 
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThPlus2MdefLvlcheckbox" @bind-Value="Flags.ThPlus2MdefLvl">+2 Mdef/Lvl</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.GenerateNewSpellbook != true)" Id="ThDarkBonuscheckbox" @bind-Value="Flags.ThDarkBonus">Dark Bonus</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.GenerateNewSpellbook != true)" Id="ThSleepBonuscheckbox" @bind-Value="Flags.ThSleepBonus">Sleep Bonus</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.GenerateNewSpellbook != true)" Id="ThSlowBonuscheckbox" @bind-Value="Flags.ThSlowBonus">Slow Bonus</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="ThPlus2MdefLvlcheckbox" @bind-Value="Flags.ThPlus2MdefLvl">+2 Mdef/Lvl</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="@(Flags.GenerateNewSpellbook != true)" Id="ThDarkBonuscheckbox" @bind-Value="Flags.ThDarkBonus">Dark Bonus</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="@(Flags.GenerateNewSpellbook != true)" Id="ThSleepBonuscheckbox" @bind-Value="Flags.ThSleepBonus">Sleep Bonus</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="@(Flags.GenerateNewSpellbook != true)" Id="ThSlowBonuscheckbox" @bind-Value="Flags.ThSlowBonus">Slow Bonus</CheckBox>
 
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThPlus50XPcheckbox" @bind-Value="Flags.ThPlus50XP">+50% XP</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThPlus100XPcheckbox" @bind-Value="Flags.ThPlus100XP">+100% XP</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="Flags.MpGainOnMaxGainMode == MpGainOnMaxGain.Blursed" Id="ThMaxMPPluscheckbox" @bind-Value="Flags.ThMaxMPPlus">Max+Mp+</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="ThPlus50XPcheckbox" @bind-Value="Flags.ThPlus50XP">+50% XP</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="ThPlus100XPcheckbox" @bind-Value="Flags.ThPlus100XP">+100% XP</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="Flags.MpGainOnMaxGainMode == MpGainOnMaxGain.Blursed" Id="ThMaxMPPluscheckbox" @bind-Value="Flags.ThMaxMPPlus">Max+Mp+</CheckBox>
 
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" IsEnabled="@((Flags.RandomizeClassCasting) & Flags.LockpickingLevelRequirement > 1)" Id="ThMagicBonusdropdown" @bind-Value="Flags.ThMagicBonus">Innate Magic Bonus</EnumDropDown>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.Lockpicking)" Id="ThEarlyLockpickcheckbox" @bind-Value="Flags.ThEarlyLockpick">Early Lockpick</CheckBox>
+                <EnumDropDown UpdateAction="@UpdateAction" IsEnabled="@((Flags.RandomizeClassCasting) & Flags.LockpickingLevelRequirement > 1)" Id="ThMagicBonusdropdown" @bind-Value="Flags.ThMagicBonus">Innate Magic Bonus</EnumDropDown>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="@(Flags.Lockpicking)" Id="ThEarlyLockpickcheckbox" @bind-Value="Flags.ThEarlyLockpick">Early Lockpick</CheckBox>
 
                 <h4>Maluses</h4>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThMinusOneHitcheckbox" @bind-Value="Flags.ThMinusOneHit">-1 Hit%/Lvl</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThMinusOneMdefcheckbox" @bind-Value="Flags.ThMinusOneMdef">-1 Mdef/Lvl</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="ThMinusOneHitcheckbox" @bind-Value="Flags.ThMinusOneHit">-1 Hit%/Lvl</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="ThMinusOneMdefcheckbox" @bind-Value="Flags.ThMinusOneMdef">-1 Mdef/Lvl</CheckBox>
 
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="ThNoBraceletscheckbox" @bind-Value="Flags.ThNoBracelets">No Bracelets</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.ArmorCrafter != true)" Id="ThNoProringcheckbox" @bind-Value="Flags.ThNoProring">No ProRing</CheckBox>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.NoMasamune != true)" Id="ThMasaCursedropdown" @bind-Value="Flags.ThMasaCurse">Masamune Curse</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.RibbonMode == RibbonMode.Vanilla)" Id="ThRibbonCursedropdown"@bind-Value="Flags.ThRibbonCurse">Ribbon Curse</EnumDropDown>
+                <CheckBox UpdateAction="@UpdateAction" Id="ThNoBraceletscheckbox" @bind-Value="Flags.ThNoBracelets">No Bracelets</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="@(Flags.ArmorCrafter != true)" Id="ThNoProringcheckbox" @bind-Value="Flags.ThNoProring">No ProRing</CheckBox>
+                <EnumDropDown UpdateAction="@UpdateAction" IsEnabled="@(Flags.NoMasamune != true)" Id="ThMasaCursedropdown" @bind-Value="Flags.ThMasaCurse">Masamune Curse</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" IsEnabled="@(Flags.RibbonMode == RibbonMode.Vanilla)" Id="ThRibbonCursedropdown"@bind-Value="Flags.ThRibbonCurse">Ribbon Curse</EnumDropDown>
 
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="@((Flags.RandomizeClassCasting) & Flags.LockpickingLevelRequirement < 50)" Id="ThLateLockpickcheckbox" @bind-Value="Flags.ThLateLockpicking">Late Lockpicking</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="@((Flags.NoTail =! false) & !Flags.FightBahamut)" Id="ThNoPromoSpellscheckbox" @bind-Value="Flags.ThNoPromoSpells">No Promo Spells</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="@((Flags.RandomizeClassCasting) & Flags.LockpickingLevelRequirement < 50)" Id="ThLateLockpickcheckbox" @bind-Value="Flags.ThLateLockpicking">Late Lockpicking</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="@((Flags.NoTail =! false) & !Flags.FightBahamut)" Id="ThNoPromoSpellscheckbox" @bind-Value="Flags.ThNoPromoSpells">No Promo Spells</CheckBox>
 
                 <h4>Key Items</h4>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="ThKeyItemsdropdown" @bind-Value="Flags.ThKeyItems">Key Items</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="ThKeyItemsdropdown" @bind-Value="Flags.ThKeyItems">Key Items</EnumDropDown>
 
                 <h4>Red Mage</h4>
                 <h4>Stats and Gold</h4>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="RmStrpooldropdown" @bind-Value="Flags.Rmstr">Strength</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="RmAgipooldropdown" @bind-Value="Flags.Rmagi">Agility</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="RmVitpooldropdown" @bind-Value="Flags.Rmvit">Vitality</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="RmLuckpooldropdown" @bind-Value="Flags.Rmluck">Luck</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="RmHPPooldropdown" @bind-Value="Flags.RmHP">HP</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="RmHitPercentpooldropdown" @bind-Value="Flags.Rmhit">Hit Percentage</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="RmMDefpooldropdown" @bind-Value="Flags.Rmmdef">Magic Defense</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.IntAffectsSpells != false)" Id="RmIntpooldropdown" @bind-Value="Flags.Rmint">Intelligence</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="RmGoldpooldropdown" @bind-Value="Flags.Rmgold">Starting Gold</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="RmStrpooldropdown" @bind-Value="Flags.Rmstr">Strength</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="RmAgipooldropdown" @bind-Value="Flags.Rmagi">Agility</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="RmVitpooldropdown" @bind-Value="Flags.Rmvit">Vitality</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="RmLuckpooldropdown" @bind-Value="Flags.Rmluck">Luck</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="RmHPPooldropdown" @bind-Value="Flags.RmHP">HP</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="RmHitPercentpooldropdown" @bind-Value="Flags.Rmhit">Hit Percentage</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="RmMDefpooldropdown" @bind-Value="Flags.Rmmdef">Magic Defense</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" IsEnabled="@(Flags.IntAffectsSpells != false)" Id="RmIntpooldropdown" @bind-Value="Flags.Rmint">Intelligence</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="RmGoldpooldropdown" @bind-Value="Flags.Rmgold">Starting Gold</EnumDropDown>
 
                 <h4>Blessing</h4>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmEquipAxescheckbox" @bind-Value="Flags.RmEquipAxes">Equip Axes</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmEquipShirtscheckbox" @bind-Value="Flags.RmEquipShirts">Equip Shirts</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmEquipShieldschecbox" @bind-Value="Flags.RmEquipShields">Equip Sheilds</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmEquipHelmBonkcheckbox" @bind-Value="Flags.RmEquipHelmBonk">Equip Helms and Gauntlets</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmLegendarySwordscheckbox" @bind-Value="Flags.RmLegendarySwords">Equip Legendary Swords</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmFighterWeaponscheckbox" @bind-Value="Flags.RmFiWeapons">Equip Fighter Weapons</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmFighterArmorcheckbox" @bind-Value="Flags.RmFiArmor">Equip Fighter Armor</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmImpCatclawcheckbox" @bind-Value="Flags.RmImpCatclaw">Improved Catclaw</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="@((Flags.NoTail =! false) & !Flags.FightBahamut)" Id="RmPromoFighterArmorcheckbox" @bind-value="Flags.RmPromoFiArmor">Promo Fighter Armor</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.ArmorCrafter != true)" Id="RmWoodAdeptcheckbox" @bind-Value="Flags.RmWoodAdept">Wood Adept</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="RmEquipAxescheckbox" @bind-Value="Flags.RmEquipAxes">Equip Axes</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="RmEquipShirtscheckbox" @bind-Value="Flags.RmEquipShirts">Equip Shirts</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="RmEquipShieldschecbox" @bind-Value="Flags.RmEquipShields">Equip Sheilds</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="RmEquipHelmBonkcheckbox" @bind-Value="Flags.RmEquipHelmBonk">Equip Helms and Gauntlets</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="RmLegendarySwordscheckbox" @bind-Value="Flags.RmLegendarySwords">Equip Legendary Swords</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="RmFighterWeaponscheckbox" @bind-Value="Flags.RmFiWeapons">Equip Fighter Weapons</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="RmFighterArmorcheckbox" @bind-Value="Flags.RmFiArmor">Equip Fighter Armor</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="RmImpCatclawcheckbox" @bind-Value="Flags.RmImpCatclaw">Improved Catclaw</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="@((Flags.NoTail =! false) & !Flags.FightBahamut)" Id="RmPromoFighterArmorcheckbox" @bind-value="Flags.RmPromoFiArmor">Promo Fighter Armor</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="@(Flags.ArmorCrafter != true)" Id="RmWoodAdeptcheckbox" @bind-Value="Flags.RmWoodAdept">Wood Adept</CheckBox>
 
 
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmPlus2lvl1MPcheckbox" @bind-Value="Flags.RmPlus2lvl1MP">+2 MP lvl 1</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmPlus1MPAllcheckbox" @bind-Value="Flags.RmPlus1MPAll">+1 MP All Levels</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="RmPlus2lvl1MPcheckbox" @bind-Value="Flags.RmPlus2lvl1MP">+2 MP lvl 1</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="RmPlus1MPAllcheckbox" @bind-Value="Flags.RmPlus1MPAll">+1 MP All Levels</CheckBox>
 
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmHurtUndeadcheckbox" @bind-Value="Flags.RmHurtUndead">Hurt Undead</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmHurtDragoncheckbox" @bind-Value="Flags.RmHurtDragon">Hurt Dragon</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmHurtAllcheckbox" @bind-Value="Flags.RmHurtAll">Hurt All</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="RmHurtUndeadcheckbox" @bind-Value="Flags.RmHurtUndead">Hurt Undead</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="RmHurtDragoncheckbox" @bind-Value="Flags.RmHurtDragon">Hurt Dragon</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="RmHurtAllcheckbox" @bind-Value="Flags.RmHurtAll">Hurt All</CheckBox>
 
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmResistSelectcheckbox" @bind-Value="Flags.RmResistSelect">Resistances</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.RmResistSelect != false)" Id="RmResistStatuscheckbox" @bind-Value="Flags.RmResistStatus">Status</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.RmResistSelect != false)" Id="RmResistPoisoncheckbox" @bind-Value="Flags.RmResistPoison">Poison</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.RmResistSelect != false)" Id="RmResistTimecheckbox" @bind-Value="Flags.RmResistTime">Time</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.RmResistSelect != false)" Id="RmResistDeathcheckbox" @bind-Value="Flags.RmResistDeath">Death</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.RmResistSelect != false)" Id="RmResistFirecheckbox" @bind-Value="Flags.RmResistFire">Fire</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.RmResistSelect != false)" Id="RmResistIcecheckbox" @bind-Value="Flags.RmResistIce">Ice</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.RmResistSelect != false)" Id="RmResistLitcheckbox" @bind-Value="Flags.RmResistLit">Lightning</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.RmResistSelect != false)" Id="RmResistEarthcheckbox" @bind-Value="Flags.RmResistEarth">Earth</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmResistPEDTScheckbox" @bind-Value="Flags.RmResistPEDTS">Resist PEDTS</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmResistAllcheckbox" @bind-Value="Flags.RmResistAll">Resist All</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="RmResistSelectcheckbox" @bind-Value="Flags.RmResistSelect">Resistances</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.RmResistSelect != false)" Id="RmResistStatuscheckbox" @bind-Value="Flags.RmResistStatus">Status</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.RmResistSelect != false)" Id="RmResistPoisoncheckbox" @bind-Value="Flags.RmResistPoison">Poison</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.RmResistSelect != false)" Id="RmResistTimecheckbox" @bind-Value="Flags.RmResistTime">Time</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.RmResistSelect != false)" Id="RmResistDeathcheckbox" @bind-Value="Flags.RmResistDeath">Death</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.RmResistSelect != false)" Id="RmResistFirecheckbox" @bind-Value="Flags.RmResistFire">Fire</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.RmResistSelect != false)" Id="RmResistIcecheckbox" @bind-Value="Flags.RmResistIce">Ice</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.RmResistSelect != false)" Id="RmResistLitcheckbox" @bind-Value="Flags.RmResistLit">Lightning</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.RmResistSelect != false)" Id="RmResistEarthcheckbox" @bind-Value="Flags.RmResistEarth">Earth</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="RmResistPEDTScheckbox" @bind-Value="Flags.RmResistPEDTS">Resist PEDTS</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="RmResistAllcheckbox" @bind-Value="Flags.RmResistAll">Resist All</CheckBox>
 
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmPlus2Mdefcheckbox" @bind-Value="Flags.RmPlus2Mdef">+2 Mdef/Lvl</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmImprovedMPcheckbox" @bind-Value="Flags.RmImprovedMP">Improved MP</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmSagecheckbox" @bind-Value="Flags.RmSage">Sage</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="@((Flags.NoTail =! false) & !Flags.FightBahamut)" Id="RmPromoSagecheckbox" @bind-Value="Flags.RmPromoSage">Promo Sage</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.GenerateNewSpellbook != true)" Id="RmLampBonuscheckbox" @bind-Value="Flags.RmLampBonus">Lamp Bonus</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.GenerateNewSpellbook != true)" Id="RmAspellBonuscheckbox" @bind-Value="Flags.RmAspellBonus">A-Spells Bonus</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.GenerateNewSpellbook != true)" Id="RmDarkBonuscheckbox" @bind-Value="Flags.RmDarkBonus">Dark Bonus</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.GenerateNewSpellbook != true)" Id="RmSleepBonuscheckbox" @bind-Value="Flags.RmSleepBonus">Sleep Bonus</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.GenerateNewSpellbook != true)" Id="RmSlowBonuscheckbox" @bind-Value="Flags.RmSlowBonus">Slow Bonus</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="RmPlus2Mdefcheckbox" @bind-Value="Flags.RmPlus2Mdef">+2 Mdef/Lvl</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="RmImprovedMPcheckbox" @bind-Value="Flags.RmImprovedMP">Improved MP</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="RmSagecheckbox" @bind-Value="Flags.RmSage">Sage</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="@((Flags.NoTail =! false) & !Flags.FightBahamut)" Id="RmPromoSagecheckbox" @bind-Value="Flags.RmPromoSage">Promo Sage</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="@(Flags.GenerateNewSpellbook != true)" Id="RmLampBonuscheckbox" @bind-Value="Flags.RmLampBonus">Lamp Bonus</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="@(Flags.GenerateNewSpellbook != true)" Id="RmAspellBonuscheckbox" @bind-Value="Flags.RmAspellBonus">A-Spells Bonus</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="@(Flags.GenerateNewSpellbook != true)" Id="RmDarkBonuscheckbox" @bind-Value="Flags.RmDarkBonus">Dark Bonus</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="@(Flags.GenerateNewSpellbook != true)" Id="RmSleepBonuscheckbox" @bind-Value="Flags.RmSleepBonus">Sleep Bonus</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="@(Flags.GenerateNewSpellbook != true)" Id="RmSlowBonuscheckbox" @bind-Value="Flags.RmSlowBonus">Slow Bonus</CheckBox>
 
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RMPlus50XPcheckbox" @bind-Value="Flags.RmPlus50XP">+50% XP</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmPlus100XPcheckbox" @bind-Value="Flags.RmPlus100XP">+100% XP</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="Flags.MpGainOnMaxGainMode == MpGainOnMaxGain.Blursed" Id="RmMaxMPPluscheckbox" @bind-Value="Flags.RmMaxMPPlus">Max+Mp+</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="RMPlus50XPcheckbox" @bind-Value="Flags.RmPlus50XP">+50% XP</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="RmPlus100XPcheckbox" @bind-Value="Flags.RmPlus100XP">+100% XP</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="Flags.MpGainOnMaxGainMode == MpGainOnMaxGain.Blursed" Id="RmMaxMPPluscheckbox" @bind-Value="Flags.RmMaxMPPlus">Max+Mp+</CheckBox>
 
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="RmSpellAdddropdown" @bind-Value="Flags.RmSpellAdd">Single Spell Add</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="RmMagicBonusdropdown" @bind-Value="Flags.RmSpellBonus">Innate Magic Bonus</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="RmSpellAdddropdown" @bind-Value="Flags.RmSpellAdd">Single Spell Add</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="RmMagicBonusdropdown" @bind-Value="Flags.RmSpellBonus">Innate Magic Bonus</EnumDropDown>
 
                 <h4>Maluses</h4>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmMinusOneHitcheckbox" @bind-Value="Flags.RmMinusOneHit">-1 Hit%/Lvl</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmMinusOneMdefcheckbox" @bind-Value="Flags.RmMinusOneMdef">-1 Mdef/Lvl</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="RmMinusOneHitcheckbox" @bind-Value="Flags.RmMinusOneHit">-1 Hit%/Lvl</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="RmMinusOneMdefcheckbox" @bind-Value="Flags.RmMinusOneMdef">-1 Mdef/Lvl</CheckBox>
 
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmNoBraceletcheckbox" @bind-Value="Flags.RmNoBracelet ">No Bracelets</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.ArmorCrafter != true)" Id="RmNoProRingcheckbox" @bind-Value="Flags.RmNoProRing">No ProRing</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmThWeaponscheckbox" @bind-Value="Flags.RmThWeapons">Thief Weapons</CheckBox>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.NoMasamune != true)" Id="RmMasaCursecheckbox" @bind-Value="Flags.RmMasaCurse">Masamune Curse</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.RibbonMode == RibbonMode.Vanilla)" Id="RmRibbonCursecheckbox" @bind-Value="Flags.RmRibbonCurse">Ribbon Curse</EnumDropDown>
+                <CheckBox UpdateAction="@UpdateAction" Id="RmNoBraceletcheckbox" @bind-Value="Flags.RmNoBracelet ">No Bracelets</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="@(Flags.ArmorCrafter != true)" Id="RmNoProRingcheckbox" @bind-Value="Flags.RmNoProRing">No ProRing</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="RmThWeaponscheckbox" @bind-Value="Flags.RmThWeapons">Thief Weapons</CheckBox>
+                <EnumDropDown UpdateAction="@UpdateAction" IsEnabled="@(Flags.NoMasamune != true)" Id="RmMasaCursecheckbox" @bind-Value="Flags.RmMasaCurse">Masamune Curse</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" IsEnabled="@(Flags.RibbonMode == RibbonMode.Vanilla)" Id="RmRibbonCursecheckbox" @bind-Value="Flags.RmRibbonCurse">Ribbon Curse</EnumDropDown>
 
 
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="RmMinus4MaxMPcheckbox" @bind-Value="Flags.RmMinus4MaxMP">-4 MP Max</CheckBox>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="RmSpellRemovedropdown" @bind-Value="Flags.RmSpellRemove">Single Spell Remove</EnumDropDown>
+                <CheckBox UpdateAction="@UpdateAction" Id="RmMinus4MaxMPcheckbox" @bind-Value="Flags.RmMinus4MaxMP">-4 MP Max</CheckBox>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="RmSpellRemovedropdown" @bind-Value="Flags.RmSpellRemove">Single Spell Remove</EnumDropDown>
 
                 <h4>Key Items</h4>
 
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="RmKeyItemsdropdown" @bind-Value="Flags.RmKeyItems">Key Items</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="RmKeyItemsdropdown" @bind-Value="Flags.RmKeyItems">Key Items</EnumDropDown>
 
                 <h4>Black Mage</h4>
                 <h4>Stats and Gold</h4>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="BmStrpooldropdown" @bind-Value="Flags.Bmstr">Strength</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="BmAgipooldropdown" @bind-Value="Flags.Bmagi">Agility</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="BmVitpooldropdown" @bind-Value="Flags.Bmvit">Vitality</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="BmLuckpooldropdown" @bind-Value="Flags.Bmluck">Luck</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="BmHPPooldropdown" @bind-Value="Flags.BmHP">HP</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="BmHitPercentpooldropdown" @bind-Value="Flags.Bmhit">Hit Percentage</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="BmMDefpooldropdown" @bind-Value="Flags.Bmmdef">Magic Defense</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.IntAffectsSpells != false)" Id="BmIntpooldropdown" @bind-Value="Flags.Bmint">Intelligence</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="BmGoldpooldropdown" @bind-Value="Flags.Bmgold">Starting Gold</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="BmStrpooldropdown" @bind-Value="Flags.Bmstr">Strength</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="BmAgipooldropdown" @bind-Value="Flags.Bmagi">Agility</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="BmVitpooldropdown" @bind-Value="Flags.Bmvit">Vitality</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="BmLuckpooldropdown" @bind-Value="Flags.Bmluck">Luck</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="BmHPPooldropdown" @bind-Value="Flags.BmHP">HP</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="BmHitPercentpooldropdown" @bind-Value="Flags.Bmhit">Hit Percentage</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="BmMDefpooldropdown" @bind-Value="Flags.Bmmdef">Magic Defense</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" IsEnabled="@(Flags.IntAffectsSpells != false)" Id="BmIntpooldropdown" @bind-Value="Flags.Bmint">Intelligence</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="BmGoldpooldropdown" @bind-Value="Flags.Bmgold">Starting Gold</EnumDropDown>
 
                 <h4>Blessings</h4>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BmEquipAxescheckbox" @bind-Value="Flags.BMEquipAxes">Equip Axes</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BmEquiptShirtcheckbox" @bind-Value="Flags.BMEquipShirts">Equip Shirts</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BmEquipShieldscheckbox" @bind-Value="Flags.BMEquipShields">Equip Shields</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BmEquipHelmBonkcheckbox" @bind-Value="Flags.BMEquipHelmBonk">Equip Helms and Gauntlets</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BmLegendarySwordcheckbox" @bind-Value="Flags.BMLegendarySwords">Equip Legendary Swords</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BmFighterWeaponscheckbox" @bind-Value="Flags.BMFiSwords">Equip Fighter Weapons</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BmFighterArmorcheckbox" @bind-Value="Flags.BMFiArmor">Equip Fighter Armor</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BmThiefWeaponscheckbox" @bind-Value="Flags.BMEquipThWeapons">Equip Thief Weapons</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.Weaponizer != true)" Id="BmImpCatclawcheckbox" @bind-Value="Flags.BMImpCatclaw">Improved Catclaw</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BmRMArmorcheckbox" @bind-Value="Flags.BMRMArmor">Equip Red Mage Armor</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="@((Flags.NoTail =! false) & !Flags.FightBahamut)" Id="BmPromoFighterArmorcheckbox" @bind-Value="Flags.BMFiArmorPromo">Promo Fighter Armor</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.ArmorCrafter != true)" Id="BmWoodAdeptcheckbox" @bind-Value="Flags.BMWoodAdept">Wood Adept</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="BmEquipAxescheckbox" @bind-Value="Flags.BMEquipAxes">Equip Axes</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="BmEquiptShirtcheckbox" @bind-Value="Flags.BMEquipShirts">Equip Shirts</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="BmEquipShieldscheckbox" @bind-Value="Flags.BMEquipShields">Equip Shields</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="BmEquipHelmBonkcheckbox" @bind-Value="Flags.BMEquipHelmBonk">Equip Helms and Gauntlets</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="BmLegendarySwordcheckbox" @bind-Value="Flags.BMLegendarySwords">Equip Legendary Swords</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="BmFighterWeaponscheckbox" @bind-Value="Flags.BMFiSwords">Equip Fighter Weapons</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="BmFighterArmorcheckbox" @bind-Value="Flags.BMFiArmor">Equip Fighter Armor</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="BmThiefWeaponscheckbox" @bind-Value="Flags.BMEquipThWeapons">Equip Thief Weapons</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="@(Flags.Weaponizer != true)" Id="BmImpCatclawcheckbox" @bind-Value="Flags.BMImpCatclaw">Improved Catclaw</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="BmRMArmorcheckbox" @bind-Value="Flags.BMRMArmor">Equip Red Mage Armor</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="@((Flags.NoTail =! false) & !Flags.FightBahamut)" Id="BmPromoFighterArmorcheckbox" @bind-Value="Flags.BMFiArmorPromo">Promo Fighter Armor</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="@(Flags.ArmorCrafter != true)" Id="BmWoodAdeptcheckbox" @bind-Value="Flags.BMWoodAdept">Wood Adept</CheckBox>
 
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BmResistSelectcheckbox" @bind-Value="Flags.BMResistSelect">Resistances</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.BMResistSelect != false)" Id="BmResistStatuscheckbox" @bind-Value="Flags.BMResistStatus">Status</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.BMResistSelect != false)" Id="BmResistPoisoncheckbox" @bind-Value="Flags.BMResistPoison">Poison</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.BMResistSelect != false)" Id="BmResistTimecheckbox" @bind-Value="Flags.BMResistTime">Time</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.BMResistSelect != false)" Id="BmResistDeathcheckbox" @bind-Value="Flags.BMResistDeath">Death</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.BMResistSelect != false)" Id="BmResistFirecheckbox" @bind-Value="Flags.BMResistFire">Fire</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.BMResistSelect != false)" Id="BmResistIcecheckbox" @bind-Value="Flags.BMResistIce">Ice</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.BMResistSelect != false)" Id="BmResistLitcheckbox" @bind-Value="Flags.BMResistLit">Lightning</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Indent IsEnabled="@(Flags.BMResistSelect != false)" Id="BmResistEarthcheckbox" @bind-Value="Flags.BMResistEarth">Earth</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BmResistPEDTScheckbox" @bind-Value="Flags.BMResistPEDTS">Resist PEDTS</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BmResistAllcheckbox" @bind-Value="Flags.BMResistAll">Resist All</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="BmResistSelectcheckbox" @bind-Value="Flags.BMResistSelect">Resistances</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.BMResistSelect != false)" Id="BmResistStatuscheckbox" @bind-Value="Flags.BMResistStatus">Status</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.BMResistSelect != false)" Id="BmResistPoisoncheckbox" @bind-Value="Flags.BMResistPoison">Poison</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.BMResistSelect != false)" Id="BmResistTimecheckbox" @bind-Value="Flags.BMResistTime">Time</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.BMResistSelect != false)" Id="BmResistDeathcheckbox" @bind-Value="Flags.BMResistDeath">Death</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.BMResistSelect != false)" Id="BmResistFirecheckbox" @bind-Value="Flags.BMResistFire">Fire</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.BMResistSelect != false)" Id="BmResistIcecheckbox" @bind-Value="Flags.BMResistIce">Ice</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.BMResistSelect != false)" Id="BmResistLitcheckbox" @bind-Value="Flags.BMResistLit">Lightning</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.BMResistSelect != false)" Id="BmResistEarthcheckbox" @bind-Value="Flags.BMResistEarth">Earth</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="BmResistPEDTScheckbox" @bind-Value="Flags.BMResistPEDTS">Resist PEDTS</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="BmResistAllcheckbox" @bind-Value="Flags.BMResistAll">Resist All</CheckBox>
 
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BmHurtUndeadcheckbox" @bind-Value="Flags.BMHurtUndead">Hurt Undead</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BmHurtDragoncheckbox" @bind-Value="Flags.BMHurtDragon">Hurt Dragon</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BmHurtAllcheckxbox" @bind-Value="Flags.BMHurtAll">Hurt All</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="BmHurtUndeadcheckbox" @bind-Value="Flags.BMHurtUndead">Hurt Undead</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="BmHurtDragoncheckbox" @bind-Value="Flags.BMHurtDragon">Hurt Dragon</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="BmHurtAllcheckxbox" @bind-Value="Flags.BMHurtAll">Hurt All</CheckBox>
 
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BmPlus2lvl1MPcheckbox" @bind-Value="Flags.BMPlus2Lvl1MP">+2 MP lvl 1</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BmPlus1MPAllcheckbox" @bind-Value="Flags.BMPlus1MPAll">+1 MP All Levels</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="BmPlus2lvl1MPcheckbox" @bind-Value="Flags.BMPlus2Lvl1MP">+2 MP lvl 1</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="BmPlus1MPAllcheckbox" @bind-Value="Flags.BMPlus1MPAll">+1 MP All Levels</CheckBox>
 
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BmPlus2Mdefcheckbox" @bind-Value="Flags.BMPlus2Mdef">+2 Mdef/Lvl</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BmImprovedMPcheckbox" @bind-Value="Flags.BMImpMP">Improved MP</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="@((Flags.NoTail =! false) & !Flags.FightBahamut)" Id="BmPromosagecheckbox" @bind-Value="Flags.BMPromoSage">Promo Sage</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.GenerateNewSpellbook != true)" Id="BmDarkBonuscheckbox" @bind-Value="Flags.BMDarkBonus">Dark Bonus</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.GenerateNewSpellbook != true)" Id="BmSleepBonuscheckbox" @bind-Value="Flags.BMSleepBonus">Sleep Bonus</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.GenerateNewSpellbook != true)" Id="BmSlowBonuscheckbox" @bind-Value="Flags.BMSlowBonus">Slow Bonus</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="BmPlus2Mdefcheckbox" @bind-Value="Flags.BMPlus2Mdef">+2 Mdef/Lvl</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="BmImprovedMPcheckbox" @bind-Value="Flags.BMImpMP">Improved MP</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="@((Flags.NoTail =! false) & !Flags.FightBahamut)" Id="BmPromosagecheckbox" @bind-Value="Flags.BMPromoSage">Promo Sage</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="@(Flags.GenerateNewSpellbook != true)" Id="BmDarkBonuscheckbox" @bind-Value="Flags.BMDarkBonus">Dark Bonus</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="@(Flags.GenerateNewSpellbook != true)" Id="BmSleepBonuscheckbox" @bind-Value="Flags.BMSleepBonus">Sleep Bonus</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="@(Flags.GenerateNewSpellbook != true)" Id="BmSlowBonuscheckbox" @bind-Value="Flags.BMSlowBonus">Slow Bonus</CheckBox>
 
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BmPlus50XPcheckbox" @bind-Value="Flags.BMPlus50XP">+50% XP</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BmPlus100XPcheckbox" @bind-Value="Flags.BMPlus100XP">+100% XP</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="Flags.MpGainOnMaxGainMode == MpGainOnMaxGain.Blursed" Id="BmMaxMPPluscheckbox" @bind-Value="Flags.BMMaxMPPlus">Max+Mp+</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="BmPlus50XPcheckbox" @bind-Value="Flags.BMPlus50XP">+50% XP</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="BmPlus100XPcheckbox" @bind-Value="Flags.BMPlus100XP">+100% XP</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="Flags.MpGainOnMaxGainMode == MpGainOnMaxGain.Blursed" Id="BmMaxMPPluscheckbox" @bind-Value="Flags.BMMaxMPPlus">Max+Mp+</CheckBox>
 
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="BmSpellAdddropdown" @bind-Value="Flags.BMSpellAdd">Single Spell Add</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="BmMagicBonusdropdown" @bind-Value="Flags.BMSpellBonus">Innate Magic Bonus</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="BmSpellAdddropdown" @bind-Value="Flags.BMSpellAdd">Single Spell Add</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="BmMagicBonusdropdown" @bind-Value="Flags.BMSpellBonus">Innate Magic Bonus</EnumDropDown>
 
                 <h4>Maluses</h4>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BmMinusOneHitcheckbox" @bind-Value="Flags.BMMinus1Hit">-1 Hit%/Lvl</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BmMinusOneMdefcheckbox" @bind-Value="Flags.BMMinus1Mdef">-1 Mdef/Lvl</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="BmMinusOneHitcheckbox" @bind-Value="Flags.BMMinus1Hit">-1 Hit%/Lvl</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Id="BmMinusOneMdefcheckbox" @bind-Value="Flags.BMMinus1Mdef">-1 Mdef/Lvl</CheckBox>
 
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BmNoBraceletcheckbox" @bind-Value="Flags.BMNoBracelet">No Bracelets</CheckBox>
-                <CheckBox UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.ArmorCrafter != true)" Id="BmNoProRingcheckbox" @bind-Value="Flags.BMNoProRing">No ProRing</CheckBox>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.NoMasamune != true)" Id="BmMasaCursecheckbox" @bind-Value="Flags.BMMasaCurse">Masamune Curse</EnumDropDown>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" IsEnabled="@(Flags.RibbonMode == RibbonMode.Vanilla)" Id="BmRibbonCursecheckbox" @bind-Value="Flags.BMRibbonCurse">Ribbon Curse</EnumDropDown>
+                <CheckBox UpdateAction="@UpdateAction" Id="BmNoBraceletcheckbox" @bind-Value="Flags.BMNoBracelet">No Bracelets</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" IsEnabled="@(Flags.ArmorCrafter != true)" Id="BmNoProRingcheckbox" @bind-Value="Flags.BMNoProRing">No ProRing</CheckBox>
+                <EnumDropDown UpdateAction="@UpdateAction" IsEnabled="@(Flags.NoMasamune != true)" Id="BmMasaCursecheckbox" @bind-Value="Flags.BMMasaCurse">Masamune Curse</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" IsEnabled="@(Flags.RibbonMode == RibbonMode.Vanilla)" Id="BmRibbonCursecheckbox" @bind-Value="Flags.BMRibbonCurse">Ribbon Curse</EnumDropDown>
 
 
-                <CheckBox UpdateToolTip="@UpdateToolTipID" Id="BmMinus4MaxMPcheckbox" @bind-Value="Flags.BMMinus4MP">-4 MP Max</CheckBox>
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="BmSpellRemovedropdown" @bind-Value="Flags.BMSpellRemove">Single Spell Remove</EnumDropDown>
+                <CheckBox UpdateAction="@UpdateAction" Id="BmMinus4MaxMPcheckbox" @bind-Value="Flags.BMMinus4MP">-4 MP Max</CheckBox>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="BmSpellRemovedropdown" @bind-Value="Flags.BMSpellRemove">Single Spell Remove</EnumDropDown>
 
                 <h4>Key Items</h4>
 
-                <EnumDropDown UpdateToolTip="@UpdateToolTipID" Id="BmKeyItemsdropdown" @bind-Value="Flags.BMKeyItems">Key Items</EnumDropDown>
+                <EnumDropDown UpdateAction="@UpdateAction" Id="BmKeyItemsdropdown" @bind-Value="Flags.BMKeyItems">Key Items</EnumDropDown>
 
                 <div class="checkbox-cell"></div>
             </div>
@@ -451,7 +451,7 @@
 
 @code {
         [Parameter] public FF1Lib.Flags Flags { get; set; }
-        [Parameter] public Action<string, MouseEventArgs> UpdateToolTipID { get; set; }
+        [Parameter] public Action<string, string> UpdateAction { get; set; }
         [Parameter] public bool noTabLayout { get; set; }
         [Parameter] public bool IsOpen { get; set; } = true;
     }

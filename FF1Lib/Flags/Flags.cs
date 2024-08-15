@@ -657,7 +657,7 @@ namespace FF1Lib
 		public bool ExclusiveLegendaryWhiteShop { get; set; } = false;
 		public bool ExclusiveLegendaryItemShop { get; set; } = false;
 		public ClassRandomizationMode RandomizeClassMode { get; set; } = ClassRandomizationMode.None;
-
+		public ClassSelect ClassSelect { get; set; } = ClassSelect.FighterSelect;
 		public FiStrpool Fighterstr { get; set; } = FiStrpool.FiStrpoolnone;
 		public FiAgipool Fighteragi { get; set; } = FiAgipool.FiAgpoolinone;
 		public FiVitpool Fightervit { get; set; } = FiVitpool.FiVitpoolNone;

@@ -9,7 +9,21 @@ using System.Text;
 using System.Threading.Tasks;
 namespace FF1Lib
 {
-
+	public enum ClassSelect
+	{
+		[Description("Fighter")]
+		FighterSelect,
+		[Description("Thief")]
+		ThiefSelect,
+		[Description("Black Belt")]
+		BlackBeltSelect,
+		[Description("Red Mage")]
+		RedMageSelect,
+		[Description("White Mage")]
+		WhiteMageSelect,
+		[Description("Black Mage")]
+		BlackMageSelect,
+	}
 	public enum FiStrpool
 	{
 		[Description("None")]

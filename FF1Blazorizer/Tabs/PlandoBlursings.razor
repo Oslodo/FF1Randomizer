@@ -6,7 +6,7 @@
     {
 
             <h3>Plando Blurings</h3>
-            
+                <p>Max 3 Blessings, 3 Maluses and 1 Key Item per class. Note that the Resistances Flag counts as only 1 and can hold a max of 3 resistances</p>
                 <EnumDropDown UpdateAction="@UpdateAction" Id="ClassListdrodown" @bind-Value="Flags.ClassSelect">Class Select</EnumDropDown>
                
                 @if(Flags.ClassSelect == ClassSelect.FighterSelect)
@@ -347,7 +347,7 @@
                
 
                     <div class="col2">
-                    <h4>Blessing</h4>
+                    <h4>Blessings</h4>
                     <CheckBox UpdateAction="@UpdateAction" Id="RmEquipAxescheckbox" @bind-Value="Flags.RmEquipAxes">Equip Axes</CheckBox>
                     <CheckBox UpdateAction="@UpdateAction" Id="RmEquipShirtscheckbox" @bind-Value="Flags.RmEquipShirts">Equip Shirts</CheckBox>
                     <CheckBox UpdateAction="@UpdateAction" Id="RmEquipShieldschecbox" @bind-Value="Flags.RmEquipShields">Equip Sheilds</CheckBox>
@@ -444,14 +444,14 @@
                 <CheckBox UpdateAction="@UpdateAction" IsEnabled="@(!((bool)Flags.NoTail && !(bool)Flags.FightBahamut))" Id="BmPromoFighterArmorcheckbox" @bind-Value="Flags.BMFiArmorPromo">Promo Fighter Armor</CheckBox>
                 <CheckBox UpdateAction="@UpdateAction" IsEnabled="@(Flags.ArmorCrafter != true)" Id="BmWoodAdeptcheckbox" @bind-Value="Flags.BMWoodAdept">Wood Adept</CheckBox>
                 <CheckBox UpdateAction="@UpdateAction" Id="BmResistSelectcheckbox" @bind-Value="Flags.BMResistSelect">Resistances</CheckBox>
-                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.BMResistSelect != false)" Id="BmResistStatuscheckbox" @bind-Value="Flags.BMResistStatus">Status</CheckBox>
-                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.BMResistSelect != false)" Id="BmResistPoisoncheckbox" @bind-Value="Flags.BMResistPoison">Poison</CheckBox>
-                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.BMResistSelect != false)" Id="BmResistTimecheckbox" @bind-Value="Flags.BMResistTime">Time</CheckBox>
-                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.BMResistSelect != false)" Id="BmResistDeathcheckbox" @bind-Value="Flags.BMResistDeath">Death</CheckBox>
-                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.BMResistSelect != false)" Id="BmResistFirecheckbox" @bind-Value="Flags.BMResistFire">Fire</CheckBox>
-                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.BMResistSelect != false)" Id="BmResistIcecheckbox" @bind-Value="Flags.BMResistIce">Ice</CheckBox>
-                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.BMResistSelect != false)" Id="BmResistLitcheckbox" @bind-Value="Flags.BMResistLit">Lightning</CheckBox>
-                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.BMResistSelect != false)" Id="BmResistEarthcheckbox" @bind-Value="Flags.BMResistEarth">Earth</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.BMResistSelect)" Id="BmResistStatuscheckbox" @bind-Value="Flags.BMResistStatus">Status</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.BMResistSelect)" Id="BmResistPoisoncheckbox" @bind-Value="Flags.BMResistPoison">Poison</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.BMResistSelect)" Id="BmResistTimecheckbox" @bind-Value="Flags.BMResistTime">Time</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.BMResistSelect)" Id="BmResistDeathcheckbox" @bind-Value="Flags.BMResistDeath">Death</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.BMResistSelect)" Id="BmResistFirecheckbox" @bind-Value="Flags.BMResistFire">Fire</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.BMResistSelect)" Id="BmResistIcecheckbox" @bind-Value="Flags.BMResistIce">Ice</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.BMResistSelect)" Id="BmResistLitcheckbox" @bind-Value="Flags.BMResistLit">Lightning</CheckBox>
+                <CheckBox UpdateAction="@UpdateAction" Indent IsEnabled="@(Flags.BMResistSelect)" Id="BmResistEarthcheckbox" @bind-Value="Flags.BMResistEarth">Earth</CheckBox>
                 <CheckBox UpdateAction="@UpdateAction" Id="BmResistPEDTScheckbox" @bind-Value="Flags.BMResistPEDTS">Resist PEDTS</CheckBox>
                 <CheckBox UpdateAction="@UpdateAction" Id="BmResistAllcheckbox" @bind-Value="Flags.BMResistAll">Resist All</CheckBox>
                 <CheckBox UpdateAction="@UpdateAction" Id="BmHurtUndeadcheckbox" @bind-Value="Flags.BMHurtUndead">Hurt Undead</CheckBox>
@@ -489,6 +489,8 @@
         [Parameter] public Action<string, string> UpdateAction { get; set; }
         [Parameter] public bool noTabLayout { get; set; }
         [Parameter] public bool IsOpen { get; set; } = true;
+
+
     }
 
 

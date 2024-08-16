@@ -145,6 +145,15 @@ namespace FF1Lib
 			var exNinjaMPlist = new List<byte> { 0x00, 0x0F, 0x00, 0x0F, 0x00, 0x0F, 0x00, 0x0F, 0x00, 0x0F, 0x00, 0x0F, 0x00, 0x0F, 0x00, 0x0F, 0x00, 0x0F, 0x00, 0x0F, 0x00, 0x0F, 0x00, 0x0F,
 				0x00, 0x0F, 0x00, 0x0F, 0x00, 0x0F, 0x00, 0x0F, 0x00, 0x0F, 0x00, 0x0F, 0x00, 0x0F, 0x00, 0x0F, 0x00, 0x0F, 0x00, 0x0F, 0x00, 0x0F, 0x00, 0x0F, 0x00 };
 
+			//Masa and Ribbon Curse Setup
+			List<(string name, byte value)> ailments = new()
+			{
+				("Poison", 0x04),
+				("Stun", 0x10),
+				("Sleep", 0x20),
+				("Mute", 0x40),
+			};
+
 			//Master Bonus List
 
 			bonusList.AddRange(new List<BonusMalus>()
@@ -202,16 +211,87 @@ namespace FF1Lib
 				new BonusMalus(BonusMalusAction.StartWithGold, "+1400 GP", mod: 14),
 				new BonusMalus(BonusMalusAction.StartWithGold, "+400 GP", mod: 4),
 				new BonusMalus(BonusMalusAction.StartWithGold, "+2000 GP", mod: 20),
-
-
-
-
-
-
-
-				/*maluses.Add(new BonusMalus(BonusMalusAction.IntMod, "-10 Int.", mod: -10, Classes: new List<Classes> { Classes.Thief, Classes.RedMage, Classes.WhiteMage, Classes.BlackMage }));
-				maluses.Add(new BonusMalus(BonusMalusAction.IntMod, "-20 Int.", mod: -20, Classes: new List<Classes> { Classes.RedMage, Classes.WhiteMage, Classes.BlackMage }));*/
+				new BonusMalus(BonusMalusAction.StartWithGold, "+600 GP", mod: 6),
+				new BonusMalus(BonusMalusAction.StartWithGold, "+3000 GP", mod: 30),
+				new BonusMalus(BonusMalusAction.StartWithGold, "+800 GP", mod: 8),
+				new BonusMalus(BonusMalusAction.StartWithGold, "+4000 GP", mod: 40),
+				new BonusMalus(BonusMalusAction.StartWithGold, "+1500 GP", mod: 15),
+				new BonusMalus(BonusMalusAction.StartWithGold, "+6000 GP", mod: 60),
+				new BonusMalus(BonusMalusAction.StartWithGold, "+5000 GP", mod: 50),
+				new BonusMalus(BonusMalusAction.StartWithGold, "+20,000 GP", mod: 200),
+				new BonusMalus(BonusMalusAction.StartWithGold, "+20,000 GP", mod: 200),
+				//Promo tier
+				new BonusMalus(BonusMalusAction.ArmorAdd, "Promo FI @A", mod: 99, equipment: equipFighterArmor),
+				new BonusMalus(BonusMalusAction.PowerRW, "Promo Sage", mod: 0, spelllist: wmWhiteSpells.Concat(bmBlackSpells).Concat(wwWhiteSpells).Concat(bwBlackSpells).ToList()),
+				new BonusMalus(BonusMalusAction.MDefGrowth, "Promo\n +3 MDef", mod: 3, mod2: 99),
+				//Armorcrafter tier
+				new BonusMalus(BonusMalusAction.WoodAdept, "Wood@A@s@h Set\n Add Evade"),
+				new BonusMalus(BonusMalusAction.SteelLord, "Steel@A\n Cast Fast"),
+				//Add Single Spell code here
+				//Lockpicking tier
+				new BonusMalus(BonusMalusAction.LockpickingLevel, "EarlyLokpik", mod: -10),
+				//XP tier removed the duplicates as they are no longer needed for balancing
+				new BonusMalus(BonusMalusAction.BonusXp, "+50% XP", mod: 150),
+				new BonusMalus(BonusMalusAction.BonusXp, "+100% XP", mod: 200),
+				//Max MP on Gain
+				new BonusMalus(BonusMalusAction.MpGainOnMaxMpGain, "Max+Mp+"),
 			});
+			maluses.AddRange(new List<BonusMalus>()
+			{
+				new BonusMalus(BonusMalusAction.StrMod, "-10 Str.", mod: -10),
+				new BonusMalus(BonusMalusAction.StrMod, "-20 Str.", mod: -20),
+				new BonusMalus(BonusMalusAction.AgiMod, "-10 Agi.", mod: -10),
+				new BonusMalus(BonusMalusAction.AgiMod, "-20 Agi.", mod: -20),
+				new BonusMalus(BonusMalusAction.VitMod, "-10 Vit.", mod: -10),
+				new BonusMalus(BonusMalusAction.VitMod, "-20 Vit.", mod: -20),
+				new BonusMalus(BonusMalusAction.LckMod, "-5 Luck", mod: -5),
+				new BonusMalus(BonusMalusAction.LckMod, "-10 Luck", mod: -10),
+				new BonusMalus(BonusMalusAction.HpMod, "-15 HP", mod: -15),
+				new BonusMalus(BonusMalusAction.HpMod, "-30 HP", mod: -30),
+				new BonusMalus(BonusMalusAction.HpGrowth, "BlackM HP", binarylist: _classes[(int)Classes.BlackMage].HpGrowth),
+				new BonusMalus(BonusMalusAction.HitMod, "-10 Hit%", mod: -10),
+				new BonusMalus(BonusMalusAction.MDefMod, "-10 MDef", mod: -10),
+				new BonusMalus(BonusMalusAction.HitGrowth, "-1 Hit%/Lv", mod: -1),
+				new BonusMalus(BonusMalusAction.MDefGrowth, "-1 MDef/Lv", mod: -1),
+				new BonusMalus(BonusMalusAction.ArmorRemove, "No @B", equipment: braceletList),
+				new BonusMalus(BonusMalusAction.WeaponReplace, "Thief @S", equipment: equipThiefWeapon),
+				new BonusMalus(BonusMalusAction.SpcMax, "-4 Max MP", mod: -4),
+				//Int tier
+				new BonusMalus(BonusMalusAction.IntMod, "-10 Int.", mod: -10),
+				new BonusMalus(BonusMalusAction.IntMod, "-20 Int.", mod: -20),
+				//Gold tier
+				new BonusMalus(BonusMalusAction.StartWithGold, "-50 GP", mod: -1),
+				new BonusMalus(BonusMalusAction.StartWithGold, "-100 GP", mod: -1),
+				new BonusMalus(BonusMalusAction.StartWithGold, "-150 GP", mod: -1),
+				new BonusMalus(BonusMalusAction.StartWithGold, "-350 GP", mod: -1),
+				new BonusMalus(BonusMalusAction.StartWithGold, "-1100 GP", mod: -1),
+				new BonusMalus(BonusMalusAction.StartWithGold, "-4500 GP", mod: -1),
+				//Masa Curse tier
+				new BonusMalus(BonusMalusAction.MasaCurse, "Masa Curse\n Poison", mod: 0x04),
+				new BonusMalus(BonusMalusAction.MasaCurse, "Masa Curse\n Stun", mod: 0x10),
+				new BonusMalus(BonusMalusAction.MasaCurse, "Masa Curse\n Sleep", mod: 0x20),
+				new BonusMalus(BonusMalusAction.MasaCurse, "Masa Curse\n Mute", mod: 0x40),
+				//Ribbon Curse tier
+				new BonusMalus(BonusMalusAction.RibbonCurse, "Ribbon Curse\n Poison", mod: 0x04),
+				new BonusMalus(BonusMalusAction.RibbonCurse, "Ribbon Curse\n Stun ", mod: 0x10),
+				new BonusMalus(BonusMalusAction.RibbonCurse, "Ribbon Curse\n Sleep", mod: 0x20),
+				new BonusMalus(BonusMalusAction.RibbonCurse, "Ribbon Curse\n Mute", mod: 0x40),
+				//Promo Curse tier
+				new BonusMalus(BonusMalusAction.ArmorReplace, "No Promo @A", mod: 99, equipment: equipFighterArmorFull),
+				new BonusMalus(BonusMalusAction.ArmorReplace, "Promo RW @A", mod: 99, equipment: equipRedWizardArmorFull),
+				new BonusMalus(BonusMalusAction.NoPromoMagic, "No Promo Sp", mod: 0, mod2: 0, binarylist: nullSpells),
+				new BonusMalus(BonusMalusAction.UnarmedAttack, "Promo\n Unarmed", mod: 99),
+				//Armorcrafter tier
+				new BonusMalus(BonusMalusAction.ArmorRemove, "-" + olditemnames[(int)Item.ProRing], equipment: new List<Item> { Item.ProRing }),
+				//Add Single Spell code here
+				//Lockpicking tier
+				new BonusMalus(BonusMalusAction.LockpickingLevel, "LateLockpik", mod: 10),
+
+
+
+			});
+
+			
 
 		}
 	}

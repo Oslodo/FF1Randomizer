@@ -286,9 +286,6 @@ namespace FF1Lib
 				//Add Single Spell code here
 				//Lockpicking tier
 				new BonusMalus(BonusMalusAction.LockpickingLevel, "LateLockpik", mod: 10),
-
-
-
 			});
 
 			

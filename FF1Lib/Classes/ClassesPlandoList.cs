@@ -187,7 +187,7 @@ namespace FF1Lib
 				new BonusMalusPlando(BonusMalusAction.InnateResist, "Res. PEDTS", mod: (int)(SpellElement.Poison | SpellElement.Earth | SpellElement.Death | SpellElement.Time | SpellElement.Status)),
 				//start of strong tier
 				new BonusMalusPlando(BonusMalusAction.StrMod, "+40 Str.", mod: 40),
-				new     (BonusMalusAction.AgiMod, "+50 Agi.", mod: 50),
+				new BonusMalusPlando(BonusMalusAction.AgiMod, "+50 Agi.", mod: 50),
 				new BonusMalusPlando(BonusMalusAction.VitMod, "+40 Vit.", mod: 40),
 				new BonusMalusPlando(BonusMalusAction.LckMod, "+15 Luck", mod: 15),
 				new BonusMalusPlando(BonusMalusAction.HpMod, "+80 HP", mod: 80),
@@ -219,7 +219,6 @@ namespace FF1Lib
 				new BonusMalusPlando(BonusMalusAction.StartWithGold, "+6000 GP", mod: 60),
 				new BonusMalusPlando(BonusMalusAction.StartWithGold, "+5000 GP", mod: 50),
 				new BonusMalusPlando(BonusMalusAction.StartWithGold, "+20,000 GP", mod: 200),
-				new BonusMalusPlando(BonusMalusAction.StartWithGold, "+20,000 GP", mod: 200),
 				//Promo tier
 				new BonusMalusPlando(BonusMalusAction.ArmorAdd, "Promo FI @A", mod: 99, equipment: equipFighterArmor),
 				new BonusMalusPlando(BonusMalusAction.PowerRW, "Promo Sage", mod: 0, spelllist: wmWhiteSpells.Concat(bmBlackSpells).Concat(wwWhiteSpells).Concat(bwBlackSpells).ToList()),
@@ -244,7 +243,7 @@ namespace FF1Lib
 				new BonusMalusPlando(BonusMalusAction.AgiMod, "-20 Agi.", mod: -20),
 				new BonusMalusPlando(BonusMalusAction.VitMod, "-10 Vit.", mod: -10),
 				new BonusMalusPlando(BonusMalusAction.VitMod, "-20 Vit.", mod: -20),
-				new         (BonusMalusAction.LckMod, "-5 Luck", mod: -5),
+				new BonusMalusPlando(BonusMalusAction.LckMod, "-5 Luck", mod: -5),
 				new BonusMalusPlando(BonusMalusAction.LckMod, "-10 Luck", mod: -10),
 				new BonusMalusPlando(BonusMalusAction.HpMod, "-15 HP", mod: -15),
 				new BonusMalusPlando(BonusMalusAction.HpMod, "-30 HP", mod: -30),
@@ -311,9 +310,9 @@ namespace FF1Lib
 			});
 		}
 
-		public List<BonusMalus> CreateSpellBonusesPlado(FF1Rom rom, MT19337 rng, Flags flags)
+		public List<BonusMalusPlando> CreateSpellBonusesPlado(FF1Rom rom, MT19337 rng, Flags flags)
 		{
-			List<BonusMalus> spellBlursings = new();
+			List<BonusMalusPlando> spellBlursings = new();
 
 			SpellHelper spellHelper = new(rom);
 
@@ -340,7 +339,7 @@ namespace FF1Lib
 					SpellSlotInfo spellId = SpellSlotStructure.GetSpellSlots().Find(x => x.NameId == spell.PickRandom(rng));
 					if (spellId != null)
 					{
-						spellBlursings.Add(new BonusMalus(BonusMalusAction.InnateSpells, "+" + rom.ItemsText[(int)spellId.NameId], spellsmod: new List<SpellSlotInfo> { spellId, new SpellSlotInfo(), new SpellSlotInfo()}));
+						spellBlursings.Add(new BonusMalusPlando(BonusMalusAction.InnateSpells, "+" + rom.ItemsText[(int)spellId.NameId], spellsmod: new List<SpellSlotInfo> { spellId, new SpellSlotInfo(), new SpellSlotInfo()}));
 					}
 				}
 			}
@@ -354,12 +353,253 @@ namespace FF1Lib
 					SpellSlotInfo spellId = SpellSlotStructure.GetSpellSlots().Find(x => x.NameId == pickedSpell);
 					if (spellId != null)
 					{
-						spellBlursings.Add(new BonusMalus(BonusMalusAction.InnateSpells, "+" + rom.ItemsText[(int)spellId.NameId], spellsmod: new List<SpellSlotInfo> { spellId, new SpellSlotInfo(), new SpellSlotInfo()}));
+						spellBlursings.Add(new BonusMalusPlando(BonusMalusAction.InnateSpells, "+" + rom.ItemsText[(int)spellId.NameId], spellsmod: new List<SpellSlotInfo> { spellId, new SpellSlotInfo(), new SpellSlotInfo()}));
 					}
 				}
 			}
 
 			return spellBlursings;
+		}
+		public List<BonusMalusPlando> CreateMagicBonusesPlando(FF1Rom rom, MT19337 rng, Flags flags)
+		{
+			List<BonusMalusPlando> spellBlursingsPlando = new();
+			
+
+			SpellHelper spellHelper = new(rom);
+
+			SpellSlotInfo emptySlot = new();
+
+			List<List<byte>> blackSpellList = new();
+			List<List<byte>> whiteSpellList = new();
+
+
+			List<byte> spellNuke = spellHelper.FindSpells(SpellRoutine.Damage, SpellTargeting.AllEnemies).Where(s => s.Info.elem == SpellElement.None && s.Info.effect >= 100).Select(x => (byte)x.Id).ToList(); // Nuke
+			List<byte> spellElem3 = spellHelper.FindSpells(SpellRoutine.Damage, SpellTargeting.AllEnemies).Where(s => s.Info.effect >= 50 && s.Info.elem != SpellElement.None).Select(x => (byte)x.Id).ToList();
+			List<byte> spellElem2 = spellHelper.FindSpells(SpellRoutine.Damage, SpellTargeting.AllEnemies).Where(s => s.Info.elem != SpellElement.None && s.Info.effect >= 30 && s.Info.effect < 50).Select(x => (byte)x.Id).ToList();
+			List<byte> spellFast = spellHelper.FindSpells(SpellRoutine.Fast, SpellTargeting.Any).Select(x => (byte)x.Id).ToList(); // Fast
+			List<byte> spellTmpr = spellHelper.FindSpells(SpellRoutine.Sabr, SpellTargeting.OneCharacter).Select(x => (byte)x.Id).ToList(); // Tmpr
+			List<byte> spellSabr = spellHelper.FindSpells(SpellRoutine.Sabr, SpellTargeting.Self).Where(s => s.Info.effect <= 18).Select(x => (byte)x.Id).ToList(); // Sabr
+			List<byte> spellWarp = new List<byte> { (byte)(rom.Get(FF1Rom.MagicOutOfBattleOffset + FF1Rom.MagicOutOfBattleSize * 10, 1)[0]) }; // Warp
+			List<byte> spellLife = spellHelper.FindSpells(SpellRoutine.Life, SpellTargeting.OneCharacter).Select(x => (byte)x.Id).ToList(); // Life
+			List<byte> spellRuse = spellHelper.FindSpells(SpellRoutine.Ruse, SpellTargeting.Self).Select(x => (byte)x.Id).ToList(); // Ruse
+			List<byte> spellInv2 = spellHelper.FindSpells(SpellRoutine.Ruse, SpellTargeting.AllCharacters).Where(s => s.Info.effect <= 50).Select(x => (byte)x.Id).ToList(); // Inv2
+			List<byte> spellCur3 = spellHelper.FindSpells(SpellRoutine.Heal, SpellTargeting.OneCharacter).Where(s => s.Info.effect >= 70 && s.Info.effect <= 140).Select(x => (byte)x.Id).ToList(); //Cur3
+			List<byte> spellCur4 = spellHelper.FindSpells(SpellRoutine.FullHeal, SpellTargeting.OneCharacter).Select(x => (byte)x.Id).ToList(); //Cur4
+			List<byte> spellHel2 = spellHelper.FindSpells(SpellRoutine.Heal, SpellTargeting.AllCharacters).Where(s => s.Info.effect >= 24 && s.Info.effect <= 40).Select(x => (byte)x.Id).ToList(); //Hel2
+			List<byte> spellHel3 = spellHelper.FindSpells(SpellRoutine.Heal, SpellTargeting.AllCharacters).Where(s => s.Info.effect > 40).Select(x => (byte)x.Id).ToList(); //Hel3
+			List<byte> spellExit = new List<byte> { (byte)(rom.Get(FF1Rom.MagicOutOfBattleOffset + FF1Rom.MagicOutOfBattleSize * 12, 1)[0]) }; // Exit
+			List<byte> spellCleaning = spellHelper.FindSpells(SpellRoutine.CureAilment, SpellTargeting.Any).Select(x => (byte)x.Id).ToList();
+			List<byte> spellDoom = spellHelper.FindSpells(SpellRoutine.InflictStatus, SpellTargeting.Any).Where(s => s.Info.effect == (byte)SpellStatus.Death || s.Info.effect == (byte)SpellStatus.Stone).Select(x => (byte)x.Id).ToList();
+
+
+			if (spellNuke.Any())
+			{
+				var selectedSpell = spellNuke.PickRandom(rng);
+				SpellSlotInfo spellId = SpellSlotStructure.GetSpellSlots().Find(x => x.NameId == selectedSpell);
+
+				if (spellId != null)
+				{
+					spellBlursingsPlando.Add(new BonusMalusPlando(BonusMalusAction.InnateSpells, "Nuke Magic", spellsmod: new List<SpellSlotInfo> { spellId, spellId, emptySlot }));
+				}
+			}
+
+			if (spellElem3.Count >= 2)
+			{
+				List<SpellSlotInfo> spells = new();
+
+				while (spells.Count < 2 && spellElem3.Any())
+				{
+					var selectedSpell = spellElem3.SpliceRandom(rng);
+					if (SpellSlotStructure.GetSpellSlots().TryFind(x => x.NameId == selectedSpell, out var spellId))
+					{
+						spells.Add(spellId);
+					}
+				}
+
+				if (spells.Count >= 2)
+				{
+					spellBlursingsPlando.Add(new BonusMalusPlando(BonusMalusAction.InnateSpells, "Elem+ Magic", spellsmod: new List<SpellSlotInfo> { spells[0], spells[1], emptySlot }));
+
+				}
+			}
+
+			if (spellElem2.Count >= 2)
+			{
+				List<SpellSlotInfo> spells = new();
+
+				while (spells.Count < 2 && spellElem2.Any())
+				{
+					var selectedSpell = spellElem2.SpliceRandom(rng);
+					if (SpellSlotStructure.GetSpellSlots().TryFind(x => x.NameId == selectedSpell, out var spellId))
+					{
+						spells.Add(spellId);
+					}
+				}
+
+				if (spells.Count >= 2)
+				{
+					spellBlursingsPlando.Add(new BonusMalusPlando(BonusMalusAction.InnateSpells, "Elem Magic", spellsmod: new List<SpellSlotInfo> { spells[0], spells[1], emptySlot }));
+				}
+			}
+
+			if (spellCleaning.Count >= 2)
+			{
+				List<SpellSlotInfo> spells = new();
+
+				while (spells.Count < 2 && spellCleaning.Any())
+				{
+					var selectedSpell = spellCleaning.SpliceRandom(rng);
+					if (SpellSlotStructure.GetSpellSlots().TryFind(x => x.NameId == selectedSpell, out var spellId))
+					{
+						spells.Add(spellId);
+					}
+				}
+
+				if (spells.Count >= 2)
+				{
+					spellBlursingsPlando.Add(new BonusMalusPlando(BonusMalusAction.InnateSpells, "Clean Magic", spellsmod: new List<SpellSlotInfo> { spells[0], spells[1], emptySlot }));
+				}
+			}
+
+			if (spellDoom.Count >= 2)
+			{
+				List<SpellSlotInfo> spells = new();
+
+				while (spells.Count < 2 && spellDoom.Any())
+				{
+					var selectedSpell = spellDoom.SpliceRandom(rng);
+					if (SpellSlotStructure.GetSpellSlots().TryFind(x => x.NameId == selectedSpell, out var spellId))
+					{
+						spells.Add(spellId);
+					}
+				}
+
+				if (spells.Count >= 2)
+				{
+					spellBlursingsPlando.Add(new BonusMalusPlando(BonusMalusAction.InnateSpells, "Doom Magic", spellsmod: new List<SpellSlotInfo> { spells[0], spells[1], emptySlot }));
+				}
+			}
+
+			if (spellCur3.Any() && spellHel2.Any() && spellLife.Any())
+			{
+				List<SpellSlotInfo> spells = new();
+				SpellSlotInfo spellId = new();
+				SpellSlotInfo lifespell;
+
+				SpellSlotStructure.GetSpellSlots().TryFind(x => x.NameId == spellLife.PickRandom(rng), out lifespell);
+
+				if (SpellSlotStructure.GetSpellSlots().TryFind(x => x.NameId == spellCur3.PickRandom(rng), out spellId))
+				{
+					spells.Add(spellId);
+				}
+
+				if (SpellSlotStructure.GetSpellSlots().TryFind(x => x.NameId == spellHel2.PickRandom(rng), out spellId))
+				{
+					spells.Add(spellId);
+				}
+
+				if (spells.Count >= 2 || (lifespell != null && spells.Count >= 1))
+				{
+					spells = new() { spells.SpliceRandom(rng), lifespell ?? spells.SpliceRandom(rng) };
+					spells.Shuffle(rng);
+
+					spellBlursingsPlando.Add(new BonusMalusPlando(BonusMalusAction.InnateSpells, "Heal Magic", spellsmod: new List<SpellSlotInfo> { spells[0], spells[1], emptySlot }));
+				}
+			}
+
+			if (spellCur4.Any() && spellHel3.Any() && spellLife.Any())
+			{
+				List<SpellSlotInfo> spells = new();
+				SpellSlotInfo spellId = new();
+				SpellSlotInfo lifespell;
+
+				SpellSlotStructure.GetSpellSlots().TryFind(x => x.NameId == spellLife.PickRandom(rng), out lifespell);
+
+				if (SpellSlotStructure.GetSpellSlots().TryFind(x => x.NameId == spellCur4.PickRandom(rng), out spellId))
+				{
+					spells.Add(spellId);
+				}
+
+				if (SpellSlotStructure.GetSpellSlots().TryFind(x => x.NameId == spellHel3.PickRandom(rng), out spellId))
+				{
+					spells.Add(spellId);
+				}
+
+				if (spells.Count >= 2 || (lifespell != null && spells.Count >= 1))
+				{
+					spells = new() { spells.SpliceRandom(rng), lifespell ?? spells.SpliceRandom(rng) };
+					spells.Shuffle(rng);
+
+					spellBlursingsPlando.Add(new BonusMalusPlando(BonusMalusAction.InnateSpells, "Heal+ Magic", spellsmod: new List<SpellSlotInfo> { spells[0], spells[1], emptySlot }));
+				}
+			}
+
+			if (spellRuse.Any() && spellSabr.Any())
+			{
+				List<SpellSlotInfo> spells = new();
+				SpellSlotInfo spellId = new();
+
+				if (SpellSlotStructure.GetSpellSlots().TryFind(x => x.NameId == spellRuse.PickRandom(rng), out spellId))
+				{
+					spells.Add(spellId);
+				}
+
+				if (SpellSlotStructure.GetSpellSlots().TryFind(x => x.NameId == spellSabr.PickRandom(rng), out spellId))
+				{
+					spells.Add(spellId);
+				}
+
+				if (spells.Count >= 2)
+				{
+					spellBlursingsPlando.Add(new BonusMalusPlando(BonusMalusAction.InnateSpells, "Self Magic", spellsmod: new List<SpellSlotInfo> { spells[0], spells[1], emptySlot }));
+				}
+			}
+
+			if (spellTmpr.Any() && spellFast.Any())
+			{
+				List<SpellSlotInfo> spells = new();
+				SpellSlotInfo spellId = new();
+
+				if (SpellSlotStructure.GetSpellSlots().TryFind(x => x.NameId == spellTmpr.PickRandom(rng), out spellId))
+				{
+					spells.Add(spellId);
+				}
+
+				if (SpellSlotStructure.GetSpellSlots().TryFind(x => x.NameId == spellFast.PickRandom(rng), out spellId))
+				{
+					spells.Add(spellId);
+				}
+
+				spells.Shuffle(rng);
+
+				if (spells.Count >= 2)
+				{
+					spellBlursingsPlando.Add(new BonusMalusPlando(BonusMalusAction.InnateSpells, "Buff Magic", spellsmod: new List<SpellSlotInfo> { spells[0], spells[1], emptySlot }));
+				}
+			}
+
+			if (spellWarp.Any() && spellExit.Any())
+			{
+				List<SpellSlotInfo> spells = new();
+				SpellSlotInfo spellId = new();
+
+				if (SpellSlotStructure.GetSpellSlots().TryFind(x => x.NameId == spellWarp.PickRandom(rng), out spellId))
+				{
+					spells.Add(spellId);
+				}
+
+				if (SpellSlotStructure.GetSpellSlots().TryFind(x => x.NameId == spellExit.PickRandom(rng), out spellId))
+				{
+					spells.Add(spellId);
+				}
+
+				if (spells.Count == 2)
+				{
+					spellBlursingsPlando.Add(new BonusMalusPlando(BonusMalusAction.InnateSpells, "Tele Magic", spellsmod: new List<SpellSlotInfo> { spells[0], spells[1], emptySlot }));
+				}
+			}
+
+			return (spellBlursingsPlando);
 		}
 	}
 }

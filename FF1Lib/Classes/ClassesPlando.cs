@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FF1Lib
+/*namespace FF1Lib
 {
 	public partial class GameClasses
 	{
@@ -39,8 +39,9 @@ namespace FF1Lib
 				{ Classes.BlackMage, new() },
 			};
 			List<BonusMalus> maluses = new();
-
-
+			
+			
 		}
 	}
 }
+*/

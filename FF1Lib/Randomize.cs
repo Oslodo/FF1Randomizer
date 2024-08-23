@@ -393,7 +393,7 @@ public partial class FF1Rom : NesRom
 		}
 
 		// Spoilers
-		//if (flags.Spoilers && sanityChecker != null) new ExtSpoiler(this, sanityChecker, ShopData, ItemsText, itemPlacement.PlacedItems, Overworld, PlacementContext, WeaponPermissions, ArmorPermissions, flags).WriteSpoiler();
+		if (flags.Spoilers && sanityChecker != null) new ExtSpoiler(this, sanityChecker, ShopData, ItemsText, itemPlacement.PlacedItems, Overworld, PlacementContext, WeaponPermissions, ArmorPermissions, flags).WriteSpoiler();
 
 		// Write back everything
 		ItemsText.Write(this, flags.GameMode == GameModes.DeepDungeon ? new List<Item>() : ItemLists.UnusedGoldItems.ToList());
@@ -402,12 +402,10 @@ public partial class FF1Rom : NesRom
 		Dialogues.Write();
 		ShopData.StoreData();
 
+
 		EnemyScripts.Write(this);
 		EncounterRates.Write();
 		itemPlacement.Write();
-
-		// Spoilers
-		if (flags.Spoilers && sanityChecker != null) new ExtSpoiler(this, sanityChecker, ShopData, ItemsText, itemPlacement.PlacedItems, Overworld, PlacementContext, WeaponPermissions, ArmorPermissions, flags).WriteSpoiler();
 
 		Maps.Write();
 		TileSetsData.Write();

@@ -118,12 +118,75 @@ namespace FF1Lib
 					case FiKeyItems.FiKeyItemsKey:
 						assignedBlessings[Classes.Fighter].Add(StartwithKIPlando[(int)Item.Key]);
 						break;
-				}	
+				}
 
 			};
 
+			if (flags.ThKeyItems != ThKeyItems.ThKeyItemsNone)
+			{
+				switch (flags.ThKeyItems)
+				{
+					case ThKeyItems.ThKeyItemsCrown:
+						assignedBlessings[Classes.Thief].Add(StartwithKIPlando[(int)Item.Crown]);
+						break;
 
+					case ThKeyItems.ThKeyItemsCrystal:
+						assignedBlessings[Classes.Thief].Add(StartwithKIPlando[(int)Item.Crystal]);
+						break;
 
+					case ThKeyItems.ThKeyItemsHerb:
+						assignedBlessings[Classes.Thief].Add(StartwithKIPlando[(int)Item.Herb]);
+						break;
+
+					case ThKeyItems.ThKeyItemsTNT:
+						assignedBlessings[Classes.Thief].Add(StartwithKIPlando[(int)Item.Tnt]);
+						break;
+
+					case ThKeyItems.ThKeyItemsAdamant:
+						assignedBlessings[Classes.Thief].Add(StartwithKIPlando[(int)Item.Adamant]);
+						break;
+
+					case ThKeyItems.ThKeyItemsSlab:
+						assignedBlessings[Classes.Thief].Add(StartwithKIPlando[(int)Item.Slab]);
+						break;
+
+					case ThKeyItems.ThKeyItemsRuby:
+						assignedBlessings[Classes.Thief].Add(StartwithKIPlando[(int)Item.Ruby]);
+						break;
+
+					case ThKeyItems.ThKeyItemsRod:
+						assignedBlessings[Classes.Thief].Add(StartwithKIPlando[(int)Item.Rod]);
+						break;
+
+					case ThKeyItems.ThKeyItemsChime:
+						assignedBlessings[Classes.Thief].Add(StartwithKIPlando[(int)Item.Chime]);
+						break;
+
+					case ThKeyItems.ThKeyItemsCube:
+						assignedBlessings[Classes.Thief].Add(StartwithKIPlando[(int)Item.Cube]);
+						break;
+
+					case ThKeyItems.ThKeyItemsBottle:
+						assignedBlessings[Classes.Thief].Add(StartwithKIPlando[(int)Item.Bottle]);
+						break;
+
+					case ThKeyItems.ThKeyItemsOxyale:
+						assignedBlessings[Classes.Thief].Add(StartwithKIPlando[(int)Item.Oxyale]);
+						break;
+
+					case ThKeyItems.ThKeyItemsLute:
+						assignedBlessings[Classes.Thief].Add(StartwithKIPlando[(int)Item.Lute]);
+						break;
+
+					case ThKeyItems.ThKeyItemsTail:
+						assignedBlessings[Classes.Thief].Add(StartwithKIPlando[(int)Item.Tail]);
+						break;
+
+					case ThKeyItems.ThKeyItemsKey:
+						assignedBlessings[Classes.Thief].Add(StartwithKIPlando[(int)Item.Key]);
+						break;
+				}
+			};
 
 		}
 		private List<BonusMalusPlando> KeyItemList(Flags flags, List<string> olditemnames)

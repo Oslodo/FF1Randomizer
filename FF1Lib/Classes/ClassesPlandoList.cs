@@ -234,6 +234,7 @@ namespace FF1Lib
 				new BonusMalusPlando(BonusMalusAction.BonusXp, "+100% XP", mod: 200),
 				//Max MP on Gain
 				new BonusMalusPlando(BonusMalusAction.MpGainOnMaxMpGain, "Max+Mp+"),
+				
 			});
 			maluses.AddRange(new List<BonusMalusPlando>()
 			{
@@ -285,30 +286,10 @@ namespace FF1Lib
 				//Add Single Spell code here
 				//Lockpicking tier
 				new BonusMalusPlando(BonusMalusAction.LockpickingLevel, "LateLockpik", mod: 10),
-			});
-		}
-		public void KeyItemList(List<BonusMalusPlando> StartwithKIPlando, Flags flags, List<string> olditemnames)
-		{
-			StartwithKIPlando.AddRange(new List<BonusMalusPlando>()
-			{
-				new BonusMalusPlando(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Crown], mod: (int)Item.Crown),
-				new BonusMalusPlando(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Crystal], mod: (int)Item.Crystal),
-				new BonusMalusPlando(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Herb], mod: (int)Item.Herb),
-				new BonusMalusPlando(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Tnt], mod: (int)Item.Tnt),
-				new BonusMalusPlando(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Adamant], mod: (int)Item.Adamant),
-				new BonusMalusPlando(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Slab], mod: (int)Item.Slab),
-				new BonusMalusPlando(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Ruby], mod: (int)Item.Ruby),
-				new BonusMalusPlando(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Rod], mod: (int)Item.Rod),
-				new BonusMalusPlando(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Chime], mod: (int)Item.Chime),
-				new BonusMalusPlando(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Cube], mod: (int)Item.Cube),
-				new BonusMalusPlando(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Bottle], mod: (int)Item.Bottle),
-				new BonusMalusPlando(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Oxyale], mod: (int)Item.Oxyale),
-				new BonusMalusPlando(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Lute], mod: (int)Item.Lute),
-				new BonusMalusPlando(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Tail], mod: (int)Item.Tail),
-				new BonusMalusPlando(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Key], mod: (int)Item.Key),
 
 			});
 		}
+
 
 		public List<BonusMalusPlando> CreateSpellBonusesPlado(FF1Rom rom, MT19337 rng, Flags flags)
 		{
@@ -339,7 +320,7 @@ namespace FF1Lib
 					SpellSlotInfo spellId = SpellSlotStructure.GetSpellSlots().Find(x => x.NameId == spell.PickRandom(rng));
 					if (spellId != null)
 					{
-						spellBlursings.Add(new BonusMalusPlando(BonusMalusAction.InnateSpells, "+" + rom.ItemsText[(int)spellId.NameId], spellsmod: new List<SpellSlotInfo> { spellId, new SpellSlotInfo(), new SpellSlotInfo()}));
+						spellBlursings.Add(new BonusMalusPlando(BonusMalusAction.InnateSpells, "+" + rom.ItemsText[(int)spellId.NameId], spellsmod: new List<SpellSlotInfo> { spellId, new SpellSlotInfo(), new SpellSlotInfo() }));
 					}
 				}
 			}
@@ -353,7 +334,7 @@ namespace FF1Lib
 					SpellSlotInfo spellId = SpellSlotStructure.GetSpellSlots().Find(x => x.NameId == pickedSpell);
 					if (spellId != null)
 					{
-						spellBlursings.Add(new BonusMalusPlando(BonusMalusAction.InnateSpells, "+" + rom.ItemsText[(int)spellId.NameId], spellsmod: new List<SpellSlotInfo> { spellId, new SpellSlotInfo(), new SpellSlotInfo()}));
+						spellBlursings.Add(new BonusMalusPlando(BonusMalusAction.InnateSpells, "+" + rom.ItemsText[(int)spellId.NameId], spellsmod: new List<SpellSlotInfo> { spellId, new SpellSlotInfo(), new SpellSlotInfo() }));
 					}
 				}
 			}
@@ -363,7 +344,7 @@ namespace FF1Lib
 		public List<BonusMalusPlando> CreateMagicBonusesPlando(FF1Rom rom, MT19337 rng, Flags flags)
 		{
 			List<BonusMalusPlando> spellBlursingsPlando = new();
-			
+
 
 			SpellHelper spellHelper = new(rom);
 
@@ -601,5 +582,65 @@ namespace FF1Lib
 
 			return (spellBlursingsPlando);
 		}
+
+		private struct SpellLearningPlando
+		{
+			public Spell Name;
+			public byte Id;
+		}
+
+
+
+		private void BuildSpellIdDictPlando(FF1Rom rom)
+		{
+			SpellHelper spellHelper = new(rom);
+			List<(Spell spell, byte id)> spellsFound = new();
+
+			// Lamp
+			var lampCandidates = spellHelper.FindSpells(SpellRoutine.CureAilment, SpellTargeting.Any).Where(s => (s.Info.effect & 0x08) > 0).Select(x => (byte)x.Id).ToList();
+			spellsFound.Add((Spell.LAMP, lampCandidates.Any() ? (byte)(lampCandidates.First() - 0xB0 + 1) : (byte)0xFF));
+
+			// A-Spells
+			var aSpellsCandidates = spellHelper.FindSpells(SpellRoutine.DefElement, SpellTargeting.AllCharacters).ToList();
+			spellsFound.Add((Spell.AFIR, aSpellsCandidates.TryFind(s => (s.Info.effect & 0x10) > 0, out var afirespell) ? (byte)(afirespell.Id - 0xB0 + 1) : (byte)0xFF));
+			spellsFound.Add((Spell.AICE, aSpellsCandidates.TryFind(s => (s.Info.effect & 0x20) > 0, out var aicespell) ? (byte)(aicespell.Id - 0xB0 + 1) : (byte)0xFF));
+			spellsFound.Add((Spell.ALIT, aSpellsCandidates.TryFind(s => (s.Info.effect & 0x40) > 0, out var alitspell) ? (byte)(alitspell.Id - 0xB0 + 1) : (byte)0xFF));
+			spellsFound.Add((Spell.ARUB, aSpellsCandidates.TryFind(s => (s.Info.effect & 0x80) > 0, out var arubspell) ? (byte)(arubspell.Id - 0xB0 + 1) : (byte)0xFF));
+
+			var aMuteCandidates = spellHelper.FindSpells(SpellRoutine.CureAilment, SpellTargeting.Any).Where(s => (s.Info.effect & 0x40) > 0).Select(x => (byte)x.Id).ToList();
+			spellsFound.Add((Spell.AMUT, aMuteCandidates.Any() ? (byte)(aMuteCandidates.First() - 0xB0 + 1) : (byte)0xFF));
+
+			// Dark
+			var darkCandidates = spellHelper.FindSpells(SpellRoutine.InflictStatus, SpellTargeting.Any).ToList();
+			spellsFound.Add((Spell.DARK, darkCandidates.TryFind(s => (s.Info.effect & 0x08) > 0, out var darkspell) ? (byte)(darkspell.Id - 0xB0 + 1) : (byte)0xFF));
+
+			// Sleeps
+			var sleepCandidates = spellHelper.FindSpells(SpellRoutine.InflictStatus, SpellTargeting.Any).ToList();
+			spellsFound.Add((Spell.SLEP, darkCandidates.TryFind(s => (s.Info.effect & 0x20) > 0 && s.Info.targeting == SpellTargeting.AllEnemies, out var slepspell) ? (byte)(slepspell.Id - 0xB0 + 1) : (byte)0xFF));
+			spellsFound.Add((Spell.SLP2, darkCandidates.TryFind(s => (s.Info.effect & 0x20) > 0 && s.Info.targeting == SpellTargeting.OneEnemy, out var slp2spell) ? (byte)(slp2spell.Id - 0xB0 + 1) : (byte)0xFF));
+
+			// Slows
+			var slowCandidates = spellHelper.FindSpells(SpellRoutine.Slow, SpellTargeting.Any).ToList();
+			spellsFound.Add((Spell.SLOW, slowCandidates.TryFind(s => s.Info.targeting == SpellTargeting.AllEnemies, out var slowspell) ? (byte)(slowspell.Id - 0xB0 + 1) : (byte)0xFF));
+			spellsFound.Add((Spell.SLO2, slowCandidates.TryFind(s => s.Info.targeting == SpellTargeting.OneEnemy, out var slo2spell) ? (byte)(slo2spell.Id - 0xB0 + 1) : (byte)0xFF));
+		}
+
+			private List<BonusMalusPlando> CreateSpellLearningBlessingsPlando(FF1Rom rom)
+			{
+				BuildSpellIdDict(rom);
+
+				List<BonusMalusPlando> bonusListLearn = new();
+			bonusListLearn.Add(new BonusMalusPlando(BonusMalusAction.LearnLampRibbon, "Learn LAMP\n Resist All"));
+			bonusListLearn.Add(new BonusMalusPlando(BonusMalusAction.LearDarkEvade, "Learn DARK\n +Evade"));
+			bonusListLearn.Add(new BonusMalusPlando(BonusMalusAction.LearnSleepMDef, "Learn SLEEP\n +MDef"));
+			bonusListLearn.Add(new BonusMalusPlando(BonusMalusAction.LearnSlowAbsorb, "Learn SLOW\n +Absorb"));
+			bonusListLearn.Add(new BonusMalusPlando(BonusMalusAction.ASpellsAutocast, "A-Spells\n Autocast"));
+				
+			
+				return bonusListLearn;
+
+			}
+		
 	}
 }
+

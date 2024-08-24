@@ -4,10 +4,11 @@ using System;
 using System.Collections.Generic;
 using System.IO.Compression;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
-/*namespace FF1Lib
+namespace FF1Lib
 {
 	public partial class GameClasses
 	{
@@ -28,8 +29,9 @@ using System.Threading.Tasks;
 				0x00, 0x0F, 0x00, 0x0F, 0x00, 0x0F, 0x00, 0x0F, 0x00, 0x0F, 0x00, 0x0F, 0x00, 0x0F, 0x00, 0x0F, 0x00, 0x0F, 0x00, 0x0F, 0x00, 0x0F, 0x00, 0x0F, 0x00 };
 
 			// Blursings List
-			List<BonusMalus> baseTierBlessings = new();
-			Dictionary<Classes, List<BonusMalus>> classBlessings = new()
+			List<BonusMalusPlando> bonuslist = new();
+			List<BonusMalusPlando> maluses = new();
+			/*Dictionary<Classes, List<BonusMalus>> classBlessings = new()
 			{
 				{ Classes.Fighter, new() },
 				{ Classes.Thief, new() },
@@ -37,11 +39,117 @@ using System.Threading.Tasks;
 				{ Classes.RedMage, new() },
 				{ Classes.WhiteMage, new() },
 				{ Classes.BlackMage, new() },
+			};*/
+			var descriptionList = new List<string>();
+
+			GenerateListsPlando(bonuslist, maluses, olditemnames, itemnames, flags, rom);
+
+			var StartwithKIPlando = KeyItemList(flags, olditemnames);
+
+
+			Dictionary<Classes, List<BonusMalusPlando>> assignedBlessings = new();
+			Dictionary<Classes, List<BonusMalusPlando>> assignedMaluses = new();
+
+			List<Classes> classList = Enumerable.Range(0, 6).Select(c => (Classes)c).ToList();
+			List<Classes> validClasses = new();
+
+			//KI First
+
+			if (flags.FighterKI != FiKeyItems.FiKeyItemsNone)
+			{
+				switch (flags.FighterKI)
+				{
+					case FiKeyItems.FiKeyItemsCrown:
+						assignedBlessings[Classes.Fighter].Add(StartwithKIPlando[(int)Item.Crown]);
+						break;
+
+					case FiKeyItems.FiKeyItemsCrystal:
+						assignedBlessings[Classes.Fighter].Add(StartwithKIPlando[(int)Item.Crystal]);
+						break;
+
+					case FiKeyItems.FiKeyItemsHerb:
+						assignedBlessings[Classes.Fighter].Add(StartwithKIPlando[(int)Item.Herb]);
+						break;
+
+					case FiKeyItems.FiKeyItemsTNT:
+						assignedBlessings[Classes.Fighter].Add(StartwithKIPlando[(int)Item.Tnt]);
+						break;
+
+					case FiKeyItems.FiKeyItemsAdamant:
+						assignedBlessings[Classes.Fighter].Add(StartwithKIPlando[(int)Item.Adamant]);
+						break;
+
+					case FiKeyItems.FiKeyItemsSlab:
+						assignedBlessings[Classes.Fighter].Add(StartwithKIPlando[(int)Item.Slab]);
+						break;
+
+					case FiKeyItems.FiKeyItemsRuby:
+						assignedBlessings[Classes.Fighter].Add(StartwithKIPlando[(int)Item.Ruby]);
+						break;
+
+					case FiKeyItems.FiKeyItemsRod:
+						assignedBlessings[Classes.Fighter].Add(StartwithKIPlando[(int)Item.Rod]);
+						break;
+
+					case FiKeyItems.FiKeyItemsChime:
+						assignedBlessings[Classes.Fighter].Add(StartwithKIPlando[(int)Item.Chime]);
+						break;
+
+					case FiKeyItems.FiKeyItemsCube:
+						assignedBlessings[Classes.Fighter].Add(StartwithKIPlando[(int)Item.Cube]);
+						break;
+
+					case FiKeyItems.FiKeyItemsBottle:
+						assignedBlessings[Classes.Fighter].Add(StartwithKIPlando[(int)Item.Bottle]);
+						break;
+
+					case FiKeyItems.FiKeyItemsOxyale:
+						assignedBlessings[Classes.Fighter].Add(StartwithKIPlando[(int)Item.Oxyale]);
+						break;
+
+					case FiKeyItems.FiKeyItemsLute:
+						assignedBlessings[Classes.Fighter].Add(StartwithKIPlando[(int)Item.Lute]);
+						break;
+
+					case FiKeyItems.FiKeyItemsTail:
+						assignedBlessings[Classes.Fighter].Add(StartwithKIPlando[(int)Item.Tail]);
+						break;
+
+					case FiKeyItems.FiKeyItemsKey:
+						assignedBlessings[Classes.Fighter].Add(StartwithKIPlando[(int)Item.Key]);
+						break;
+				}	
+
 			};
-			List<BonusMalus> maluses = new();
+
+
+
+
+		}
+		private List<BonusMalusPlando> KeyItemList(Flags flags, List<string> olditemnames)
+		{
+			List<BonusMalusPlando> kiPlando = new()
+			{
+				new BonusMalusPlando(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Crown], mod: (int)Item.Crown),
+				new BonusMalusPlando(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Crystal], mod: (int)Item.Crystal),
+				new BonusMalusPlando(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Herb], mod: (int)Item.Herb),
+				new BonusMalusPlando(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Tnt], mod: (int)Item.Tnt),
+				new BonusMalusPlando(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Adamant], mod: (int)Item.Adamant),
+				new BonusMalusPlando(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Slab], mod: (int)Item.Slab),
+				new BonusMalusPlando(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Ruby], mod: (int)Item.Ruby),
+				new BonusMalusPlando(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Rod], mod: (int)Item.Rod),
+				new BonusMalusPlando(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Chime], mod: (int)Item.Chime),
+				new BonusMalusPlando(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Cube], mod: (int)Item.Cube),
+				new BonusMalusPlando(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Bottle], mod: (int)Item.Bottle),
+				new BonusMalusPlando(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Oxyale], mod: (int)Item.Oxyale),
+				new BonusMalusPlando(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Lute], mod: (int)Item.Lute),
+				new BonusMalusPlando(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Tail], mod: (int)Item.Tail),
+				new BonusMalusPlando(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Key], mod: (int)Item.Key),
+
 			
-			
+			};
+			return kiPlando;
 		}
 	}
 }
-*/
+

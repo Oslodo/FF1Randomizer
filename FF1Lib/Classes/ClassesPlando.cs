@@ -453,6 +453,101 @@ namespace FF1Lib
 						break;
 				}
 			};
+
+			//Do the Stat changes first
+
+			if (flags.Fighterstr != FiStrpool.FiStrpoolnone)
+			{
+				int i = 0;
+				switch (flags.Fighterstr)
+				{
+					case FiStrpool.Fiadd10Str:
+						_classes[i].StrStarting = (byte)Math.Max(_classes[i].StrStarting + 10, 0);
+						break;
+
+					case FiStrpool.Fiadd20Str:
+						_classes[i].StrStarting = (byte)Math.Max(_classes[i].StrStarting + 20, 0);
+						break;
+
+					case FiStrpool.Fiadd40Str:
+						_classes[i].StrStarting = (byte)Math.Max(_classes[i].StrStarting + 40, 0);
+						break;
+
+					case FiStrpool.Fiminus10Str:
+						_classes[i].StrStarting = (byte)Math.Max(_classes[i].StrStarting - 10, 0);
+						break;
+
+					case FiStrpool.Fiminus20Str:
+						_classes[i].StrStarting = (byte)Math.Max(_classes[i].StrStarting - 20, 0);
+						break;
+				}
+
+			};
+			if (flags.Fighteragi != FiAgipool.FiAgpoolinone)
+			{
+				int i = 0;
+				switch(flags.Fighteragi)
+				{
+					case FiAgipool.Fiadd15Agi:
+						_classes[i].AgiStarting = (byte)Math.Max(_classes[i].AgiStarting + 15, 0);
+						break;
+
+					case FiAgipool.Fiadd25Agi:
+						_classes[i].AgiStarting = (byte)Math.Max(_classes[i].AgiStarting + 25, 0);
+						break;
+
+					case FiAgipool.Fiadd50Agi:
+						_classes[i].AgiStarting = (byte)Math.Max(_classes[i].AgiStarting + 50, 0);
+						break;
+
+					case FiAgipool.Fiminus10Agi:
+						_classes[i].AgiStarting = (byte)Math.Max(_classes[i].AgiStarting - 10, 0);
+						break;
+
+				}
+
+			};
+			if (flags.Fightervit != FiVitpool.FiVitpoolNone)
+			{
+				int i = 0;
+				switch (flags.Fightervit)
+				{
+					case FiVitpool.Fiadd10Vit:
+						_classes[i].VitStarting = (byte)Math.Max(_classes[i].VitStarting + 10, 0);
+						break;
+
+					case FiVitpool.Fiadd20Vit:
+						_classes[i].VitStarting = (byte)Math.Max(_classes[i].VitStarting + 20, 0);
+						break;
+
+					case FiVitpool.Fiadd40Vit:
+						_classes[i].VitStarting = (byte)Math.Max(_classes[i].VitStarting + 40, 0);
+						break;
+
+					case FiVitpool.Fiminus10Vit:
+						_classes[i].VitStarting = (byte)Math.Max(_classes[i].VitStarting - 10, 0);
+						break;
+
+				}
+			};
+
+
+
+
+
+
+			validClasses = new() { Classes.Fighter, Classes.Thief, Classes.BlackBelt, Classes.RedMage, Classes.WhiteMage, Classes.BlackMage };
+
+			foreach (var gameclass in validClasses)
+			{
+
+				var blessingstring = string.Join("\n\n", assignedBlessings[gameclass].Select(b => b.Description.ToList()));
+				var malusesstring = string.Join("\n\n", assignedMaluses[gameclass].Select(b => b.Description.ToList()));
+
+				descriptionList.Add(blessingstring + "\n\n\nMALUS\n\n" + malusesstring);
+			}
+
+
 		}
 		private List<BonusMalusPlando> KeyItemList(Flags flags, List<string> olditemnames)
 		{

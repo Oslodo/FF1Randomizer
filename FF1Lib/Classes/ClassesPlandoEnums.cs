@@ -33,9 +33,9 @@ namespace FF1Lib
 		[Description("+20 Str")]
 		Fiadd20Str,
 		[Description("+40 Str")]
-		FIadd40Str,
+		Fiadd40Str,
 		[Description("-10 Str")]
-		FIminus10Str,
+		Fiminus10Str,
 		[Description("-20 Str")]
 		Fiminus20Str,
 

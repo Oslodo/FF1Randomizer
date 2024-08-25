@@ -188,6 +188,71 @@ namespace FF1Lib
 				}
 			};
 
+			if (flags.BBKeyItems != BBKeyItems.BBKeyItemsNone)
+			{
+				switch (flags.BBKeyItems)
+				{
+					case BBKeyItems.BBKeyItemsCrown:
+						assignedBlessings[Classes.BlackBelt].Add(StartwithKIPlando[(int)Item.Crown]);
+						break;
+
+					case BBKeyItems.BBKeyItemsCrystal:
+						assignedBlessings[Classes.BlackBelt].Add(StartwithKIPlando[(int)Item.Crystal]);
+						break;
+
+					case BBKeyItems.BBKeyItemsHerb:
+						assignedBlessings[Classes.BlackBelt].Add(StartwithKIPlando[(int)Item.Herb]);
+						break;
+
+					case BBKeyItems.BBKeyItemsTNT:
+						assignedBlessings[Classes.BlackBelt].Add(StartwithKIPlando[(int)Item.Tnt]);
+						break;
+
+					case BBKeyItems.BBKeyItemsAdamant:
+						assignedBlessings[Classes.BlackBelt].Add(StartwithKIPlando[(int)Item.Adamant]);
+						break;
+
+					case BBKeyItems.BBKeyItemsSlab:
+						assignedBlessings[Classes.BlackBelt].Add(StartwithKIPlando[(int)Item.Slab]);
+						break;
+
+					case BBKeyItems.BBKeyItemsRuby:
+						assignedBlessings[Classes.BlackBelt].Add(StartwithKIPlando[(int)Item.Ruby]);
+						break;
+
+					case BBKeyItems.BBKeyItemsRod:
+						assignedBlessings[Classes.BlackBelt].Add(StartwithKIPlando[(int)Item.Rod]);
+						break;
+
+					case BBKeyItems.BBKeyItemsChime:
+						assignedBlessings[Classes.BlackBelt].Add(StartwithKIPlando[(int)Item.Chime]);
+						break;
+
+					case BBKeyItems.BBKeyItemsCube:
+						assignedBlessings[Classes.BlackBelt].Add(StartwithKIPlando[(int)Item.Cube]);
+						break;
+
+					case BBKeyItems.BBKeyItemsBottle:
+						assignedBlessings[Classes.BlackBelt].Add(StartwithKIPlando[(int)Item.Bottle]);
+						break;
+
+					case BBKeyItems.BBKeyItemsOxyale:
+						assignedBlessings[Classes.BlackBelt].Add(StartwithKIPlando[(int)Item.Oxyale]);
+						break;
+
+					case BBKeyItems.BBKeyItemsLute:
+						assignedBlessings[Classes.BlackBelt].Add(StartwithKIPlando[(int)Item.Lute]);
+						break;
+
+					case BBKeyItems.BBKeyItemsTail:
+						assignedBlessings[Classes.BlackBelt].Add(StartwithKIPlando[(int)Item.Tail]);
+						break;
+
+					case BBKeyItems.BBKeyItemsKey:
+						assignedBlessings[Classes.BlackBelt].Add(StartwithKIPlando[(int)Item.Key]);
+						break;
+				}
+			}
 		}
 		private List<BonusMalusPlando> KeyItemList(Flags flags, List<string> olditemnames)
 		{

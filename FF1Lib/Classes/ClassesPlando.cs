@@ -321,7 +321,138 @@ namespace FF1Lib
 				}
 			};
 
+			if (flags.WMKeyItems != WMKeyItems.WMKeyItemsNone)
 
+			{
+				switch (flags.WMKeyItems)
+				{
+					case WMKeyItems.WMKeyItemsCrown:
+						assignedBlessings[Classes.WhiteMage].Add(StartwithKIPlando[(int)Item.Crown]);
+						break;
+
+					case WMKeyItems.WMKeyItemsCrystal:
+						assignedBlessings[Classes.WhiteMage].Add(StartwithKIPlando[(int)Item.Crystal]);
+						break;
+
+					case WMKeyItems.WMKeyItemsHerb:
+						assignedBlessings[Classes.WhiteMage].Add(StartwithKIPlando[(int)Item.Herb]);
+						break;
+
+					case WMKeyItems.WMKeyItemsTNT:
+						assignedBlessings[Classes.WhiteMage].Add(StartwithKIPlando[(int)Item.Tnt]);
+						break;
+
+					case WMKeyItems.WMKeyItemsAdamant:
+						assignedBlessings[Classes.WhiteMage].Add(StartwithKIPlando[(int)Item.Adamant]);
+						break;
+
+					case WMKeyItems.WMKeyItemsSlab:
+						assignedBlessings[Classes.WhiteMage].Add(StartwithKIPlando[(int)Item.Slab]);
+						break;
+
+					case WMKeyItems.WMKeyItemsRuby:
+						assignedBlessings[Classes.WhiteMage].Add(StartwithKIPlando[(int)Item.Ruby]);
+						break;
+
+					case WMKeyItems.WMKeyItemsRod:
+						assignedBlessings[Classes.WhiteMage].Add(StartwithKIPlando[(int)Item.Rod]);
+						break;
+
+					case WMKeyItems.WMKeyItemsChime:
+						assignedBlessings[Classes.WhiteMage].Add(StartwithKIPlando[(int)Item.Chime]);
+						break;
+
+					case WMKeyItems.WMKeyItemsCube:
+						assignedBlessings[Classes.WhiteMage].Add(StartwithKIPlando[(int)Item.Cube]);
+						break;
+
+					case WMKeyItems.WMKeyItemsBottle:
+						assignedBlessings[Classes.WhiteMage].Add(StartwithKIPlando[(int)Item.Bottle]);
+						break;
+
+					case WMKeyItems.WMKeyItemsOxyale:
+						assignedBlessings[Classes.WhiteMage].Add(StartwithKIPlando[(int)Item.Oxyale]);
+						break;
+
+					case WMKeyItems.WMKeyItemsLute:
+						assignedBlessings[Classes.WhiteMage].Add(StartwithKIPlando[(int)Item.Lute]);
+						break;
+
+					case WMKeyItems.WMKeyItemsTail:
+						assignedBlessings[Classes.WhiteMage].Add(StartwithKIPlando[(int)Item.Tail]);
+						break;
+
+					case WMKeyItems.WMKeyItemsKey:
+						assignedBlessings[Classes.WhiteMage].Add(StartwithKIPlando[(int)Item.Key]);
+						break;
+				}
+			};
+
+			if (flags.BMKeyItems != BMKeyItems.BMKeyItemsNone)
+			{
+				switch (flags.BMKeyItems)
+				{
+					case BMKeyItems.BMKeyItemsCrown:
+						assignedBlessings[Classes.BlackMage].Add(StartwithKIPlando[(int)Item.Crown]);
+						break;
+
+					case BMKeyItems.BMKeyItemsCrystal:
+						assignedBlessings[Classes.BlackMage].Add(StartwithKIPlando[(int)Item.Crystal]);
+						break;
+
+					case BMKeyItems.BMKeyItemsHerb:
+						assignedBlessings[Classes.BlackMage].Add(StartwithKIPlando[(int)Item.Herb]);
+						break;
+
+					case BMKeyItems.BMKeyItemsTNT:
+						assignedBlessings[Classes.BlackMage].Add(StartwithKIPlando[(int)Item.Tnt]);
+						break;
+
+					case BMKeyItems.BMKeyItemsAdamant:
+						assignedBlessings[Classes.BlackMage].Add(StartwithKIPlando[(int)Item.Adamant]);
+						break;
+
+					case BMKeyItems.BMKeyItemsSlab:
+						assignedBlessings[Classes.BlackMage].Add(StartwithKIPlando[(int)Item.Slab]);
+						break;
+
+					case BMKeyItems.BMKeyItemsRuby:
+						assignedBlessings[Classes.BlackMage].Add(StartwithKIPlando[(int)Item.Ruby]);
+						break;
+
+					case BMKeyItems.BMKeyItemsRod:
+						assignedBlessings[Classes.BlackMage].Add(StartwithKIPlando[(int)Item.Rod]);
+						break;
+
+					case BMKeyItems.BMKeyItemsChime:
+						assignedBlessings[Classes.BlackMage].Add(StartwithKIPlando[(int)Item.Chime]);
+						break;
+
+					case BMKeyItems.BMKeyItemsCube:
+						assignedBlessings[Classes.BlackMage].Add(StartwithKIPlando[(int)Item.Cube]);
+						break;
+
+					case BMKeyItems.BMKeyItemsBottle:
+						assignedBlessings[Classes.BlackMage].Add(StartwithKIPlando[(int)Item.Bottle]);
+						break;
+
+					case BMKeyItems.BMKeyItemsOxyale:
+						assignedBlessings[Classes.BlackMage].Add(StartwithKIPlando[(int)Item.Oxyale]);
+						break;
+
+					case BMKeyItems.BMKeyItemsLute:
+						assignedBlessings[Classes.BlackMage].Add(StartwithKIPlando[(int)Item.Lute]);
+						break;
+
+					case BMKeyItems.BMKeyItemsTail:
+						assignedBlessings[Classes.BlackMage].Add(StartwithKIPlando[(int)Item.Tail]);
+						break;
+
+					case BMKeyItems.BMKeyItemsKey:
+						assignedBlessings[Classes.BlackMage].Add(StartwithKIPlando[(int)Item.Key]);
+						break;
+				}
+			};
 		}
 		private List<BonusMalusPlando> KeyItemList(Flags flags, List<string> olditemnames)
 		{

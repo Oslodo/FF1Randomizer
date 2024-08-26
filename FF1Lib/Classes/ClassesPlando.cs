@@ -7,6 +7,7 @@ using System.Linq;
 using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
+using static FF1Lib.GameClasses;
 
 namespace FF1Lib
 {
@@ -530,11 +531,123 @@ namespace FF1Lib
 
 				}
 			};
+			if (flags.Fighterluck != FiLuckpool.FiLuckpoolNone)
+			{
+				int  i = 0;
+				switch (flags.Fighterluck)
+				{
+					case FiLuckpool.Fiadd5Luck:
+						_classes[i].LckStarting = (byte)Math.Max(_classes[i].LckStarting + 5, 0);
+						break;
 
+					case FiLuckpool.Fiadd10Luck:
+						_classes[i].LckStarting = (byte)Math.Max(_classes[i].LckStarting + 10, 0);
+						break;
 
+					case FiLuckpool.Fiadd20Luck:
+						_classes[i].LckStarting = (byte)Math.Max(_classes[i].LckStarting + 20, 0);
+						break;
 
+					case FiLuckpool.Fiminus5Luck:
+						_classes[i].LckStarting = (byte)Math.Max(_classes[i].LckStarting - 10, 0);
+						break;
+				}
+			};
+			if (flags.FighterHP != FiHPPool.FiHPPoolNone)
+			{
+				int i = 0;
+				switch (flags.FighterHP)
+				{
+					case FiHPPool.Fiadd20HP:
+						_classes[i].HpStarting = (byte)Math.Max(_classes[i].HpStarting + 20, 1);
+						break;
 
+					case FiHPPool.Fiadd40HP:
+						_classes[i].HpStarting = (byte)Math.Max(_classes[i].HpStarting + 40, 1);
+						break;
 
+					case FiHPPool.Fiadd80HP:
+						_classes[i].HpStarting = (byte)Math.Max(_classes[i].HpStarting + 80, 1);
+						break;
+
+					case FiHPPool.Fiminus15HP:
+						_classes[i].HpStarting = (byte)Math.Max(_classes[i].HpStarting - 15, 1);
+						break;
+
+					case FiHPPool.Fiminus30HP:
+						_classes[i].HpStarting = (byte)Math.Max(_classes[i].HpStarting - 30, 1);
+						break;
+				}
+			};
+			if (flags.FighterHit != FiHitPercentpool.FiHitPercentpoolNone)
+			{
+				int i = 0;
+				switch (flags.FighterHit)
+				{
+					case FiHitPercentpool.Fiadd10hit:
+						_classes[i].HitStarting = (byte)Math.Max(_classes[i].HitStarting + 10, 0);
+					break;
+
+					case FiHitPercentpool.Fiadd20hit:
+						_classes[i].HitStarting = (byte)Math.Max(_classes[i].HitStarting + 20, 0);
+						break;
+
+					case FiHitPercentpool.Fiminus10hit:
+						_classes[i].HitStarting = (byte)Math.Max(_classes[i].HitStarting - 10, 0);
+						break;
+				}
+			};
+			if (flags.FighterMdef != FiMdefpool.FiMdefpoolNone)
+			{
+				int i = 0;
+				switch (flags.FighterMdef)
+				{
+					case FiMdefpool.Fiadd10mdef:
+						_classes[i].MDefStarting = (byte)Math.Max(_classes[i].MDefStarting + 10, 0);
+						break;
+
+					case FiMdefpool.Fiadd20mdef:
+						_classes[i].MDefStarting = (byte)Math.Max(_classes[i].MDefStarting + 20, 0);
+						break;
+
+					case FiMdefpool.Fiminus10mdef:
+						_classes[i].MDefStarting = (byte)Math.Max(_classes[i].MDefStarting - 10, 0);
+						break;
+				}
+			};
+			if (flags.FighterInt != FiIntpool.FiIntpoolNone)
+			{
+				int i = 0;
+				switch (flags.FighterInt)
+				{
+					case FiIntpool.Fiadd10int:
+						_classes[i].IntStarting = (byte)Math.Max(_classes[i].IntStarting + 10, 0);
+						break;
+
+					case FiIntpool.Fiadd20int:
+						_classes[i].IntStarting = (byte)Math.Max(_classes[i].IntStarting + 20, 0);
+						break;
+
+					case FiIntpool.Fiadd40int:
+						_classes[i].IntStarting = (byte)Math.Max(_classes[i].IntStarting + 40, 0);
+						break;
+				}
+
+			};
+			if (flags.Fightergold != FiGoldpool.FiGoldpoolNone) //unsure if this code will function, will write it and test it later
+			{
+				int i = 0;
+				 
+				switch (flags.Fightergold)
+				{
+					case FiGoldpool.Fiadd200gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(2, 0); 
+						break;
+
+				
+				}
+
+			};
 
 			validClasses = new() { Classes.Fighter, Classes.Thief, Classes.BlackBelt, Classes.RedMage, Classes.WhiteMage, Classes.BlackMage };
 

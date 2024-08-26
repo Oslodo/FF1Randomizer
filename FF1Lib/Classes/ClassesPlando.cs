@@ -455,8 +455,8 @@ namespace FF1Lib
 				}
 			};
 
-			//Do the Stat changes first
-
+			//Do the Stat and gold changes first
+			#region FigherStats
 			if (flags.Fighterstr != FiStrpool.FiStrpoolnone)
 			{
 				int i = 0;
@@ -644,10 +644,140 @@ namespace FF1Lib
 						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(2, 0); 
 						break;
 
-				
+					case FiGoldpool.Fiadd400gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(4, 0);
+						break;
+
+					case FiGoldpool.Fiadd600gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(6, 0);
+						break;
+
+					case FiGoldpool.Fiadd800gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(8, 0);
+						break;
+
+					case FiGoldpool.FIadd1500gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(15, 0);
+						break;
+
+					case FiGoldpool.Fiadd5000gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(50, 0);
+						break;
+
+					case FiGoldpool.Fiadd20000gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(200, 0);
+						break;
+
+
+
 				}
 
 			};
+			#endregion
+
+			#region ThiefStats
+			if (flags.Thiefstr != ThStrpool.ThStrpoolNone)
+			{
+				int i = 1;
+				switch (flags.Thiefstr)
+				{
+					case ThStrpool.Thadd10Str:
+						_classes[i].StrStarting = (byte)Math.Max(_classes[i].StrStarting + 10, 0);
+						break;
+
+					case ThStrpool.Thadd20Str:
+						_classes[i].StrStarting = (byte)Math.Max(_classes[i].StrStarting + 20, 0);
+						break;
+
+					case ThStrpool.Thadd40Str:
+						_classes[i].StrStarting = (byte)Math.Max(_classes[i].StrStarting + 40, 0);
+						break;
+
+					case ThStrpool.Thminus10Str:
+						_classes[i].StrStarting = (byte)Math.Max(_classes[i].StrStarting - 10, 0);
+						break;
+
+				}
+
+			};
+			if (flags.Thiefagi != ThAgipool.ThAgipoolNone)
+			{
+				int i = 1;
+				switch (flags.Thiefagi)
+				{
+					case ThAgipool.Thadd15Agi:
+						_classes[i].AgiStarting = (byte)Math.Max(_classes[i].AgiStarting + 15, 0);
+						break;
+
+					case ThAgipool.Thadd25Agi:
+						_classes[i].AgiStarting = (byte)Math.Max(_classes[i].AgiStarting + 25, 0);
+						break;
+
+					case ThAgipool.Thadd50Agi:
+						_classes[i].AgiStarting = (byte)Math.Max(_classes[i].AgiStarting + 50, 0);
+						break;
+
+					case ThAgipool.Thminus10Agi:
+						_classes[i].AgiStarting = (byte)Math.Max(_classes[i].AgiStarting - 10, 0);
+						break;
+
+					case ThAgipool.Thminus20Agi:
+						_classes[i].AgiStarting = (byte)Math.Max(_classes[i].AgiStarting - 20, 0);
+						break;
+				}
+			};
+			if (flags.Thiefvit != ThVitpool.ThVitpoolNone)
+			{
+				int i = 1;
+				switch (flags.Thiefluck)
+				{
+					case ThLuckpool.Thadd5Luck:
+						_classes[i].LckStarting = (byte)Math.Max(_classes[i].LckStarting + 5, 0);
+						break;
+
+					case ThLuckpool.Thadd10Luck:
+						_classes[i].LckStarting = (byte)Math.Max(_classes[i].LckStarting + 10, 0);
+						break;
+
+					case ThLuckpool.Thminus5luck:
+						_classes[i].LckStarting = (byte)Math.Max(_classes[i].LckStarting - 5, 0);
+						break;
+
+					case ThLuckpool.Thminus10Luck:
+						_classes[i].LckStarting = (byte)Math.Max(_classes[i].LckStarting - 10, 0);
+						break;
+				}	
+
+			};
+			if (flags.ThiefHP != ThHPPool.ThHPPoolNone)
+			{
+				int i = 1;
+				switch (flags.ThiefHP)
+				{
+					case ThHPPool.Thadd20HP:
+						_classes[i].HpStarting = (byte)Math.Max(_classes[i].HpStarting + 20, 0);
+						break;
+
+					case ThHPPool.Thadd40HP:
+						_classes[i].HpStarting = (byte)Math.Max(_classes[i].HpStarting + 40, 0);
+						break;
+
+					case ThHPPool.Thadd80HP:
+						_classes[i].HpStarting = (byte)Math.Max(_classes[i].HpStarting + 80, 0);
+						break;
+
+					case ThHPPool.Thminus15HP:
+						_classes[i].HpStarting = (byte)Math.Max(_classes[i].HpStarting - 15, 0);
+						break;
+
+					case ThHPPool.Thminus30HP:
+						_classes[i].HpStarting = (byte)Math.Max(_classes[i].HpStarting - 30, 0);
+						break;
+
+					}
+			};
+
+			#endregion 
 
 			validClasses = new() { Classes.Fighter, Classes.Thief, Classes.BlackBelt, Classes.RedMage, Classes.WhiteMage, Classes.BlackMage };
 

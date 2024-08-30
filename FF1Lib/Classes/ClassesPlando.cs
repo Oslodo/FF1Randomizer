@@ -776,8 +776,138 @@ namespace FF1Lib
 
 					}
 			};
+			if (flags.ThiefHit != ThHitPercentpool.ThHitPercentpoolNone)
+			{
+				int i = 1;
+				switch (flags.ThiefHit)
+				{
+					case ThHitPercentpool.Thadd10hit:
+						_classes[i].HitStarting = (byte)Math.Max(_classes[i].HitStarting + 10, 0);
+						break;
 
-			#endregion 
+					case ThHitPercentpool.Thadd20hit:
+						_classes[i].HitStarting = (byte)Math.Max(_classes[i].HitStarting + 20, 0);
+						break;
+
+					case ThHitPercentpool.Thminus10hit:
+						_classes[i].HitStarting = (byte)Math.Max(_classes[i].HitStarting - 10, 0);
+						break;
+
+				}
+
+			};
+			if (flags.ThiefMdef != ThMdefpool.ThMdefpoolNone)
+			{
+				int i = 1;
+				switch (flags.ThiefMdef)
+				{
+					case ThMdefpool.Thadd10mdef:
+						_classes[i].MDefStarting = (byte)Math.Max(_classes[i].MDefStarting + 10, 0);
+						break;
+
+					case ThMdefpool.Thadd20mdef:
+						_classes[i].MDefStarting = (byte)Math.Max(_classes[i].MDefStarting + 20, 0);
+						break;
+
+					case ThMdefpool.Thminus10mdef:
+						_classes[i].MDefStarting = (byte)Math.Max(_classes[i].MDefStarting - 10, 0);
+						break;
+				}
+			};
+			if (flags.ThiefInt != ThIntpool.ThIntpoolNone)
+			{
+				int i = 1;
+				switch (flags.ThiefInt)
+				{
+					case ThIntpool.Thadd10int:
+						_classes[i].IntStarting = (byte)Math.Max(_classes[i].IntStarting +  10, 0);
+						break;
+
+					case ThIntpool.Thadd20int:
+						_classes[i].IntStarting = (byte)Math.Max(_classes[i].IntStarting + 20, 0);
+						break;
+
+					case ThIntpool.Thminus10int:
+						_classes[i].IntStarting = (byte)Math.Max(_classes[i].IntStarting - 10, 0);
+						break;
+
+				}
+
+			};
+			if (flags.Thiefgold != ThGoldpool.ThGoldpoolNone)
+			{
+				int i = 1;
+				switch (flags.Thiefgold)
+				{
+					case ThGoldpool.Thadd200gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(2, 0);
+						break;
+
+					case ThGoldpool.Thadd400gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(4, 0);
+						break;
+
+					case ThGoldpool.Thadd600gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(6, 0);
+						break;
+
+					case ThGoldpool.Thadd800gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(8, 0);
+						break;
+
+					case ThGoldpool.Thadd1400gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(14, 0);
+						break;
+
+					case ThGoldpool.Thadd1500gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(15, 0);
+						break;
+
+					case ThGoldpool.Thadd2000gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(20, 0);
+						break;
+
+					case ThGoldpool.Thadd3000gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(30, 0);
+						break;
+
+					case ThGoldpool.Thadd4000gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(40, 0);
+						break;
+
+					case ThGoldpool.Thadd6000gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(60, 0);
+						break;
+
+					case ThGoldpool.Thadd20000gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(200, 0);
+						break;
+
+					case ThGoldpool.Thminus50gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(-5, 0);
+						break;
+
+					case ThGoldpool.Thminus100gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(-10, 0);
+						break;
+
+					case ThGoldpool.Thminus150gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(-15, 0);
+						break;
+
+					case ThGoldpool.Thminus350gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(-35, 0);
+						break;
+
+					case ThGoldpool.Thminus1100gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(-110, 0);
+						break;
+				}
+
+			};
+			#endregion
+
+
 
 			validClasses = new() { Classes.Fighter, Classes.Thief, Classes.BlackBelt, Classes.RedMage, Classes.WhiteMage, Classes.BlackMage };
 

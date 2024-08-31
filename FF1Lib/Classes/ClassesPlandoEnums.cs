@@ -770,7 +770,7 @@ namespace FF1Lib
 		[Description("-10 Int")]
 		RMminus10int,
 		[Description("-20 Int")]
-		RMmins20int,
+		RMminus20int,
 	}
 	public enum RMGoldpool
 	{

@@ -1053,7 +1053,7 @@ namespace FF1Lib
 		[Description("-10 Int")]
 		WMminus10int,
 		[Description("-20 Int")]
-		WMmins20int,
+		WMminus20int,
 	}
 	public enum WMGoldpool
 	{

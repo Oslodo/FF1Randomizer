@@ -1,4 +1,5 @@
-﻿using FF1Lib.Helpers;
+﻿using DotNetAsm;
+using FF1Lib.Helpers;
 using FF1Lib.Sanity;
 using RomUtilities;
 using SixLabors.ImageSharp.Processing;
@@ -459,6 +460,7 @@ namespace FF1Lib
 			};
 
 			//Do the Stat and gold changes first
+			//Gold function unknown at this time, may need a re-write
 			#region FigherStatsGold
 			if (flags.Fighterstr != FiStrpool.FiStrpoolnone)
 			{
@@ -637,7 +639,7 @@ namespace FF1Lib
 				}
 
 			};
-			if (flags.Fightergold != FiGoldpool.FiGoldpoolNone) //unsure if this code will function, will write it and test it later
+			if (flags.Fightergold != FiGoldpool.FiGoldpoolNone) 
 			{
 				int i = 0;
 				 
@@ -1376,6 +1378,239 @@ namespace FF1Lib
 			};
 			#endregion
 
+			#region WhiteMageStatsGold
+			if (flags.Wmstr != WMStrpool.WMStrpoolNone)
+			{
+				int i = 4;
+				switch (flags.Wmstr)
+				{
+					case WMStrpool.WMadd10Str:
+						_classes[i].StrStarting = (byte)Math.Max(_classes[i].StrStarting + 10, 0);
+						break;
+
+					case WMStrpool.WMadd20Str:
+						_classes[i].StrStarting = (byte)Math.Max(_classes[i].StrStarting + 20, 0);
+						break;
+
+					case WMStrpool.WMadd40Str:
+						_classes[i].StrStarting = (byte)Math.Max(_classes[i].StrStarting + 40, 0);
+						break;
+
+					case WMStrpool.WMminus10Str:
+						_classes[i].StrStarting = (byte)Math.Max(_classes[i].StrStarting - 10, 0);
+						break;
+				}
+			};
+			if (flags.Wmagi != WMAgipool.WMAgipoolNone)
+			{
+				int i = 4;
+				switch (flags.Wmagi)
+				{
+					case WMAgipool.WMadd15Agi:
+						_classes[i].AgiStarting = (byte)Math.Max(_classes[i].AgiStarting + 15, 0);
+						break;
+
+					case WMAgipool.WMadd25Agi:
+						_classes[i].AgiStarting = (byte)Math.Max(_classes[i].AgiStarting + 25, 0);
+						break;
+
+					case WMAgipool.WMadd50Agi:
+						_classes[i].AgiStarting = (byte)Math.Max(_classes[i].AgiStarting + 50, 0);
+						break;
+
+					case WMAgipool.WMminus10Agi:
+						_classes[i].AgiStarting = (byte)Math.Max(_classes[i].AgiStarting - 10, 0);
+						break;
+				}
+			};
+			if (flags.Wmvit != WMVitpool.WMVitpoolNone)
+			{
+				int i = 4;
+				switch (flags.Wmvit)
+				{
+					case WMVitpool.WMadd10Vit:
+						_classes[i].VitStarting = (byte)Math.Max(_classes[i].VitStarting + 10, 0);
+						break;
+
+					case WMVitpool.WMadd20Vit:
+						_classes[i].VitStarting = (byte)Math.Max(_classes[i].VitStarting + 20, 0);
+						break;
+
+					case WMVitpool.WMadd40Vit:
+						_classes[i].VitStarting = (byte)Math.Max(_classes[i].VitStarting + 40, 0);
+						break;
+
+					case WMVitpool.WMminus10Vit:
+						_classes[i].VitStarting = (byte)Math.Max(_classes[i].VitStarting - 10, 0);
+						break;
+				}
+			};
+			if (flags.Wmluck != WMLuckpool.WMLuckpoolNone)
+			{
+				int i = 4;
+				switch (flags.Wmluck)
+				{
+					case WMLuckpool.WMadd5Luck:
+						_classes[i].LckStarting = (byte)Math.Max(_classes[i].LckStarting + 5, 0);
+						break;
+
+					case WMLuckpool.WMadd10Luck:
+						_classes[i].LckStarting = (byte)Math.Max(_classes[i].LckStarting + 10, 0);
+						break;
+
+					case WMLuckpool.WMadd15Luck:
+						_classes[i].LckStarting = (byte)Math.Max(_classes[i].LckStarting + 15, 0);
+						break;
+
+					case WMLuckpool.WMminus5luck:
+						_classes[i].LckStarting = (byte)Math.Max(_classes[i].LckStarting - 5, 0);
+						break;
+				}
+			};
+			if (flags.WmHP != WMHPPool.WMHPPoolNone)
+			{
+				int i = 4;
+				switch (flags.WmHP)
+				{
+					case WMHPPool.WMadd20HP:
+						_classes[i].HpStarting = (byte)Math.Max(_classes[i].HpStarting + 20, 0);
+						break;
+
+					case WMHPPool.WMadd40HP:
+						_classes[i].HpStarting = (byte)Math.Max(_classes[i].HpStarting + 40, 0);
+						break;
+
+					case WMHPPool.WMadd80HP:
+						_classes[i].HpStarting = (byte)Math.Max(_classes[i].HpStarting + 80, 0);
+						break;
+
+					case WMHPPool.WMminus15HP:
+						_classes[i].HpStarting = (byte)Math.Max(_classes[i].HpStarting - 15, 0);
+						break;
+
+					case WMHPPool.WMminus30HP:
+						_classes[i].HpStarting = (byte)Math.Max(_classes[i].HpStarting - 30, 0);
+						break;
+				}
+			};
+			if (flags.Wmhit != WMHitPercentpool.WMHitPercentpoolNone)
+			{
+				int i = 4;
+				switch (flags.Wmhit)
+				{
+					case WMHitPercentpool.WMadd10hit:
+						_classes[i].HitStarting = (byte)Math.Max(_classes[i].HitStarting + 10, 0);
+						break;
+
+					case WMHitPercentpool.WMadd20hit:
+						_classes[i].HitStarting = (byte)Math.Max(_classes[i].HitStarting + 20, 0);
+						break;
+
+					case WMHitPercentpool.WMminus10hit:
+						_classes[i].HitStarting = (byte)Math.Max(_classes[i].HitStarting - 10, 0);
+						break;
+				}
+			};
+			if (flags.Wmmdef != WMMdefpool.WMMdefpoolNone)
+			{
+				int i = 4;
+				switch (flags.Wmmdef)
+				{
+					case WMMdefpool.WMadd10mdef:
+						_classes[i].MDefStarting = (byte)Math.Max(_classes[i].MDefStarting + 10, 0);
+						break;
+
+					case WMMdefpool.WMadd20mdef:
+						_classes[i].MDefStarting = (byte)Math.Max(_classes[i].MDefStarting + 20, 0);
+						break;
+
+					case WMMdefpool.WMminus10mdef:
+						_classes[i].MDefStarting = (byte)Math.Max(_classes[i].MDefStarting - 10, 0);
+						break;
+				}
+			};
+			if (flags.Wmint != WMIntpool.WMIntpoolNone)
+			{
+				int i = 4;
+				switch (flags.Wmint)
+				{
+					case WMIntpool.WMadd10int:
+						_classes[i].IntStarting = (byte)Math.Max(_classes[i].IntStarting + 10, 0);
+						break;
+
+					case WMIntpool.WMadd20int:
+						_classes[i].IntStarting = (byte)Math.Max(_classes[i].IntStarting + 20, 0);
+						break;
+
+					case WMIntpool.WMadd40int:
+						_classes[i].IntStarting = (byte)Math.Max(_classes[i].IntStarting + 40, 0);
+						break;
+
+					case WMIntpool.WMminus10int:
+						_classes[i].IntStarting = (byte)Math.Max(_classes[i].IntStarting - 10, 0);
+						break;
+
+					case WMIntpool.WMminus20int:
+						_classes[i].IntStarting = (byte)Math.Max(_classes[i].IntStarting - 20, 0);
+						break;
+				}
+			};
+			if (flags.Wmgold != WMGoldpool.WMGoldpoolNone)
+			{
+				int i = 4;
+				switch (flags.Wmgold)
+				{
+					case WMGoldpool.WMadd200gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(2, 0);
+						break;
+
+					case WMGoldpool.WMadd400gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(4, 0);
+						break;
+
+					case WMGoldpool.WMadd600gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(6, 0);
+						break;
+
+					case WMGoldpool.WMadd800gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(8, 0);
+						break;
+
+					case WMGoldpool.WMadd1500gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(15, 0);
+						break;
+
+					case WMGoldpool.WMadd5000gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(50, 0);
+						break;
+
+					case WMGoldpool.WMadd20000gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(200, 0);
+						break;
+
+					case WMGoldpool.WMminus50gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(-5, 0);
+						break;
+
+					case WMGoldpool.WMminus100gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(-10, 0);
+						break;
+
+					case WMGoldpool.WMminus150gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(-15, 0);
+						break;
+
+					case WMGoldpool.WMminus350gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(-35, 0);
+						break;
+
+					case WMGoldpool.WMminus1100gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(-110, 0);
+						break;
+
+				}
+			};
+			#endregion
 			validClasses = new() { Classes.Fighter, Classes.Thief, Classes.BlackBelt, Classes.RedMage, Classes.WhiteMage, Classes.BlackMage };
 
 			foreach (var gameclass in validClasses)

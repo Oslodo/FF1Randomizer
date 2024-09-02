@@ -9,6 +9,7 @@ using System.IO.Compression;
 using System.Linq;
 using System.Reflection.Metadata.Ecma335;
 using System.Runtime.ExceptionServices;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using static FF1Lib.GameClasses;
@@ -1608,6 +1609,224 @@ namespace FF1Lib
 						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(-110, 0);
 						break;
 
+				}
+			};
+			#endregion
+
+			#region BlackMageStatsGold
+			if (flags.Bmstr != BMStrpool.BMStrpoolnone)
+			{
+				int i = 5;
+				switch(flags.Bmstr)
+				{
+					case BMStrpool.BMadd10Str:
+						_classes[i].StrStarting = (byte)Math.Max(_classes[i].StrStarting + 10, 0);
+						break;
+
+					case BMStrpool.BMadd20Str:
+						_classes[i].StrStarting = (byte)Math.Max(_classes[i].StrStarting + 20, 0);
+						break;
+
+					case BMStrpool.BMadd40Str:
+						_classes[i].StrStarting = (byte)Math.Max(_classes[i].StrStarting + 40, 0);
+						break;
+
+					case BMStrpool.BMminus10Str:
+						_classes[i].StrStarting = (byte)Math.Max(_classes[i].StrStarting - 10, 0);
+						break;
+				}
+			};
+			if (flags.Bmagi != BMAgipool.BMAgipoolnone)
+			{
+				int i = 5;
+				switch (flags.Bmagi)
+				{
+					case BMAgipool.BMadd15Agi:
+						_classes[i].AgiStarting = (byte)Math.Max(_classes[i].AgiStarting + 15, 0);
+						break;
+
+					case BMAgipool.BMadd25Agi:
+						_classes[i].AgiStarting = (byte)Math.Max(_classes[i].AgiStarting + 25, 0);
+						break;
+
+					case BMAgipool.BMadd50Agi:
+						_classes[i].AgiStarting = (byte)Math.Max(_classes[i].AgiStarting + 50, 0);
+						break;
+
+					case BMAgipool.BMminus10Agi:
+						_classes[i].AgiStarting = (byte)Math.Max(_classes[i].AgiStarting - 10, 0);
+						break;
+				}
+			};
+			if (flags.Bmvit != BMVitpool.BMVitpoolnone)
+			{
+				int i = 5;
+				switch (flags.Bmvit)
+				{
+					case BMVitpool.BMadd10Vit:
+						_classes[i].VitStarting = (byte)Math.Max(_classes[i].VitStarting + 10, 0);
+						break;
+
+					case BMVitpool.BMadd20Vit:
+						_classes[i].VitStarting = (byte)Math.Max(_classes[i].VitStarting + 20, 0);
+						break;
+
+					case BMVitpool.BMadd40Vit:
+						_classes[i].VitStarting = (byte)Math.Max(_classes[i].VitStarting + 40, 0);
+						break;
+
+					case BMVitpool.BMminus10Vit:
+						_classes[i].VitStarting = (byte)Math.Max(_classes[i].VitStarting - 10, 0);
+						break;
+				}
+			};
+			if (flags.Bmluck != BMLuckpool.BMLuckpoolnone)
+			{
+				int i = 5;
+				switch (flags.Bmluck)
+				{
+					case BMLuckpool.BMadd5Luck:
+						_classes[i].LckStarting = (byte)Math.Max(_classes[i].LckStarting + 5, 0);
+						break;
+
+					case BMLuckpool.BMadd10Luck:
+						_classes[i].LckStarting = (byte)Math.Max(_classes[i].LckStarting + 10, 0);
+						break;
+
+					case BMLuckpool.BMadd15Luck:
+						_classes[i].LckStarting = (byte)Math.Max(_classes[i].LckStarting + 15, 0);
+						break;
+
+					case BMLuckpool.BMminus10Luck:
+						_classes[i].LckStarting = (byte)Math.Max(_classes[i].LckStarting  - 10, 0);
+						break;
+
+
+				}
+			};
+			if (flags.BmHP != BMHPPool.BMHPPoolnone)
+			{
+				int i = 5;
+				switch (flags.BmHP)
+				{
+					case BMHPPool.BMadd20HP:
+						_classes[i].HpStarting = (byte)Math.Max(_classes[i].HpStarting + 20, 0);
+						break;
+
+					case BMHPPool.BMadd40HP:
+						_classes[i].HpStarting = (byte)Math.Max(_classes[i].HpStarting + 40, 0);
+						break;
+
+					case BMHPPool.BMadd80HP:
+						_classes[i].HpStarting = (byte)Math.Max(_classes[i].HpStarting + 80, 0);
+						break;
+
+					case BMHPPool.BMminus15HP:
+						_classes[i].HpStarting = (byte)Math.Max(_classes[i].HpStarting - 15, 0);
+						break;
+
+					case BMHPPool.BMminus30HP:
+						_classes[i].HpStarting = (byte)Math.Max(_classes[i].HpStarting - 30, 0);
+						break;
+				}
+			};
+			if (flags.Bmmdef != BMMdefpool.BMMdefpoolnone)
+			{
+				int i = 5;
+				switch (flags.Bmmdef)
+				{
+					case BMMdefpool.BMadd10mdef:
+						_classes[i].MDefStarting = (byte)Math.Max(_classes[i].MDefStarting + 10, 0);
+						break;
+
+					case BMMdefpool.BMadd20mdef:
+						_classes[i].MDefStarting = (byte)Math.Max(_classes[i].MDefStarting + 20, 0);
+						break;
+
+					case BMMdefpool.BMminus10mdef:
+						_classes[i].MDefStarting = (byte)Math.Max(_classes[i].MDefStarting - 10, 0);
+						break;
+				}
+			};
+			if (flags.Bmint != BMIntpool.BMIntpoolNone)
+			{
+				int i = 5;
+				switch (flags.Bmint)
+				{
+					case BMIntpool.BMadd10int:
+						_classes[i].IntStarting = (byte)Math.Max(_classes[i].IntStarting + 10, 0);
+						break;
+
+					case BMIntpool.BMadd20int:
+						_classes[i].IntStarting = (byte)Math.Max(_classes[i].IntStarting + 20, 0);
+						break;
+
+					case BMIntpool.BMadd40int:
+						_classes[i].IntStarting = (byte)Math.Max(_classes[i].IntStarting + 40, 0);
+						break;
+
+					case BMIntpool.BMminus10int:
+						_classes[i].IntStarting = (byte)Math.Max(_classes[i].IntStarting - 10, 0);
+						break;
+
+					case BMIntpool.BMmins20int:
+						_classes[i].IntStarting = (byte)Math.Max(_classes[i].IntStarting - 20, 0);
+						break;
+				}
+			};
+			if (flags.Bmgold != BMGoldpool.BMGoldpoolnone)
+			{
+				int i = 5;
+				switch (flags.Bmgold)
+				{
+
+					case BMGoldpool.BMadd200gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(2, 0);
+						break;
+
+					case BMGoldpool.BMadd400gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(4, 0);
+						break;
+
+					case BMGoldpool.BMadd600gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(6, 0);
+						break;
+
+					case BMGoldpool.BMadd800gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(8, 0);
+						break;
+
+					case BMGoldpool.BMadd1500gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(15, 0);
+						break;
+
+					case BMGoldpool.BMadd5000gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(50, 0);
+						break;
+
+					case BMGoldpool.BMadd20000gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(200, 0);
+						break;
+
+					case BMGoldpool.BMminus50gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(-5, 0);
+						break;
+
+					case BMGoldpool.BMminus100gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(-10, 0);
+						break;
+
+					case BMGoldpool.BMminus150gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(-15, 0);
+						break;
+
+					case BMGoldpool.BMminus350gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(-35, 0);
+						break;
+
+					case BMGoldpool.BMminus1100gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(-110, 0);
+						break;
 				}
 			};
 			#endregion

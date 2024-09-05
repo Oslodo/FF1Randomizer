@@ -470,7 +470,7 @@ namespace FF1Lib
 				{
 					case FiStrpool.Fiadd10Str:
 						_classes[i].StrStarting = (byte)Math.Max(_classes[i].StrStarting + 10, 0);
-						break;
+							break;
 
 					case FiStrpool.Fiadd20Str:
 						_classes[i].StrStarting = (byte)Math.Max(_classes[i].StrStarting + 20, 0);
@@ -1830,6 +1830,8 @@ namespace FF1Lib
 				}
 			};
 			#endregion
+
+
 			validClasses = new() { Classes.Fighter, Classes.Thief, Classes.BlackBelt, Classes.RedMage, Classes.WhiteMage, Classes.BlackMage };
 
 			foreach (var gameclass in validClasses)

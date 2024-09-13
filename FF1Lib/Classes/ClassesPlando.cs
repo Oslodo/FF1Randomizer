@@ -51,7 +51,7 @@ namespace FF1Lib
 			GenerateListsPlando(bonuslist, maluses, olditemnames, itemnames, flags, rom);
 
 			var StartwithKIPlando = KeyItemList(flags, olditemnames);
-
+			//var PlandoBonusList = GenerateListsPlando(bonuslist, maluses, olditemnames, itemnames, flags, rom);
 
 			Dictionary<Classes, List<BonusMalusPlando>> assignedBlessings = new();
 			Dictionary<Classes, List<BonusMalusPlando>> assignedMaluses = new();
@@ -470,6 +470,7 @@ namespace FF1Lib
 				{
 					case FiStrpool.Fiadd10Str:
 						_classes[i].StrStarting = (byte)Math.Max(_classes[i].StrStarting + 10, 0);
+						//assignedBlessings[Classes.Fighter].Add(bonuslist(BonusMalusAction.));
 							break;
 
 					case FiStrpool.Fiadd20Str:

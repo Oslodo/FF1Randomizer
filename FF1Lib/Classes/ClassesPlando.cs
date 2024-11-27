@@ -51,8 +51,8 @@ namespace FF1Lib
 			GenerateListsPlando(bonuslist, maluses, olditemnames, itemnames, flags, rom);
 
 			var StartwithKIPlando = KeyItemList(flags, olditemnames);
-			
-			//var PlandoBonusList = GenerateListsPlando(bonuslist, maluses, olditemnames, itemnames, flags, rom);
+
+			//var PlandoMasterList = (bonuslist, maluses);
 
 			Dictionary<Classes, List<BonusMalusPlando>> assignedBlessings = new();
 			Dictionary<Classes, List<BonusMalusPlando>> assignedMaluses = new();
@@ -471,23 +471,27 @@ namespace FF1Lib
 				{
 					case FiStrpool.Fiadd10Str:
 						_classes[i].StrStarting = (byte)Math.Max(_classes[i].StrStarting + 10, 0);
-						//assignedBlessings[Classes.Fighter].Add(BonusMalusAction.StrMod);
+						assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusAction.StrMod]);	//Not sure if this will apply the correct number value, check later
 							break;
 
 					case FiStrpool.Fiadd20Str:
 						_classes[i].StrStarting = (byte)Math.Max(_classes[i].StrStarting + 20, 0);
+						assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusAction.StrMod]);
 						break;
 
 					case FiStrpool.Fiadd40Str:
 						_classes[i].StrStarting = (byte)Math.Max(_classes[i].StrStarting + 40, 0);
+						assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusAction.StrMod]);
 						break;
 
 					case FiStrpool.Fiminus10Str:
 						_classes[i].StrStarting = (byte)Math.Max(_classes[i].StrStarting - 10, 0);
+						assignedMaluses[Classes.Fighter].Add(bonuslist[(int)BonusMalusAction.StrMod]);
 						break;
 
 					case FiStrpool.Fiminus20Str:
 						_classes[i].StrStarting = (byte)Math.Max(_classes[i].StrStarting - 20, 0);
+						assignedMaluses[Classes.Fighter].Add(maluses[(int)BonusMalusAction.StrMod]);		//remember to switch to Maluses list for the maluses
 						break;
 				}
 
@@ -499,18 +503,22 @@ namespace FF1Lib
 				{
 					case FiAgipool.Fiadd15Agi:
 						_classes[i].AgiStarting = (byte)Math.Max(_classes[i].AgiStarting + 15, 0);
+						assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusAction.AgiMod]);
 						break;
 
 					case FiAgipool.Fiadd25Agi:
 						_classes[i].AgiStarting = (byte)Math.Max(_classes[i].AgiStarting + 25, 0);
+						assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusAction.AgiMod]);
 						break;
 
 					case FiAgipool.Fiadd50Agi:
 						_classes[i].AgiStarting = (byte)Math.Max(_classes[i].AgiStarting + 50, 0);
+						assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusAction.AgiMod]);
 						break;
 
 					case FiAgipool.Fiminus10Agi:
 						_classes[i].AgiStarting = (byte)Math.Max(_classes[i].AgiStarting - 10, 0);
+						assignedMaluses[Classes.Fighter].Add(maluses[(int)BonusMalusAction.AgiMod]);
 						break;
 
 				}
@@ -523,18 +531,22 @@ namespace FF1Lib
 				{
 					case FiVitpool.Fiadd10Vit:
 						_classes[i].VitStarting = (byte)Math.Max(_classes[i].VitStarting + 10, 0);
+						assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusAction.VitMod]);
 						break;
 
 					case FiVitpool.Fiadd20Vit:
 						_classes[i].VitStarting = (byte)Math.Max(_classes[i].VitStarting + 20, 0);
+						assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusAction.VitMod]);
 						break;
 
 					case FiVitpool.Fiadd40Vit:
 						_classes[i].VitStarting = (byte)Math.Max(_classes[i].VitStarting + 40, 0);
+						assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusAction.VitMod]);
 						break;
 
 					case FiVitpool.Fiminus10Vit:
 						_classes[i].VitStarting = (byte)Math.Max(_classes[i].VitStarting - 10, 0);
+						assignedMaluses[Classes.Fighter].Add(maluses[(int)BonusMalusAction.VitMod]);
 						break;
 
 				}
@@ -546,18 +558,22 @@ namespace FF1Lib
 				{
 					case FiLuckpool.Fiadd5Luck:
 						_classes[i].LckStarting = (byte)Math.Max(_classes[i].LckStarting + 5, 0);
+						assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusAction.LckMod]);
 						break;
 
 					case FiLuckpool.Fiadd10Luck:
 						_classes[i].LckStarting = (byte)Math.Max(_classes[i].LckStarting + 10, 0);
+						assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusAction.LckMod]);
 						break;
 
 					case FiLuckpool.Fiadd20Luck:
 						_classes[i].LckStarting = (byte)Math.Max(_classes[i].LckStarting + 20, 0);
+						assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusAction.LckMod]);
 						break;
 
 					case FiLuckpool.Fiminus5Luck:
 						_classes[i].LckStarting = (byte)Math.Max(_classes[i].LckStarting - 10, 0);
+						assignedMaluses[Classes.Fighter].Add(bonuslist[(int)BonusMalusAction.LckMod]);
 						break;
 				}
 			};
@@ -568,22 +584,27 @@ namespace FF1Lib
 				{
 					case FiHPPool.Fiadd20HP:
 						_classes[i].HpStarting = (byte)Math.Max(_classes[i].HpStarting + 20, 1);
+						assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusAction.HpMod]);
 						break;
 
 					case FiHPPool.Fiadd40HP:
 						_classes[i].HpStarting = (byte)Math.Max(_classes[i].HpStarting + 40, 1);
+						assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusAction.HpMod]);
 						break;
 
 					case FiHPPool.Fiadd80HP:
 						_classes[i].HpStarting = (byte)Math.Max(_classes[i].HpStarting + 80, 1);
+						assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusAction.HpMod]);
 						break;
 
 					case FiHPPool.Fiminus15HP:
 						_classes[i].HpStarting = (byte)Math.Max(_classes[i].HpStarting - 15, 1);
+						assignedMaluses[Classes.Fighter].Add(bonuslist[(int)BonusMalusAction.HpMod]);
 						break;
 
 					case FiHPPool.Fiminus30HP:
 						_classes[i].HpStarting = (byte)Math.Max(_classes[i].HpStarting - 30, 1);
+						assignedMaluses[Classes.Fighter].Add(bonuslist[(int)BonusMalusAction.HpMod]);
 						break;
 				}
 			};
@@ -594,14 +615,17 @@ namespace FF1Lib
 				{
 					case FiHitPercentpool.Fiadd10hit:
 						_classes[i].HitStarting = (byte)Math.Max(_classes[i].HitStarting + 10, 0);
-					break;
+						assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusAction.HitMod]);
+						break;
 
 					case FiHitPercentpool.Fiadd20hit:
 						_classes[i].HitStarting = (byte)Math.Max(_classes[i].HitStarting + 20, 0);
+						assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusAction.HitMod]);
 						break;
 
 					case FiHitPercentpool.Fiminus10hit:
 						_classes[i].HitStarting = (byte)Math.Max(_classes[i].HitStarting - 10, 0);
+						assignedMaluses[Classes.Fighter].Add(bonuslist[(int)BonusMalusAction.HitMod]);
 						break;
 				}
 			};
@@ -612,14 +636,17 @@ namespace FF1Lib
 				{
 					case FiMdefpool.Fiadd10mdef:
 						_classes[i].MDefStarting = (byte)Math.Max(_classes[i].MDefStarting + 10, 0);
+						assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusAction.MDefMod]);
 						break;
 
 					case FiMdefpool.Fiadd20mdef:
 						_classes[i].MDefStarting = (byte)Math.Max(_classes[i].MDefStarting + 20, 0);
+						assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusAction.MDefMod]);
 						break;
 
 					case FiMdefpool.Fiminus10mdef:
 						_classes[i].MDefStarting = (byte)Math.Max(_classes[i].MDefStarting - 10, 0);
+						assignedMaluses[Classes.Fighter].Add(bonuslist[(int)BonusMalusAction.MDefMod]);
 						break;
 				}
 			};
@@ -630,14 +657,17 @@ namespace FF1Lib
 				{
 					case FiIntpool.Fiadd10int:
 						_classes[i].IntStarting = (byte)Math.Max(_classes[i].IntStarting + 10, 0);
+						assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusAction.IntMod]);
 						break;
 
 					case FiIntpool.Fiadd20int:
 						_classes[i].IntStarting = (byte)Math.Max(_classes[i].IntStarting + 20, 0);
+						assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusAction.IntMod]);
 						break;
 
 					case FiIntpool.Fiadd40int:
 						_classes[i].IntStarting = (byte)Math.Max(_classes[i].IntStarting + 40, 0);
+						assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusAction.IntMod]);
 						break;
 				}
 
@@ -649,34 +679,64 @@ namespace FF1Lib
 				switch (flags.Fightergold)
 				{
 					case FiGoldpool.Fiadd200gold:
-						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(2, 0); 
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(2, 0);
+						assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusAction.StartWithGold]);
 						break;
 
 					case FiGoldpool.Fiadd400gold:
 						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(4, 0);
+						assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusAction.StartWithGold]);
 						break;
 
 					case FiGoldpool.Fiadd600gold:
 						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(6, 0);
+						assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusAction.StartWithGold]);
 						break;
 
 					case FiGoldpool.Fiadd800gold:
 						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(8, 0);
+						assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusAction.StartWithGold]);
 						break;
 
 					case FiGoldpool.FIadd1500gold:
 						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(15, 0);
+						assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusAction.StartWithGold]);
 						break;
 
 					case FiGoldpool.Fiadd5000gold:
 						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(50, 0);
+						assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusAction.StartWithGold]);
 						break;
 
 					case FiGoldpool.Fiadd20000gold:
 						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(200, 0);
+						assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusAction.StartWithGold]);
 						break;
 
+					case FiGoldpool.Fiminus50gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(-5, 0);
+						assignedMaluses[Classes.Fighter].Add(bonuslist[(int)BonusMalusAction.StartWithGold]);
+						break;
 
+					case FiGoldpool.Fiminus100gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(-10, 0);
+						assignedMaluses[Classes.Fighter].Add(bonuslist[(int)BonusMalusAction.StartWithGold]);
+						break;
+
+					case FiGoldpool.Fiminus150gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(-15, 0);
+						assignedMaluses[Classes.Fighter].Add(bonuslist[(int)BonusMalusAction.StartWithGold]);
+						break;
+
+					case FiGoldpool.Fiminus350gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(-35, 0);
+						assignedMaluses[Classes.Fighter].Add(bonuslist[(int)BonusMalusAction.StartWithGold]);
+						break;
+
+					case FiGoldpool.Fiminus1100gold:
+						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(-110, 0);
+						assignedMaluses[Classes.Fighter].Add(bonuslist[(int)BonusMalusAction.StartWithGold]);
+						break;
 
 				}
 
@@ -691,18 +751,22 @@ namespace FF1Lib
 				{
 					case ThStrpool.Thadd10Str:
 						_classes[i].StrStarting = (byte)Math.Max(_classes[i].StrStarting + 10, 0);
+						assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusAction.StrMod]);
 						break;
 
 					case ThStrpool.Thadd20Str:
 						_classes[i].StrStarting = (byte)Math.Max(_classes[i].StrStarting + 20, 0);
+						assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusAction.StrMod]);
 						break;
 
 					case ThStrpool.Thadd40Str:
 						_classes[i].StrStarting = (byte)Math.Max(_classes[i].StrStarting + 40, 0);
+						assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusAction.StrMod]);
 						break;
 
 					case ThStrpool.Thminus10Str:
 						_classes[i].StrStarting = (byte)Math.Max(_classes[i].StrStarting - 10, 0);
+						assignedMaluses[Classes.Thief].Add(bonuslist[(int)BonusMalusAction.StrMod]);
 						break;
 
 				}
@@ -715,22 +779,27 @@ namespace FF1Lib
 				{
 					case ThAgipool.Thadd15Agi:
 						_classes[i].AgiStarting = (byte)Math.Max(_classes[i].AgiStarting + 15, 0);
+						assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusAction.AgiMod]);
 						break;
 
 					case ThAgipool.Thadd25Agi:
 						_classes[i].AgiStarting = (byte)Math.Max(_classes[i].AgiStarting + 25, 0);
+						assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusAction.AgiMod]);
 						break;
 
 					case ThAgipool.Thadd50Agi:
+						assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusAction.AgiMod]);
 						_classes[i].AgiStarting = (byte)Math.Max(_classes[i].AgiStarting + 50, 0);
 						break;
 
 					case ThAgipool.Thminus10Agi:
 						_classes[i].AgiStarting = (byte)Math.Max(_classes[i].AgiStarting - 10, 0);
+						assignedMaluses[Classes.Thief].Add(bonuslist[(int)BonusMalusAction.AgiMod]);
 						break;
 
 					case ThAgipool.Thminus20Agi:
 						_classes[i].AgiStarting = (byte)Math.Max(_classes[i].AgiStarting - 20, 0);
+						assignedMaluses[Classes.Thief].Add(bonuslist[(int)BonusMalusAction.AgiMod]);
 						break;
 				}
 			};
@@ -741,18 +810,22 @@ namespace FF1Lib
 				{
 					case ThVitpool.Thadd10Vit:
 						_classes[i].VitStarting = (byte)Math.Max(_classes[i].VitStarting + 10, 0);
+						assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusAction.VitMod]);
 						break;
 
 					case ThVitpool.Thadd20Vit:
 						_classes[i].VitStarting = (byte)Math.Max(_classes[i].VitStarting + 20, 0);
+						assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusAction.VitMod]);
 						break;
 
 					case ThVitpool.Thadd40Vit:
 						_classes[i].VitStarting = (byte)Math.Max(_classes[i].VitStarting + 40, 0);
+						assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusAction.VitMod]);
 						break;
 
 					case ThVitpool.Thminus10Vit:
 						_classes[i].VitStarting = (byte)Math.Max(_classes[i].VitStarting - 10, 0);
+						assignedMaluses[Classes.Thief].Add(bonuslist[(int)BonusMalusAction.VitMod]);
 						break;
 				}
 			};
@@ -763,18 +836,22 @@ namespace FF1Lib
 				{
 					case ThLuckpool.Thadd5Luck:
 						_classes[i].LckStarting = (byte)Math.Max(_classes[i].LckStarting + 5, 0);
+						assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusAction.LckMod]);
 						break;
 
 					case ThLuckpool.Thadd10Luck:
 						_classes[i].LckStarting = (byte)Math.Max(_classes[i].LckStarting + 10, 0);
+						assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusAction.LckMod]);
 						break;
 
 					case ThLuckpool.Thminus5luck:
 						_classes[i].LckStarting = (byte)Math.Max(_classes[i].LckStarting - 5, 0);
+						assignedMaluses[Classes.Thief].Add(bonuslist[(int)BonusMalusAction.LckMod]);
 						break;
 
 					case ThLuckpool.Thminus10Luck:
 						_classes[i].LckStarting = (byte)Math.Max(_classes[i].LckStarting - 10, 0);
+						assignedMaluses[Classes.Thief].Add(bonuslist[(int)BonusMalusAction.LckMod]);
 						break;
 				}	
 
@@ -786,22 +863,27 @@ namespace FF1Lib
 				{
 					case ThHPPool.Thadd20HP:
 						_classes[i].HpStarting = (byte)Math.Max(_classes[i].HpStarting + 20, 0);
+						assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusAction.HpMod]);
 						break;
 
 					case ThHPPool.Thadd40HP:
 						_classes[i].HpStarting = (byte)Math.Max(_classes[i].HpStarting + 40, 0);
+						assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusAction.HpMod]);
 						break;
 
 					case ThHPPool.Thadd80HP:
 						_classes[i].HpStarting = (byte)Math.Max(_classes[i].HpStarting + 80, 0);
+						assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusAction.HpMod]);
 						break;
 
 					case ThHPPool.Thminus15HP:
 						_classes[i].HpStarting = (byte)Math.Max(_classes[i].HpStarting - 15, 0);
+						assignedMaluses[Classes.Thief].Add(bonuslist[(int)BonusMalusAction.HpMod]);
 						break;
 
 					case ThHPPool.Thminus30HP:
 						_classes[i].HpStarting = (byte)Math.Max(_classes[i].HpStarting - 30, 0);
+						assignedMaluses[Classes.Thief].Add(bonuslist[(int)BonusMalusAction.HpMod]);
 						break;
 
 					}
@@ -813,14 +895,17 @@ namespace FF1Lib
 				{
 					case ThHitPercentpool.Thadd10hit:
 						_classes[i].HitStarting = (byte)Math.Max(_classes[i].HitStarting + 10, 0);
+						assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusAction.HitMod]);
 						break;
 
 					case ThHitPercentpool.Thadd20hit:
 						_classes[i].HitStarting = (byte)Math.Max(_classes[i].HitStarting + 20, 0);
+						assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusAction.HitMod]);
 						break;
 
 					case ThHitPercentpool.Thminus10hit:
 						_classes[i].HitStarting = (byte)Math.Max(_classes[i].HitStarting - 10, 0);
+						assignedMaluses[Classes.Thief].Add(bonuslist[(int)BonusMalusAction.HitMod]);
 						break;
 
 				}
@@ -833,14 +918,17 @@ namespace FF1Lib
 				{
 					case ThMdefpool.Thadd10mdef:
 						_classes[i].MDefStarting = (byte)Math.Max(_classes[i].MDefStarting + 10, 0);
+						assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusAction.MDefMod]);
 						break;
 
 					case ThMdefpool.Thadd20mdef:
 						_classes[i].MDefStarting = (byte)Math.Max(_classes[i].MDefStarting + 20, 0);
+						assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusAction.MDefMod]);
 						break;
 
 					case ThMdefpool.Thminus10mdef:
 						_classes[i].MDefStarting = (byte)Math.Max(_classes[i].MDefStarting - 10, 0);
+						assignedMaluses[Classes.Thief].Add(bonuslist[(int)BonusMalusAction.MDefMod]);
 						break;
 				}
 			};
@@ -851,14 +939,17 @@ namespace FF1Lib
 				{
 					case ThIntpool.Thadd10int:
 						_classes[i].IntStarting = (byte)Math.Max(_classes[i].IntStarting +  10, 0);
+						assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusAction.IntMod]);
 						break;
 
 					case ThIntpool.Thadd20int:
 						_classes[i].IntStarting = (byte)Math.Max(_classes[i].IntStarting + 20, 0);
+						assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusAction.IntMod]);
 						break;
 
 					case ThIntpool.Thminus10int:
 						_classes[i].IntStarting = (byte)Math.Max(_classes[i].IntStarting - 10, 0);
+						assignedMaluses[Classes.Thief].Add(bonuslist[(int)BonusMalusAction.IntMod]);
 						break;
 
 				}
@@ -871,66 +962,82 @@ namespace FF1Lib
 				{
 					case ThGoldpool.Thadd200gold:
 						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(2, 0);
+						assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusAction.StartWithGold]);
 						break;
 
 					case ThGoldpool.Thadd400gold:
 						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(4, 0);
+						assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusAction.StartWithGold]);
 						break;
 
 					case ThGoldpool.Thadd600gold:
 						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(6, 0);
+						assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusAction.StartWithGold]);
 						break;
 
 					case ThGoldpool.Thadd800gold:
 						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(8, 0);
+						assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusAction.StartWithGold]);
 						break;
 
 					case ThGoldpool.Thadd1400gold:
 						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(14, 0);
+						assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusAction.StartWithGold]);
 						break;
 
 					case ThGoldpool.Thadd1500gold:
 						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(15, 0);
+						assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusAction.StartWithGold]);
 						break;
 
 					case ThGoldpool.Thadd2000gold:
 						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(20, 0);
+						assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusAction.StartWithGold]);
 						break;
 
 					case ThGoldpool.Thadd3000gold:
 						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(30, 0);
+						assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusAction.StartWithGold]);
 						break;
 
 					case ThGoldpool.Thadd4000gold:
 						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(40, 0);
+						assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusAction.StartWithGold]);
 						break;
 
 					case ThGoldpool.Thadd6000gold:
 						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(60, 0);
+						assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusAction.StartWithGold]);
 						break;
 
 					case ThGoldpool.Thadd20000gold:
 						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(200, 0);
+						assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusAction.StartWithGold]);
 						break;
 
 					case ThGoldpool.Thminus50gold:
 						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(-5, 0);
+						assignedMaluses[Classes.Thief].Add(bonuslist[(int)BonusMalusAction.StartWithGold]);
 						break;
 
 					case ThGoldpool.Thminus100gold:
 						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(-10, 0);
+						assignedMaluses[Classes.Thief].Add(bonuslist[(int)BonusMalusAction.StartWithGold]);
 						break;
 
 					case ThGoldpool.Thminus150gold:
 						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(-15, 0);
+						assignedMaluses[Classes.Thief].Add(bonuslist[(int)BonusMalusAction.StartWithGold]);
 						break;
 
 					case ThGoldpool.Thminus350gold:
 						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(-35, 0);
+						assignedMaluses[Classes.Thief].Add(bonuslist[(int)BonusMalusAction.StartWithGold]);
 						break;
 
 					case ThGoldpool.Thminus1100gold:
 						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(-110, 0);
+						assignedMaluses[Classes.Thief].Add(bonuslist[(int)BonusMalusAction.StartWithGold]);
 						break;
 				}
 
@@ -945,14 +1052,17 @@ namespace FF1Lib
 				{
 					case BBStrpool.BBadd10Str:
 						_classes[i].StrStarting = (byte)Math.Max(_classes[i].StrStarting + 10, 0);
+						assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusAction.StrMod]);
 						break;
 
 					case BBStrpool.BBadd20Str:
 						_classes[i].StrStarting = (byte)Math.Max(_classes[i].StrStarting + 20, 0);
+						assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusAction.StrMod]);
 						break;
 
 					case BBStrpool.BBadd40Str:
 						_classes[i].StrStarting = (byte)Math.Max(_classes[i].StrStarting + 40, 0);
+						assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusAction.StrMod]);
 						break;
 				}
 			};
@@ -963,18 +1073,22 @@ namespace FF1Lib
 				{
 					case BBAgipool.BBadd15Agi:
 						_classes[i].AgiStarting = (byte)Math.Max(_classes[i].AgiStarting + 15, 0);
+						assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusAction.AgiMod]);
 						break;
 
 					case BBAgipool.BBadd25Agi:
 						_classes[i].AgiStarting = (byte)Math.Max(_classes[i].AgiStarting + 25, 0);
+						assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusAction.AgiMod]);
 						break;
 
 					case BBAgipool.BBadd50Agi:
 						_classes[i].AgiStarting = (byte)Math.Max(_classes[i].AgiStarting + 50, 0);
+						assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusAction.AgiMod]);
 						break;
 
 					case BBAgipool.BBminus10Agi:
 						_classes[i].AgiStarting = (byte)Math.Max(_classes[i].AgiStarting - 10, 0);
+						assignedMaluses[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusAction.AgiMod]);
 						break;
 				}
 			};
@@ -985,22 +1099,27 @@ namespace FF1Lib
 				{
 					case BBVitpool.BBadd10Vit:
 						_classes[i].VitStarting = (byte)Math.Max(_classes[i].VitStarting + 10, 0);
+						assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusAction.VitMod]);
 						break;
 
 					case BBVitpool.BBadd20Vit:
 						_classes[i].VitStarting = (byte)Math.Max(_classes[i].VitStarting + 20, 0);
+						assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusAction.VitMod]);
 						break;
 
 					case BBVitpool.BBadd40Vit:
 						_classes[i].VitStarting = (byte)Math.Max(_classes[i].VitStarting + 40, 4);
+						assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusAction.VitMod]);
 						break;
 
 					case BBVitpool.BBminus10Vit:
 						_classes[i].VitStarting = (byte)Math.Max(_classes[i].VitStarting - 10, 0);
+						assignedMaluses[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusAction.VitMod]);
 						break;
 
 					case BBVitpool.BBminus20Vit:
 						_classes[i].VitStarting = (byte)Math.Max(_classes[i].VitStarting - 20, 0);
+						assignedMaluses[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusAction.VitMod]);
 						break;
 
 				}
@@ -1012,18 +1131,22 @@ namespace FF1Lib
 				{
 					case BBLuckpool.BBadd5Luck:
 						_classes[i].LckStarting = (byte)Math.Max(_classes[i].LckStarting + 5, 0);
+						assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusAction.LckMod]);
 						break;
 
 					case BBLuckpool.BBadd10Luck:
 						_classes[i].LckStarting = (byte)Math.Max(_classes[i].LckStarting + 10, 0);
+						assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusAction.LckMod]);
 						break;
 
 					case BBLuckpool.BBadd15Luck:
 						_classes[i].LckStarting = (byte)Math.Max(_classes[i].LckStarting + 15, 0);
+						assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusAction.LckMod]);
 						break;
 
 					case BBLuckpool.BBminus5luck:
 						_classes[i].LckStarting = (byte)Math.Max(_classes[i].LckStarting - 5, 0);
+						assignedMaluses[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusAction.LckMod]);
 						break;
 				}
 			};
@@ -1034,22 +1157,27 @@ namespace FF1Lib
 				{
 					case BBHPPool.BBadd20HP:
 						_classes[i].HpStarting = (byte)Math.Max(_classes[i].HpStarting + 20, 0);
+						assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusAction.HpMod]);
 						break;
 
 					case BBHPPool.BBadd40HP:
 						_classes[i].HpStarting = (byte)Math.Max(_classes[i].HpStarting + 40, 0);
+						assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusAction.HpMod]);
 						break;
 
 					case BBHPPool.BBadd80HP:
 						_classes[i].HpStarting = (byte)Math.Max(_classes[i].HpStarting + 80, 0);
+						assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusAction.HpMod]);
 						break;
 
 					case BBHPPool.BBminus15HP:
 						_classes[i].HpStarting = (byte)Math.Max(_classes[i].HpStarting - 15, 0);
+						assignedMaluses[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusAction.HpMod]);
 						break;
 
 					case BBHPPool.BBminus30HP:
 						_classes[i].HpStarting = (byte)Math.Max(_classes[i].HpStarting - 30, 0);
+						assignedMaluses[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusAction.HpMod]);
 						break;
 				}
 			};
@@ -1060,14 +1188,17 @@ namespace FF1Lib
 				{
 					case BBHitPercentpool.BBadd10hit:
 						_classes[i].HitStarting = (byte)Math.Max(_classes[i].HitStarting + 10, 0);
+						assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusAction.HitMod]);
 						break;
 
 					case BBHitPercentpool.BBadd20hit:
 						_classes[i].HitStarting = (byte)Math.Max(_classes[i].HitStarting + 20, 0);
+						assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusAction.HitMod]);
 						break;
 
 					case BBHitPercentpool.BBminus10hit:
 						_classes[i].HitStarting = (byte)Math.Max(_classes[i].HitStarting - 10, 0);
+						assignedMaluses[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusAction.HitMod]);
 						break;
 				}
 			};
@@ -1078,14 +1209,17 @@ namespace FF1Lib
 				{
 					case BBMdefpool.BBadd10mdef:
 						_classes[i].MDefStarting = (byte)Math.Max(_classes[i].MDefStarting + 10, 0);
+						assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusAction.MDefMod]);
 						break;
 
 					case BBMdefpool.BBadd20mdef:
 						_classes[i].MDefStarting = (byte)Math.Max(_classes[i].MDefStarting + 20, 0);
+						assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusAction.MDefMod]);
 						break;
 
 					case BBMdefpool.BBminus10mdef:
 						_classes[i].MDefStarting = (byte)Math.Max(_classes[i].MDefStarting - 10, 0);
+						assignedMaluses[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusAction.MDefMod]);
 						break;
 				}
 			};
@@ -1096,50 +1230,62 @@ namespace FF1Lib
 				{
 					case BBGoldpool.BBadd200gold:
 						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(2, 0);
+						assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusAction.StartWithGold]);
 						break;
 
 					case BBGoldpool.BBadd400gold:
 						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(4, 0);
+						assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusAction.StartWithGold]);
 						break;
 
 					case BBGoldpool.BBadd600gold:
 						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(6, 0);
+						assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusAction.StartWithGold]);
 						break;
 
 					case BBGoldpool.BBadd800gold:
 						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(8, 0);
+						assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusAction.StartWithGold]);
 						break;
 
 					case BBGoldpool.BBadd1500gold:
 						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(15, 0);
+						assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusAction.StartWithGold]);
 						break;
 
 					case BBGoldpool.BBadd5000gold:
 						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(50, 0);
+						assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusAction.StartWithGold]);
 						break;
 
 					case BBGoldpool.BBadd20000gold:
 						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(200, 0);
+						assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusAction.StartWithGold]);
 						break;
 
 					case BBGoldpool.BBminus50gold:
 						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(-5, 0);
+						assignedMaluses[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusAction.StartWithGold]);
 						break;
 
 					case BBGoldpool.BBminus100gold:
 						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(-10, 0);
+						assignedMaluses[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusAction.StartWithGold]);
 						break;
 
 					case BBGoldpool.BBminus150gold:
 						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(-15, 0);
+						assignedMaluses[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusAction.StartWithGold]);
 						break;
 
 					case BBGoldpool.BBminus350gold:
 						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(-35, 0);
+						assignedMaluses[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusAction.StartWithGold]);
 						break;
 
 					case BBGoldpool.BBminus1100gold:
 						_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(-110, 0);
+						assignedMaluses[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusAction.StartWithGold]);
 						break;
 				}
 

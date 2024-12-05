@@ -583,11 +583,11 @@ namespace FF1Lib
 			return (spellBlursingsPlando);
 		}
 
-		private struct SpellLearningPlando
+		/*private struct SpellLearningPlando
 		{
 			public Spell Name;
 			public byte Id;
-		}
+		}*/
 
 
 

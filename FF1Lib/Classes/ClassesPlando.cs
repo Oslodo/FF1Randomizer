@@ -2108,6 +2108,16 @@ namespace FF1Lib
 			};
 			#endregion
 
+			#region FighterEquipment
+
+			if (flags.FiEquipShirts != false)
+			{
+				//int i = 0;
+				//_armorPermissions.AddPermissionsRange(_classes[i]);
+			};
+
+			#endregion
+
 
 			validClasses = new() { Classes.Fighter, Classes.Thief, Classes.BlackBelt, Classes.RedMage, Classes.WhiteMage, Classes.BlackMage };
 
@@ -2120,6 +2130,7 @@ namespace FF1Lib
 				descriptionList.Add(blessingstring + "\n\n\nMALUS\n\n" + malusesstring);
 			}
 
+			return descriptionList;
 
 		}
 		private List<BonusMalusPlando> KeyItemList(Flags flags, List<string> olditemnames)

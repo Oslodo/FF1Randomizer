@@ -74,8 +74,8 @@ namespace FF1Lib
 		Fiadd5Luck,
 		[Description("+10 Luck")]
 		Fiadd10Luck,
-		[Description("+20 Luck")]
-		Fiadd20Luck,
+		[Description("+15 Luck")]
+		Fiadd15Luck,
 		[Description("-5 Luck")]
 		Fiminus5Luck,
 
@@ -668,6 +668,7 @@ namespace FF1Lib
 		[Description("Key")]
 		BBKeyItemsKey,
 	}
+
 	public enum RMStrpool
 	{
 		[Description("None")]
@@ -1475,7 +1476,7 @@ namespace FF1Lib
 		StrModDown20 = 5,
 		AgiModUp15 = 6,
 		AgiModUp25 = 7,
-		AgiModIp50 = 8,
+		AgiModUp50 = 8,
 		AgiModDown10 = 9,
 		AgiModDown20 = 10,
 		VitModUp10 = 11,
@@ -1485,7 +1486,7 @@ namespace FF1Lib
 		VitModDown20 = 15,
 		LckModUp5 = 16,
 		LckModUp10 = 17,
-		LckModup15 = 18,
+		LckModUp15 = 18,
 		LckModDown5 = 19,
 		LckModDown10 = 20,
 		HPModUp20 = 21,
@@ -1541,6 +1542,7 @@ namespace FF1Lib
 		StartWithGoldUp20000 = 71,
 		StartWithGoldDown50 = 72,
 		StartWithGoldDown100 = 73,
+		StartWithGoldDown150 = 114,
 		StartWithGoldDown350 = 74,
 		StartWithGoldDown1100 = 75,
 		StartWithGoldDown4500 = 76,

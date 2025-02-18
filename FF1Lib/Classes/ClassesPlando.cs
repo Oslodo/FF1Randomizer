@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.IO.Compression;
 using System.Linq;
 using System.Reflection.Metadata.Ecma335;
+using System.Runtime.CompilerServices;
 using System.Runtime.ExceptionServices;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -37,7 +38,7 @@ namespace FF1Lib
 			// Blursings List
 			List<BonusMalusPlando> bonuslist = new();
 			List<BonusMalusPlando> maluses = new();
-			/*Dictionary<Classes, List<BonusMalus>> classBlessings = new()
+			Dictionary<Classes, List<BonusMalusPlando>> classBlessings = new()
 			{
 				{ Classes.Fighter, new() },
 				{ Classes.Thief, new() },
@@ -45,7 +46,7 @@ namespace FF1Lib
 				{ Classes.RedMage, new() },
 				{ Classes.WhiteMage, new() },
 				{ Classes.BlackMage, new() },
-			};*/
+			};
 			var descriptionList = new List<string>();
 
 			GenerateListsPlando(bonuslist, maluses, olditemnames, itemnames, flags, rom);
@@ -2078,32 +2079,32 @@ namespace FF1Lib
 
 					case BMGoldpool.BMadd20000gold:
 						//_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(200, 0);
-						assignedBlessings[Classes.BlackMage].Add(bonuslist[(int)BonusMalusAction.StartWithGold]);
+						assignedBlessings[Classes.BlackMage].Add(bonuslist[(int)BonusMalusActionPlando.StartWithGoldUp200]);
 						break;
 
 					case BMGoldpool.BMminus50gold:
 						//_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(-5, 0);
-						assignedMaluses[Classes.BlackMage].Add(maluses[(int)BonusMalusAction.StartWithGold]);
+						assignedMaluses[Classes.BlackMage].Add(maluses[(int)BonusMalusActionPlando.StartWithGoldDown50]);
 						break;
 
 					case BMGoldpool.BMminus100gold:
 						//_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(-10, 0);
-						assignedMaluses[Classes.BlackMage].Add(maluses[(int)BonusMalusAction.StartWithGold]);
+						assignedMaluses[Classes.BlackMage].Add(maluses[(int)BonusMalusActionPlando.StartWithGoldDown100]);
 						break;
 
 					case BMGoldpool.BMminus150gold:
 						//_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(-15, 0);
-						assignedMaluses[Classes.BlackMage].Add(maluses[(int)BonusMalusAction.StartWithGold]);
+						assignedMaluses[Classes.BlackMage].Add(maluses[(int)BonusMalusActionPlando.StartWithGoldDown150]);
 						break;
 
 					case BMGoldpool.BMminus350gold:
 						//_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(-35, 0);
-						assignedMaluses[Classes.BlackMage].Add(maluses[(int)BonusMalusAction.StartWithGold]);
+						assignedMaluses[Classes.BlackMage].Add(maluses[(int)BonusMalusActionPlando.StartWithGoldDown350]);
 						break;
 
 					case BMGoldpool.BMminus1100gold:
 						//_classes[i].StartWithGold = (BlursesStartWithGold)Math.Max(-110, 0);
-						assignedMaluses[Classes.BlackMage].Add(maluses[(int)BonusMalusAction.StartWithGold]);
+						assignedMaluses[Classes.BlackMage].Add(maluses[(int)BonusMalusActionPlando.StartWithGoldDown1100]);
 						break;
 				}
 			};
@@ -2113,28 +2114,222 @@ namespace FF1Lib
 
 			if (flags.FiEquipShirts != false)
 			{
-				_armorPermissions.AddPermission(Classes.Fighter, Item.BlackShirt);
+				/*_armorPermissions.AddPermission(Classes.Fighter, Item.BlackShirt);
 				_armorPermissions.AddPermission(Classes.Fighter, Item.WhiteShirt);
 				_armorPermissions.AddPermission(Classes.Knight, Item.BlackShirt);
-				_armorPermissions.AddPermission(Classes.Knight, Item.WhiteShirt);
+				_armorPermissions.AddPermission(Classes.Knight, Item.WhiteShirt);*/
 				assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusActionPlando.ArmorAddShirts]);
 			};
 
 			if (flags.FiImpThor != false)
 			{
-				_weaponPermissions.AddPermission(Classes.Fighter, Item.ThorHammer);
-				_weaponPermissions.AddPermission(Classes.Knight, Item.ThorHammer);
-				assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusAction.WeaponAdd]);
+				/*_weaponPermissions.AddPermission(Classes.Fighter, Item.ThorHammer);
+				_weaponPermissions.AddPermission(Classes.Knight, Item.ThorHammer);*/
+				assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusActionPlando.ImprovedThor]);
 			}
 
 			if (flags.FiThWeapons != false)
 			{
-				int i = 0;
 				//_weaponPermissions[(Classes)i] = BonusMalusAction.WeaponReplace;
+				assignedMaluses[Classes.Fighter].Add(maluses[(int)BonusMalusActionPlando.WeaponAddThief]);
+			}
+
+			if (flags.FiNoBracelet != false)
+			{
+				assignedMaluses[Classes.Fighter].Add(maluses[(int)BonusMalusActionPlando.NoBracelets]);
+			}
+
+			if (flags.FiNoPromoArmor != false)
+			{
+				assignedMaluses[Classes.Fighter].Add(maluses[(int)BonusMalusActionPlando.ArmorReplaceNoPromoFi]);
+			}
+
+			if (flags.FiImpCatclaw != false)
+			{
+				assignedMaluses[Classes.Fighter].Add(maluses[(int)BonusMalusActionPlando.ImprovedCatclaw]);
+			}
+
+			if (flags.FighterMasaCurse != FiMasaCurse.FiMasaCurseNone)
+			{
+				switch (flags.FighterMasaCurse)
+				{
+					case FiMasaCurse.FiMasaPoison:
+						assignedMaluses[Classes.Fighter].Add(maluses[(int)BonusMalusActionPlando.MasaCursePoison]);
+						break;
+
+					case FiMasaCurse.FiMasaStun:
+						assignedMaluses[Classes.Fighter].Add(maluses[(int)BonusMalusActionPlando.MasaCurseStun]);
+						break;
+
+					case FiMasaCurse.FiMasaSleep:
+						assignedMaluses[Classes.Fighter].Add(maluses[(int)BonusMalusActionPlando.MasaCurseSleep]);
+						break;
+
+					case FiMasaCurse.FiMasaMute:
+						assignedMaluses[Classes.Fighter].Add(maluses[(int)BonusMalusActionPlando.MasaCurseMute]);
+						break;
+										
+				}
+			}
+
+			if (flags.FighterRibbonCurse != FiRibbonCurse.FiRibbonCurseNone)
+			{
+				switch (flags.FighterRibbonCurse)
+				{
+					case FiRibbonCurse.FiRibbonCursePoison:
+						assignedMaluses[Classes.Fighter].Add(maluses[(int)BonusMalusActionPlando.RibbonCursePosion]);
+						break;
+
+					case FiRibbonCurse.FiRibbonCurseStun:
+						assignedMaluses[Classes.Fighter].Add(maluses[(int)BonusMalusActionPlando.RibbonCurseStun]);
+						break;
+
+					case FiRibbonCurse.FiRibbonCurseSleep:
+						assignedMaluses[Classes.Fighter].Add(maluses[(int)BonusMalusActionPlando.RibbonCurseSleep]);
+						break;
+
+					case FiRibbonCurse.FiRibbonCurseMute:
+						assignedMaluses[Classes.Fighter].Add(maluses[(int)BonusMalusActionPlando.RibbonCurseMute]);
+						break;
+				}
+			}
+
+			if (flags.FiWoodAdept != false)
+			{
+
+				assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusActionPlando.WoodAdept]);
+			}
+
+			if (flags.FiSteelLord != false)
+			{
+				assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusActionPlando.SteelLord]);
+			}
+
+			if (flags.FiLegendarySwords != false)
+			{
+				assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusActionPlando.WeaponAddLegendary]);
 			}
 
 			#endregion
 
+			#region ThiefEquipment
+
+			if (flags.ThEquipAxes != false)
+			{
+				assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusActionPlando.WeaponAddAxes]);
+			}
+
+			if (flags.ThEquipShirts != false)
+			{
+				assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusActionPlando.ArmorAddShirts]);	
+			}
+
+			if (flags.ThEquipShields != false)
+			{
+				assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusActionPlando.ArmorAddShields]);
+			}
+
+			if (flags.ThEquipHelmBonk != false)
+			{
+				assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusActionPlando.ArmorAddHelmGauntlet]);
+			}
+
+			if (flags.ThLegendarySwords != false)
+			{
+				assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusActionPlando.WeaponAddLegendary]);
+			}
+
+			if (flags.ThRMArmor != false)
+			{
+				assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusActionPlando.ArmorAddRedMage]);
+			}
+
+			if (flags.ThImpThor != false)
+			{
+				assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusActionPlando.ImprovedThor]);
+			}
+
+			if (flags.ThFiArmor != false)
+			{
+				assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusActionPlando.ArmorAddFighter]);
+			}
+
+			if (flags.ThFiWeapons != false)
+			{
+				assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusActionPlando.WeaponAddFighter]);
+			}
+
+			if (flags.ThImpCatclaw != false)
+			{
+				assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusActionPlando.ImprovedCatclaw]);
+			}
+
+			if (flags.ThDualWield != false)
+			{
+				assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusActionPlando.DualWieldKnife]);
+			}
+
+			if (flags.ThWoodAdept != false)
+			{
+				assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusActionPlando.WoodAdept]);
+			}
+
+			if (flags.ThNoBracelets != false)
+			{
+				assignedMaluses[Classes.Thief].Add(maluses[(int)BonusMalusActionPlando.NoBracelets]);
+			}
+
+			if (flags.ThNoProring != false)
+			{
+				assignedMaluses[Classes.Thief].Add(maluses[(int)BonusMalusActionPlando.ArmorRemoveNoProRing]);
+			}
+
+			if (flags.ThMasaCurse != ThMasaCurse.ThMasaCurseNone)
+			{
+				switch (flags.ThMasaCurse)
+				{
+					case ThMasaCurse.ThMasaPoison:
+						assignedMaluses[Classes.Thief].Add(maluses[(int)BonusMalusActionPlando.MasaCursePoison]);
+						break;
+
+					case ThMasaCurse.ThMasaStun:
+						assignedMaluses[Classes.Thief].Add(maluses[(int)BonusMalusActionPlando.MasaCurseStun]);
+						break;
+
+					case ThMasaCurse.ThMasaSleep:
+						assignedMaluses[Classes.Thief].Add(maluses[(int)BonusMalusActionPlando.MasaCurseSleep]);
+						break;
+
+					case ThMasaCurse.ThMasaMute:
+						assignedMaluses[Classes.Thief].Add(maluses[(int)BonusMalusActionPlando.MasaCurseMute]);
+						break;
+
+				}
+			}
+
+			if (flags.ThRibbonCurse != ThRibbonCurse.ThRibbonCurseNone)
+			{
+				switch (flags.ThRibbonCurse)
+				{
+					case ThRibbonCurse.ThRibbonPoison:
+						assignedMaluses[Classes.Thief].Add(maluses[(int)BonusMalusActionPlando.RibbonCursePosion]);
+						break;
+
+					case ThRibbonCurse.ThRibbonStun:
+						assignedMaluses[Classes.Thief].Add(maluses[(int)BonusMalusActionPlando.RibbonCurseStun]);
+						break;
+
+					case ThRibbonCurse.ThRibbonSleep:
+						assignedMaluses[Classes.Thief].Add(maluses[(int)BonusMalusActionPlando.RibbonCurseSleep]);
+						break;
+
+					case ThRibbonCurse.ThRibbonMute:
+						assignedMaluses[Classes.Thief].Add(maluses[(int)BonusMalusActionPlando.RibbonCurseMute]);
+						break;
+
+				}
+			}
+			#endregion
 
 			validClasses = new() { Classes.Fighter, Classes.Thief, Classes.BlackBelt, Classes.RedMage, Classes.WhiteMage, Classes.BlackMage };
 

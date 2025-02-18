@@ -755,7 +755,7 @@ namespace FF1Lib
 		public bool ThMinusOneMdef { get; set; } = false;
 		public bool ThNoBracelets { get; set; } = false;
 		public ThMasaCurse ThMasaCurse { get; set; } = ThMasaCurse.ThMasaCurseNone;
-		public ThRibbonCurse ThRibbonCurse { get; set; } = ThRibbonCurse.ThMasaCurseNone;
+		public ThRibbonCurse ThRibbonCurse { get; set; } = ThRibbonCurse.ThRibbonCurseNone;
 		public bool ThNoProring { get; set; } = false;
 		public bool ThLateLockpicking { get; set; } = false;
 		public bool ThNoPromoSpells { get; set; } = false;

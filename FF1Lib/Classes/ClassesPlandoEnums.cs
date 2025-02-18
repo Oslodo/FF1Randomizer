@@ -419,15 +419,15 @@ namespace FF1Lib
 	public enum ThRibbonCurse
 	{
 		[Description("None")]
-		ThMasaCurseNone,
+		ThRibbonCurseNone,
 		[Description("Poison")]
-		ThMasaPoison,
+		ThRibbonPoison,
 		[Description("Stun")]
-		ThMasaStun,
+		ThRibbonStun,
 		[Description("Sleep")]
-		ThMasaSleep,
+		ThRibbonSleep,
 		[Description("Mute")]
-		ThMasaMute,
+		ThRibbonMute,
 	}
 	public enum ThKeyItems
 	{
@@ -1564,7 +1564,7 @@ namespace FF1Lib
 		RibbonCurseMute = 92,
 		ArmorReplaceNoPromoFi = 93,
 		ArmorReplaceRMArmorTh = 94,
-		NoPromoSpellsKiNi = 95,
+		NoPromoSpellsNi = 95,
 		UnarmmedAttackMa = 96,
 		ArmorRemoveNoProRing = 97,
 		LateLockpicking = 98,
@@ -1583,6 +1583,8 @@ namespace FF1Lib
 		LearnSleepMDef = 111,
 		LearnSlowAbsorb = 112,
 		LearnAspellAuto = 113,
+		NoBracelets = 115,
+		NoPromoSpellsKi = 116,
 
 
 

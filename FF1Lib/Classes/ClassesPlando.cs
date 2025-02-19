@@ -2449,6 +2449,40 @@ namespace FF1Lib
 			}
 			#endregion
 
+			#region RMEquipment
+
+			if (flags.RmEquipAxes != false)
+			{
+				assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.WeaponAddAxes]);
+			}
+
+			if (flags.RmEquipShirts != false)
+			{
+				assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.ArmorAddShirts]);
+			}
+
+			if (flags.RmEquipShields != false)
+			{
+				assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.ArmorAddShields]);
+			}
+
+			if (flags.RmEquipHelmBonk != false)
+			{
+				assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.ArmorAddHelmGauntlet]);
+			}
+
+			if (flags.RmLegendarySwords != false)
+			{
+				assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.WeaponAddLegendary]);
+			}
+
+			if (flags.RmFiWeapons != false)
+			{
+
+			}
+
+			#endregion
+
 			validClasses = new() { Classes.Fighter, Classes.Thief, Classes.BlackBelt, Classes.RedMage, Classes.WhiteMage, Classes.BlackMage };
 
 			foreach (var gameclass in validClasses)

@@ -2331,6 +2331,124 @@ namespace FF1Lib
 			}
 			#endregion
 
+			#region BBEquipment
+
+			if (flags.BBEquipShirts != false)
+			{
+				assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusActionPlando.ArmorAddShirts]);
+			}
+
+			if (flags.BBEquipAxes != false)
+			{
+				assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusActionPlando.WeaponAddAxes]);
+			}
+
+			if (flags.BBEquipShields != false)
+			{
+				assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusActionPlando.ArmorAddShields]);
+			}
+
+			if (flags.BBEquipHelmBonk != false)
+			{
+				assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusActionPlando.ArmorAddHelmGauntlet]);
+			}
+
+			if (flags.BBEquipThWeapons != false)
+			{
+				assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusActionPlando.WeaponAddThief]);
+			}
+
+			if (flags.BBRMArmor != false)
+			{
+				assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusActionPlando.ArmorAddRedMage]);
+			}
+
+			if (flags.BBLegendarySwords != false)
+			{
+				assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusActionPlando.WeaponAddLegendary]);
+			}
+
+			if (flags.BBFighterWeapons != false)
+			{
+				assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusActionPlando.WeaponAddFighter]);
+			}
+
+			if (flags.BBNoBracelet != false)
+			{
+				assignedMaluses[Classes.BlackBelt].Add(maluses[(int)BonusMalusActionPlando.NoBracelets]);
+			}
+
+			if (flags.BBUnarmed != false)
+			{
+				assignedMaluses[Classes.BlackBelt].Add(maluses[(int)BonusMalusActionPlando.UnarmmedAttackMa]);
+			}
+
+			if (flags.BBWoodAdept != false)
+			{
+				assignedMaluses[Classes.BlackBelt].Add(maluses[(int)BonusMalusActionPlando.WoodAdept]);
+			}
+
+			if (flags.BBNoProRing != false)
+			{
+				assignedMaluses[Classes.BlackBelt].Add(maluses[(int)BonusMalusActionPlando.ArmorRemoveNoProRing]);
+			}
+
+			if (flags.BBFiArmor != false)
+			{
+
+				assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusActionPlando.ArmorAddFighter]);
+			}
+
+			if (flags.BBPromoFiArmor != false)
+			{
+				assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusActionPlando.ArmorAddFighterPromo]);
+			}
+
+			if (flags.BBMasaCurse != BBMasaCruse.BBMasaCurseNone)
+			{
+				switch (flags.BBMasaCurse)
+				{
+					case BBMasaCruse.BBMasaPoison:
+						assignedMaluses[Classes.BlackBelt].Add(maluses[(int)BonusMalusActionPlando.MasaCursePoison]);
+						break;
+
+					case BBMasaCruse.BBMasaStun:
+						assignedMaluses[Classes.BlackBelt].Add(maluses[(int)BonusMalusActionPlando.MasaCurseStun]);
+						break;
+
+					case BBMasaCruse.BBMasaSleep:
+						assignedMaluses[Classes.BlackBelt].Add(maluses[(int)BonusMalusActionPlando.MasaCurseSleep]);
+						break;
+
+					case BBMasaCruse.BBMasaMute:
+						assignedMaluses[Classes.BlackBelt].Add(maluses[(int)BonusMalusActionPlando.MasaCurseMute]);
+						break;
+				}
+			}
+
+			if (flags.BBRibbonCurse != BBRibbonCurse.BBRibbonCurseNone)
+			{
+				switch (flags.BBRibbonCurse)
+				{
+					case BBRibbonCurse.BBRibbonCursePoison:
+						assignedMaluses[Classes.BlackBelt].Add(maluses[(int)BonusMalusActionPlando.RibbonCursePosion]);
+						break;
+
+					case BBRibbonCurse.BBRibbonCurseStun:
+						assignedMaluses[Classes.BlackBelt].Add(maluses[(int)BonusMalusActionPlando.RibbonCurseStun]);
+						break;
+
+					case BBRibbonCurse.BBRibbonCurseSleep:
+						assignedMaluses[Classes.BlackBelt].Add(maluses[(int)BonusMalusActionPlando.RibbonCurseSleep]);
+						break;
+
+					case BBRibbonCurse.BBRibbonCurseMute:
+						assignedMaluses[Classes.BlackBelt].Add(maluses[(int)BonusMalusActionPlando.RibbonCurseMute]);
+						break;
+				}
+			}
+			#endregion
+
 			validClasses = new() { Classes.Fighter, Classes.Thief, Classes.BlackBelt, Classes.RedMage, Classes.WhiteMage, Classes.BlackMage };
 
 			foreach (var gameclass in validClasses)

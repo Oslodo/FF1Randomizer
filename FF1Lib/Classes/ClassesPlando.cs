@@ -2478,10 +2478,90 @@ namespace FF1Lib
 
 			if (flags.RmFiWeapons != false)
 			{
-
+				assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.WeaponAddFighter]);
 			}
 
+			if (flags.RmFiArmor != false)
+			{
+				assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.ArmorAddFighter]);
+			}
+
+			if (flags.RmImpCatclaw != false)
+			{
+				assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.ImprovedCatclaw]);
+			}
+
+			if (flags.RmPromoFiArmor != false)
+			{
+				assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.ArmorAddFighterPromo]);
+			}
+
+			if (flags.RmWoodAdept != false)
+			{
+				assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.WoodAdept]);
+			}
+
+			if (flags.RmNoBracelet != false)
+			{
+				assignedMaluses[Classes.RedMage].Add(maluses[(int)BonusMalusActionPlando.NoBracelets]);
+			}
+
+			if (flags.RmThWeapons != false)
+			{
+				assignedMaluses[Classes.RedMage].Add(maluses[(int)BonusMalusActionPlando.WeaponAddThief]);
+			}
+
+			if (flags.RmNoProRing != false)
+			{
+				assignedMaluses[Classes.RedMage].Add(maluses[(int)BonusMalusActionPlando.ArmorRemoveNoProRing]);
+			}
+
+			if (flags.RmMasaCurse != RmMasaCurse.RmMasaCurseNone)
+			{
+				switch (flags.RmMasaCurse)
+				{
+					case RmMasaCurse.RmMasaCursePoison:
+						assignedMaluses[Classes.RedMage].Add(maluses[(int)BonusMalusActionPlando.MasaCursePoison]);
+						break;
+
+					case RmMasaCurse.RmMasaCurseStun:
+						assignedMaluses[Classes.RedMage].Add(maluses[(int)BonusMalusActionPlando.MasaCurseStun]);
+						break;
+
+					case RmMasaCurse.RmMasaCurseSleep:
+						assignedMaluses[Classes.RedMage].Add(maluses[(int)BonusMalusActionPlando.MasaCurseSleep]);
+						break;
+
+					case RmMasaCurse.RmMasaCurseMute:
+						assignedMaluses[Classes.RedMage].Add(maluses[(int)BonusMalusActionPlando.MasaCurseMute]);
+						break;
+				}
+			}
+
+			if (flags.RmRibbonCurse != RmRibbonCurse.RmRibbonCurseNone)
+			{
+				switch (flags.RmRibbonCurse)
+				{
+					case RmRibbonCurse.RmRibbonCursePoison:
+						assignedMaluses[Classes.RedMage].Add(maluses[(int)BonusMalusActionPlando.RibbonCursePosion]);
+						break;
+
+					case RmRibbonCurse.RmRibbonCurseStun:
+						assignedMaluses[Classes.RedMage].Add(maluses[(int)BonusMalusActionPlando.RibbonCurseStun]);
+						break;
+
+					case RmRibbonCurse.RmRibbonCurseSleep:
+						assignedMaluses[Classes.RedMage].Add(maluses[(int)BonusMalusActionPlando.RibbonCurseSleep]);
+						break;
+
+					case RmRibbonCurse.RmRibbonCurseMute:
+						assignedMaluses[Classes.RedMage].Add(maluses[(int)BonusMalusActionPlando.RibbonCurseMute]);
+						break;
+				}
+			}
 			#endregion
+
+
 
 			validClasses = new() { Classes.Fighter, Classes.Thief, Classes.BlackBelt, Classes.RedMage, Classes.WhiteMage, Classes.BlackMage };
 

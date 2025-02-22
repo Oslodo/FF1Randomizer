@@ -2561,7 +2561,118 @@ namespace FF1Lib
 			}
 			#endregion
 
+			#region WMEquipment
 
+			if (flags.WMEquipAxes != false)
+			{
+				assignedBlessings[Classes.WhiteMage].Add(bonuslist[(int)BonusMalusActionPlando.WeaponAddAxes]);
+			}
+
+			if (flags.WMEquipShirts != false)
+			{
+				assignedBlessings[Classes.WhiteMage].Add(bonuslist[(int)BonusMalusActionPlando.ArmorAddShirts]);
+			}
+
+			if (flags.WMEquipShields != false)
+			{
+				assignedBlessings[Classes.WhiteMage].Add(bonuslist[(int)BonusMalusActionPlando.ArmorAddShields]);
+			}
+
+			if (flags.WMEquipHelmBonk != false)
+			{
+				assignedBlessings[Classes.WhiteMage].Add(bonuslist[(int)BonusMalusActionPlando.ArmorAddHelmGauntlet]);
+			}
+
+			if (flags.WMEquipThWeapons != false)
+			{
+				assignedBlessings[Classes.WhiteMage].Add(bonuslist[(int)BonusMalusActionPlando.WeaponAddThief]);
+			}
+
+			if (flags.WMLegendarySwords != false)
+			{
+				assignedBlessings[Classes.WhiteMage].Add(bonuslist[(int)BonusMalusActionPlando.WeaponAddLegendary]);
+			}
+
+			if (flags.WMRMArmor != false)
+			{
+				assignedBlessings[Classes.WhiteMage].Add(bonuslist[(int)BonusMalusActionPlando.ArmorAddRedMage]);
+			}
+
+			if (flags.WMImpThor != false)
+			{
+				assignedBlessings[Classes.WhiteMage].Add(bonuslist[(int)BonusMalusActionPlando.ImprovedThor]);
+			}
+
+			if (flags.WMFiWeapons != false)
+			{
+				assignedBlessings[Classes.WhiteMage].Add(bonuslist[(int)BonusMalusActionPlando.WeaponAddFighter]);
+			}
+
+			if (flags.WMFiArmor != false)
+			{
+				assignedBlessings[Classes.WhiteMage].Add(bonuslist[(int)BonusMalusActionPlando.ArmorAddFighter]);
+			}
+
+			if (flags.WMPromoFiArmor != false)
+			{
+				assignedBlessings[Classes.WhiteMage].Add(bonuslist[(int)BonusMalusActionPlando.ArmorAddFighterPromo]);
+			}
+
+			if (flags.WMNoBracelet != false)
+			{
+				assignedMaluses[Classes.WhiteMage].Add(maluses[(int)BonusMalusActionPlando.NoBracelets]);
+			}
+
+			if (flags.WMNoProRing != false)
+			{
+				assignedMaluses[Classes.WhiteMage].Add(maluses[(int)BonusMalusActionPlando.ArmorRemoveNoProRing]);
+			}
+
+			if (flags.WMMasaCurse != WMMasaCurse.WMMasaCurseNone)
+			{
+				switch (flags.WMMasaCurse)
+				{
+					case WMMasaCurse.FIMasaPoison:
+						assignedMaluses[Classes.WhiteMage].Add(maluses[(int)BonusMalusActionPlando.MasaCursePoison]);
+						break;
+
+					case WMMasaCurse.WMMasaStun:
+						assignedMaluses[Classes.WhiteMage].Add(maluses[(int)BonusMalusActionPlando.MasaCurseStun]);
+						break;
+
+					case WMMasaCurse.WMMasaSleep:
+						assignedMaluses[Classes.WhiteMage].Add(maluses[(int)BonusMalusActionPlando.MasaCurseSleep]);
+						break;
+
+					case WMMasaCurse.WMMasaMute:
+						assignedMaluses[Classes.WhiteMage].Add(maluses[(int)BonusMalusActionPlando.MasaCurseMute]);
+						break;
+				}
+			}
+
+			if (flags.WmRibbonCurse != WMRibbonCurse.WMRibbonCurseNone)
+			{
+				switch (flags.WmRibbonCurse)
+				{
+					case WMRibbonCurse.WMRibbonCursePoison:
+						assignedMaluses[Classes.WhiteMage].Add(maluses[(int)BonusMalusActionPlando.RibbonCursePosion]);
+						break;
+
+					case WMRibbonCurse.WMRibbonCurseStun:
+						assignedMaluses[Classes.WhiteMage].Add(maluses[(int)BonusMalusActionPlando.RibbonCurseStun]);
+						break;
+
+					case WMRibbonCurse.WMRibbonCurseSleep:
+						assignedMaluses[Classes.WhiteMage].Add(maluses[(int)BonusMalusActionPlando.RibbonCurseSleep]);
+						break;
+
+					case WMRibbonCurse.WMRibbonCurseMute:
+						assignedMaluses[Classes.WhiteMage].Add(maluses[(int)BonusMalusActionPlando.RibbonCurseMute]);
+						break;
+				}
+			}
+
+			#endregion
 
 			validClasses = new() { Classes.Fighter, Classes.Thief, Classes.BlackBelt, Classes.RedMage, Classes.WhiteMage, Classes.BlackMage };
 

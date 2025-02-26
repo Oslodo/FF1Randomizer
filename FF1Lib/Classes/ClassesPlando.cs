@@ -2791,6 +2791,117 @@ namespace FF1Lib
 			}
 			#endregion
 
+			#region FighterHunter
+
+			if (flags.FiHurtUndead != false)
+			{
+				assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusActionPlando.HunterUndead]);
+			}
+
+			if (flags.FiHurtDragon != false)
+			{
+				assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusActionPlando.HunterDragon]);
+			}
+
+			if (flags.FiHurtAll != false)
+			{
+				assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusActionPlando.HunterHurtAll]);
+			}
+			#endregion
+
+			#region ThiefHunter
+
+			if (flags.ThHuntUndead != false)
+			{
+				assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusActionPlando.HunterUndead]);
+			}
+
+			if (flags.ThHurtDragon != false)
+			{
+				assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusActionPlando.HunterDragon]);
+			}
+
+			if (flags.ThHurtAll != false)
+			{
+				assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusActionPlando.HunterHurtAll]);
+			}
+
+			#endregion
+
+			#region BBHunter
+
+			if (flags.BBHurtUndead != false)
+			{
+				assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusActionPlando.HunterUndead]);
+			}
+
+			if (flags.BBHurtDragon != false)
+			{
+				assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusActionPlando.HunterDragon]);
+			}
+
+			if (flags.BBHurtAll != false)
+			{
+				assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusActionPlando.HunterHurtAll]);
+			}
+
+			#endregion
+
+			#region RMHunter
+
+			if (flags.RmHurtUndead != false)
+			{
+				assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.HunterUndead]);
+			}
+
+			if (flags.RmHurtDragon != false)
+			{
+				assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.HunterDragon]);
+			}
+
+			if (flags.RmHurtAll != false)
+			{
+				assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.HunterHurtAll]);
+			}
+			#endregion
+
+			#region WMHunter
+
+			if (flags.WMHurtUndead != false)
+			{
+				assignedBlessings[Classes.WhiteMage].Add(bonuslist[(int)BonusMalusActionPlando.HunterUndead]);
+			}
+
+			if (flags.WMHurtDragon != false)
+			{
+				assignedBlessings[Classes.WhiteMage].Add(bonuslist[(int)BonusMalusActionPlando.HunterDragon]);
+			}
+
+			if (flags.WMHurtAll != false)
+			{
+				assignedBlessings[Classes.WhiteMage].Add(bonuslist[(int)BonusMalusActionPlando.HunterHurtAll]);
+			}
+			#endregion
+
+			#region BMHunter
+
+			if (flags.BMHurtUndead != false)
+			{
+				assignedBlessings[Classes.BlackMage].Add(bonuslist[(int)BonusMalusActionPlando.HunterUndead]);
+			}
+
+			if (flags.BMHurtDragon != false)
+			{
+				assignedBlessings[Classes.BlackMage].Add(bonuslist[(int)BonusMalusActionPlando.HunterDragon]);
+			}
+
+			if (flags.BMHurtAll != false)
+			{
+				assignedBlessings[Classes.BlackMage].Add(bonuslist[(int)BonusMalusActionPlando.HunterHurtAll]);
+			}
+
+			#endregion
+
 			validClasses = new() { Classes.Fighter, Classes.Thief, Classes.BlackBelt, Classes.RedMage, Classes.WhiteMage, Classes.BlackMage };
 
 			foreach (var gameclass in validClasses)

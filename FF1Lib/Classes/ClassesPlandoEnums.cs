@@ -1547,7 +1547,7 @@ namespace FF1Lib
 		StartWithGoldDown1100 = 75,
 		StartWithGoldDown4500 = 76,
 		ArmorAddFighterPromo = 77,
-		MDefGrowthPromoPlus3 = 78,
+		MDefGrowthPromoPlus2 = 78,
 		WoodAdept = 79,
 		SteelLord = 80,
 		EarlyLockPick = 81,
@@ -1585,6 +1585,12 @@ namespace FF1Lib
 		LearnAspellAuto = 113,
 		NoBracelets = 115,
 		NoPromoSpellsKi = 116,
+		FiBMHP = 117,
+		ThWeaponsReplace = 118,
+		MinusOneHit = 119,
+		MinusOneMdef= 120,
+		MaMDef = 121,
+
 
 
 

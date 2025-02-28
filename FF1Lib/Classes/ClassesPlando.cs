@@ -2130,8 +2130,7 @@ namespace FF1Lib
 
 			if (flags.FiThWeapons != false)
 			{
-				//_weaponPermissions[(Classes)i] = BonusMalusAction.WeaponReplace;
-				assignedMaluses[Classes.Fighter].Add(maluses[(int)BonusMalusActionPlando.WeaponAddThief]);
+				assignedMaluses[Classes.Fighter].Add(maluses[(int)BonusMalusActionPlando.ThWeaponsReplace]);
 			}
 
 			if (flags.FiNoBracelet != false)
@@ -2899,6 +2898,76 @@ namespace FF1Lib
 			{
 				assignedBlessings[Classes.BlackMage].Add(bonuslist[(int)BonusMalusActionPlando.HunterHurtAll]);
 			}
+
+			#endregion
+
+			#region FighterStats
+
+			if (flags.FiBMHP != false)
+			{
+				assignedMaluses[Classes.Fighter].Add(maluses[(int)BonusMalusActionPlando.FiBMHP]);
+			}
+
+			if (flags.FiPlus2MdefLevel != false)
+			{
+				assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusActionPlando.MDefGrowthPromoPlus2]);
+			}
+
+			if (flags.FiMinusOneHit != false)
+			{
+				assignedMaluses[Classes.Fighter].Add(maluses[(int)BonusMalusActionPlando.MinusOneHit]);
+			}
+
+
+
+			#endregion
+
+			#region ThiefStats
+
+			if (flags.ThPlus2MdefLvl != false)
+			{
+				assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusActionPlando.MDefGrowthPromoPlus2]);
+			}
+
+			if (flags.ThEarlyLockpick != false)
+			{
+				assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusActionPlando.EarlyLockPick]);
+			}
+
+			if (flags.ThMinusOneHit != false)
+			{
+				assignedMaluses[Classes.Thief].Add(maluses[(int)BonusMalusActionPlando.MinusOneHit]);
+			}
+
+			if (flags.ThMinusOneMdef != false)
+			{
+				assignedMaluses[Classes.Thief].Add(maluses[(int)BonusMalusActionPlando.MinusOneMdef]);
+			}
+
+			if (flags.ThLateLockpicking != false)
+			{
+				assignedMaluses[Classes.Thief].Add(maluses[(int)BonusMalusActionPlando.LateLockpicking]);
+			}
+
+			#endregion
+
+			#region BBStats
+
+			if (flags.BBMinusOneHit != false)
+			{
+				assignedMaluses[Classes.BlackBelt].Add(maluses[(int)BonusMalusActionPlando.MinusOneHit]);
+			}
+
+			if (flags.BBMinusOneMdef != false)
+			{
+				assignedMaluses[Classes.BlackBelt].Add(maluses[(int)BonusMalusActionPlando.MinusOneMdef]);
+			}
+
+			if (flags.BBMasterMdef != false)
+			{
+				assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusActionPlando.MaMDef]);
+			}
+
 
 			#endregion
 

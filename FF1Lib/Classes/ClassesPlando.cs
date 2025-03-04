@@ -2507,7 +2507,7 @@ namespace FF1Lib
 
 			if (flags.RmThWeapons != false)
 			{
-				assignedMaluses[Classes.RedMage].Add(maluses[(int)BonusMalusActionPlando.WeaponAddThief]);
+				assignedMaluses[Classes.RedMage].Add(maluses[(int)BonusMalusActionPlando.ThWeaponsReplace]);
 			}
 
 			if (flags.RmNoProRing != false)
@@ -2968,6 +2968,63 @@ namespace FF1Lib
 				assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusActionPlando.MaMDef]);
 			}
 
+
+			#endregion
+
+			#region RMStats
+
+			if (flags.RmPlus2Mdef != false)
+			{
+				assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.MDefGrowthPromoPlus2]);
+			}
+
+			if (flags.RmMinusOneHit != false)
+			{
+				assignedMaluses[Classes.RedMage].Add(maluses[(int)BonusMalusActionPlando.MinusOneHit]);
+			}
+
+			if (flags.RmMinusOneMdef != false)
+			{
+				assignedMaluses[Classes.RedMage].Add(maluses[(int)BonusMalusActionPlando.MinusOneMdef]);
+			}
+
+			#endregion
+
+			#region WMStats
+
+			if (flags.WMPlus2Mdef != false)
+			{
+				assignedBlessings[Classes.WhiteMage].Add(bonuslist[(int)BonusMalusActionPlando.MDefGrowthPromoPlus2]);
+			}
+
+			if (flags.WMMinusOneHit != false)
+			{
+				assignedMaluses[Classes.WhiteMage].Add(maluses[(int)BonusMalusActionPlando.MinusOneHit]);
+			}
+
+			if (flags.WMMinusOneMdef != false)
+			{
+				assignedMaluses[Classes.WhiteMage].Add(maluses[(int)BonusMalusActionPlando.MinusOneMdef]);
+			}
+
+			#endregion
+
+			#region BMStats
+
+			if (flags.BMPlus2Mdef != false)
+			{
+				assignedBlessings[Classes.BlackMage].Add(bonuslist[(int)BonusMalusActionPlando.MDefGrowthPromoPlus2]);
+			}
+
+			if (flags.BMMinus1Hit != false)
+			{
+				assignedMaluses[Classes.BlackMage].Add(maluses[(int)BonusMalusActionPlando.MinusOneHit]);
+			}
+
+			if (flags.BMMinus1Mdef != false)
+			{
+				assignedMaluses[Classes.BlackMage].Add(maluses[(int)BonusMalusActionPlando.MinusOneMdef]);
+			}
 
 			#endregion
 

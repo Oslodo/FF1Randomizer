@@ -3026,6 +3026,62 @@ namespace FF1Lib
 				assignedMaluses[Classes.BlackMage].Add(maluses[(int)BonusMalusActionPlando.MinusOneMdef]);
 			}
 
+
+			#endregion
+
+			#region XPChanges
+
+			if (flags.FiPlus50XP != false)
+			{
+				assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusActionPlando.BonusXPPlus50]);
+			}
+
+			if (flags.ThPlus50XP != false)
+			{
+				assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusActionPlando.BonusXPPlus50]);
+			}
+
+			if (flags.ThPlus100XP != false)
+			{
+				assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusActionPlando.BonusXPPlus100]);
+			}
+
+			if (flags.BBPlus50XP != false)
+			{
+				assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusActionPlando.BonusXPPlus50]);
+			}
+
+			if (flags.RmPlus50XP != false)
+			{
+
+				assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.BonusXPPlus50]);
+			}
+
+			if (flags.RmPlus100XP != false)
+			{
+				assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.BonusXPPlus100]);
+			}
+
+			if (flags.WMPlus50XP != false)
+			{
+				assignedBlessings[Classes.WhiteMage].Add(bonuslist[(int)BonusMalusActionPlando.BonusXPPlus50]);
+			}
+
+			if (flags.WMPlus100XP != false)
+			{
+				assignedBlessings[Classes.WhiteMage].Add(bonuslist[(int)BonusMalusActionPlando.BonusXPPlus100]);
+			}
+
+			if (flags.BMPlus50XP != false)
+			{
+				assignedBlessings[Classes.BlackMage].Add(bonuslist[(int)BonusMalusActionPlando.BonusXPPlus50]);
+			}
+
+			if (flags.BMPlus100XP != false)
+			{
+				assignedBlessings[Classes.BlackMage].Add(bonuslist[(int)BonusMalusActionPlando.BonusXPPlus100]);
+			}
+
 			#endregion
 
 			validClasses = new() { Classes.Fighter, Classes.Thief, Classes.BlackBelt, Classes.RedMage, Classes.WhiteMage, Classes.BlackMage };

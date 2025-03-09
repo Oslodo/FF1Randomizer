@@ -3349,6 +3349,233 @@ namespace FF1Lib
 
 			#endregion
 
+			#region RMMagic
+
+			if (flags.RmPlus2lvl1MP != false)
+			{
+				assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.StartWithMPLvl1]);
+			}
+
+			if (flags.RmPlus1MPAll != false)
+			{
+				assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.Plus1MPAll]);
+			}
+
+			if (flags.RmSage != false)
+			{
+				assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.PowerRM]);
+			}
+
+			if (flags.RmPromoSage != false)
+			{
+				assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.PowerRMPromo]);
+			}
+
+			if (flags.RmMaxMPPlus != false)
+			{
+				assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.MPGainOnMaxMP]);
+			}
+
+			if (flags.RmImprovedMP != false)
+			{
+				assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.SpcGrowthImpMP]);
+			}
+
+			if (flags.RmLampBonus != false)
+			{
+				assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.LearnLampRibbon]);
+			}
+
+			if (flags.RmAspellBonus != false)
+			{
+				assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.LearnAspellAuto]);
+			}
+
+			if (flags.RmDarkBonus != false)
+			{
+				assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.LearnDarkEvade]);
+			}
+
+			if (flags.RmSleepBonus != false)
+			{
+				assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.LearnSleepMDef]);
+			}
+
+			if (flags.RmSlowBonus != false)
+			{
+				assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.LearnSlowAbsorb]);
+			}
+
+			if (flags.RmMinus4MaxMP != false)
+			{
+				assignedMaluses[Classes.RedMage].Add(maluses[(int)BonusMalusActionPlando.MaxMPDown4]);
+			}
+
+			if (flags.RmSpellAdd != RmSpellAdd.RMSpellAddNone)
+			{
+				switch (flags.RmSpellAdd)
+				{
+					case RmSpellAdd.RMSpellAddLife:
+						assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.AddSpellLife]);
+						break;
+
+					case RmSpellAdd.RMSpellAddInv2:
+						assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.AddSpellInvs2]);
+						break;
+
+					case RmSpellAdd.RMSPellAddCur3:
+						assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.AddSpellCur3]);
+						break;
+
+					case RmSpellAdd.RMSpellAddHel2:
+						assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.AddSpellHel2]);
+						break;
+
+					case RmSpellAdd.RMSpellAddExit:
+						assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.AddSpellExit]);
+						break;
+
+					case RmSpellAdd.RMSpellAddFast:
+						assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.AddSpellFast]);
+						break;
+
+					case RmSpellAdd.RMSpellAddTmpr:
+						assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.AddSpellTmpr]);
+						break;
+
+					case RmSpellAdd.RMSpellAddWarp:
+						assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.AddSpellWarp]);
+						break;
+
+					case RmSpellAdd.RMSpellAddLock:
+						assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.AddSpellLock]);
+						break;
+
+					case RmSpellAdd.RMSpellAddLok2:
+						assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.AddSpellLok2]);
+						break;
+				}
+			}
+
+			if (flags.RmSpellRemove != RmSpellRemove.RmSpellRemoveNone)
+			{
+				switch (flags.RmSpellRemove)
+				{
+					case RmSpellRemove.RmSpellRemoveLife:
+						assignedMaluses[Classes.RedMage].Add(maluses[(int)BonusMalusActionPlando.RemoveSpellLife]);
+						break;
+
+					case RmSpellRemove.RmSpellRemoveInv2:
+						assignedMaluses[Classes.RedMage].Add(maluses[(int)BonusMalusActionPlando.RemoveSpellInv2]);
+						break;
+
+					case RmSpellRemove.RmSpellRemoveFade:
+						assignedMaluses[Classes.RedMage].Add(maluses[(int)BonusMalusActionPlando.RemoveSpellFade]);
+						break;
+
+					case RmSpellRemove.WMSpellRemoveExit:
+						assignedMaluses[Classes.RedMage].Add(maluses[(int)BonusMalusActionPlando.RemoveSpellExit]);
+						break;
+
+					case RmSpellRemove.RmSpellRemoveCur3:
+						assignedMaluses[Classes.RedMage].Add(maluses[(int)BonusMalusActionPlando.RemoveSpelCur3]);
+						break;
+
+					case RmSpellRemove.RmSpellRemoveHel3:
+						assignedMaluses[Classes.RedMage].Add(maluses[(int)BonusMalusActionPlando.RemoveSpelHel3]);
+						break;
+
+					case RmSpellRemove.RmSpellRemoveWall:
+						assignedMaluses[Classes.RedMage].Add(maluses[(int)BonusMalusActionPlando.RemoveSpellWall]);
+						break;
+
+					case RmSpellRemove.RmSpellRemoveFast:
+						assignedMaluses[Classes.RedMage].Add(maluses[(int)BonusMalusActionPlando.RemoveSpellFast]);
+						break;
+
+					case RmSpellRemove.RmSpellRemoveTmpr:
+						assignedMaluses[Classes.RedMage].Add(maluses[(int)BonusMalusActionPlando.RemoveSpellTmpr]);
+						break;
+
+					case RmSpellRemove.RmSpellRemoveNuke:
+						assignedMaluses[Classes.RedMage].Add(maluses[(int)BonusMalusActionPlando.RemoveSpellNuke]);
+						break;
+
+					case RmSpellRemove.RmSpellRemoveFir3:
+						assignedMaluses[Classes.RedMage].Add(maluses[(int)BonusMalusActionPlando.RemoveSpellFir3]);
+						break;
+
+					case RmSpellRemove.RmSpellRemoveIce3:
+						assignedMaluses[Classes.RedMage].Add(maluses[(int)BonusMalusActionPlando.RemoveSpellIce3]);
+						break;
+
+					case RmSpellRemove.RmSpellRemoveLit3:
+						assignedMaluses[Classes.RedMage].Add(maluses[(int)BonusMalusActionPlando.RemoveSpellLit3]);
+						break;
+
+					case RmSpellRemove.RmSpellRemoveWarp:
+						assignedMaluses[Classes.RedMage].Add(maluses[(int)BonusMalusActionPlando.RemoveSpellWarp]);
+						break;
+
+					case RmSpellRemove.RmSpellRemoveLock:
+						assignedMaluses[Classes.RedMage].Add(maluses[(int)BonusMalusActionPlando.RemoveSpellLock]);
+						break;
+
+					case RmSpellRemove.RmSpellRemoveLok2:
+						assignedMaluses[Classes.RedMage].Add(maluses[(int)BonusMalusActionPlando.RemoveSpellLok2]);
+						break;
+				}
+			}
+
+			if (flags.RmSpellBonus != RmMagicBonus.RmMagicBonusNone)
+			{
+				switch (flags.RmSpellBonus)
+				{
+					case RmMagicBonus.RmMagicBonusNuke:
+						assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.InnateSpellsNuke]);
+						break;
+
+					case RmMagicBonus.RmMagicBonusElem:
+						assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.InnateSpellsElem]);
+						break;
+
+					case RmMagicBonus.RmMagicBonusElemPlus:
+						assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.InnateSpellsElemPlus]);
+						break;
+
+					case RmMagicBonus.RmMagicBonusClean:
+						assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.InnateSpellsClean]);
+						break;
+
+					case RmMagicBonus.RmMagicBonusDoom:
+						assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.InnateSpellsDoom]);
+						break;
+
+					case RmMagicBonus.RmMagicBonusHeal:
+						assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.InnateSpellsHeal]);
+						break;
+
+					case RmMagicBonus.RmMagicBonusHealPlus:
+						assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.InnateSpellsHealPlus]);
+						break;
+
+					case RmMagicBonus.RmMagicBonusSelf:
+						assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.InnateSpellsSelf]);
+						break;
+
+					case RmMagicBonus.RmMagicBonusBuff:
+						assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.InnateSpellsBuff]);
+						break;
+
+					case RmMagicBonus.RmMagicBonusTele:
+						assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.InnateSpellsTele]);
+						break;
+				}
+			}
+
+
+			#endregion
+
 			validClasses = new() { Classes.Fighter, Classes.Thief, Classes.BlackBelt, Classes.RedMage, Classes.WhiteMage, Classes.BlackMage };
 
 			foreach (var gameclass in validClasses)

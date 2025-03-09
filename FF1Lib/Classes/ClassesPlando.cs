@@ -3307,6 +3307,48 @@ namespace FF1Lib
 
 			#endregion
 
+			#region BBMagic
+
+			if (flags.BBMagicBonus != BBMagicBonus.BBMagicBonusNone)
+			{
+				switch (flags.BBMagicBonus)
+				{
+					case BBMagicBonus.BBMagicBonusElem:
+						assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusActionPlando.InnateSpellsElem]);
+						break;
+
+					case BBMagicBonus.BBMagicBonusElemPlus:
+						assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusActionPlando.InnateSpellsElemPlus]);
+						break;
+
+					case BBMagicBonus.BBMagicBonusClean:
+						assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusActionPlando.InnateSpellsClean]);
+						break;
+
+					case BBMagicBonus.BBMagicBonusHeal:
+						assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusActionPlando.InnateSpellsHeal]);
+						break;
+
+					case BBMagicBonus.BBMagicBonusHealPlus:
+						assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusActionPlando.InnateSpellsHealPlus]);
+						break;
+
+					case BBMagicBonus.BBMagicBonusSelf:
+						assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusActionPlando.InnateSpellsSelf]);
+						break;
+
+					case BBMagicBonus.BBMagicBonusBuff:
+						assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusActionPlando.InnateSpellsSelf]);
+						break;
+
+					case BBMagicBonus.BBMagicBonusTele:
+						assignedBlessings[Classes.BlackBelt].Add(bonuslist[(int)BonusMalusActionPlando.InnateSpellsTele]);
+						break;
+				}
+			}
+
+			#endregion
+
 			validClasses = new() { Classes.Fighter, Classes.Thief, Classes.BlackBelt, Classes.RedMage, Classes.WhiteMage, Classes.BlackMage };
 
 			foreach (var gameclass in validClasses)

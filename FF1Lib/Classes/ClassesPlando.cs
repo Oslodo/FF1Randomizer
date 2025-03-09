@@ -3084,6 +3084,101 @@ namespace FF1Lib
 
 			#endregion
 
+			#region FighterResist
+
+			if (flags.FiResistPEDTS != false)
+			{
+				assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusActionPlando.InnateResistMajor]);
+			}
+
+			if (flags.FiResistAll != false)
+			{
+				assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusActionPlando.InnateResistAll]);
+			}
+
+			if (flags.FiResistSelect != false)
+			{
+				assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusActionPlando.InnateResistMinor]);
+			}
+
+			#endregion
+
+			#region ThiefResist
+
+			if (flags.ThResistPEDTS != false)
+			{
+				assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusActionPlando.InnateResistMajor]);
+			}
+
+			if (flags.ThResistAll != false)
+			{
+				assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusActionPlando.InnateResistAll]);
+			}
+
+			if (flags.ThResistSelect != false)
+			{
+				assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusActionPlando.InnateResistMinor]);
+			}
+
+			#endregion
+
+			#region RMResist
+
+			if (flags.RmResistPEDTS != false)
+			{
+				assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.InnateResistMajor]);
+			}
+
+			if (flags.RmResistAll != false)
+			{
+				assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.InnateResistAll]);
+			}
+
+			if (flags.RmResistSelect != false)
+			{
+				assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.InnateResistMinor]);
+			}
+
+			#endregion
+
+			#region WMResist
+
+			if (flags.WMResistPEDTS != false)
+			{
+				assignedBlessings[Classes.WhiteMage].Add(bonuslist[(int)BonusMalusActionPlando.InnateResistMajor]);
+			}
+
+			if (flags.WMResistAll != false)
+			{
+				assignedBlessings[Classes.WhiteMage].Add(bonuslist[(int)BonusMalusActionPlando.InnateResistAll]);
+			}
+
+			if (flags.WMResistSelect != false)
+			{
+				assignedBlessings[Classes.WhiteMage].Add(bonuslist[(int)BonusMalusActionPlando.InnateResistMinor])
+			}
+
+			#endregion
+
+			#region BMResist
+
+			if (flags.BMResistPEDTS != false)
+			{
+				assignedBlessings[Classes.BlackMage].Add(bonuslist[(int)BonusMalusActionPlando.InnateResistMajor]);
+			}
+
+			if (flags.BMResistAll != false)
+			{
+				assignedBlessings[Classes.BlackMage].Add(bonuslist[(int)BonusMalusActionPlando.InnateResistAll]);
+			}
+
+			if (flags.BMResistSelect != false)
+			{
+				assignedBlessings[Classes.BlackMage].Add(bonuslist[(int)BonusMalusActionPlando.InnateResistMinor]);
+			}
+
+			#endregion
+
 			validClasses = new() { Classes.Fighter, Classes.Thief, Classes.BlackBelt, Classes.RedMage, Classes.WhiteMage, Classes.BlackMage };
 
 			foreach (var gameclass in validClasses)

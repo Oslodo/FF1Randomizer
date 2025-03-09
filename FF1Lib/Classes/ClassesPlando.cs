@@ -3196,6 +3196,11 @@ namespace FF1Lib
 				assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusActionPlando.LearnAspellAuto]);
 			}
 
+			if (flags.FiMaxMPPlus != false)
+			{
+				assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusActionPlando.MPGainOnMaxMP]);
+			}
+
 			if (flags.FighterMagicBonus != FiMagicBonus.FiMagicBonusNone)
 			{
 				switch (flags.FighterMagicBonus)
@@ -3233,6 +3238,73 @@ namespace FF1Lib
 						break;
 				}
 			}
+			#endregion
+
+			#region ThiefMagic
+
+			if (flags.ThNoPromoSpells != false)
+			{
+				assignedMaluses[Classes.Thief].Add(maluses[(int)BonusMalusActionPlando.NoPromoSpellsNi]);
+			}
+
+			if (flags.ThDarkBonus != false)
+			{
+				assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusActionPlando.LearnDarkEvade]);
+			}
+
+			if (flags.ThSlowBonus != false)
+			{
+				assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusActionPlando.LearnSlowAbsorb]);
+			}
+
+			if (flags.ThSleepBonus != false)
+			{
+				assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusActionPlando.LearnSleepMDef]);
+			}
+
+			if (flags.ThMaxMPPlus != false)
+			{
+				assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusActionPlando.MPGainOnMaxMP]);
+			}
+
+			if (flags.ThMagicBonus != ThMagicBonus.ThMagicBonusNone)
+			{
+				switch (flags.ThMagicBonus)
+				{
+					case ThMagicBonus.ThMagicBonusElem:
+						assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusActionPlando.InnateSpellsElem]);
+						break;
+
+					case ThMagicBonus.ThMagicBonusElemPlus:
+						assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusActionPlando.InnateSpellsElemPlus]);
+						break;
+
+					case ThMagicBonus.ThMagicBonusClean:
+						assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusActionPlando.InnateSpellsClean]);
+						break;
+
+					case ThMagicBonus.ThMagicBonusHeal:
+						assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusActionPlando.InnateSpellsHeal]);
+						break;
+
+					case ThMagicBonus.ThMagicBonusHealPlus:
+						assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusActionPlando.InnateSpellsHealPlus]);
+						break;
+
+					case ThMagicBonus.ThMagicBonusSelf:
+						assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusActionPlando.InnateSpellsSelf]);
+						break;
+
+					case ThMagicBonus.ThMagicBonusBuff:
+						assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusActionPlando.InnateSpellsSelf]);
+						break;
+
+					case ThMagicBonus.ThMagicBonusTele:
+						assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusActionPlando.InnateSpellsTele]);
+						break;
+				}
+			}
+
 			#endregion
 
 			validClasses = new() { Classes.Fighter, Classes.Thief, Classes.BlackBelt, Classes.RedMage, Classes.WhiteMage, Classes.BlackMage };

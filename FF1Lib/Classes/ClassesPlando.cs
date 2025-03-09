@@ -3155,7 +3155,7 @@ namespace FF1Lib
 
 			if (flags.WMResistSelect != false)
 			{
-				assignedBlessings[Classes.WhiteMage].Add(bonuslist[(int)BonusMalusActionPlando.InnateResistMinor])
+				assignedBlessings[Classes.WhiteMage].Add(bonuslist[(int)BonusMalusActionPlando.InnateResistMinor]);
 			}
 
 			#endregion
@@ -3177,6 +3177,62 @@ namespace FF1Lib
 				assignedBlessings[Classes.BlackMage].Add(bonuslist[(int)BonusMalusActionPlando.InnateResistMinor]);
 			}
 
+			#endregion
+
+			#region FighterMagic
+
+			if (flags.FiNoPromoSpells != false)
+			{
+				assignedMaluses[Classes.Fighter].Add(maluses[(int)BonusMalusActionPlando.NoPromoSpellsKi]);
+			}
+
+			if (flags.FiLampBonus != false)
+			{
+				assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusActionPlando.LearnLampRibbon]);
+			}
+
+			if (flags.FiAspellBonus != false)
+			{
+				assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusActionPlando.LearnAspellAuto]);
+			}
+
+			if (flags.FighterMagicBonus != FiMagicBonus.FiMagicBonusNone)
+			{
+				switch (flags.FighterMagicBonus)
+				{
+					case FiMagicBonus.FiMagicBonusElem:
+						assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusActionPlando.InnateSpellsElem]);
+						break;
+
+					case FiMagicBonus.FiMagicBonusElemPlus:
+						assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusActionPlando.InnateSpellsElemPlus]);
+						break;
+
+					case FiMagicBonus.FiMagicBonusClean:
+						assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusActionPlando.InnateSpellsClean]);
+						break;
+
+					case FiMagicBonus.FiMagicBonusHeal:
+						assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusActionPlando.InnateSpellsHeal]);
+						break;
+
+					case FiMagicBonus.FiMagicBonusHealPlus:
+						assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusActionPlando.InnateSpellsHealPlus]);
+						break;
+
+					case FiMagicBonus.FiMagicBonusSelf:
+						assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusActionPlando.InnateSpellsSelf]);
+						break;
+
+					case FiMagicBonus.FiMagicBonusBuff:
+						assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusActionPlando.InnateSpellsSelf]);
+						break;
+
+					case FiMagicBonus.FiMagicBonusTele:
+						assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusActionPlando.InnateSpellsTele]);
+						break;
+				}
+			}
 			#endregion
 
 			validClasses = new() { Classes.Fighter, Classes.Thief, Classes.BlackBelt, Classes.RedMage, Classes.WhiteMage, Classes.BlackMage };

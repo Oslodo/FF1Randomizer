@@ -3715,7 +3715,7 @@ namespace FF1Lib
 			}
 			#endregion
 
-			#region
+			#region BMMagic
 
 			if (flags.BMPlus2Lvl1MP != false)
 			{

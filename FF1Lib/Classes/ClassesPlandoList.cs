@@ -23,13 +23,13 @@ namespace FF1Lib
 			public int StatMod { get; set; }
 			public int StatMod2 { get; set; }
 			public RankedType TargetStat { get; set; }
-			public BonusMalusAction Action { get; set; }
+			public BonusMalusActionPlando Action { get; set; }
 			public string Description { get; set; }
 			public List<byte> SpcGrowth { get; set; }
 			public List<Classes> ClassList { get; set; }
 			public SpellSlotInfo SpellSlotMod { get; set; }
 			public List<SpellSlotInfo> SpellsMod { get; set; }
-			public BonusMalusPlando(BonusMalusAction action, string description, int mod = 0, int mod2 = 0, List<Item> equipment = null, List<bool> binarylist = null, List<SpellSlots> spelllist = null, List<byte> bytelist = null, SpellSlotInfo spellslotmod = null, List<SpellSlotInfo> spellsmod = null, List<Classes> Classes = null)
+			public BonusMalusPlando(BonusMalusActionPlando action, string description, int mod = 0, int mod2 = 0, List<Item> equipment = null, List<bool> binarylist = null, List<SpellSlots> spelllist = null, List<byte> bytelist = null, SpellSlotInfo spellslotmod = null, List<SpellSlotInfo> spellsmod = null, List<Classes> Classes = null)
 			{
 				Action = action;
 				Description = description;
@@ -158,134 +158,135 @@ namespace FF1Lib
 
 			bonusList.AddRange(new List<BonusMalusPlando>()
 			{
-				new BonusMalusPlando(BonusMalusAction.StrMod, "+10 Str.", mod: 10),
-				new BonusMalusPlando(BonusMalusAction.AgiMod, "+15 Agi.", mod: 15),
-				new BonusMalusPlando(BonusMalusAction.VitMod, "+10 Vit.", mod: 10),
-				new BonusMalusPlando(BonusMalusAction.LckMod, "+5 Luck", mod: 5),
-				new BonusMalusPlando(BonusMalusAction.HpMod, "+20 HP", mod: 20),
-				new BonusMalusPlando(BonusMalusAction.HitMod, "+10 Hit%", mod: 10),
-				new BonusMalusPlando(BonusMalusAction.MDefMod, "+10 MDef", mod: 10),
-				new BonusMalusPlando(BonusMalusAction.WeaponAdd, "+Equip @X", equipment: equipAxes),
-				new BonusMalusPlando(BonusMalusAction.ArmorAdd, "+Equip @T", equipment: equipShirts),
-				new BonusMalusPlando(BonusMalusAction.ArmorAdd, "+Equip @s", equipment: equipShields),
-				new BonusMalusPlando(BonusMalusAction.ArmorAdd, "+Equip @G+@h", equipment: equipGauntletsHelmets),
-				new BonusMalusPlando(BonusMalusAction.WeaponAdd, "+Thief @S", equipment: equipThiefWeapon),
-				new BonusMalusPlando(BonusMalusAction.SpcMod, "+2 Lv1 MP", mod: 2),
-				new BonusMalusPlando(BonusMalusAction.StrMod, "+20 Str.", mod: 20),
-				new BonusMalusPlando(BonusMalusAction.AgiMod, "+25 Agi.", mod: 25),
-				new BonusMalusPlando(BonusMalusAction.VitMod, "+20 Vit.", mod: 20),
-				new BonusMalusPlando(BonusMalusAction.LckMod, "+10 Luck", mod: 10),
-				new BonusMalusPlando(BonusMalusAction.HpMod, "+40 HP", mod: 40),
-				new BonusMalusPlando(BonusMalusAction.HitMod, "+20 Hit%", mod: 20),
-				new BonusMalusPlando(BonusMalusAction.MDefMod, "+20 MDef", mod: 20),
-				new BonusMalusPlando(BonusMalusAction.WeaponAdd, "+Legendary@S", equipment: equipLegendaryWeapons),
-				new BonusMalusPlando(BonusMalusAction.ArmorAdd, "+Red Mage @A", equipment: equipRedMageArmor),
-				new BonusMalusPlando(BonusMalusAction.StartWithMp, "+1 MP LvAll"),
-				new BonusMalusPlando(BonusMalusAction.ThorMaster, "Improved\n Thor@H"),
-				new BonusMalusPlando(BonusMalusAction.Hunter, "Hurt Undead", mod: 0x18),
-				new BonusMalusPlando(BonusMalusAction.Hunter, "Hurt Dragon", mod: 0x02),
-				new BonusMalusPlando(BonusMalusAction.InnateResist, "Res. PEDTS", mod: (int)(SpellElement.Poison | SpellElement.Earth | SpellElement.Death | SpellElement.Time | SpellElement.Status)),
+				new BonusMalusPlando(BonusMalusActionPlando.StrModUp10, "+10 Str.", mod: 10),
+				new BonusMalusPlando(BonusMalusActionPlando.AgiModUp15, "+15 Agi.", mod: 15),
+				new BonusMalusPlando(BonusMalusActionPlando.VitModUp10, "+10 Vit.", mod: 10),
+				new BonusMalusPlando(BonusMalusActionPlando.LckModUp5, "+5 Luck", mod: 5),
+				new BonusMalusPlando(BonusMalusActionPlando.HPModUp20, "+20 HP", mod: 20),
+				new BonusMalusPlando(BonusMalusActionPlando.HitModUp10, "+10 Hit%", mod: 10),
+				new BonusMalusPlando(BonusMalusActionPlando.MDefModUp10, "+10 MDef", mod: 10),
+				new BonusMalusPlando(BonusMalusActionPlando.WeaponAddAxes, "+Equip @X", equipment: equipAxes),
+				new BonusMalusPlando(BonusMalusActionPlando.ArmorAddShirts, "+Equip @T", equipment: equipShirts),
+				new BonusMalusPlando(BonusMalusActionPlando.ArmorAddShields, "+Equip @s", equipment: equipShields),
+				new BonusMalusPlando(BonusMalusActionPlando.ArmorAddHelmGauntlet, "+Equip @G+@h", equipment: equipGauntletsHelmets),
+				new BonusMalusPlando(BonusMalusActionPlando.WeaponAddThief, "+Thief @S", equipment: equipThiefWeapon),
+				new BonusMalusPlando(BonusMalusActionPlando.SpcModPlus2, "+2 Lv1 MP", mod: 2),
+				new BonusMalusPlando(BonusMalusActionPlando.StrModUp20, "+20 Str.", mod: 20),
+				new BonusMalusPlando(BonusMalusActionPlando.AgiModUp25, "+25 Agi.", mod: 25),
+				new BonusMalusPlando(BonusMalusActionPlando.VitModUp20, "+20 Vit.", mod: 20),
+				new BonusMalusPlando(BonusMalusActionPlando.LckModUp10, "+10 Luck", mod: 10),
+				new BonusMalusPlando(BonusMalusActionPlando.HPModUp40, "+40 HP", mod: 40),
+				new BonusMalusPlando(BonusMalusActionPlando.HitModUp20, "+20 Hit%", mod: 20),
+				new BonusMalusPlando(BonusMalusActionPlando.MDefModUp20, "+20 MDef", mod: 20),
+				new BonusMalusPlando(BonusMalusActionPlando.WeaponAddLegendary, "+Legendary@S", equipment: equipLegendaryWeapons),
+				new BonusMalusPlando(BonusMalusActionPlando.ArmorAddRedMage, "+Red Mage @A", equipment: equipRedMageArmor),
+				new BonusMalusPlando(BonusMalusActionPlando.StartWithMPLvl1, "+1 MP LvAll"),
+				new BonusMalusPlando(BonusMalusActionPlando.ImprovedThor, "Improved\n Thor@H"),
+				new BonusMalusPlando(BonusMalusActionPlando.HunterUndead, "Hurt Undead", mod: 0x18),
+				new BonusMalusPlando(BonusMalusActionPlando.HunterDragon, "Hurt Dragon", mod: 0x02),
+				new BonusMalusPlando(BonusMalusActionPlando.InnateResistMajor, "Res. PEDTS", mod: (int)(SpellElement.Poison | SpellElement.Earth | SpellElement.Death | SpellElement.Time | SpellElement.Status)),
 				//start of strong tier
-				new BonusMalusPlando(BonusMalusAction.StrMod, "+40 Str.", mod: 40),
-				new BonusMalusPlando(BonusMalusAction.AgiMod, "+50 Agi.", mod: 50),
-				new BonusMalusPlando(BonusMalusAction.VitMod, "+40 Vit.", mod: 40),
-				new BonusMalusPlando(BonusMalusAction.LckMod, "+15 Luck", mod: 15),
-				new BonusMalusPlando(BonusMalusAction.HpMod, "+80 HP", mod: 80),
-				new BonusMalusPlando(BonusMalusAction.MDefGrowth, "+2 MDef/Lv", mod: 2),
-				new BonusMalusPlando(BonusMalusAction.WeaponAdd, "+Fighter @S", equipment: equipFighterWeapon),
-				new BonusMalusPlando(BonusMalusAction.ArmorAdd, "+Fighter @A", equipment: equipFighterArmor),
-				new BonusMalusPlando(BonusMalusAction.SpcGrowth, "Improved MP", bytelist: improvedMPlist),
-				new BonusMalusPlando(BonusMalusAction.PowerRW, "Sage", mod: 1, spelllist: wmWhiteSpells.Concat(bmBlackSpells).Concat(wwWhiteSpells).Concat(bwBlackSpells).ToList()),
-				new BonusMalusPlando(BonusMalusAction.Hunter, "Hurt All", mod: 0xFF),
-				new BonusMalusPlando(BonusMalusAction.InnateResist, "Res. All", mod: 0xFF),
+				new BonusMalusPlando(BonusMalusActionPlando.StrModUp40, "+40 Str.", mod: 40),
+				new BonusMalusPlando(BonusMalusActionPlando.AgiModUp50, "+50 Agi.", mod: 50),
+				new BonusMalusPlando(BonusMalusActionPlando.VitModUp40, "+40 Vit.", mod: 40),
+				new BonusMalusPlando(BonusMalusActionPlando.LckModUp15, "+15 Luck", mod: 15),
+				new BonusMalusPlando(BonusMalusActionPlando.HPModUp80, "+80 HP", mod: 80),
+				new BonusMalusPlando(BonusMalusActionPlando.MDefGrowthPlus2, "+2 MDef/Lv", mod: 2),
+				new BonusMalusPlando(BonusMalusActionPlando.WeaponAddFighter, "+Fighter @S", equipment: equipFighterWeapon),
+				new BonusMalusPlando(BonusMalusActionPlando.ArmorAddFighter, "+Fighter @A", equipment: equipFighterArmor),
+				new BonusMalusPlando(BonusMalusActionPlando.Plus1MPAll, "Improved MP", bytelist: improvedMPlist),
+				new BonusMalusPlando(BonusMalusActionPlando.PowerRM, "Sage", mod: 1, spelllist: wmWhiteSpells.Concat(bmBlackSpells).Concat(wwWhiteSpells).Concat(bwBlackSpells).ToList()),
+				new BonusMalusPlando(BonusMalusActionPlando.HunterHurtAll, "Hurt All", mod: 0xFF),
+				new BonusMalusPlando(BonusMalusActionPlando.InnateResistAll, "Res. All", mod: 0xFF),
 				//Add here the code for the resistances
 				//int tier
-				new BonusMalusPlando(BonusMalusAction.IntMod, "+10 Int.", mod: 10),
-				new BonusMalusPlando(BonusMalusAction.IntMod, "+20 Int.", mod: 20),
-				new BonusMalusPlando(BonusMalusAction.IntMod, "+40 Int.", mod: 40),
+				new BonusMalusPlando(BonusMalusActionPlando.IntModUp10, "+10 Int.", mod: 10),
+				new BonusMalusPlando(BonusMalusActionPlando.IntModUp20, "+20 Int.", mod: 20),
+				new BonusMalusPlando(BonusMalusActionPlando.IntModUp40, "+40 Int.", mod: 40),
 				//weaponizer tier
-				new BonusMalusPlando(BonusMalusAction.CatClawMaster, "Improved\n CatClaw", equipment: new List<Item>() { Item.CatClaw }),
-				new BonusMalusPlando(BonusMalusAction.DualWieldKnife, "DualWield @K"),
+				new BonusMalusPlando(BonusMalusActionPlando.ImprovedCatclaw, "Improved\n CatClaw", equipment: new List<Item>() { Item.CatClaw }),
+				new BonusMalusPlando(BonusMalusActionPlando.DualWieldKnife, "DualWield @K"),
 				//gold tier
-				new BonusMalusPlando(BonusMalusAction.StartWithGold, "+200 GP", mod: 2),
-				new BonusMalusPlando(BonusMalusAction.StartWithGold, "+1400 GP", mod: 14),
-				new BonusMalusPlando(BonusMalusAction.StartWithGold, "+400 GP", mod: 4),
-				new BonusMalusPlando(BonusMalusAction.StartWithGold, "+2000 GP", mod: 20),
-				new BonusMalusPlando(BonusMalusAction.StartWithGold, "+600 GP", mod: 6),
-				new BonusMalusPlando(BonusMalusAction.StartWithGold, "+3000 GP", mod: 30),
-				new BonusMalusPlando(BonusMalusAction.StartWithGold, "+800 GP", mod: 8),
-				new BonusMalusPlando(BonusMalusAction.StartWithGold, "+4000 GP", mod: 40),
-				new BonusMalusPlando(BonusMalusAction.StartWithGold, "+1500 GP", mod: 15),
-				new BonusMalusPlando(BonusMalusAction.StartWithGold, "+6000 GP", mod: 60),
-				new BonusMalusPlando(BonusMalusAction.StartWithGold, "+5000 GP", mod: 50),
-				new BonusMalusPlando(BonusMalusAction.StartWithGold, "+20,000 GP", mod: 200),
+				new BonusMalusPlando(BonusMalusActionPlando.StartWithGoldUp200, "+200 GP", mod: 2),
+				new BonusMalusPlando(BonusMalusActionPlando.StartWithGoldUp1400, "+1400 GP", mod: 14),
+				new BonusMalusPlando(BonusMalusActionPlando.StartWithGoldUp400, "+400 GP", mod: 4),
+				new BonusMalusPlando(BonusMalusActionPlando.StartWithGoldUp2000, "+2000 GP", mod: 20),
+				new BonusMalusPlando(BonusMalusActionPlando.StartWithGoldUp600, "+600 GP", mod: 6),
+				new BonusMalusPlando(BonusMalusActionPlando.StartWithGoldUp3000, "+3000 GP", mod: 30),
+				new BonusMalusPlando(BonusMalusActionPlando.StartWithGoldUp800, "+800 GP", mod: 8),
+				new BonusMalusPlando(BonusMalusActionPlando.StartWithGoldUp400, "+4000 GP", mod: 40),
+				new BonusMalusPlando(BonusMalusActionPlando.StartWithGoldUp1500, "+1500 GP", mod: 15),
+				new BonusMalusPlando(BonusMalusActionPlando.StartWithGoldUp6000, "+6000 GP", mod: 60),
+				new BonusMalusPlando(BonusMalusActionPlando.StartWithGoldUp5000, "+5000 GP", mod: 50),
+				new BonusMalusPlando(BonusMalusActionPlando.StartWithGoldUp20000, "+20,000 GP", mod: 200),
 				//Promo tier
-				new BonusMalusPlando(BonusMalusAction.ArmorAdd, "Promo FI @A", mod: 99, equipment: equipFighterArmor),
-				new BonusMalusPlando(BonusMalusAction.PowerRW, "Promo Sage", mod: 0, spelllist: wmWhiteSpells.Concat(bmBlackSpells).Concat(wwWhiteSpells).Concat(bwBlackSpells).ToList()),
-				new BonusMalusPlando(BonusMalusAction.MDefGrowth, "Promo\n +3 MDef", mod: 3, mod2: 99),
+				new BonusMalusPlando(BonusMalusActionPlando.ArmorAddFighterPromo, "Promo FI @A", mod: 99, equipment: equipFighterArmor),
+				new BonusMalusPlando(BonusMalusActionPlando.PowerRMPromo, "Promo Sage", mod: 0, spelllist: wmWhiteSpells.Concat(bmBlackSpells).Concat(wwWhiteSpells).Concat(bwBlackSpells).ToList()),
+				new BonusMalusPlando(BonusMalusActionPlando.MaMDef, "Promo\n +3 MDef", mod: 3, mod2: 99),
 				//Armorcrafter tier
-				new BonusMalusPlando(BonusMalusAction.WoodAdept, "Wood@A@s@h Set\n Add Evade"),
-				new BonusMalusPlando(BonusMalusAction.SteelLord, "Steel@A\n Cast Fast"),
+				new BonusMalusPlando(BonusMalusActionPlando.WoodAdept, "Wood@A@s@h Set\n Add Evade"),
+				new BonusMalusPlando(BonusMalusActionPlando.SteelLord, "Steel@A\n Cast Fast"),
 				//Add Single Spell code here
 				//Lockpicking tier
-				new BonusMalusPlando(BonusMalusAction.LockpickingLevel, "EarlyLokpik", mod: -10),
+				new BonusMalusPlando(BonusMalusActionPlando.EarlyLockPick, "EarlyLokpik", mod: -10),
 				//XP tier removed the duplicates as they are no longer needed for balancing
-				new BonusMalusPlando(BonusMalusAction.BonusXp, "+50% XP", mod: 150),
-				new BonusMalusPlando(BonusMalusAction.BonusXp, "+100% XP", mod: 200),
+				new BonusMalusPlando(BonusMalusActionPlando.BonusXPPlus50, "+50% XP", mod: 150),
+				new BonusMalusPlando(BonusMalusActionPlando.BonusXPPlus100, "+100% XP", mod: 200),
 				//Max MP on Gain
-				new BonusMalusPlando(BonusMalusAction.MpGainOnMaxMpGain, "Max+Mp+"),
+				new BonusMalusPlando(BonusMalusActionPlando.MPGainOnMaxMP, "Max+Mp+"),
 				
 			});
 			maluses.AddRange(new List<BonusMalusPlando>()
 			{
-				new BonusMalusPlando(BonusMalusAction.StrMod, "-10 Str.", mod: -10),
-				new BonusMalusPlando(BonusMalusAction.StrMod, "-20 Str.", mod: -20),
-				new BonusMalusPlando(BonusMalusAction.AgiMod, "-10 Agi.", mod: -10),
-				new BonusMalusPlando(BonusMalusAction.AgiMod, "-20 Agi.", mod: -20),
-				new BonusMalusPlando(BonusMalusAction.VitMod, "-10 Vit.", mod: -10),
-				new BonusMalusPlando(BonusMalusAction.VitMod, "-20 Vit.", mod: -20),
-				new BonusMalusPlando(BonusMalusAction.LckMod, "-5 Luck", mod: -5),
-				new BonusMalusPlando(BonusMalusAction.LckMod, "-10 Luck", mod: -10),
-				new BonusMalusPlando(BonusMalusAction.HpMod, "-15 HP", mod: -15),
-				new BonusMalusPlando(BonusMalusAction.HpMod, "-30 HP", mod: -30),
-				new BonusMalusPlando(BonusMalusAction.HpGrowth, "BlackM HP", binarylist: _classes[(int)Classes.BlackMage].HpGrowth),
-				new BonusMalusPlando(BonusMalusAction.HitMod, "-10 Hit%", mod: -10),
-				new BonusMalusPlando(BonusMalusAction.MDefMod, "-10 MDef", mod: -10),
-				new BonusMalusPlando(BonusMalusAction.HitGrowth, "-1 Hit%/Lv", mod: -1),
-				new BonusMalusPlando(BonusMalusAction.MDefGrowth, "-1 MDef/Lv", mod: -1),
-				new BonusMalusPlando(BonusMalusAction.ArmorRemove, "No @B", equipment: braceletList),
-				new BonusMalusPlando(BonusMalusAction.WeaponReplace, "Thief @S", equipment: equipThiefWeapon),
-				new BonusMalusPlando(BonusMalusAction.SpcMax, "-4 Max MP", mod: -4),
+				new BonusMalusPlando(BonusMalusActionPlando.StrModDown10, "-10 Str.", mod: -10),
+				new BonusMalusPlando(BonusMalusActionPlando.StrModDown20, "-20 Str.", mod: -20),
+				new BonusMalusPlando(BonusMalusActionPlando.AgiModDown10, "-10 Agi.", mod: -10),
+				new BonusMalusPlando(BonusMalusActionPlando.AgiModDown20, "-20 Agi.", mod: -20),
+				new BonusMalusPlando(BonusMalusActionPlando.VitModDown10, "-10 Vit.", mod: -10),
+				new BonusMalusPlando(BonusMalusActionPlando.VitModDown20, "-20 Vit.", mod: -20),
+				new BonusMalusPlando(BonusMalusActionPlando.LckModDown5, "-5 Luck", mod: -5),
+				new BonusMalusPlando(BonusMalusActionPlando.LckModDown10, "-10 Luck", mod: -10),
+				new BonusMalusPlando(BonusMalusActionPlando.HPModDown15, "-15 HP", mod: -15),
+				new BonusMalusPlando(BonusMalusActionPlando.HPModDown30, "-30 HP", mod: -30),
+				new BonusMalusPlando(BonusMalusActionPlando.FiBMHP, "BlackM HP", binarylist: _classes[(int)Classes.BlackMage].HpGrowth),
+				new BonusMalusPlando(BonusMalusActionPlando.HitModDown10, "-10 Hit%", mod: -10),
+				new BonusMalusPlando(BonusMalusActionPlando.MDefModDown10, "-10 MDef", mod: -10),
+				new BonusMalusPlando(BonusMalusActionPlando.MinusOneHit, "-1 Hit%/Lv", mod: -1),
+				new BonusMalusPlando(BonusMalusActionPlando.MinusOneMdef, "-1 MDef/Lv", mod: -1),
+				new BonusMalusPlando(BonusMalusActionPlando.NoBracelets, "No @B", equipment: braceletList),
+				new BonusMalusPlando(BonusMalusActionPlando.ThWeaponsReplace, "Thief @S", equipment: equipThiefWeapon),
+				new BonusMalusPlando(BonusMalusActionPlando.MaxMPDown4, "-4 Max MP", mod: -4),
 				//Int tier
-				new BonusMalusPlando(BonusMalusAction.IntMod, "-10 Int.", mod: -10),
-				new BonusMalusPlando(BonusMalusAction.IntMod, "-20 Int.", mod: -20),
+				new BonusMalusPlando(BonusMalusActionPlando.IntModDown10, "-10 Int.", mod: -10),
+				new BonusMalusPlando(BonusMalusActionPlando.IntModDown20, "-20 Int.", mod: -20),
 				//Gold tier
-				new BonusMalusPlando(BonusMalusAction.StartWithGold, "-50 GP", mod: -1),
-				new BonusMalusPlando(BonusMalusAction.StartWithGold, "-100 GP", mod: -1),
-				new BonusMalusPlando(BonusMalusAction.StartWithGold, "-150 GP", mod: -1),
-				new BonusMalusPlando(BonusMalusAction.StartWithGold, "-350 GP", mod: -1),
-				new BonusMalusPlando(BonusMalusAction.StartWithGold, "-1100 GP", mod: -1),
-				new BonusMalusPlando(BonusMalusAction.StartWithGold, "-4500 GP", mod: -1),
+				new BonusMalusPlando(BonusMalusActionPlando.StartWithGoldDown50, "-50 GP", mod: -1),
+				new BonusMalusPlando(BonusMalusActionPlando.StartWithGoldDown100, "-100 GP", mod: -1),
+				new BonusMalusPlando(BonusMalusActionPlando.StartWithGoldDown150, "-150 GP", mod: -1),
+				new BonusMalusPlando(BonusMalusActionPlando.StartWithGoldDown350, "-350 GP", mod: -1),
+				new BonusMalusPlando(BonusMalusActionPlando.StartWithGoldDown1100, "-1100 GP", mod: -1),
+				new BonusMalusPlando(BonusMalusActionPlando.StartWithGoldDown4500, "-4500 GP", mod: -1),
 				//Masa Curse tier
-				new BonusMalusPlando(BonusMalusAction.MasaCurse, "Masa Curse\n Poison", mod: 0x04),
-				new BonusMalusPlando(BonusMalusAction.MasaCurse, "Masa Curse\n Stun", mod: 0x10),
-				new BonusMalusPlando(BonusMalusAction.MasaCurse, "Masa Curse\n Sleep", mod: 0x20),
-				new BonusMalusPlando(BonusMalusAction.MasaCurse, "Masa Curse\n Mute", mod: 0x40),
+				new BonusMalusPlando(BonusMalusActionPlando.MasaCursePoison, "Masa Curse\n Poison", mod: 0x04),
+				new BonusMalusPlando(BonusMalusActionPlando.MasaCurseStun, "Masa Curse\n Stun", mod: 0x10),
+				new BonusMalusPlando(BonusMalusActionPlando.MasaCurseSleep, "Masa Curse\n Sleep", mod: 0x20),
+				new BonusMalusPlando(BonusMalusActionPlando.MasaCurseMute, "Masa Curse\n Mute", mod: 0x40),
 				//Ribbon Curse tier
-				new BonusMalusPlando(BonusMalusAction.RibbonCurse, "Ribbon Curse\n Poison", mod: 0x04),
-				new BonusMalusPlando(BonusMalusAction.RibbonCurse, "Ribbon Curse\n Stun ", mod: 0x10),
-				new BonusMalusPlando(BonusMalusAction.RibbonCurse, "Ribbon Curse\n Sleep", mod: 0x20),
-				new BonusMalusPlando(BonusMalusAction.RibbonCurse, "Ribbon Curse\n Mute", mod: 0x40),
+				new BonusMalusPlando(BonusMalusActionPlando.RibbonCursePosion, "Ribbon Curse\n Poison", mod: 0x04),
+				new BonusMalusPlando(BonusMalusActionPlando.RibbonCurseStun, "Ribbon Curse\n Stun ", mod: 0x10),
+				new BonusMalusPlando(BonusMalusActionPlando.RibbonCurseSleep, "Ribbon Curse\n Sleep", mod: 0x20),
+				new BonusMalusPlando(BonusMalusActionPlando.RibbonCurseMute, "Ribbon Curse\n Mute", mod: 0x40),
 				//Promo Curse tier
-				new BonusMalusPlando(BonusMalusAction.ArmorReplace, "No Promo @A", mod: 99, equipment: equipFighterArmorFull),
-				new BonusMalusPlando(BonusMalusAction.ArmorReplace, "Promo RW @A", mod: 99, equipment: equipRedWizardArmorFull),
-				new BonusMalusPlando(BonusMalusAction.NoPromoMagic, "No Promo Sp", mod: 0, mod2: 0, binarylist: nullSpells),
-				new BonusMalusPlando(BonusMalusAction.UnarmedAttack, "Promo\n Unarmed", mod: 99),
+				new BonusMalusPlando(BonusMalusActionPlando.ArmorReplaceNoPromoFi, "No Promo @A", mod: 99, equipment: equipFighterArmorFull),
+				new BonusMalusPlando(BonusMalusActionPlando.ArmorAddRedMage, "Promo RW @A", mod: 99, equipment: equipRedWizardArmorFull),
+				new BonusMalusPlando(BonusMalusActionPlando.NoPromoSpellsKi, "No Promo Sp", mod: 0, mod2: 0, binarylist: nullSpells),
+				new BonusMalusPlando(BonusMalusActionPlando.NoPromoSpellsNi, "No Promo Sp", mod: 0, mod2: 0, binarylist: nullSpells),
+				new BonusMalusPlando(BonusMalusActionPlando.UnarmmedAttackMa, "Promo\n Unarmed", mod: 99),
 				//Armorcrafter tier
-				new BonusMalusPlando(BonusMalusAction.ArmorRemove, "-" + olditemnames[(int)Item.ProRing], equipment: new List<Item> { Item.ProRing }),
+				new BonusMalusPlando(BonusMalusActionPlando.ArmorRemoveNoProRing, "-" + olditemnames[(int)Item.ProRing], equipment: new List<Item> { Item.ProRing }),
 				//Add Single Spell code here
 				//Lockpicking tier
-				new BonusMalusPlando(BonusMalusAction.LockpickingLevel, "LateLockpik", mod: 10),
+				new BonusMalusPlando(BonusMalusActionPlando.LateLockpicking, "LateLockpik", mod: 10),
 
 			});
 		}
@@ -320,7 +321,7 @@ namespace FF1Lib
 					SpellSlotInfo spellId = SpellSlotStructure.GetSpellSlots().Find(x => x.NameId == spell.PickRandom(rng));
 					if (spellId != null)
 					{
-						spellBlursings.Add(new BonusMalusPlando(BonusMalusAction.InnateSpells, "+" + rom.ItemsText[(int)spellId.NameId], spellsmod: new List<SpellSlotInfo> { spellId, new SpellSlotInfo(), new SpellSlotInfo() }));
+						spellBlursings.Add(new BonusMalusPlando(BonusMalusActionPlando.InnateSpells, "+" + rom.ItemsText[(int)spellId.NameId], spellsmod: new List<SpellSlotInfo> { spellId, new SpellSlotInfo(), new SpellSlotInfo() }));
 					}
 				}
 			}
@@ -334,7 +335,7 @@ namespace FF1Lib
 					SpellSlotInfo spellId = SpellSlotStructure.GetSpellSlots().Find(x => x.NameId == pickedSpell);
 					if (spellId != null)
 					{
-						spellBlursings.Add(new BonusMalusPlando(BonusMalusAction.InnateSpells, "+" + rom.ItemsText[(int)spellId.NameId], spellsmod: new List<SpellSlotInfo> { spellId, new SpellSlotInfo(), new SpellSlotInfo() }));
+						spellBlursings.Add(new BonusMalusPlando(BonusMalusActionPlando.InnateSpells, "+" + rom.ItemsText[(int)spellId.NameId], spellsmod: new List<SpellSlotInfo> { spellId, new SpellSlotInfo(), new SpellSlotInfo() }));
 					}
 				}
 			}
@@ -380,7 +381,7 @@ namespace FF1Lib
 
 				if (spellId != null)
 				{
-					spellBlursingsPlando.Add(new BonusMalusPlando(BonusMalusAction.InnateSpells, "Nuke Magic", spellsmod: new List<SpellSlotInfo> { spellId, spellId, emptySlot }));
+					spellBlursingsPlando.Add(new BonusMalusPlando(BonusMalusActionPlando.InnateSpellsNuke, "Nuke Magic", spellsmod: new List<SpellSlotInfo> { spellId, spellId, emptySlot }));
 				}
 			}
 
@@ -399,7 +400,7 @@ namespace FF1Lib
 
 				if (spells.Count >= 2)
 				{
-					spellBlursingsPlando.Add(new BonusMalusPlando(BonusMalusAction.InnateSpells, "Elem+ Magic", spellsmod: new List<SpellSlotInfo> { spells[0], spells[1], emptySlot }));
+					spellBlursingsPlando.Add(new BonusMalusPlando(BonusMalusActionPlando.InnateSpellsElemPlus, "Elem+ Magic", spellsmod: new List<SpellSlotInfo> { spells[0], spells[1], emptySlot }));
 
 				}
 			}
@@ -419,7 +420,7 @@ namespace FF1Lib
 
 				if (spells.Count >= 2)
 				{
-					spellBlursingsPlando.Add(new BonusMalusPlando(BonusMalusAction.InnateSpells, "Elem Magic", spellsmod: new List<SpellSlotInfo> { spells[0], spells[1], emptySlot }));
+					spellBlursingsPlando.Add(new BonusMalusPlando(BonusMalusActionPlando.InnateSpellsElem, "Elem Magic", spellsmod: new List<SpellSlotInfo> { spells[0], spells[1], emptySlot }));
 				}
 			}
 
@@ -438,7 +439,7 @@ namespace FF1Lib
 
 				if (spells.Count >= 2)
 				{
-					spellBlursingsPlando.Add(new BonusMalusPlando(BonusMalusAction.InnateSpells, "Clean Magic", spellsmod: new List<SpellSlotInfo> { spells[0], spells[1], emptySlot }));
+					spellBlursingsPlando.Add(new BonusMalusPlando(BonusMalusActionPlando.InnateSpellsClean, "Clean Magic", spellsmod: new List<SpellSlotInfo> { spells[0], spells[1], emptySlot }));
 				}
 			}
 
@@ -457,7 +458,7 @@ namespace FF1Lib
 
 				if (spells.Count >= 2)
 				{
-					spellBlursingsPlando.Add(new BonusMalusPlando(BonusMalusAction.InnateSpells, "Doom Magic", spellsmod: new List<SpellSlotInfo> { spells[0], spells[1], emptySlot }));
+					spellBlursingsPlando.Add(new BonusMalusPlando(BonusMalusActionPlando.InnateSpellsDoom, "Doom Magic", spellsmod: new List<SpellSlotInfo> { spells[0], spells[1], emptySlot }));
 				}
 			}
 
@@ -484,7 +485,7 @@ namespace FF1Lib
 					spells = new() { spells.SpliceRandom(rng), lifespell ?? spells.SpliceRandom(rng) };
 					spells.Shuffle(rng);
 
-					spellBlursingsPlando.Add(new BonusMalusPlando(BonusMalusAction.InnateSpells, "Heal Magic", spellsmod: new List<SpellSlotInfo> { spells[0], spells[1], emptySlot }));
+					spellBlursingsPlando.Add(new BonusMalusPlando(BonusMalusActionPlando.InnateSpellsHeal, "Heal Magic", spellsmod: new List<SpellSlotInfo> { spells[0], spells[1], emptySlot }));
 				}
 			}
 
@@ -511,7 +512,7 @@ namespace FF1Lib
 					spells = new() { spells.SpliceRandom(rng), lifespell ?? spells.SpliceRandom(rng) };
 					spells.Shuffle(rng);
 
-					spellBlursingsPlando.Add(new BonusMalusPlando(BonusMalusAction.InnateSpells, "Heal+ Magic", spellsmod: new List<SpellSlotInfo> { spells[0], spells[1], emptySlot }));
+					spellBlursingsPlando.Add(new BonusMalusPlando(BonusMalusActionPlando.InnateSpellsHealPlus, "Heal+ Magic", spellsmod: new List<SpellSlotInfo> { spells[0], spells[1], emptySlot }));
 				}
 			}
 
@@ -532,7 +533,7 @@ namespace FF1Lib
 
 				if (spells.Count >= 2)
 				{
-					spellBlursingsPlando.Add(new BonusMalusPlando(BonusMalusAction.InnateSpells, "Self Magic", spellsmod: new List<SpellSlotInfo> { spells[0], spells[1], emptySlot }));
+					spellBlursingsPlando.Add(new BonusMalusPlando(BonusMalusActionPlando.InnateSpellsSelf, "Self Magic", spellsmod: new List<SpellSlotInfo> { spells[0], spells[1], emptySlot }));
 				}
 			}
 
@@ -555,7 +556,7 @@ namespace FF1Lib
 
 				if (spells.Count >= 2)
 				{
-					spellBlursingsPlando.Add(new BonusMalusPlando(BonusMalusAction.InnateSpells, "Buff Magic", spellsmod: new List<SpellSlotInfo> { spells[0], spells[1], emptySlot }));
+					spellBlursingsPlando.Add(new BonusMalusPlando(BonusMalusActionPlando.InnateSpellsBuff, "Buff Magic", spellsmod: new List<SpellSlotInfo> { spells[0], spells[1], emptySlot }));
 				}
 			}
 
@@ -576,7 +577,7 @@ namespace FF1Lib
 
 				if (spells.Count == 2)
 				{
-					spellBlursingsPlando.Add(new BonusMalusPlando(BonusMalusAction.InnateSpells, "Tele Magic", spellsmod: new List<SpellSlotInfo> { spells[0], spells[1], emptySlot }));
+					spellBlursingsPlando.Add(new BonusMalusPlando(BonusMalusActionPlando.InnateSpellsTele, "Tele Magic", spellsmod: new List<SpellSlotInfo> { spells[0], spells[1], emptySlot }));
 				}
 			}
 
@@ -630,11 +631,11 @@ namespace FF1Lib
 				BuildSpellIdDict(rom);
 
 				List<BonusMalusPlando> bonusListLearn = new();
-			bonusListLearn.Add(new BonusMalusPlando(BonusMalusAction.LearnLampRibbon, "Learn LAMP\n Resist All"));
-			bonusListLearn.Add(new BonusMalusPlando(BonusMalusAction.LearDarkEvade, "Learn DARK\n +Evade"));
-			bonusListLearn.Add(new BonusMalusPlando(BonusMalusAction.LearnSleepMDef, "Learn SLEEP\n +MDef"));
-			bonusListLearn.Add(new BonusMalusPlando(BonusMalusAction.LearnSlowAbsorb, "Learn SLOW\n +Absorb"));
-			bonusListLearn.Add(new BonusMalusPlando(BonusMalusAction.ASpellsAutocast, "A-Spells\n Autocast"));
+			bonusListLearn.Add(new BonusMalusPlando(BonusMalusActionPlando.LearnLampRibbon, "Learn LAMP\n Resist All"));
+			bonusListLearn.Add(new BonusMalusPlando(BonusMalusActionPlando.LearnDarkEvade, "Learn DARK\n +Evade"));
+			bonusListLearn.Add(new BonusMalusPlando(BonusMalusActionPlando.LearnSleepMDef, "Learn SLEEP\n +MDef"));
+			bonusListLearn.Add(new BonusMalusPlando(BonusMalusActionPlando.LearnSlowAbsorb, "Learn SLOW\n +Absorb"));
+			bonusListLearn.Add(new BonusMalusPlando(BonusMalusActionPlando.LearnAspellAuto, "A-Spells\n Autocast"));
 				
 			
 				return bonusListLearn;

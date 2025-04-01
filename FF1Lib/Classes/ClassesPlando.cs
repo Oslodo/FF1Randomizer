@@ -2911,7 +2911,7 @@ namespace FF1Lib
 
 			if (flags.FiPlus2MdefLevel != false)
 			{
-				assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusActionPlando.MDefGrowthPromoPlus2]);
+				assignedBlessings[Classes.Fighter].Add(bonuslist[(int)BonusMalusActionPlando.MDefGrowthPlus2]);
 			}
 
 			if (flags.FiMinusOneHit != false)
@@ -2927,7 +2927,7 @@ namespace FF1Lib
 
 			if (flags.ThPlus2MdefLvl != false)
 			{
-				assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusActionPlando.MDefGrowthPromoPlus2]);
+				assignedBlessings[Classes.Thief].Add(bonuslist[(int)BonusMalusActionPlando.MDefGrowthPlus2]);
 			}
 
 			if (flags.ThEarlyLockpick != false)
@@ -2976,7 +2976,7 @@ namespace FF1Lib
 
 			if (flags.RmPlus2Mdef != false)
 			{
-				assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.MDefGrowthPromoPlus2]);
+				assignedBlessings[Classes.RedMage].Add(bonuslist[(int)BonusMalusActionPlando.MDefGrowthPlus2]);
 			}
 
 			if (flags.RmMinusOneHit != false)
@@ -2995,7 +2995,7 @@ namespace FF1Lib
 
 			if (flags.WMPlus2Mdef != false)
 			{
-				assignedBlessings[Classes.WhiteMage].Add(bonuslist[(int)BonusMalusActionPlando.MDefGrowthPromoPlus2]);
+				assignedBlessings[Classes.WhiteMage].Add(bonuslist[(int)BonusMalusActionPlando.MDefGrowthPlus2]);
 			}
 
 			if (flags.WMMinusOneHit != false)
@@ -3014,7 +3014,7 @@ namespace FF1Lib
 
 			if (flags.BMPlus2Mdef != false)
 			{
-				assignedBlessings[Classes.BlackMage].Add(bonuslist[(int)BonusMalusActionPlando.MDefGrowthPromoPlus2]);
+				assignedBlessings[Classes.BlackMage].Add(bonuslist[(int)BonusMalusActionPlando.MDefGrowthPlus2]);
 			}
 
 			if (flags.BMMinus1Hit != false)
@@ -3888,21 +3888,21 @@ namespace FF1Lib
 		{
 			List<BonusMalusPlando> kiPlando = new()
 			{
-				new BonusMalusPlando(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Crown], mod: (int)Item.Crown),
-				new BonusMalusPlando(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Crystal], mod: (int)Item.Crystal),
-				new BonusMalusPlando(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Herb], mod: (int)Item.Herb),
-				new BonusMalusPlando(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Tnt], mod: (int)Item.Tnt),
-				new BonusMalusPlando(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Adamant], mod: (int)Item.Adamant),
-				new BonusMalusPlando(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Slab], mod: (int)Item.Slab),
-				new BonusMalusPlando(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Ruby], mod: (int)Item.Ruby),
-				new BonusMalusPlando(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Rod], mod: (int)Item.Rod),
-				new BonusMalusPlando(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Chime], mod: (int)Item.Chime),
-				new BonusMalusPlando(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Cube], mod: (int)Item.Cube),
-				new BonusMalusPlando(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Bottle], mod: (int)Item.Bottle),
-				new BonusMalusPlando(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Oxyale], mod: (int)Item.Oxyale),
-				new BonusMalusPlando(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Lute], mod: (int)Item.Lute),
-				new BonusMalusPlando(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Tail], mod: (int)Item.Tail),
-				new BonusMalusPlando(BonusMalusAction.StartWithKI, "+" + olditemnames[(int)Item.Key], mod: (int)Item.Key),
+				new BonusMalusPlando(BonusMalusActionPlando.StartWithKICrown, "+" + olditemnames[(int)Item.Crown], mod: (int)Item.Crown),
+				new BonusMalusPlando(BonusMalusActionPlando.StartWithKICrystal, "+" + olditemnames[(int)Item.Crystal], mod: (int)Item.Crystal),
+				new BonusMalusPlando(BonusMalusActionPlando.StartWithKIHerb, "+" + olditemnames[(int)Item.Herb], mod: (int)Item.Herb),
+				new BonusMalusPlando(BonusMalusActionPlando.StartWithKITNT, "+" + olditemnames[(int)Item.Tnt], mod: (int)Item.Tnt),
+				new BonusMalusPlando(BonusMalusActionPlando.StartWithKIAdamant, "+" + olditemnames[(int)Item.Adamant], mod: (int)Item.Adamant),
+				new BonusMalusPlando(BonusMalusActionPlando.StartWithKISlab, "+" + olditemnames[(int)Item.Slab], mod: (int)Item.Slab),
+				new BonusMalusPlando(BonusMalusActionPlando.StartWithKIRuby, "+" + olditemnames[(int)Item.Ruby], mod: (int)Item.Ruby),
+				new BonusMalusPlando(BonusMalusActionPlando.StartWithKIRod, "+" + olditemnames[(int)Item.Rod], mod: (int)Item.Rod),
+				new BonusMalusPlando(BonusMalusActionPlando.StartWithKIChime, "+" + olditemnames[(int)Item.Chime], mod: (int)Item.Chime),
+				new BonusMalusPlando(BonusMalusActionPlando.StartWithKICube, "+" + olditemnames[(int)Item.Cube], mod: (int)Item.Cube),
+				new BonusMalusPlando(BonusMalusActionPlando.StartWithKIBottle, "+" + olditemnames[(int)Item.Bottle], mod: (int)Item.Bottle),
+				new BonusMalusPlando(BonusMalusActionPlando.StartWithKIOxyale, "+" + olditemnames[(int)Item.Oxyale], mod: (int)Item.Oxyale),
+				new BonusMalusPlando(BonusMalusActionPlando.StartWithKILute, "+" + olditemnames[(int)Item.Lute], mod: (int)Item.Lute),
+				new BonusMalusPlando(BonusMalusActionPlando.StartWithKITail, "+" + olditemnames[(int)Item.Tail], mod: (int)Item.Tail),
+				new BonusMalusPlando(BonusMalusActionPlando.StartWithKIKey, "+" + olditemnames[(int)Item.Key], mod: (int)Item.Key),
 
 			
 			};

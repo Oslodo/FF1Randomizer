@@ -3479,11 +3479,11 @@ namespace FF1Lib
 						break;
 
 					case RmSpellRemove.RmSpellRemoveCur3:
-						assignedMaluses[Classes.RedMage].Add(maluses[(int)BonusMalusActionPlando.RemoveSpelCur3]);
+						assignedMaluses[Classes.RedMage].Add(maluses[(int)BonusMalusActionPlando.RemoveSpellCur3]);
 						break;
 
 					case RmSpellRemove.RmSpellRemoveHel3:
-						assignedMaluses[Classes.RedMage].Add(maluses[(int)BonusMalusActionPlando.RemoveSpelHel3]);
+						assignedMaluses[Classes.RedMage].Add(maluses[(int)BonusMalusActionPlando.RemoveSpellHel3]);
 						break;
 
 					case RmSpellRemove.RmSpellRemoveWall:
@@ -3657,11 +3657,11 @@ namespace FF1Lib
 						break;
 
 					case WMSpellRemove.WmSpellRemoveCur3:
-						assignedMaluses[Classes.WhiteMage].Add(maluses[(int)BonusMalusActionPlando.RemoveSpelCur3]);
+						assignedMaluses[Classes.WhiteMage].Add(maluses[(int)BonusMalusActionPlando.RemoveSpellCur3]);
 						break;
 
 					case WMSpellRemove.WmSpellRemoveHel3:
-						assignedMaluses[Classes.WhiteMage].Add(maluses[(int)BonusMalusActionPlando.RemoveSpelHel3]);
+						assignedMaluses[Classes.WhiteMage].Add(maluses[(int)BonusMalusActionPlando.RemoveSpellHel3]);
 						break;
 
 					case WMSpellRemove.WmSpellRemoveWall:

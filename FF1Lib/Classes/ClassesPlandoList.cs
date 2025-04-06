@@ -291,6 +291,344 @@ namespace FF1Lib
 			});
 		}
 
+			public BonusMalusPlando CreateRandomResistBonusMalusPlando(Flags flags)
+		{
+			byte innateResistValue = 0x00;
+			string description = "Res. ";
+			List<SpellElement> elements = Enum.GetValues(typeof(SpellElement)).Cast<SpellElement>().ToList();
+			elements.Remove(SpellElement.Any);
+			elements.Remove(SpellElement.All);
+
+
+			if (flags.FiResistSelect != false)
+			{
+				SpellElement resistElementsFi = new();
+				if (flags.FiResistDeath != false)
+				{
+					resistElementsFi = SpellElement.Death;
+					description += "D";
+				}
+
+				if (flags.FiResistFire != false)
+				{
+					resistElementsFi = SpellElement.Fire;
+					description += "F";
+				}
+
+				if (flags.FiResistIce != false)
+				{
+					resistElementsFi = SpellElement.Ice;
+					description += "I";
+				}
+
+				if (flags.FiResistLit != false)
+				{
+					resistElementsFi = SpellElement.Lightning;
+					description += "L";
+				}
+
+				if (flags.FiResistEarth != false)
+				{
+					resistElementsFi = SpellElement.Earth;
+					description += "E";
+				}
+
+				if (flags.FiResistPoison != false)
+				{
+					resistElementsFi = SpellElement.Poison;
+					description += "P";
+				}
+
+				if (flags.FiResistStatus != false)
+				{
+					resistElementsFi = SpellElement.Status;
+					description += "S";
+				}
+
+				if (flags.FiResistTime != false)
+				{
+					resistElementsFi = SpellElement.Time;
+					description += "T";
+				}
+
+					innateResistValue |= (byte)resistElementsFi;
+				}
+
+			if (flags.ThResistSelect != false)
+			{
+				SpellElement resistElementsTh = new();
+				if (flags.ThResistDeath != false)
+				{
+					resistElementsTh = SpellElement.Death;
+					description += "D";
+				}
+
+				if (flags.ThResistFire != false)
+				{
+					resistElementsTh = SpellElement.Fire;
+					description += "F";
+				}
+
+				if (flags.ThResistIce != false)
+				{
+					resistElementsTh = SpellElement.Ice;
+					description += "I";
+				}
+
+				if (flags.ThResistLit != false)
+				{
+					resistElementsTh = SpellElement.Lightning;
+					description += "L";
+				}
+
+				if (flags.ThResistEarth != false)
+				{
+					resistElementsTh = SpellElement.Earth;
+					description += "E";
+				}
+
+				if (flags.ThResistPoison != false)
+				{
+					resistElementsTh = SpellElement.Poison;
+					description += "P";
+				}
+
+				if (flags.ThResistStatus != false)
+				{
+					resistElementsTh = SpellElement.Status;
+					description += "S";
+				}
+
+				if (flags.ThResistTime != false)
+				{
+					resistElementsTh = SpellElement.Time;
+					description += "T";
+				}
+
+				innateResistValue |= (byte)resistElementsTh;
+			}
+
+			if (flags.BBResistSelect != false)
+			{
+				SpellElement resistElementsBB = new();
+				if (flags.BBResistDeath != false)
+				{
+					resistElementsBB = SpellElement.Death;
+					description += "D";
+				}
+
+				if (flags.BBResistFire != false)
+				{
+					resistElementsBB = SpellElement.Fire;
+					description += "F";
+				}
+
+				if (flags.BBResistIce != false)
+				{
+					resistElementsBB = SpellElement.Ice;
+					description += "I";
+				}
+
+				if (flags.BBResistLit != false)
+				{
+					resistElementsBB = SpellElement.Lightning;
+					description += "L";
+				}
+
+				if (flags.BBResistEarth != false)
+				{
+					resistElementsBB = SpellElement.Earth;
+					description += "E";
+				}
+
+				if (flags.BBResistPoison != false)
+				{
+					resistElementsBB = SpellElement.Poison;
+					description += "P";
+				}
+
+				if (flags.BBResistStatus != false)
+				{
+					resistElementsBB = SpellElement.Status;
+					description += "S";
+				}
+
+				if (flags.BBResistTime != false)
+				{
+					resistElementsBB = SpellElement.Time;
+					description += "T";
+				}
+
+				innateResistValue |= (byte)resistElementsBB;
+			}
+
+			if (flags.RmResistSelect != false)
+			{
+				SpellElement resistElementsRM = new();
+				if (flags.RmResistDeath != false)
+				{
+					resistElementsRM = SpellElement.Death;
+					description += "D";
+				}
+
+				if (flags.RmResistFire != false)
+				{
+					resistElementsRM = SpellElement.Fire;
+					description += "F";
+				}
+
+				if (flags.RmResistIce != false)
+				{
+					resistElementsRM = SpellElement.Ice;
+					description += "I";
+				}
+
+				if (flags.RmResistLit != false)
+				{
+					resistElementsRM = SpellElement.Lightning;
+					description += "L";
+				}
+
+				if (flags.RmResistEarth != false)
+				{
+					resistElementsRM = SpellElement.Earth;
+					description += "E";
+				}
+
+				if (flags.RmResistPoison != false)
+				{
+					resistElementsRM = SpellElement.Poison;
+					description += "P";
+				}
+
+				if (flags.RmResistStatus != false)
+				{
+					resistElementsRM = SpellElement.Status;
+					description += "S";
+				}
+
+				if (flags.RmResistTime != false)
+				{
+					resistElementsRM = SpellElement.Time;
+					description += "T";
+				}
+
+				innateResistValue |= (byte)resistElementsRM;
+			}
+
+			if (flags.WMResistSelect != false)
+			{
+				SpellElement resistElementsWM = new();
+				if (flags.WMResistDeath != false)
+				{
+					resistElementsWM = SpellElement.Death;
+					description += "D";
+				}
+
+				if (flags.WMResistFire != false)
+				{
+					resistElementsWM = SpellElement.Fire;
+					description += "F";
+				}
+
+				if (flags.WMResistIce != false)
+				{
+					resistElementsWM = SpellElement.Ice;
+					description += "I";
+				}
+
+				if (flags.WMResistLit != false)
+				{
+					resistElementsWM = SpellElement.Lightning;
+					description += "L";
+				}
+
+				if (flags.WMResistEarth != false)
+				{
+					resistElementsWM = SpellElement.Earth;
+					description += "E";
+				}
+
+				if (flags.WMResistPoison != false)
+				{
+					resistElementsWM = SpellElement.Poison;
+					description += "P";
+				}
+
+				if (flags.WMResistStatus != false)
+				{
+					resistElementsWM = SpellElement.Status;
+					description += "S";
+				}
+
+				if (flags.WMResistTime != false)
+				{
+					resistElementsWM = SpellElement.Time;
+					description += "T";
+				}
+
+				innateResistValue |= (byte)resistElementsWM;
+			}
+
+			if (flags.BMResistSelect != false)
+			{
+				SpellElement resistElementsBM = new();
+				if (flags.BMResistDeath != false)
+				{
+					resistElementsBM = SpellElement.Death;
+					description += "D";
+				}
+
+				if (flags.BMResistFire != false)
+				{
+					resistElementsBM = SpellElement.Fire;
+					description += "F";
+				}
+
+				if (flags.BMResistIce != false)
+				{
+					resistElementsBM = SpellElement.Ice;
+					description += "I";
+				}
+
+				if (flags.BMResistLit != false)
+				{
+					resistElementsBM = SpellElement.Lightning;
+					description += "L";
+				}
+
+				if (flags.BMResistEarth != false)
+				{
+					resistElementsBM = SpellElement.Earth;
+					description += "E";
+				}
+
+				if (flags.BMResistPoison != false)
+				{
+					resistElementsBM = SpellElement.Poison;
+					description += "P";
+				}
+
+				if (flags.BMResistStatus != false)
+				{
+					resistElementsBM = SpellElement.Status;
+					description += "S";
+				}
+
+				if (flags.BMResistTime != false)
+				{
+					resistElementsBM = SpellElement.Time;
+					description += "T";
+				}
+
+				innateResistValue |= (byte)resistElementsBM;
+			}
+
+			return new BonusMalusPlando(BonusMalusActionPlando.InnateResistMinor, description, mod: innateResistValue); //Might cause issues with several classes having the same resistances when that is
+																														//not what the flags say, if so, break Minor into Class Grouping
+			}
+		
+
 
 		public List<BonusMalusPlando> CreateSpellBonusesPlado(FF1Rom rom, MT19337 rng, Flags flags)
 		{
